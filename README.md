@@ -1,23 +1,23 @@
 # Diplomarbeit
 
-Diplomarbeit "Chatbot" für das Jahr 2021/2022 von Dumfarth Felix und Lukas Starka unter Betreuung
-von Herr Pof. Stütz.
+Diplomarbeit "ML-based Chatbot" für das Jahr 2021/2022 von Dumfarth Felix und Lukas Starka unter Betreuung
+von Herrn Professor Stütz.
 ## Links
 
 [Index](https://github.com/htl-leonding-project/2021-da-chatbot/)
 
 ### Besprechungen
-[1. Besprechung 22.02.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/22-02-2021)
+[1. Besprechung 22.02.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-02-22)
 
-[2. Besprechung 09.03.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/09-03-2021)
+[2. Besprechung 09.03.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-03-09)
 
-[3. Besprechung 23.03.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/23-03-2021)
+[3. Besprechung 23.03.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-03-23)
 
-[4. Besprechung 06.04.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/06-04-2021)
+[4. Besprechung 06.04.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-04-06)
 
-[5. Besprechung 20.04.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/20-04-2021)
+[5. Besprechung 20.04.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-04-20)
 
-[6. Besprechung 29.04.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/29-04-2021)
+[6. Besprechung 29.04.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-04-29)
 
 # asciidoctor-docker-template
 
