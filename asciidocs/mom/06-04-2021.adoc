@@ -1,0 +1,81 @@
+= Besprechungsprotokoll 06.04.2021
+Dumfarth, Starka
+1.0, 06.04.2021: Some notes
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+//icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-project/2021-da-chatbot/] ‏ ‏ ‎
+icon:home[link=https://htl-leonding-project.github.io/2021-da-chatbot]
+endif::backend-html5[]
+
+
+.Teilnehmer
+|===
+|anwesend
+
+|Dumfarth Felix
+
+|Starka Lukas
+
+|Thomas Stütz
+
+|Hammer Christian
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Online (Discord)
+
+|von-bis
+|Mo. 06.04.20211, 18 - 18:40 Uhr
+|Dauer
+|40 min
+|===
+
+
+
+== Besprochene Themen
+* Maschine Learning ist wichtig.
+
+* Programmiersprache je nach Engine
+
+* Chatbot soll nicht fluchen usw. (beispiel: Microsoft)
+
+* kern der arbeit => unterscheidung (mit gefahren) von maschine learning
+
+* es geht ums dazulernen, es kann rauskommen das wir merken es hat kann Sinn,
+
+* Arten von chatbots (rule based ,...) => alleine anschauen
+
+* Unterschied von regeln und Trainieren(beim Trainieren wird er besser und lernt dazu)
+
+* wenn er nicht mehr weiterweiß übergabe an menschen
+
+* https://www.mygreatlearning.com/blog/basics-of-building-an-artificial-intelligence-chatbot/#typesofchatbot[Gute Webseite]
+
+* fertige beispiele nehmen , asnchauen, verstehen, ...
+
+* Prototyp von lernenden Chatbot muss da sein, selbst wenn wir realisieren Rule Based ist besser für unsre angelegenheit
+
+* nächster termin 20.4.2021
+
+== Vereinbarungen und Entscheidungen
+
+.Was wurde vereinbart?
+[%autowidth]
+|===
+|wer |macht was |bis wann
+
+| Schüler
+a| - Arten von chatbots (rule based, ...) alleine anschauen
+| 20.04.2021
+|===
