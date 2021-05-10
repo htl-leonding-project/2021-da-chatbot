@@ -17,6 +17,8 @@ von Herr Pof. Stütz.
 
 [5. Besprechung 20.04.2021](https://htl-leonding-project.github.io/2021-da-chatbotmom/20-04-2021)
 
+[6. Besprechung 29.04.2021](https://htl-leonding-project.github.io/2021-da-chatbotmom/29-04-2021)
+
 # asciidoctor-docker-template
 
 ## Overview
