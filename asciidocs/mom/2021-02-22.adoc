@@ -1,6 +1,6 @@
-= Besprechungsprotokoll 09.03.2021
+= Besprechungsprotokoll 22.02.2021
 Dumfarth, Starka
-1.0, 09.03.2021: Some notes
+1.0, 22.02.2021: Some notes
 ifndef::imagesdir[:imagesdir: images]
 :icons: font
 //:sectnums:    // Nummerierung der Überschriften / section numbering
@@ -23,15 +23,12 @@ endif::backend-html5[]
 
 |Dumfarth Felix
 
-
 |Starka Lukas
 
 
-|
-
+|Thomas Stütz
 
 |Hammer Christian
-
 |===
 
 .Ort und Zeit
@@ -41,18 +38,18 @@ endif::backend-html5[]
 |Online (Discord)
 
 |von-bis
-|Mo. 09.03.2021, 18 - 18:20
+|Mo. 22.02.2021, 16 - 16:25
 |Dauer
-|20 min
+|25 min
 |===
 
 
 
 == Besprochene Themen
 
-* Fortschritt
-* Prof. Hammer hat über Chatbots Folien und Handouts gezeigt
-* Was bis zum nächsten mal zu erledigen ist
+* Vorstellung
+* Was ist bis Sommer zu erledigen
+* Vorgehensweise
 
 
 == Vereinbarungen und Entscheidungen
@@ -63,7 +60,14 @@ endif::backend-html5[]
 |wer |macht was |bis wann
 
 | Schüler
-a| Ausarbeitung: Geschichte Chatbots, Razer vs Dialogflow
-| 23.03.2021
+a| Kurse erarbeiten und Ziel ist es die Funktionsweise und Elemente eines Chatbots zu verstehen und anwenden zu können
+| Anfang Sommerferien
 
+| Schüler
+a| Chatbot programmieren
+| Ende Sommerferien
+
+|Prof. Hammer
+a| Informationsinhalte, die der Chatbot präsentieren soll
+|
 |===

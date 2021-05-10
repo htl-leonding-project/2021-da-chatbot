@@ -1,7 +1,7 @@
-= Besprechungsprotokoll 22.02.2021
+= Besprechungsprotokoll 20.04.2021
 Dumfarth, Starka
-1.0, 22.02.2021: Some notes
-ifndef::imagesdir[:imagesdir: images]
+1.0, 20.04.2021: Some notes
+ifndef::imagesdir[:imagesdir: ../images]
 :icons: font
 //:sectnums:    // Nummerierung der Überschriften / section numbering
 //:toc: left
@@ -20,11 +20,9 @@ endif::backend-html5[]
 |===
 |anwesend
 
-
 |Dumfarth Felix
 
 |Starka Lukas
-
 
 |Thomas Stütz
 
@@ -38,18 +36,19 @@ endif::backend-html5[]
 |Online (Discord)
 
 |von-bis
-|Mo. 22.02.2021, 16 - 16:25
+|Di. 20.04.2021, 18 - 18:55 Uhr
 |Dauer
-|25 min
+|55 min
 |===
 
 
 
 == Besprochene Themen
+* Chatbot soll selbstlernend sein
 
-* Vorstellung
-* Was ist bis Sommer zu erledigen
-* Vorgehensweise
+ifdef::backend-html5,backend-revealjs[image:Grafik1.png[width=80%]]
+
+ifdef::backend-html5,backend-revealjs[image:Grafik2.png[width=80%]]
 
 
 == Vereinbarungen und Entscheidungen
@@ -59,15 +58,7 @@ endif::backend-html5[]
 |===
 |wer |macht was |bis wann
 
-| Schüler
-a| Kurse erarbeiten und Ziel ist es die Funktionsweise und Elemente eines Chatbost zu verstehen und anwenden zu können
+| Alle
+a| Am Anfang der Sommerferien schauen wir, dass wir eine weile alleine Arbeiten können und uns nur von Zeit zu Zeit treffen
 | Anfang Sommerferien
-
-| Schüler
-a| Chatbot programmieren
-| Ende Sommerferien
-
-|Prof. Hammer
-a| Informationsinhalte, die der Chatbot präsentieren soll
-|
 |===

@@ -1,7 +1,7 @@
-= Besprechungsprotokoll 29.04.2021
+= Besprechungsprotokoll 23.03.2021
 Dumfarth, Starka
-1.0, 29.04.2021: Some notes
-ifndef::imagesdir[:imagesdir: ../images]
+1.0, 23.03.2021: Some notes
+ifndef::imagesdir[:imagesdir: images]
 :icons: font
 //:sectnums:    // Nummerierung der Überschriften / section numbering
 //:toc: left
@@ -26,7 +26,7 @@ endif::backend-html5[]
 
 |Thomas Stütz
 
-
+|Hammer Christian
 |===
 
 .Ort und Zeit
@@ -36,15 +36,19 @@ endif::backend-html5[]
 |Online (Discord)
 
 |von-bis
-|Mo. 29.04.2021, 18 - 18:55 Uhr
+|Di. 23.03.2021, 18 - 20:00 Uhr
 |Dauer
-|55 min
+|120 min
 |===
 
 
 
 == Besprochene Themen
-* Diplomarbeits DB
+
+* Präsentation Chatbots (https://prezi.com/view/gQ73qC269dDre67ge8DO/[Präsentation])
+* Dialogflow vs Raza
+* Was bis zum nächsten Mal zu erledigen ist
+
 
 == Vereinbarungen und Entscheidungen
 
@@ -54,6 +58,16 @@ endif::backend-html5[]
 |wer |macht was |bis wann
 
 | Schüler
-a| Diplomarbeit DB schreiben bzw. umschreiben
-| -
+a| - Kleiner Rasa Prototyp
+- Was ist Rasa open source, Rasa X, Rasa Action Server?
+- Fachbegriffe: NLU, NLP, ..
+| 06.04.2021
+
+| Schüler
+a| Diplomarbeit:
+
+- Fokus ist der Gesprächsverlauf
+- Inhalt des Gesprächs ist ein Thema (z.B. Ausbildung, Produktangebot, Leistungsangebot, usw.)
+- Unterthema: Einen Chatbot verstehen (Struktur, Aufbau)
+|
 |===

@@ -1,6 +1,6 @@
-= Besprechungsprotokoll 23.03.2021
+= Besprechungsprotokoll 09.03.2021
 Dumfarth, Starka
-1.0, 23.03.2021: Some notes
+1.0, 09.03.2021: Some notes
 ifndef::imagesdir[:imagesdir: images]
 :icons: font
 //:sectnums:    // Nummerierung der Überschriften / section numbering
@@ -20,13 +20,18 @@ endif::backend-html5[]
 |===
 |anwesend
 
+
 |Dumfarth Felix
+
 
 |Starka Lukas
 
-|Thomas Stütz
+
+|
+
 
 |Hammer Christian
+
 |===
 
 .Ort und Zeit
@@ -36,17 +41,17 @@ endif::backend-html5[]
 |Online (Discord)
 
 |von-bis
-|Mo. 23.03.2021, 18 - 20:00 Uhr
+|Di. 09.03.2021, 18 - 18:20
 |Dauer
-|120 min
+|20 min
 |===
 
 
 
 == Besprochene Themen
 
-* Präsentation Chatbots (https://prezi.com/view/gQ73qC269dDre67ge8DO/[Präsentation])
-* Dialogflow vs Raza
+* Fortschritt
+* Prof. Hammer zeigte Präsentation über Chatbots von anderen Schülern her
 * Was bis zum nächsten mal zu erledigen ist
 
 
@@ -58,16 +63,7 @@ endif::backend-html5[]
 |wer |macht was |bis wann
 
 | Schüler
-a| - kleiner Rasa Prototyp
-- Was ist Rasa open source, Rasa X, Rasa Action Server?
-- Fachbegriffe: NLU, NLP, ..
-| 06.04.2021
+a| Ausarbeitung: Geschichte Chatbots, Rasa vs Dialogflow
+| 23.03.2021
 
-| Schüler
-a| Diplomarbeit:
-
-- Fokus ist der Gesprächsverlauf
-- Inhalt des Gesprächs ist ein Thema (zB Ausbildung, Produktangebot, Leistungsangebot, usw)
-- Unterthema: Einen Chatbot verstehen (Struktur, Aufbau)
-|
 |===

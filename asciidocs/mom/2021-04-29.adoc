@@ -1,6 +1,6 @@
-= Besprechungsprotokoll 20.04.2021
+= Besprechungsprotokoll 29.04.2021
 Dumfarth, Starka
-1.0, 20.04.2021: Some notes
+1.0, 29.04.2021: Some notes
 ifndef::imagesdir[:imagesdir: ../images]
 :icons: font
 //:sectnums:    // Nummerierung der Überschriften / section numbering
@@ -26,7 +26,7 @@ endif::backend-html5[]
 
 |Thomas Stütz
 
-|Hammer Christian
+
 |===
 
 .Ort und Zeit
@@ -36,20 +36,15 @@ endif::backend-html5[]
 |Online (Discord)
 
 |von-bis
-|Mo. 20.04.2021, 18 - 18:55 Uhr
+|Do. 29.04.2021, 20 - 20:45 Uhr
 |Dauer
-|55 min
+|45 min
 |===
 
 
 
 == Besprochene Themen
-* Chatbot soll selbstlernend sein
-
-ifdef::backend-html5,backend-revealjs[image:Grafik1.png[width=80%]]
-
-ifdef::backend-html5,backend-revealjs[image:Grafik2.png[width=80%]]
-
+* Diplomarbeits-DB
 
 == Vereinbarungen und Entscheidungen
 
@@ -58,7 +53,7 @@ ifdef::backend-html5,backend-revealjs[image:Grafik2.png[width=80%]]
 |===
 |wer |macht was |bis wann
 
-| Alle
-a| Am Anfang der Sommerferien schauen wir das wir eine weile alleine Arbeiten können und uns nur von Zeit zu Zeit treffen
+| Schüler
+a| Diplomarbeits-DB schreiben bzw. umschreiben
 | -
 |===

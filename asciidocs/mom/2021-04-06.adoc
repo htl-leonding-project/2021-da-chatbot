@@ -36,7 +36,7 @@ endif::backend-html5[]
 |Online (Discord)
 
 |von-bis
-|Mo. 06.04.20211, 18 - 18:40 Uhr
+|Di. 06.04.20211, 18 - 18:40 Uhr
 |Dauer
 |40 min
 |===
@@ -44,29 +44,29 @@ endif::backend-html5[]
 
 
 == Besprochene Themen
-* Maschine Learning ist wichtig.
+* Machine Learning ist wichtig
 
 * Programmiersprache je nach Engine
 
-* Chatbot soll nicht fluchen usw. (beispiel: Microsoft)
+* Chatbot soll nicht fluchen oder dergleichen (Beispiel: Microsoft)
 
-* kern der arbeit => unterscheidung (mit gefahren) von maschine learning
+* Kern der Arbeit => Unterscheidung (mit Gefahren) von Machine Learning
 
-* es geht ums dazulernen, es kann rauskommen das wir merken es hat kann Sinn,
+* Es geht ums dazulernen, es kann rauskommen, dass wir merken es hat keinen Sinn
 
-* Arten von chatbots (rule based ,...) => alleine anschauen
+* Arten von Chatbots (rule-based ,...) => alleine anschauen
 
-* Unterschied von regeln und Trainieren(beim Trainieren wird er besser und lernt dazu)
+* Unterschied von Regeln und trainieren (beim Trainieren wird er besser und lernt dazu)
 
-* wenn er nicht mehr weiterweiß übergabe an menschen
+* Wenn er nicht mehr weiterweiß übergabe an menschen
 
 * https://www.mygreatlearning.com/blog/basics-of-building-an-artificial-intelligence-chatbot/#typesofchatbot[Gute Webseite]
 
-* fertige beispiele nehmen , asnchauen, verstehen, ...
+* Fertige beispiele nehmen, asnchauen, verstehen, ...
 
-* Prototyp von lernenden Chatbot muss da sein, selbst wenn wir realisieren Rule Based ist besser für unsre angelegenheit
+* Prototyp von lernendem Chatbot muss da sein, selbst wenn wir realisieren rule-based ist besser für unsre Angelegenheit
 
-* nächster termin 20.4.2021
+* Nächster Termin 20.4.2021
 
 == Vereinbarungen und Entscheidungen
 
@@ -76,6 +76,6 @@ endif::backend-html5[]
 |wer |macht was |bis wann
 
 | Schüler
-a| - Arten von chatbots (rule based, ...) alleine anschauen
+a| - Arten von Chatbots (rule-based, ...) alleine anschauen
 | 20.04.2021
 |===
