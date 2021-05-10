@@ -7,17 +7,17 @@ von Herr Pof. Stütz.
 [Index](https://github.com/htl-leonding-project/2021-da-chatbot/)
 
 ### Besprechungen
-[1. Besprechung 22.02.2021](https://htl-leonding-project.github.io/2021-da-chatbotmom/22-02-2021)
+[1. Besprechung 22.02.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/22-02-2021)
 
-[2. Besprechung 09.03.2021](https://htl-leonding-project.github.io/2021-da-chatbotmom/09-03-2021)
+[2. Besprechung 09.03.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/09-03-2021)
 
-[3. Besprechung 23.03.2021](https://htl-leonding-project.github.io/2021-da-chatbotmom/23-03-2021)
+[3. Besprechung 23.03.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/23-03-2021)
 
-[4. Besprechung 06.04.2021](https://htl-leonding-project.github.io/2021-da-chatbotmom/06-04-2021)
+[4. Besprechung 06.04.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/06-04-2021)
 
-[5. Besprechung 20.04.2021](https://htl-leonding-project.github.io/2021-da-chatbotmom/20-04-2021)
+[5. Besprechung 20.04.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/20-04-2021)
 
-[6. Besprechung 29.04.2021](https://htl-leonding-project.github.io/2021-da-chatbotmom/29-04-2021)
+[6. Besprechung 29.04.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/29-04-2021)
 
 # asciidoctor-docker-template
 
