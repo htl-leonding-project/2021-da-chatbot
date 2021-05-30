@@ -1,0 +1,423 @@
+= Rasa Notes
+
+== Installation
+
+1. Create your directory
+2. Install Python 
+[source,]
+----
+sudo apt update
+sudo apt install python3-dev python3-pip python3-venv
+----
+3. Create a virtual environment (optional but recommended)
+[source,]
+----
+python3 -m venv ./venv
+source ./venv/bin/activate
+----
+4. Install Rasa Open Source
+[source,]
+----
+pip3 install -U pip
+pip3 install rasa
+----
+
+== Create the project
+
+- To initalize to project you need to run
+
+[source,]
+----
+rasa init
+----
+
+image::images/rasa_init.png[]
+
+- After that you can open the project in your preferred IDE.
+
+- To start a server with your trained model you use
+
+[source,]
+----
+rasa run
+----
+
+== Train your bot
+
+=== Add new intents
+
+Intents are stored in the `data/nlu.md` file.
+The syntax to create a new intent is as following:
+
+[source,]
+----
+## intent:<intent name>
+- <phrase 1>
+- <phrase 2>
+- <phrase 3>
+----
+
+If you're using a newer version of Rasa you'll have a `nlu.yml` file insead
+
+[source,]
+----
+- intent: <intent name>
+  examples: |
+    - <phrase 1>
+    - <phrase 2>
+    - <phrase 3>
+----
+
+Now to identify these new intents you have to add them to the list found
+in your `domain.yml` file.
+
+[source,]
+----
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - <your newly created intent>
+  ...
+----
+
+=== Add responses
+
+To add responses the chatbot should give go to the `domain.yml` file. 
+The syntax for adding a new response looks like this:
+
+[source,]
+----
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  
+  utter_<name of your response>:
+  - text: "<text>"
+    image: "<img link>"
+  ...
+----
+
+=== Create stories
+
+To use your created intents and responses you have to define so-called 
+`stories` in your `data/stories.yml` file.
+
+The syntax for markdown looks like this:
+
+[source,]
+----
+## <name of your story>
+* <name of the intent that is triggered>
+  - <response that should be provided>
+----
+
+And this is the syntax for yml files:
+
+[source,]
+----
+- story: <name of your story>
+  steps:
+    - intent: <name of the intent that is triggered>
+    - action: <response that should be provided>
+    - intent: <name of the intent that is triggered>
+    - action: <response that should be provided>
+    ...
+----
+
+=== Run your new stories
+
+At first you have to re-train your model. This allows the model 
+to learn all the things we just implemented to the training data and
+the domain file.
+
+To train your model you need to run:
+
+[source,]
+----
+rasa train
+----
+
+After that you can start the server and initiate a chat-session
+through the `rasa shell` command.
+
+
+[source,]
+----
+rasa shell
+----
+
+Now you can start asking your bot your new defined questions. Keep in mind that the text doesn't have to be exactly like you wrote it and that the assistant will still be able to recognize it even with a few differences.
+
+image::images/rasa_shell.png[]
+
+== Slots
+
+Slots are the bot's memory. They are key-value pairs and can be used to store information the user provided, similiar to entities, like locations or information about the outside world.
+
+In this example we are using slots for a form. 
+
+The syntax for creating a slot inside the `domain.yml` file is as follows:
+
+[source,]
+----
+slots:
+  slot_name: <slot name>
+    type: <type>
+----
+
+== Entities
+
+Entities are structured pieces of information inside a user message like for example a location or a job or a name.
+
+In your `domain.yml` file you write:
+
+[source,]
+----
+entities:
+  - <entity name>
+  - <entity name>
+----
+
+To specify the entity in your intents you write:
+
+== Rasa Action Server
+
+A Rasa action server runs custom actions for a Rasa Open Source conversational assistant.
+
+When your assistant predicts a custom action, the Rasa server sends a POST request to the action server with a json payload including the name of the predicted action, the conversation ID, the contents of the tracker and the contents of the domain.
+
+=== Running the Rasa SDK Action Server
+
+There are two ways to run the action server, depending on whether or not you are using an environment with `rasa` installed or not.
+
+If you have `rasa` installed you can use:
+
+[source,]
+----
+rasa run actions
+----
+
+Or else use:
+
+[source,]
+----
+python -m rasa_sdk --actions actions
+----
+
+We are now running two servers, one for `Rasa Open Source` and the `Rasa Action Server`.
+
+== Airtable
+
+For the tutorial `Rasa for Beginners` on Udemy we used a template for an Airtable workspace.
+
+You need to define three keys when working with Airtable. 
+
+The `API_KEY` which is obtained on your `/account` page.
+
+image::images/api_key.png[]
+
+Your `BASE_ID` which you when you're in your `API Docs`. And the 
+`TABLE_NAME` which you'll also get there.
+
+image::images/base_id.png[]
+
+Now export your keys in a `.env.sh` and `.env` file.
+
+Note that the `TABLE_NAME` uses HTML to encode the name and `%20` is for the space character.
+
+[source,]
+----
+export AIRTABLE_API_KEY=key***
+export BASE_ID=app***
+export TABLE_NAME=Table%201
+----
+
+To keep our credentials seperate from other code we'll use `python-dotenv`. You install it through:
+
+[source,]
+----
+pip install python-dotenv
+----
+
+Now to run the action server you use:
+
+[source,]
+----
+rasa run actions
+----
+
+And in another terminal you start `Rasa Open Source` through:
+
+[source,]
+----
+rasa shell
+----
+
+Now after you've taken part in the survey a new line in your Airtable will be inserted
+
+image::images/airtable-new.png[]
+
+== Twilio
+
+=== Ngrok
+
+To connect to Twilio we'll have to use this tool, which simulates hosting a system to a server. It creates a tunnel URL.
+
+To install Ngrok use:
+
+[source,]
+----
+sudo snap install ngrok
+----
+
+After that connect Ngrok to your account through
+
+[source,]
+----
+ngrok auththoken <your token>
+----
+
+Then you can use Ngrok to create a tunnel for you. In this case
+we want it for the `http port 5005`.
+
+Note that this URL is only temporary and you always have to restart it when you want to use it.
+
+[source,]
+----
+ngrok http 5005
+----
+
+In the `Rasa for beginners` course we connect to Twilio, which provides developer-friendly APIs for text messages.
+
+At first you have to register for an account.
+
+In your `credentials.yml` file you can now save the data of Twilio.
+
+[source,]
+----
+twilio:
+  account_sid: "<your SID>"
+  auth_token: "<your token>"
+  twilio_number: "<your twilio number>"
+----
+
+Now you need to restart Rasa through 
+
+[source,]
+----
+rasa run
+----
+
+Also Ngrok should be running and you have to insert your URL
+into Twilio.
+
+image::images/twilio-ngrok.png[]
+
+Now you can chat with your assistant via SMS.
+
+image::images/chat-twilio.jpeg[width=30%]
+
+image::images/chat-info.jpeg[width=30%]
+
+== Conversation-Driven Development CDD
+
+Conversation-Driven Development is the process of listening to your users and using those insights to improve your AI assistant. 
+
+The way we wrote phrases that the user might come up with doesn't 
+connect to the real world. People are different in the way that
+they phrase something based on their age, background and other factors.
+
+Also there's the "curse of knowledge" which means that we know our
+application well and we know how to phrase something in order
+to get the correct answer but other people don't have that. 
+So in other words we can't imagine how an user who doesn't know
+something might use the bot.
+
+It is really important that you test your application with real
+world people even though it might feel uncomfortable at first.
+
+There are 6 factors of CDD:
+
+1. Share
+2. Review
+3. Annotate
+4. Test
+5. Track
+6. Fix
+
+
+== Rasa X
+
+- Layers on top of Rasa Open Source and helps you build a better assistant
+- Can be deployed anywhere, so your training data stays secure and proprietary
+- Runs in the browser
+- Let's you talk to your bot
+- Helps to correct model predictions
+- Share your application with test users
+- Review conversations
+- Annotate user messages
+
+
+In the proccess of `Deployment` you expose your application to a 
+server rather than still using it locally. 
+
+
+=== Installation
+
+There are different ways to install Rasa X
+
+==== Local Mode
+
+To install Rasa X locally you use:
+
+[source,]
+----
+pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
+----
+
+And then to start it write:
+
+[source,]
+----
+rasa x
+----
+
+This should open a browser tab to `http://localhost:5002`.
+
+== Troubleshooting
+
+=== Port 5005 already in use
+
+If you're having trouble with `rasa init` because the port `5005` is already in use try to find the process, that is listening on this port, and kill it for example like this:
+
+[source,]
+----
+lsof -i -P -n | grep LISTEN
+kill <id of process>
+----
+
+image::images/kill_process.png[]
+
+=== Rasa: command not found
+
+This could be because pip, pip3 and pip3.8 are all installed in `/home/user/.local/bin` which is not in the PATH. In order to fix this you have to export this path to to the path variable.
+
+[source,]
+----
+export PATH="$HOME/.local/bin:$PATH"
+----
+
+== Links
+
+Links used for this documentation are:
+
+https://www.udemy.com/course/rasa-for-beginners/
+
+https://blog.rasa.com/conversation-driven-development-a-better-approach-to-building-ai-assistants/
+
+https://rasa.com/docs/rasa/
