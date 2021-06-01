@@ -1,0 +1,272 @@
+= Text analysis
+
+== Text analysis vs. text mining vs. text analytics
+
+Meistens werden *text analysis* und *text mining* im selben Zusammenhang verwendet. Auch wenn oftmals beide Begriffe unterschiedlich verwendet werden so bedeuten sie doch eigentlich dasselbe, nämlich, dass man den Sinn einer Nachricht extrahiert. Daher wird im folgenden nur von *text analysis* gesprochen. 
+
+Aber es gibt einen Unterschied zwischen *text analysis* und *text analytics*. Grundsätzlich kann man dabei sagen, dass *text analysis* qualitative Ergebnisse liefert, wohingegen es bei *text analytics* mehr um die Quantität geht. 
+
+Bei *text analysis* werden also wichtige Informationen aus der Nachricht herausgelesen. Oder anders formuliert geht es darum, dass trotz der Vielseitigkeiten der menschlichen Sprache trotzdem die Kernaussage herausgefunden werden kann, mit der dann gearbeitet wird. Es können also dann Informationen herausgefiltert werden, wie beispielsweise, ob etwas positiv oder negativ ist oder was das Haupttheme des Textes ist.
+
+Auf der anderen Seite wird bei *text analytics* werden verschiedene Muster aus einer großen Menge an Nachrichten herausgefiltert, welche dann in Graphen, Tabellen oder Berichten gezeigt werden können. Bei der *text analytics* geht es also darum Muster und Entwicklungen von numerischen Ergebnissen herauszufinden. Es können also dann Informationen herausgefiltert werden, wie beispielsweise, die Prozentanzahl der positiven Bewertungen.
+
+== Warum text analysis
+
+Machine learning macht es viel effizienter und schneller als manuelles Aufbereiten von Texten. Außerdem sorgt es für eine schnellere Bearbeitung, die außerdem auch kostengünstiger ist, weil viele Stellen wegfallen, bei der aber dennoch nicht gespart werden muss was die Qualität angeht. 
+
+Durch text analysis tools spart man viele Arbeitskräfte, die bei anderen wichtigeren Aufgaben innerhalb eines Unternehmens eingesetzt werden können. Außerdem können dadurch Texte rund um die Uhr und zur Echtzeit bearbeitet werden. 
+
+Durch Algorithmen werden außerdem Fehler reduziert, die bei manuellem Bearbeiten leicht auftreten können und Daten können viel genauer aufbereitet werden, als dies von Menschen möglich.
+
+== Machine learning mit text analysis
+
+Grob kann man behaupten, dass ein text-analysis tool aus drei verschiedenen Schritten besteht.
+
+1. Zunächst muss man sich überlegen, welche Daten gesammelt werden sollen um damit sein Model zu trainieren und testen. Man unterscheidet hierbei zwischen *internal data* und *external data*. Unter *external data* werden Quellen, wie Zeitungen oder Foren bezeichnet und zu der *internal data* zählen sämtliche Daten, die eine Firma jeden Tag generiert, wie E-Mails, Reports, Chats, Umfragen oder aus Datenbanken oder Product Analytics.
+
+2. Danach müssen die Daten vorbereitet werden, damit das Programm diese versteht. Dieser Schritt wird meistens als *data preprocessing* bezeichnet. 
+
+3. Zum Schluss wird dann ein Machine learning Algorithmus hinzugefügt, welcher sich um die Analyse kümmert. Diesen kann man entweder komplett selber implementieren oder man nimmt sich Libraries zur Hilfe.
+
+== Natural Language Processing NLP
+
+=== Corpus
+
+Unter dem *Corpus* werden die Daten bezeichnet, die verwendet werden um das NLP Model zu trainieren, damit dieses menschliche Sprache versteht und damit arbeiten kann. 
+
+=== Tokenization
+
+Jeder Token ist beim *Tokenizing* eine sinnvolle Einheit. Wörter, Zeichen, Nummern oder Sonderzeichen sind dabei ein eigener Token, wobei Leerzeichen keine eigenen Token sind. 
+
+Tokenization wird vor allem für verschiedene Sprachen gebraucht, weil es in diesen immer unterschiedliche Regeln gibt. 
+
+[source,]
+----
+Let us go to the park. 
+
+0: Let
+1: us
+2: go
+3: to
+4: the
+5: park
+6: .
+----
+
+In diesem Beispiel sah es zwar vielleicht noch danach aus, als könnte man eine normale `split()` Methode für solche Funktionalitäten verwenden. Allerdings spielt Tokenization besonders eine wichtige Rolle, wenn Besonderheiten einer Sprache richtig dargestellt werden sollen, wie im nächsten Beispiel zu sehen ist:
+
+[source,]
+----
+"Let's go to the U.K.!"
+
+0: "
+1: Let
+2: 's
+3: go
+4: to
+5: the
+6: U.K.
+7: !
+8: "
+----
+
+=== Part-of-speech tagging POS-Tagging
+
+Wie der Name schon vermuten lässt, geht es hierbei um das Taggen von Wörtern zu deren zugehörigen Teil der Sprache (Part-of-speech).
+
+Als Teil einer Sprache werden normalerweise Kategorien von Wörtern bezeichnet, die ähnliche grammatikalische Eigenschaften oder Nutzung besitzen. Im deutschen würden hierbei also die verschiedenen Wortarten gemeint sein. 
+
+Beim Tagging werden entweder Statistiken angewendet, wie beispielsweise, dass es sehr wahrscheinlich ist, dass nach einem Artikel ein Nomen folgt. 
+
+Außerdem gibt es sogenannte *rule-based POS-taggers*, welche vordefinierte Regeln verwenden um das Tagging zu vollziehen oder diese Regeln basierend auf dem Corpus erstellen. 
+
+Ein Beispiel für *POS-Tagging* könnte also folgendermaßen aussehen:
+
+[source,]
+----
+I am going to the U.K.
+
+I: Pronoun
+am: Verb
+going: Verb
+to: Part
+the: Article 
+U.K.: Noun
+----
+
+=== Named Entity Recognition tagging NER-Tagging
+
+Named Entity Recognition ist eine der wichtigsten Säulen von Natural language processing. Dabei werden Entities aus Texten erkannt und anschließend mit einem Tag der zugehörigen Kategorie versehen.
+
+Beispiele für Entites wären also:
+
+[source,]
+----
+PERSON      Personen (inklusive fiktionalen Personen)
+NORP        Nationalitäten oder religiöse oder politische Gruppen
+FACILITY    Gebäude, Flughäfen, Brücken, Straßen
+LOC         Orte
+PRODUCT     Objekte, Fahrzeuge, Essen
+LANGUAGE    Sprachen
+----
+
+
+
+=== Stemming
+
+Andere häufig durchgeführte Schritte beim Preprocessing von Texten sind das *Stemming* sowie *Lemmatization*.
+
+Beim *Stemming* werden die werden die Suffixe und Prefixe der einzelnen *Tokens* des Textes mit Hilfe eines Stemmers in eine Form überführt, welche nur den Wortstamm zurücklässt. 
+
+Stemming wird dazu verwendet, dass nicht alle verschiedenen Formen von 
+
+Auch hierbei gibt es entweder die Möglichkeit selber einen *Stemmer* zu programmieren oder bereits vorgefertigte Stemmer zu verwenden. 
+
+Hier sind einige Beispiele fürs Stemming:
+
+[source,]
+----
+Buying ---> buy
+
+unpredictability ---> un + predict + able + ity
+un          prefix
+predict     base word
+able        suffix
+ity         suffix
+----
+
+=== Lemmatization
+
+Unter diesem Begriff wird verstanden, dass alle verschiedenen Arten eines Wortes zu dem "root" Verb umgeformt werden. 
+
+Der Unterschied zwischen *Stemming* und *Lemmatization* ist, dass bei der *Lemmatization* versucht wird, dass auch der Kontext miteinbezogen wird. Wörter haben oftmals verschiedene Bedeutungen, je nachdem in welchem Kontext man sie verwendet und können sich dabei häufig sogar von ihrer Wortart unterscheiden. 
+
+Dennoch sind *Stemmer* leichter zu implementieren und laufen schneller und bei vielen Applikationen ist die höhere Genauigkeit auch vernachlässigbar. 
+
+Beispiele hierfür sind:
+
+[source,]
+----
+better ---> good
+walking ---> walk
+walked ---> walk
+walks ---> walk
+meeting ---> meet (wenn es als Verb gebraucht wird)
+----
+
+=== Parsing
+
+Es gibt zwei verschiedene Arten von Parsing. *Dependency parsing* und *constituency parsing*. Parsing könnte man so beschreiben, dass es eine Art ist um einen Satz auseinanderzuteilen um die Struktur des Satzes zu verstehen. 
+
+==== Dependency parsing
+
+Wie der Name schon sagt, geht es beim dependency parsing darum, dass die Struktur eines Satzes durch die Abhängigkeiten der Wörter verstanden wird. Die Idee von Abhängigkeiten ist, dass Wörter in einem Satz über Verknüpfungen miteinander verbunden sind. Beim dependency parsing werden die Hauptwörter eines Satzes herausgefunden und anschließend Wörter gesucht, die in Verbindung mit diesen stehen und deren Bedeutung verändern. 
+
+[source,]
+----
+              sees
+                |
+        +--------------+
+subject |              | object
+        |              |
+      John            Bill
+----
+
+==== Constituency parsing
+
+Bei diesem werden Sätze in Phrasen, oder seperate constitutents, geteilt. Das bedeutet, dass man beim constitutency parsing im Gegensatz zum dependency parsing, wo man Beziehungen zwischen den Wörtern bekommt, man die Sätze gruppieren kann. Dies hilft also um die Struktur von Sätzen zu zeigen. Der Nachteil hierbei ist, dass es keinen Context gibt bei der Grammatik, dafür kann man aber gut nachweisen, ob ein Satz grammatikalisch korrekt oder inkorrekt ist. 
+
+[source,]
+----
+                  Sentence
+                     |
+       +-------------+------------+
+       |                          |
+  Noun Phrase                Verb Phrase
+       |                          |
+     John                 +-------+--------+
+                          |                |
+                        Verb          Noun Phrase
+                          |                |
+                        sees              Bill
+----
+
+=== Stopwords
+
+Unter Stopwords werden Worter verstanden, welche zwar häufig vorkommen, aber nicht wirklich viel zum Informationsgehalt eines Satzes beitragen.
+
+Beispiele in der deutschen Sprache wären:
+
+[source,]
+----
+der
+und
+aber
+mit
+oder
+----
+
+=== Vectorization
+
+=== Bag of Words (BOW)
+
+=== Word2Vec
+
+=== NLP und NLU Tools
+
+==== https://www.nltk.org/[NLTK]
+
+Das Natural Language Toolkit (kurz NLTK) ist wahrscheinlich die berühmteste Python library für natural language processing. Sie besitzt über 50 Ressourcen für das Bearbeiten von Corpora. 
+
+Außerdem gibt es viele eingebaute Libraries für das Analysieren eines Textes, wie die Klassifikation, Tokenization, Stemming, Tagging, Parsing und Semantic reasoning. 
+
+==== https://spacy.io/[SpaCy]
+
+SpaCy ist ebenfalls eine sehr berühmte Bibliothek für Python. SpaCy beschreibt sich selbst als "Industrial-Strength Natural Language Processing" und unterstützt über 64 Sprachen.
+
+SpaCy hat nur einen POS-Tagging Algorithmus und pro Sprache nur einen Named-Entity-Recognizer, was den Vorteil hat, dass es nicht voller unnötiger Features ist und sich nur auf ein paar wichtige Funktionalitäten konzentriert. 
+
+==== https://www.tensorflow.org/[TensorFlow]
+
+
+TensorFlow wird von Google betrieben und ist bei weitem die meist verwendete Library für Deep Learning. 
+
+Außerdem ist die Plattform Open-Source. 
+
+==== https://keras.io/[Keras]
+
+Keras ist eine Deep Learning Plattform, die in Python geschrieben ist. Sie wurde designed um schnelle Iterationen und schnelles Ausprobieren mit deep neural networks zu ermöglichen. 
+
+Außerdem bietet Keras ein Interface zu deep neural networks an, welche dann beispielsweise auf TensorFlow, Theano oder anderen Backends laufen können. 
+
+==== https://stanfordnlp.github.io/CoreNLP/[CoreNLP]
+
+Das CoreNLP Projekt von Stanford ist ein NLP toolkit, welches zwar in Java geschrieben wurde aber auch in anderen Sprachen verwendet werden kann, die auf der JVM Plattform sind. 
+
+==== https://radimrehurek.com/gensim/[Gensim]
+
+Gensim ist eine Open-Source Library für Python, mit der man semantische NLP Modelle trainieren kann.
+
+Außerdem ist Gensim Plattform unabhängig und läuft auf jedem Betriebssystem. 
+
+==== https://textblob.readthedocs.io/en/dev/[TextBlob]
+
+TextBlob ist eine Python Library für das Bearbeiten von Texten.
+
+==== https://fasttext.cc/[FastText]
+
+FastText ist eine Open-Source Library, die es Benutzern erlaubt text represantations und text classifier zu verwenden. 
+
+== Quellen
+
+https://serokell.io/blog/machine-learning-text-analysis
+
+https://monkeylearn.com/text-analysis/
+
+https://data-science-blog.com/blog/2018/10/18/einstieg-in-natural-language-processing-teil-2-preprocessing-von-rohtext-mit-python/
+
+https://stackoverflow.com/questions/10401076/difference-between-constituency-parser-and-dependency-parser
+
+https://towardsdatascience.com/machine-learning-text-processing-1d5a2d638958
+
+https://data-science-blog.com/blog/2018/09/24/einstieg-in-natural-language-processing-teil-1-naturliche-vs-formale-sprachen/
