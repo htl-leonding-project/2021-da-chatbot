@@ -208,9 +208,70 @@ oder
 
 === Vectorization
 
+Systeme können durch Machine Learning Dinge voraussagen, basierend auf vorherigen Eingaben.
+Diese Systeme benötigen Trainingsdaten um die Präzision davon zu steigern. Wenn man also sein System trainieren möchte
+benötigt man eine Darstellungsform, die auch Maschinen verstehen können. Hierbei kommen Vektoren zum Einsatz.
+Durch die Vektoren kann das System dann die wichtigsten Informationen extrahieren und daraus lernen.
+
 === Bag of Words (BOW)
 
+Es gibt hierzu viele Ansätze aber der berühmteste ist die sogenannte *Bag of Words Vectorization*.
+Es ist eine der leichtesten Techniken um Text numerisch zu repräsentieren.
+
+Dabei wird zunächst jedes Wort, welches im Corpus vorkommt als sogenanntes Vokabular gespeichert.
+Danach wird jeder Satz durch 0en und 1en dargestellt, je nachdem ob das Wort im Vokabular existiert oder nicht.
+
+[source,]
+----
+Dies ist ein Bag of Words Beispiel.
+
+Das         0
+Dies        1
+ist         1
+ein         1
+eine        0
+Bag         1
+of          1
+Words       1
+Beispiel    1
+Example     0
+----
+
+=== Term Frequency-Inverse Document Frequency (TF-IDF)
+
+Eine weitere Repräsentation von Texten in Vektoren, kann mach erzielen, indem man die Vorkommen der Wörter in Sätzen zählt.
+
+Der bekannteste und einfachste Weg um dies zu erledigen ist, indem man TF-IDF verwendet.
+
+TF steht hierbei für Term Frequency. Dabei rechnet man die `Anzahl eines Terms der in einem Dokument vorkommt / Anzahl der Terme insgesamt`.
+
+IDF ist der `log(N/n)`, wobei `N` die Anzahl der Dokumente ist und `n` die Anzahl des Termes, wie oft er vorkommt.
+
+Wenn die IDF also hoch ist, bedeutet dies, dass das Wort eher seltener in Sätzen vorkommt.
+
+Ein Beispiel hierfür wäre der Satz `This is a beautiful day`. Bei dem Wort `day` ist der Count besonders hoch, weil das Wort selten vorkommt und so wird angenommen, dass dieses wichtig für die Bedeutung des Satzes ist.
+
+[source,]
+----
+Term        Count
+This        1
+is          1
+a           1
+beautiful   2
+day         5
+----
+
 === Word2Vec
+
+Word2Vec ist das berühmteste Model für *Word Embedding*.
+
+Unter Word Embedding wird verstanden, dass Texte in denen Wörter die selbe Bedeutung haben zusammen repräsentiert werden.
+Es werden also sozusagen alle Wörter in einem Koordinatensystem dargestellt, wobei Wörter, die zusammen gehören nah beieinander sind.
+
+Word2Vec nimmt einen großen Corpus an Text und produziert daraus einen Vektor mit den einzigartigen Wörtern, die ähnlich zu einander sind.
+Es ist sehr berühmt dafür, dass demonstriert werden kann, wie Wörter miteinander verbunden sind.
+
+Ein Beispiel hierfür wäre, dass man erfährt, dass sich `Mann` zu `Frau` verhält, wie sich `Onkel` zu `Tante` verhält.
 
 === NLP und NLU Tools
 
@@ -256,6 +317,38 @@ TextBlob ist eine Python Library für das Bearbeiten von Texten.
 ==== https://fasttext.cc/[FastText]
 
 FastText ist eine Open-Source Library, die es Benutzern erlaubt text represantations und text classifier zu verwenden. 
+
+=== Welche Techniken verwenden die Programme
+
+==== Rasa
+
+In Rasa kann man nachverfolgen, welche Schritte gemacht werden, indem man in `config.yml` File navigiert und sich dort die `pipeline` anzeigen lässt.
+
+[source,python]
+----
+pipeline:
+#  See https://rasa.com/docs/rasa/tuning-your-model for more information.
+   - name: WhitespaceTokenizer
+   - name: RegexFeaturizer
+   - name: LexicalSyntacticFeaturizer
+   - name: CountVectorsFeaturizer
+   - name: CountVectorsFeaturizer
+     analyzer: char_wb
+     min_ngram: 1
+     max_ngram: 4
+   - name: DIETClassifier
+     epochs: 100
+     constrain_similarities: true
+   - name: EntitySynonymMapper
+   - name: ResponseSelector
+     epochs: 100
+     constrain_similarities: true
+   - name: FallbackClassifier
+     threshold: 0.3
+     ambiguity_threshold: 0.1
+----
+
+Genauere Informationen zu den Komponenten, die bei Rasa verwendet werden kann man unter https://rasa.com/docs/rasa/components/[diesem] Link nachlesen.
 
 == Quellen
 
