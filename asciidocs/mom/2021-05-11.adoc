@@ -45,11 +45,11 @@ endif::backend-html5[]
 
 
 == Besprochene Themen
-* Wir können auch ein Halbfertiges Ding nehmen das wir verändern und umbauen => müssen nicht bei 0 anfangen
+* Wir können auch ein halbfertiges Projekt nehmen, welches wir verändern und umbauen => müssen nicht bei 0 anfangen
 
 * So schnell wie möglich mehr Theorie lernen (AI, Tokenization)
 
-* Wenn wir einmal unser Mathematisches Model haben können wir auch zwischen verschiede Technologien wechseln
+* Sobald wir unser mathematisches Model haben, können wir auch zwischen verschiedenen Technologien wechseln
 
 == Vereinbarungen und Entscheidungen
 
@@ -68,6 +68,6 @@ a| Wir verwenden YouTrack für die DA
 | -
 
 | Schüler
-a| Bis zu die Ferien wissen was wir wie machen müssen
+a| Bis zu den Ferien wissen, was wir wie machen müssen
 | Anfang Ferien
 |===
