@@ -45,7 +45,7 @@ endif::backend-html5[]
 
 
 == Besprochene Themen
-* Machine Learning implemntieren durch einfache Vectorization mit Feedback vom User, ob die Antworten sinnvoll sind
+* Machine Learning implementieren durch einfache Vectorization mit Feedback vom User, ob die Antworten sinnvoll sind
 
 * E-Mail-Verläufe als Vorstufe, weil dabei Testdaten (Corpus) verfügbar sind
 
@@ -73,15 +73,15 @@ endif::backend-html5[]
 
 ** Welche Tools kann man wofür verwenden?
 
-* Kapitel im Buch die von Interesse sein könnten:
+* Kapitel im Buch von Manning die von Interesse sein könnten:
 
-** Getting Real
+** Deeper Learning (Neural Networks)
+
+** Getting Real (Real world NLP challenges)
 
 ** Predicting
 
 ** Theano
-
-** Inhaltsverzeichnis
 
 == Vereinbarungen und Entscheidungen
 
