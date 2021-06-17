@@ -28,7 +28,7 @@ Grob kann man behaupten, dass ein text-analysis tool aus drei verschiedenen Schr
 
 3. Zum Schluss wird dann ein Machine learning Algorithmus hinzugefügt, welcher sich um die Analyse kümmert. Diesen kann man entweder komplett selber implementieren oder man nimmt sich Libraries zur Hilfe.
 
-== Natural Language Processing NLP
+== [underline]##N##atural [underline]##L##anguage [underline]##P##rocessing NLP
 
 === Corpus
 
@@ -70,7 +70,7 @@ In diesem Beispiel sah es zwar vielleicht noch danach aus, als könnte man eine 
 8: "
 ----
 
-=== Part-of-speech tagging POS-Tagging
+=== [underline]##P##art-[underline]##o##f-[underline]##s##peech tagging POS-Tagging
 
 Wie der Name schon vermuten lässt, geht es hierbei um das Taggen von Wörtern zu deren zugehörigen Teil der Sprache (Part-of-speech).
 
@@ -94,7 +94,7 @@ the: Article
 U.K.: Noun
 ----
 
-=== Named Entity Recognition tagging NER-Tagging
+=== [underline]##N##amed [underline]##E##ntity [underline]##R##ecognition tagging NER-Tagging
 
 Named Entity Recognition ist eine der wichtigsten Säulen von Natural language processing. Dabei werden Entities aus Texten erkannt und anschließend mit einem Tag der zugehörigen Kategorie versehen.
 
@@ -213,7 +213,26 @@ Diese Systeme benötigen Trainingsdaten um die Präzision davon zu steigern. Wen
 benötigt man eine Darstellungsform, die auch Maschinen verstehen können. Hierbei kommen Vektoren zum Einsatz.
 Durch die Vektoren kann das System dann die wichtigsten Informationen extrahieren und daraus lernen.
 
-=== Bag of Words (BOW)
+
+=== Skalarprodukt
+
+Beim Natural Language Processing benötigt man sehr oft das sogenannte Skalarprodukt. Dieses kann auch als _inneres Produkt_ oder _Punktprodukt_ bezeichnet werden. 
+
+Das *Skalarprodukt* ordnet zwei Vektoren eine Zahl zu.
+
+Ein Skalarprodukt berechnet man wie folgt:
+
+image::./images/dot-product.png[]
+
+=== Kreuzprodukt
+
+Das *Kreuzprodukt* unterscheidet sich vom Skalarprodukt, indem beim Kreuzprodukt von zwei Vektoren das Ergebnis ebenfalls wieder ein Vektor ist. 
+
+Das *Kreuzprodukt* berechnet man, wie der Name schon vermuten lässt indem man die Werte der Vektoren überkreuzt zusammenrechnet.
+
+image::./images/cross-product.jpg[]
+
+=== [underline]##B##ag [underline]##o##f [underline]##W##ords (BOW)
 
 Es gibt hierzu viele Ansätze aber der berühmteste ist die sogenannte *Bag of Words Vectorization*.
 Es ist eine der leichtesten Techniken um Text numerisch zu repräsentieren.
@@ -237,7 +256,37 @@ Beispiel    1
 Example     0
 ----
 
-=== Term Frequency-Inverse Document Frequency (TF-IDF)
+Um die Überlappungen von Bag of Words zu berechnen nutzt man das Skalarprodukt der beiden Vektoren von Sätzen, die man vergleichen will. Bei diesem Skalarprodukt kommt dann immer ein Wert (Skalar) als Ergebnis heraus. 
+
+=== Bag of n-grams
+
+Ein *Bag of n-grams* ist ziemlich ähnlich zu einem *Bag of Words*. Allerdings wird bei einem *Bag of n-grams* ein Text als eine unsortierte Collection von n-grams dargestellt. 
+
+In dem Bag of *n-grams* wird dann die Anzahl, wie oft ein n-gram vorkommt gespeichert. 
+
+Ein n-gram ist eine Sammlung von n aufeinander folgener Wörter. Wenn das `n = 2` ist spricht man von einem bigram, wenn `n = 3` ist von einem trigram und so weiter.  
+
+Somit würde unser vorheriges Beispiel als *bigram* folgendermaßen aussehen:
+
+[source,]
+----
+Dies ist ein Bag of Words Beispiel.
+
+1: <start> Dies
+2: Dies ist
+3: ist ein
+4: ein Bag
+5: Bag of
+6: of Words
+7: Words Beispiel
+8: Beispiel <end>
+----
+
+=== Vector spaces
+
+Ein Vector space ist die Sammlung von allen möglichen Vektoren, die in diesem Raum vorhanden sein dürfen. 
+
+=== Term Frequency times Inverse Document Frequency (TF-IDF)
 
 Eine weitere Repräsentation von Texten in Vektoren, kann mach erzielen, indem man die Vorkommen der Wörter in Sätzen zählt.
 
@@ -247,7 +296,7 @@ TF steht hierbei für Term Frequency. Dabei rechnet man die `Anzahl eines Terms 
 
 IDF ist der `log(N/n)`, wobei `N` die Anzahl der Dokumente ist und `n` die Anzahl des Termes, wie oft er vorkommt.
 
-Wenn die IDF also hoch ist, bedeutet dies, dass das Wort eher seltener in Sätzen vorkommt.
+Wenn die IDF also hoch ist, bedeutet dies, dass das Wort eher seltener in Sätzen vorkommt. Außerdem können auf diese Weise auch Spamwörter weniger Beachtung geschenkt werden. 
 
 Ein Beispiel hierfür wäre der Satz `This is a beautiful day`. Bei dem Wort `day` ist der Count besonders hoch, weil das Wort selten vorkommt und so wird angenommen, dass dieses wichtig für die Bedeutung des Satzes ist.
 
@@ -260,6 +309,26 @@ a           1
 beautiful   2
 day         5
 ----
+
+=== Zipfsches Gesetz
+
+Anfang des 20. Jahrhunderts erkannte der Stenograf Jean-Baptiste Estoup ein Muster beim Vorkommen von Dokumenten und er rechnete sich selbst diese aus. In den 1930ern nutzte der amerikanische Linguist *George Kingsley Zipf* diese Beobachtungen und formulierte ein Gesetz dazu. 
+
+Bei dem Modell des *Zipfschen Gesetzes* kann man bei bestimmten Größen, die in eine Rangfolge gebracht werden, deren Wert aus ihrem Rang abschätzen. 
+
+Vereinfacht besagt das *Zipsche Gesetz*, dass wenn die Elemente einer Menge nach ihrer Häufigkeit geordnet werden, ist die Wahrscheinlichkeit ihres Auftretens umgekehrt proportional zum Platz auf der Häufigkeitsliste.
+
+Das *Zipfsche Gesetz* wird benötigt, wenn man beispielsweise folgendes Szenario hat.
+
+[source,]
+----
+Von 1.000.000 Wörtern gibt es
+
+Apfel: 1 mal
+Birne: 10 mal
+----
+
+Wenn man die Häufigkeit dieser vergleicht, würde man davon ausgehen, dass Birne viel öfter vorkommt als Apfel, weil die Anzahl dieses Worts eine Exponenz von der Anzahl des Wortes Apfel ist. Deswegen besagt das Zipfsche Gesetz, dass man diese Häufigkeiten noch *logarithmieren* sollte. Danach kommt als Ergebnis raus, dass diese Wörter beide nicht wirklich oft vorkommen.
 
 === Word2Vec
 
@@ -363,3 +432,9 @@ https://stackoverflow.com/questions/10401076/difference-between-constituency-par
 https://towardsdatascience.com/machine-learning-text-processing-1d5a2d638958
 
 https://data-science-blog.com/blog/2018/09/24/einstieg-in-natural-language-processing-teil-1-naturliche-vs-formale-sprachen/
+
+https://de.wikipedia.org/wiki/Zipfsches_Gesetz
+
+**Bhargav Srinivasa-Desikan**: _Natural Language Processing and Computational Linguistics: A practical guide to text analysis with Python, Gensim, spaCy, and Keras_ **ISBN**: https://isbnsearch.org/isbn/178883853X[178883853X]
+
+**Hobson Lane**: _Natural Language Processing in Action: Understanding, analyzing, and generating text with Python_ **ISBN**: https://isbnsearch.org/isbn/1617294632[1617294632]
