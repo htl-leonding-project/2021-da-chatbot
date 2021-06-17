@@ -1,3 +1,5 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
 = Deep Learning
 
 == Allgemeines
@@ -8,7 +10,7 @@ Nun geht es um Deep Learning und wie man dieses für seine Anwendung nutzen kann
 
 Den Namen bekommen neuronale Netzwerke von Neuronen, welche man eher unter dem Begriff Nervenzellen kennt. Stark vereinfacht gesagt funktionieren diese indem ein Signal durch die sogenannte _Dendrite_ in den _Nucleus_ oder _Zellkern_ fließt und sich eine elektrische Ladung beginnt aufzubauen. Sobald die Ladung groß genug ist wird ein elektrisches Signal durch das _Axon_ gefeuert. Dendriten sind allerdings nicht alle gleich beschaffen und so werden manche Signale stärker angenommen als andere und somit wiegen Nervenzellen die Signale ab und entscheiden dann wann ein elektrisches Signal gefeuert werden soll oder nicht. Bei *neuronalen Netzwerken* ist dies auf eine andere Weise auch der Fall.
 
-image::./images/neuron.png[]
+ifdef::backend-html5,backend-revealjs[image:neuron.png[width=80%]]
 
 === Perzeptron
 
@@ -34,7 +36,7 @@ Mit Backpropagation kann man also den Betrag um eine Gewichtung zu ändern erfah
 
 Ein neuronales Netzwerk ist im Endeffekt eine Sammlung von Neuronen, die miteinander verbunden sind. Wenn man eine Architektur hat, bei der der Output zu einem weiteren Input wird spricht man auch von sogenannten **hidden neurons**. Ein solches Netz wird dann als *fully connected network* bezeichnet. 
 
-image::./images/fully-connected-neural-net.png[]
+ifdef::backend-html5,backend-revealjs[image:fully-connected-neural-net.png[width=80%]]
 
 == Word Vectors
 
@@ -97,11 +99,11 @@ Tatsächlich war das Word2Vec Model als es 2013 vorgestellt wurde viel genauer m
 
 Hier ist ein Beispiel aus dem Buch "_Natural Language Processing in Action: Understanding, analyzing, and generating text with Python_" bei dem gezeigt wird, wie ein Team gefunden wird (_Seattle sounders_) indem man die _Portland timbers_ aus _Portland_ mit einem Team aus _Seattle_ vergleichen will. 
 
-image::./images/geometry-word2vec.png[]
+ifdef::backend-html5,backend-revealjs[image:geometry-word2vec.png[]]
 
 Man kann also erkennen, dass der Abstand zwischen Seattle und Portland ähnlich zu dem von Seattle sounders und Portland timbers ist. Wenn man also `Seattle + Portland timbers - portland` rechnet ergibt sich folgendes:
 
-image::./images/compute-word2vec.png[]
+ifdef::backend-html5,backend-revealjs[image:compute-word2vec.png[]]
 
 Außerdem wurden noch andere Beziehungen zwischen Wörtern durch Word2Vec dargestellt, und so kam man beispielsweise darauf, dass der Unterschied zwischen zwei Singular und Plural Formen verschiedener Wörter ungefähr derselbe ist.
 
@@ -130,17 +132,17 @@ Die Beziehungen von Wörtern können multilayer perceptrons zwar erfassen, aller
 
 Der Name Convolutional stammt von dem Prinzip, dass man ein schmales Fenster sozusagen über die Daten gehen lässt und man dabei nur den Teil betrachtet, der durch das Fenster gesehen werden kann. 
 
-image::./images/convolutional.png[]
+ifdef::backend-html5,backend-revealjs[image:convolutional.png[]]
 
 Convolutional Neural Networks wurden zuerst für die Bilderkennung gemacht aber sie funktionieren nach dem selben Prinzip auch für Texte. Ein convolutional net gibt den einzelnen Elementen keine Gewichtung sondern es definiert ein Set von Filtern, die angewendet werden. 
 
 Wenn wir also bei diesem Beispiel von Bildern bleiben, kann jedes Bild durch einzelne Pixel dargestellt werden, welche entweder schwarz oder weiß sind bei einem schwarz-weiß Bild oder verschiedene Graustufen besitzen.
 
-image::./images/convolutional-net.png[]
+ifdef::backend-html5,backend-revealjs[image:convolutional-net.png[]]
 
 Jeder Filter wird also über dieses Netz von Daten convoliert und fährt sozusagen, wie das Fenster, welches vorher beschrieben wurde über diese Werte. Dies macht er indem er immer einen Wert nimmt und diesen mit den Werten des Filters multipliziert. Wenn man also wie hier einen 3x3 Filter hat wird jeder Wert des Inputs mit der Gewichtung dieses Filters multipliziert und diese Werte werden dann addiert wieder zu einem Wert zusammengefasst, wie in der Grafik zu sehen ist.
 
-image::./images/convolution-example.png[]
+ifdef::backend-html5,backend-revealjs[image:convolution-example.png[]]
 
 Diese Art des Lernens kann nun nicht nur auf Bilder sondern auch auf Texte angewendet werden. 
 
@@ -157,7 +159,7 @@ Dies passiert in dem der "finale" Output mit der gewünschten Ausgabe verglichen
 
 Dann "gehen wir in die Vergangenheit" und wiederholen den Prozess, aber passen die Gewichtung der einzelnen Ausgaben an, und hoffentlich erhalten wir so einen möglichst geringen Fehler.
 
-image::./images/SNN.png[]
+ifdef::backend-html5,backend-revealjs[image:SNN.png[width=80%]]
 
 === LSTM
 

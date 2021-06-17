@@ -1,3 +1,5 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
 = Text analysis
 
 == Text analysis vs. text mining vs. text analytics
@@ -222,7 +224,7 @@ Das *Skalarprodukt* ordnet zwei Vektoren eine Zahl zu.
 
 Ein Skalarprodukt berechnet man wie folgt:
 
-image::./images/dot-product.png[]
+ifdef::backend-html5,backend-revealjs[image:dot-product.png[]]
 
 === Kreuzprodukt
 
@@ -230,7 +232,7 @@ Das *Kreuzprodukt* unterscheidet sich vom Skalarprodukt, indem beim Kreuzprodukt
 
 Das *Kreuzprodukt* berechnet man, wie der Name schon vermuten lässt indem man die Werte der Vektoren überkreuzt zusammenrechnet.
 
-image::./images/cross-product.jpg[]
+ifdef::backend-html5,backend-revealjs[image:cross-product.jpg[]]
 
 === [underline]##B##ag [underline]##o##f [underline]##W##ords (BOW)
 
