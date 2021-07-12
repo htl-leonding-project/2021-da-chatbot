@@ -1,0 +1,19 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hallo", "Ist hier jemand?", "Servus", "Grüß Gott"],
+     "responses": ["Hallo", "Hi", "Servus"]
+    },
+  {"tag": "aboutSchool",
+    "patterns": ["Was ist die HTL Leonding?", "HTL Leonding?"],
+    "responses": ["Die HTL Leonding ist eine höhere Schule in Österreich"]
+  },
+  {"tag": "aboutBrach",
+    "patterns": ["Welche Fachrichtungen gibt es?","Welche Zweige gibt es?", "Was kann man bei euch lernen"],
+    "responses": ["Es gibt 4 verschiedene Zweige in jedem herrscht ein anderer Fokus es gibt: Informatik, Medientechnik, Elektronik und Medizintechnik"]
+  },
+  {"tag": "medientechnik",
+    "patterns": ["Medientechnik?","Was weißt du über Medientechnik?", "Was lernt man im Medientechnik Zweig"],
+    "responses": ["Im Medientechnik Zweig lernt man alles über Fotografie und PrintDesign aber auch viel übers programmieren"]
+  }
+  ]
+  }
