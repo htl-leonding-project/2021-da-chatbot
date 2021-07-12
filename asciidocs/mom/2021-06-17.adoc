@@ -37,7 +37,9 @@ endif::backend-html5[]
 |Online (Discord)
 
 |von-bis
-|Do. 17.06.2021, 18 - 20:00 Uhr
+|Do. 17.06.2021, 19 - 19:40 Uhr
+|Dauer
+|40 Minuten
 |===
 
 
