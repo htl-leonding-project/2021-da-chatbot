@@ -57,9 +57,9 @@ endif::backend-html5[]
 
 ** Wie verwendet man Rasa mit SpaCy
 
-* Sind Cloudprodukte, wie Keras oder TensorFlow wirklich besser? (z.B. aufgrund der besseren Rechenleistung)
+* Sind Cloudprodukte, wie Keras oder TensorFlow wirklich besser? (z. B. aufgrund der besseren Rechenleistung)
 
-* Rechner auf dem man mit der 2D Leonie chatten kann sollte bis September eingerichtet werden
+* Rechner, auf dem man mit der 2D Leonie chatten kann, sollte bis September eingerichtet werden
 
 * Mathematische Modelle: CNN (Convolutional Neural Networks), Recurrent Neural Networks im Kontext
 

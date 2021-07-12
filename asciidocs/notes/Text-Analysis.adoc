@@ -8,9 +8,9 @@ Meistens werden *text analysis* und *text mining* im selben Zusammenhang verwend
 
 Aber es gibt einen Unterschied zwischen *text analysis* und *text analytics*. Grundsätzlich kann man dabei sagen, dass *text analysis* qualitative Ergebnisse liefert, wohingegen es bei *text analytics* mehr um die Quantität geht. 
 
-Bei *text analysis* werden also wichtige Informationen aus der Nachricht herausgelesen. Oder anders formuliert geht es darum, dass trotz der Vielseitigkeiten der menschlichen Sprache trotzdem die Kernaussage herausgefunden werden kann, mit der dann gearbeitet wird. Es können also dann Informationen herausgefiltert werden, wie beispielsweise, ob etwas positiv oder negativ ist oder was das Haupttheme des Textes ist.
+Bei *text analysis* werden also wichtige Informationen aus der Nachricht herausgelesen. Oder anders formuliert geht es darum, dass trotz der Vielseitigkeiten der menschlichen Sprache trotzdem die Kernaussage herausgefunden werden kann, mit der dann gearbeitet wird. Es können also dann Informationen herausgefiltert werden, wie beispielsweise, ob etwas positiv oder negativ ist oder was das Hauptthema des Textes ist.
 
-Auf der anderen Seite wird bei *text analytics* werden verschiedene Muster aus einer großen Menge an Nachrichten herausgefiltert, welche dann in Graphen, Tabellen oder Berichten gezeigt werden können. Bei der *text analytics* geht es also darum Muster und Entwicklungen von numerischen Ergebnissen herauszufinden. Es können also dann Informationen herausgefiltert werden, wie beispielsweise, die Prozentanzahl der positiven Bewertungen.
+Auf der anderen Seite wird bei *text analytics* werden verschiedene Muster aus einer großen Menge an Nachrichten herausgefiltert, welche dann in Graphen, Tabellen oder Berichten gezeigt werden können. Bei der *text analytics* geht es also darum Muster und Entwicklungen von numerischen Ergebnissen herauszufinden. Es können also dann Informationen herausgefiltert werden, wie beispielsweise, die Prozentzahl der positiven Bewertungen.
 
 == Warum text analysis
 
@@ -24,7 +24,7 @@ Durch Algorithmen werden außerdem Fehler reduziert, die bei manuellem Bearbeite
 
 Grob kann man behaupten, dass ein text-analysis tool aus drei verschiedenen Schritten besteht.
 
-1. Zunächst muss man sich überlegen, welche Daten gesammelt werden sollen um damit sein Model zu trainieren und testen. Man unterscheidet hierbei zwischen *internal data* und *external data*. Unter *external data* werden Quellen, wie Zeitungen oder Foren bezeichnet und zu der *internal data* zählen sämtliche Daten, die eine Firma jeden Tag generiert, wie E-Mails, Reports, Chats, Umfragen oder aus Datenbanken oder Product Analytics.
+1. Zunächst muss man sich überlegen, welche Daten gesammelt werden sollen, um damit sein Model zu trainieren und testen. Man unterscheidet hierbei zwischen *internal data* und *external data*. Unter *external data* werden Quellen, wie Zeitungen oder Foren bezeichnet und zu der *internal data* zählen sämtliche Daten, die eine Firma jeden Tag generiert, wie E-Mails, Reports, Chats, Umfragen oder aus Datenbanken oder Product Analytics.
 
 2. Danach müssen die Daten vorbereitet werden, damit das Programm diese versteht. Dieser Schritt wird meistens als *data preprocessing* bezeichnet. 
 
@@ -34,7 +34,7 @@ Grob kann man behaupten, dass ein text-analysis tool aus drei verschiedenen Schr
 
 === Corpus
 
-Unter dem *Corpus* werden die Daten bezeichnet, die verwendet werden um das NLP Model zu trainieren, damit dieses menschliche Sprache versteht und damit arbeiten kann. 
+Unter dem *Corpus* werden die Daten bezeichnet, die verwendet werden, um das NLP Model zu trainieren, damit dieses menschliche Sprache versteht und damit arbeiten kann.
 
 === Tokenization
 
@@ -80,7 +80,7 @@ Als Teil einer Sprache werden normalerweise Kategorien von Wörtern bezeichnet, 
 
 Beim Tagging werden entweder Statistiken angewendet, wie beispielsweise, dass es sehr wahrscheinlich ist, dass nach einem Artikel ein Nomen folgt. 
 
-Außerdem gibt es sogenannte *rule-based POS-taggers*, welche vordefinierte Regeln verwenden um das Tagging zu vollziehen oder diese Regeln basierend auf dem Corpus erstellen. 
+Außerdem gibt es sogenannte *rule-based POS-taggers*, welche vordefinierte Regeln verwenden, um das Tagging zu vollziehen oder diese Regeln basierend auf dem Corpus erstellen.
 
 Ein Beispiel für *POS-Tagging* könnte also folgendermaßen aussehen:
 
@@ -100,7 +100,7 @@ U.K.: Noun
 
 Named Entity Recognition ist eine der wichtigsten Säulen von Natural language processing. Dabei werden Entities aus Texten erkannt und anschließend mit einem Tag der zugehörigen Kategorie versehen.
 
-Beispiele für Entites wären also:
+Beispiele für Entities wären also:
 
 [source,]
 ----
@@ -118,7 +118,7 @@ LANGUAGE    Sprachen
 
 Andere häufig durchgeführte Schritte beim Preprocessing von Texten sind das *Stemming* sowie *Lemmatization*.
 
-Beim *Stemming* werden die werden die Suffixe und Prefixe der einzelnen *Tokens* des Textes mit Hilfe eines Stemmers in eine Form überführt, welche nur den Wortstamm zurücklässt. 
+Beim *Stemming* werden die Suffixe und Prefixe der einzelnen *Tokens* des Textes mithilfe eines Stemmers in eine Form überführt, welche nur den Wortstamm zurücklässt.
 
 Stemming wird dazu verwendet, dass nicht alle verschiedenen Formen von 
 
@@ -158,7 +158,7 @@ meeting ---> meet (wenn es als Verb gebraucht wird)
 
 === Parsing
 
-Es gibt zwei verschiedene Arten von Parsing. *Dependency parsing* und *constituency parsing*. Parsing könnte man so beschreiben, dass es eine Art ist um einen Satz auseinanderzuteilen um die Struktur des Satzes zu verstehen. 
+Es gibt zwei verschiedene Arten von Parsing. *Dependency parsing* und *constituency parsing*. Parsing könnte man so beschreiben, dass es eine Art ist um einen Satz auseinanderzuteilen, um die Struktur des Satzes zu verstehen.
 
 ==== Dependency parsing
 
@@ -176,7 +176,7 @@ subject |              | object
 
 ==== Constituency parsing
 
-Bei diesem werden Sätze in Phrasen, oder seperate constitutents, geteilt. Das bedeutet, dass man beim constitutency parsing im Gegensatz zum dependency parsing, wo man Beziehungen zwischen den Wörtern bekommt, man die Sätze gruppieren kann. Dies hilft also um die Struktur von Sätzen zu zeigen. Der Nachteil hierbei ist, dass es keinen Context gibt bei der Grammatik, dafür kann man aber gut nachweisen, ob ein Satz grammatikalisch korrekt oder inkorrekt ist. 
+Bei diesem werden Sätze in Phrasen, oder seperate constitutents, geteilt. Das bedeutet, dass man beim constituency parsing im Gegensatz zum dependency parsing, wo man Beziehungen zwischen den Wörtern bekommt, man die Sätze gruppieren kann. Dies hilft also, um die Struktur von Sätzen zu zeigen. Der Nachteil hierbei ist, dass es keinen Context gibt bei der Grammatik, dafür kann man aber gut nachweisen, ob ein Satz grammatikalisch korrekt oder inkorrekt ist.
 
 [source,]
 ----
@@ -195,7 +195,7 @@ Bei diesem werden Sätze in Phrasen, oder seperate constitutents, geteilt. Das b
 
 === Stopwords
 
-Unter Stopwords werden Worter verstanden, welche zwar häufig vorkommen, aber nicht wirklich viel zum Informationsgehalt eines Satzes beitragen.
+Unter Stopwords werden Wörter verstanden, welche zwar häufig vorkommen, aber nicht wirklich viel zum Informationsgehalt eines Satzes beitragen.
 
 Beispiele in der deutschen Sprache wären:
 
@@ -211,7 +211,7 @@ oder
 === Vectorization
 
 Systeme können durch Machine Learning Dinge voraussagen, basierend auf vorherigen Eingaben.
-Diese Systeme benötigen Trainingsdaten um die Präzision davon zu steigern. Wenn man also sein System trainieren möchte
+Diese Systeme benötigen Trainingsdaten, um die Präzision davon zu steigern. Wenn man also sein System trainieren möchte
 benötigt man eine Darstellungsform, die auch Maschinen verstehen können. Hierbei kommen Vektoren zum Einsatz.
 Durch die Vektoren kann das System dann die wichtigsten Informationen extrahieren und daraus lernen.
 
@@ -230,7 +230,7 @@ ifdef::backend-html5,backend-revealjs[image:dot-product.png[]]
 
 Das *Kreuzprodukt* unterscheidet sich vom Skalarprodukt, indem beim Kreuzprodukt von zwei Vektoren das Ergebnis ebenfalls wieder ein Vektor ist. 
 
-Das *Kreuzprodukt* berechnet man, wie der Name schon vermuten lässt indem man die Werte der Vektoren überkreuzt zusammenrechnet.
+Das *Kreuzprodukt* berechnet man, wie der Name schon vermuten lässt, indem man die Werte der Vektoren überkreuzt zusammenrechnet.
 
 ifdef::backend-html5,backend-revealjs[image:cross-product.jpg[]]
 
@@ -258,7 +258,7 @@ Beispiel    1
 Example     0
 ----
 
-Um die Überlappungen von Bag of Words zu berechnen nutzt man das Skalarprodukt der beiden Vektoren von Sätzen, die man vergleichen will. Bei diesem Skalarprodukt kommt dann immer ein Wert (Skalar) als Ergebnis heraus. 
+Um die Überlappungen von Bag of Words zu berechnen, nutzt man das Skalarprodukt der beiden Vektoren von Sätzen, die man vergleichen will. Bei diesem Skalarprodukt kommt dann immer ein Wert (Skalar) als Ergebnis heraus.
 
 === Bag of n-grams
 
@@ -266,7 +266,7 @@ Ein *Bag of n-grams* ist ziemlich ähnlich zu einem *Bag of Words*. Allerdings w
 
 In dem Bag of *n-grams* wird dann die Anzahl, wie oft ein n-gram vorkommt gespeichert. 
 
-Ein n-gram ist eine Sammlung von n aufeinander folgener Wörter. Wenn das `n = 2` ist spricht man von einem bigram, wenn `n = 3` ist von einem trigram und so weiter.  
+Ein n-gram ist eine Sammlung von n aufeinander folgender Wörter. Wenn das n = 2 ist, spricht man von einem bigram, wenn `n = 3` ist von einem trigram und so weiter.
 
 Somit würde unser vorheriges Beispiel als *bigram* folgendermaßen aussehen:
 
@@ -294,9 +294,9 @@ Eine weitere Repräsentation von Texten in Vektoren, kann mach erzielen, indem m
 
 Der bekannteste und einfachste Weg um dies zu erledigen ist, indem man TF-IDF verwendet.
 
-TF steht hierbei für Term Frequency. Dabei rechnet man die `Anzahl eines Terms der in einem Dokument vorkommt / Anzahl der Terme insgesamt`.
+TF steht hierbei für Term Frequency. Dabei rechnet man die `Anzahl eines Terms, der in einem Dokument vorkommt / Anzahl der Terme insgesamt`.
 
-IDF ist der `log(N/n)`, wobei `N` die Anzahl der Dokumente ist und `n` die Anzahl des Termes, wie oft er vorkommt.
+IDF ist der `log(N/n)`, wobei `N` die Anzahl der Dokumente ist und `n` die Anzahl des Terms, wie oft er vorkommt.
 
 Wenn die IDF also hoch ist, bedeutet dies, dass das Wort eher seltener in Sätzen vorkommt. Außerdem können auf diese Weise auch Spamwörter weniger Beachtung geschenkt werden. 
 
@@ -318,7 +318,7 @@ Anfang des 20. Jahrhunderts erkannte der Stenograf Jean-Baptiste Estoup ein Must
 
 Bei dem Modell des *Zipfschen Gesetzes* kann man bei bestimmten Größen, die in eine Rangfolge gebracht werden, deren Wert aus ihrem Rang abschätzen. 
 
-Vereinfacht besagt das *Zipsche Gesetz*, dass wenn die Elemente einer Menge nach ihrer Häufigkeit geordnet werden, ist die Wahrscheinlichkeit ihres Auftretens umgekehrt proportional zum Platz auf der Häufigkeitsliste.
+Vereinfacht besagt das *Zipfsche Gesetz*, dass wenn die Elemente einer Menge nach ihrer Häufigkeit geordnet werden, ist die Wahrscheinlichkeit ihres Auftretens umgekehrt proportional zum Platz auf der Häufigkeitsliste.
 
 Das *Zipfsche Gesetz* wird benötigt, wenn man beispielsweise folgendes Szenario hat.
 
@@ -336,10 +336,10 @@ Wenn man die Häufigkeit dieser vergleicht, würde man davon ausgehen, dass Birn
 
 Word2Vec ist das berühmteste Model für *Word Embedding*.
 
-Unter Word Embedding wird verstanden, dass Texte in denen Wörter die selbe Bedeutung haben zusammen repräsentiert werden.
-Es werden also sozusagen alle Wörter in einem Koordinatensystem dargestellt, wobei Wörter, die zusammen gehören nah beieinander sind.
+Unter Word Embedding wird verstanden, dass Texte in denen Wörter dieselbe Bedeutung haben zusammen repräsentiert werden.
+Es werden also sozusagen alle Wörter in einem Koordinatensystem dargestellt, wobei Wörter, die zusammen gehören, nah beieinander sind.
 
-Word2Vec nimmt einen großen Corpus an Text und produziert daraus einen Vektor mit den einzigartigen Wörtern, die ähnlich zu einander sind.
+Word2Vec nimmt einen großen Corpus an Text und produziert daraus einen Vektor mit den einzigartigen Wörtern, die ähnlich zueinander sind.
 Es ist sehr berühmt dafür, dass demonstriert werden kann, wie Wörter miteinander verbunden sind.
 
 Ein Beispiel hierfür wäre, dass man erfährt, dass sich `Mann` zu `Frau` verhält, wie sich `Onkel` zu `Tante` verhält.
@@ -356,7 +356,7 @@ Außerdem gibt es viele eingebaute Libraries für das Analysieren eines Textes, 
 
 SpaCy ist ebenfalls eine sehr berühmte Bibliothek für Python. SpaCy beschreibt sich selbst als "Industrial-Strength Natural Language Processing" und unterstützt über 64 Sprachen.
 
-SpaCy hat nur einen POS-Tagging Algorithmus und pro Sprache nur einen Named-Entity-Recognizer, was den Vorteil hat, dass es nicht voller unnötiger Features ist und sich nur auf ein paar wichtige Funktionalitäten konzentriert. 
+SpaCy hat nur einen POS-Tagging-Algorithmus und pro Sprache nur einen Named-Entity-Recognizer, was den Vorteil hat, dass es nicht voller unnötiger Features ist und sich nur auf ein paar wichtige Funktionalitäten konzentriert.
 
 ==== https://www.tensorflow.org/[TensorFlow]
 
@@ -387,7 +387,7 @@ TextBlob ist eine Python Library für das Bearbeiten von Texten.
 
 ==== https://fasttext.cc/[FastText]
 
-FastText ist eine Open-Source Library, die es Benutzern erlaubt text represantations und text classifier zu verwenden. 
+FastText ist eine Open-Source Library, die es Benutzern erlaubt text representations und text classifier zu verwenden.
 
 === Welche Techniken verwenden die Programme
 

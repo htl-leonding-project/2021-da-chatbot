@@ -4,11 +4,11 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 == Allgemeines
 
-In dem Skript https://htl-leonding-project.github.io/2021-da-chatbot/notes/Text-Analysis.adoc[Text Analysis] ging es bereits über Natural Language Processing und die Konzepte von Machine Learning, indem man unter anderem Vektoren verwendet. Diese benötigt man um die Verbindungen zwischen Wörtern zu verstehen und Statistiken anfertigen zu können. 
+In dem Skript https://htl-leonding-project.github.io/2021-da-chatbot/notes/Text-Analysis.adoc[Text Analysis] ging es bereits über Natural Language Processing und die Konzepte von Machine Learning, indem man unter anderem Vektoren verwendet. Diese benötigt man, um die Verbindungen zwischen Wörtern zu verstehen und Statistiken anfertigen zu können.
 
 Nun geht es um Deep Learning und wie man dieses für seine Anwendung nutzen kann. Für den Begriff *Deep Learning* gibt es verschiedene Definitionen aber meist versteht man darunter, wenn man mehrschichtige *neuronale Netzwerke* für *Machine Learning* verwendet. 
 
-Den Namen bekommen neuronale Netzwerke von Neuronen, welche man eher unter dem Begriff Nervenzellen kennt. Stark vereinfacht gesagt funktionieren diese indem ein Signal durch die sogenannte _Dendrite_ in den _Nucleus_ oder _Zellkern_ fließt und sich eine elektrische Ladung beginnt aufzubauen. Sobald die Ladung groß genug ist wird ein elektrisches Signal durch das _Axon_ gefeuert. Dendriten sind allerdings nicht alle gleich beschaffen und so werden manche Signale stärker angenommen als andere und somit wiegen Nervenzellen die Signale ab und entscheiden dann wann ein elektrisches Signal gefeuert werden soll oder nicht. Bei *neuronalen Netzwerken* ist dies auf eine andere Weise auch der Fall.
+Den Namen bekommen neuronale Netzwerke von Neuronen, welche man eher unter dem Begriff Nervenzellen kennt. Stark vereinfacht gesagt funktionieren diese, indem ein Signal durch die sogenannte _Dendrite_ in den _Nucleus_ oder _Zellkern_ fließt und sich eine elektrische Ladung beginnt aufzubauen. Sobald die Ladung groß genug ist wird ein elektrisches Signal durch das _Axon_ gefeuert. Dendriten sind allerdings nicht alle gleich beschaffen und so werden manche Signale stärker angenommen als andere und somit wiegen Nervenzellen die Signale ab und entscheiden dann, wann ein elektrisches Signal gefeuert werden soll oder nicht. Bei *neuronalen Netzwerken* ist dies auf eine andere Weise auch der Fall.
 
 ifdef::backend-html5,backend-revealjs[image:neuron.png[width=80%]]
 
@@ -16,9 +16,9 @@ ifdef::backend-html5,backend-revealjs[image:neuron.png[width=80%]]
 
 Das *Perzeptron* ist ein vereinfachtes künstliches neuronales Netz, welches zuerst von Frank Rosenblatt im Jahre 1958 vorgestellt wurde. Das besondere hierbei ist, dass es nur einem einzigen künstlichen Neuron besteht. 
 
-Rosenblatt wollte Maschinen beibringen, dass diese Bilder erkennen können und so wollte er einzelnen Bildern eine Gewichtung verleihen, was in dem Zussamenhang mit Neuronen, wie bereits besprochen, gleichzustellen mit der Wichtigkeit ist. Dabei sollte jeder Rezeptor einen kleinen Teil des Bildes sehen und die Helligkeit die ein einzelner Rezeptor sieht, sollte dann die Stärke des Signals bestimmen. 
+Rosenblatt wollte Maschinen beibringen, dass diese Bilder erkennen können und so wollte er einzelnen Bildern eine Gewichtung verleihen, was in dem Zusammenhang mit Neuronen, wie bereits besprochen, gleichzustellen mit der Wichtigkeit ist. Dabei sollte jeder Rezeptor einen kleinen Teil des Bildes sehen und die Helligkeit, die ein einzelner Rezeptor sieht, sollte dann die Stärke des Signals bestimmen.
 
-Wenn nun also genug Signale kamen wurde das Axion gefeuert, welches zeigte, dass ein Bild erkannt wurde. In diesem Fall gibt es nur zwei Zustände. Entweder das Bild wird erkannt oder es wird nicht erkannt. 
+Wenn nun also genug Signale kamen wurde das Axon gefeuert, welches zeigte, dass ein Bild erkannt wurde. In diesem Fall gibt es nur zwei Zustände. Entweder das Bild wird erkannt oder es wird nicht erkannt.
 
 === Numerisches Perzeptron
 
@@ -30,11 +30,11 @@ Bei Rosenblatt's Experiment brauchte man also noch die Gewichtung (**weight**), 
 
 *Backpropagation* oder auch *Backpropagation of Error* oder *Fehlerrückführung* genannt, ist ein Verfahren für das Einlernen von künstlichen neuronalen Netzen. 
 
-Geoffrey E. Hinton und sein Team zeigten, dass es einen Weg gibt, wie man mehrere Perzeptronen zur selben Zeit mit einem Ziel verwenden kann, was viele Probleme lösen würde. Dies ist auch die Grundlage von *Deep Learning*. Die ungeklärten Fragen waren aber, wie man die Gewichtung dieser Perzeptronen ändern kann, weil wenn aus einem Output eines Perzeptrons wieder der Input für dieses folgt bringt dies nichts und man erreicht nichts. Backpropagation hilft genau hier aus.
+Geoffrey E. Hinton und sein Team zeigten, dass es einen Weg gibt, wie man mehrere Perzeptronen zur selben Zeit mit einem Ziel verwenden kann, was viele Probleme lösen würde. Dies ist auch die Grundlage von *Deep Learning*. Die ungeklärten Fragen waren aber, wie man die Gewichtung dieser Perzeptronen ändern kann, weil wenn aus einem Output eines Perzeptrons wieder der Input für dieses folgt, bringt dies nichts und man erreicht nichts. Backpropagation hilft genau hier aus.
 
-Mit Backpropagation kann man also den Betrag um eine Gewichtung zu ändern erfahren, indem man den Input, den Output und den erwarteten Wert gegeben hat. 
+Mit Backpropagation kann man also den Betrag um eine Gewichtung zu ändern erfahren, indem man den Input, den Output und den erwarteten Wert gegeben hat.
 
-Ein neuronales Netzwerk ist im Endeffekt eine Sammlung von Neuronen, die miteinander verbunden sind. Wenn man eine Architektur hat, bei der der Output zu einem weiteren Input wird spricht man auch von sogenannten **hidden neurons**. Ein solches Netz wird dann als *fully connected network* bezeichnet. 
+Ein neuronales Netzwerk ist im Endeffekt eine Sammlung von Neuronen, die miteinander verbunden sind. Wenn man eine Architektur hat, bei der der Output zu einem weiteren Input wird, spricht man auch von sogenannten **hidden neurons**. Ein solches Netz wird dann als *fully connected network* bezeichnet.
 
 ifdef::backend-html5,backend-revealjs[image:fully-connected-neural-net.png[width=80%]]
 
@@ -42,7 +42,7 @@ ifdef::backend-html5,backend-revealjs[image:fully-connected-neural-net.png[width
 
 Zurzeit haben wir den Kontext von Wörtern in einem Satz neben dem zu analysierenden Wort ignoriert. Tatsächlich ändern die Wortnachbarn aber sehr viel und tragen viel zur Bedeutung eines Wortes bei. 
 
-Mit Word Vectors kann man Beispielsweise Synonyme (Wörter mit gleicher Bedeutung), Antonyme (Wörter mit gegenseitiger Bedeutung) oder auch Wörter, die zu der selben Kategorie zählen erkennen. 
+Mit Word Vectors kann man Beispielsweise Synonyme (Wörter mit gleicher Bedeutung), Antonyme (Wörter mit gegenseitiger Bedeutung) oder auch Wörter, die zu derselben Kategorie zählen erkennen.
 
 Durch die großen Bag of Words bei der Latent Semantic Analysis gehen oft die zusätzlichen Bedeutungen eines Wortes verloren, deshalb werden hierbei viel kleiner Bag of Words erstellt. 
 
@@ -57,7 +57,7 @@ Word Vectors sind hilfreich um Wörter zu finden, welche sich aus der Bedeutung 
 Eine Frau, die in Europa im frühen 20. Jahrhundert im Bereich der Physik etwas erfunden hat.
 ----
 
-Wenn man nach einer solchen Frage suchen würde, würde man vermutlich nur eine Liste von berühmten Physikerinnen und Physikern bekommen, bis man dann anschließend realisiert, dass man auf den Begriff `Marie Curie` kommen wollte. Sobald man allerdings die korrekte Antwort definiert hat kann es sein, dass beim nächsten Mal wenn man dies nachschlägt bereits die richtige Antwort bekommt.
+Wenn man nach einer solchen Frage suchen würde, würde man vermutlich nur eine Liste von berühmten Physikerinnen und Physikern bekommen, bis man dann anschließend realisiert, dass man auf den Begriff `Marie Curie` kommen wollte. Sobald man allerdings die korrekte Antwort definiert hat, kann es sein, dass beim nächsten Mal, wenn man dies nachschlägt bereits die richtige Antwort bekommt.
 
 Ähnlich ist es, wenn man Word Vectors verwendet. Mit diesen könnte man hier nach einem Wort suchen, dass die Bedeutung von `Physik`, `weiblich`, `Europa`, `20. Jahrhundert` vereint. 
 
@@ -80,8 +80,8 @@ Welches Team ist für Graz, was Red Bull Salzburg für Salzburg ist?
 
 Word2Vec ist das berühmteste Model für *Word Embedding*.
 
-Unter Word Embedding wird verstanden, dass Texte in denen Wörter die selbe Bedeutung haben zusammen repräsentiert werden.
-Es werden also sozusagen alle Wörter in einem Koordinatensystem dargestellt, wobei Wörter, die zusammen gehören nah beieinander sind.
+Unter Word Embedding wird verstanden, dass Texte in denen Wörter dieselbe Bedeutung haben zusammen repräsentiert werden.
+Es werden also sozusagen alle Wörter in einem Koordinatensystem dargestellt, wobei Wörter, die zusammen gehören, nah beieinander sind.
 
 2012 erfand Thomas Mikolov, als er bei Microsoft arbeitete, einen Weg um die Bedeutung von Wörtern in einem Vektor darstellen kann. 2013 veröffentlichten er und seine Mitarbeiter dann die Software, die dies kann mit dem Namen *Word2Vec*, als sie bei Google arbeiteten. Bei Word2Vec muss man nicht beispielsweise angeben, dass Marie Curie eine Wissenschaftlerin ist und, dass Salzburg und Graz Städte sind, sondern man muss lediglich einen Textcorpus haben, der groß genug ist und diese Wörter besitzt. 
 
@@ -93,15 +93,15 @@ Beim *unsupervised learning* müssen die Trainingsdaten nicht gelabeled werden. 
 
 ==== Supervised Learning
 
-Beim *supervised learning* müssen die gesamten Traningsdaten in irgendeiner Weise gelabeled werden. Es muss also beispielsweise eine Mail mit Spam getagged werden oder eine Nachricht mit Likes versehen werden. Ein Model, welches *supervised learning* verwendet, wird nur besser, indem man die Unterschiede zwischen erwartetem Output und den Predictions messen kann. 
+Beim *supervised learning* müssen die gesamten Trainingsdaten in irgendeiner Weise gelabeled werden. Es muss also beispielsweise eine Mail mit Spam getagged werden oder eine Nachricht mit Likes versehen werden. Ein Model, welches *supervised learning* verwendet, wird nur besser, indem man die Unterschiede zwischen erwartetem Output und den Predictions messen kann.
 
-Tatsächlich war das Word2Vec Model als es 2013 vorgestellt wurde viel genauer mit 45% richtigen Antworten zu Fragen, die den obigen ähneln, als ein normales Latent Semantic Analysis Model mit nur 11%. 
+Tatsächlich war das Word2Vec Model als es 2013 vorgestellt wurde viel genauer mit 45 % richtigen Antworten zu Fragen, die den obigen ähneln, als ein normales Latent Semantic Analysis Model mit nur 11 %.
 
 Hier ist ein Beispiel aus dem Buch "_Natural Language Processing in Action: Understanding, analyzing, and generating text with Python_" bei dem gezeigt wird, wie ein Team gefunden wird (_Seattle sounders_) indem man die _Portland timbers_ aus _Portland_ mit einem Team aus _Seattle_ vergleichen will. 
 
 ifdef::backend-html5,backend-revealjs[image:geometry-word2vec.png[]]
 
-Man kann also erkennen, dass der Abstand zwischen Seattle und Portland ähnlich zu dem von Seattle sounders und Portland timbers ist. Wenn man also `Seattle + Portland timbers - portland` rechnet ergibt sich folgendes:
+Man kann also erkennen, dass der Abstand zwischen Seattle und Portland ähnlich zu dem von Seattle sounders und Portland timbers ist. Wenn man also `Seattle + Portland timbers - portland` rechnet ergibt sich Folgendes:
 
 ifdef::backend-html5,backend-revealjs[image:compute-word2vec.png[]]
 
@@ -122,11 +122,11 @@ FastText brachte Modele für ganze 294 Sprachen heraus, wo auch selten gesproche
 
 === [underline]##C##onvolutional [underline]##N##eural [underline]##N##etworks (CNNs)
 
-In den letzten Jahren gab es viele neue Erkenntnisse rund um das Thema neuronale Netzwerke. Durch die vielen Open-Source Tools entstanden viele neue Tools um Muster in Datensätzen zu erkennen. Aus der Idee des Perzeptrons beziehungsweise des multilayer Perzeptrons entstanden dann neue Varianten, wie das *Convolutional Neural Network* und das **Recurrent Neural Network**. 
+In den letzten Jahren gab es viele neue Erkenntnisse rund um das Thema neuronale Netzwerke. Durch die vielen Open-Source-Tools entstanden viele neue Tools, um Muster in Datensätzen zu erkennen. Aus der Idee des Perzeptrons beziehungsweise des multilayer Perzeptrons entstanden dann neue Varianten, wie das *Convolutional Neural Network* und das **Recurrent Neural Network**.
 
 Die Bedeutung von Sätzen entsteht meistens, durch die Beziehung der Wörter zueinander. Es gibt hierbei 2 Unterschiede. Die Word order, die besagt, dass die Reihenfolge der Wörter einen Satz ändern kann und die Word proximity also, welche Wörter sich auf andere im Satz beziehen und zusammengehören. 
 
-Die Beziehungen von Wörtern können multilayer perceptrons zwar erfassen, allerdings machen sie dies nur indem sie eine Gewichtung auf die Inputs legen aber Convolutional Neural Networks und Recurrent Neural Networks schauen sich diese Sätze auch noch spatially und temporally an. Unter spatially betrachtet man Sätze, als wären sie geschrieben und man sieht sich die Beziehungen bei der Reihenfolge der Wörter an und bei temporally betrachtet man den Satz als wäre er gesprochen. 
+Die Beziehungen von Wörtern können multilayer perceptrons zwar erfassen, allerdings machen sie dies nur, indem sie eine Gewichtung auf die Inputs legen aber Convolutional Neural Networks und Recurrent Neural Networks schauen sich diese Sätze auch noch spatially und temporally an. Unter spatially betrachtet man Sätze, als wären sie geschrieben und man sieht sich die Beziehungen bei der Reihenfolge der Wörter an und bei temporally betrachtet man den Satz als wäre er gesprochen.
 
 === Narrow windows
 
@@ -134,17 +134,17 @@ Der Name Convolutional stammt von dem Prinzip, dass man ein schmales Fenster soz
 
 ifdef::backend-html5,backend-revealjs[image:convolutional.png[]]
 
-Convolutional Neural Networks wurden zuerst für die Bilderkennung gemacht aber sie funktionieren nach dem selben Prinzip auch für Texte. Ein convolutional net gibt den einzelnen Elementen keine Gewichtung sondern es definiert ein Set von Filtern, die angewendet werden. 
+Convolutional Neural Networks wurden zuerst für die Bilderkennung gemacht aber sie funktionieren nach demselben Prinzip auch für Texte. Ein convolutional net gibt den einzelnen Elementen keine Gewichtung, sondern es definiert ein Set von Filtern, die angewendet werden.
 
 Wenn wir also bei diesem Beispiel von Bildern bleiben, kann jedes Bild durch einzelne Pixel dargestellt werden, welche entweder schwarz oder weiß sind bei einem schwarz-weiß Bild oder verschiedene Graustufen besitzen.
 
 ifdef::backend-html5,backend-revealjs[image:convolutional-net.png[]]
 
-Jeder Filter wird also über dieses Netz von Daten convoliert und fährt sozusagen, wie das Fenster, welches vorher beschrieben wurde über diese Werte. Dies macht er indem er immer einen Wert nimmt und diesen mit den Werten des Filters multipliziert. Wenn man also wie hier einen 3x3 Filter hat wird jeder Wert des Inputs mit der Gewichtung dieses Filters multipliziert und diese Werte werden dann addiert wieder zu einem Wert zusammengefasst, wie in der Grafik zu sehen ist.
+Jeder Filter wird also über dieses Netz von Daten convoliert und fährt sozusagen, wie das Fenster, welches vorher beschrieben wurde über diese Werte. Dies macht er, indem er immer einen Wert nimmt und diesen mit den Werten des Filters multipliziert. Wenn man also wie hier einen 3x3 Filter hat wird jeder Wert des Inputs mit der Gewichtung dieses Filters multipliziert und diese Werte werden dann addiert wieder zu einem Wert zusammengefasst, wie in der Grafik zu sehen ist.
 
 ifdef::backend-html5,backend-revealjs[image:convolution-example.png[]]
 
-Diese Art des Lernens kann nun nicht nur auf Bilder sondern auch auf Texte angewendet werden. 
+Diese Art des Lernens kann nun nicht nur auf Bilder, sondern auch auf Texte angewendet werden.
 
 === [underline]##R##ecurrent [underline]##N##eural [underline]##N##etworks
 
@@ -168,20 +168,20 @@ ifdef::backend-html5,backend-revealjs[image:SNN.png[width=80%]]
 Dies ist zwar ein normaler Satz aber RNN würde Schwierigkeiten haben die Verbindung zwischen den Nomen "Leonie" und dem Verb "hilft"  zu verstehen, da diese beiden Wörter einfach zu weit entfernt voneinander liegen.
 Aber warum? In der Theorie müsste RNN dazu selbstverständlich in der Lage sein. In der Realität ist dies leider nicht der Fall. Aus diesem Grund wurde LSTMs erfunden.
 
-LSTM steht für "long short-term memory" (Deutsch: langes Kurzzeitgedächtnis). LSTM ersetzt mittlerweile schon sehr viele klassische RNNs. LSTM behinhaltet einen "state" dieser funktioniert als Erinnerungen. In diesen "Erinnerungen" sind selber trainierte neurale Netzwerke, denen gelernt wurde was man sich merken muss.
+LSTM steht für "long short-term memory" (Deutsch: langes Kurzzeitgedächtnis). LSTM ersetzt mittlerweile schon sehr viele klassische RNNs. LSTM beinhaltet einen "state" dieser funktioniert als Erinnerungen. In diesen "Erinnerungen" sind selber trainierte neurale Netzwerke, denen gelernt wurde was man sich merken muss.
 
 Eine LSTM Zelle besteht aus 3 Gates:
 
 - Input Gate: Entscheidet welche Informationen es wert sind in Erinnerung zu bleiben
 
-- Forget Gate: Entscheidet was in welchen Ausmaß vergessen wird.
+- Forget Gate: Entscheidet was in welchen Ausmaßen vergessen wird.
 
 - Output Gate: Entscheidet was als Output mit den nächsten Token mitgegeben wird.
 
 === Sequence-to-sequence (seq2seq)
 
 Seq2seq verwandelt wie der Name andeuten lässt eine Sequence in eine andere, eines der häufigsten Beispiele hierbei ist Sprachen zu übersetzen.
-Dieses Model benutzt meistens LSTMs. Es gibt einen Encoder und einen Decoder. Der Encoder encodet den gegebenen Text in einen Vektor, der decoder wandelt diesen wieder in einen Text um.
+Dieses Model benutzt meistens LSTMs. Es gibt einen Encoder und einen Decoder. Der Encoder encoded den gegebenen Text in einen Vektor, der decoder wandelt diesen wieder in einen Text um.
 
 Aber warum benutzt man Seq2Seq bei Chatbots?
 Nur das nicht von Deutsch auf Englisch übersetzt wird, sondern von einer Aussage in eine passende Antwort.
@@ -189,11 +189,11 @@ Nur das nicht von Deutsch auf Englisch übersetzt wird, sondern von einer Aussag
 
 === Entities
 
-Wie extrahiere ich Entities aus einer Nachricht für einen Chatbot.
+Wie extrahiere ich Entities aus einer Nachricht für einen Chatbot?
 
 Eine sehr einfache Lösung dafür wäre Regular Expressions, meistens wird dort der "duck-typing" Ansatz genommen, wenn es sich benimmt wie eine Ente (z.b. Quarkt) und so aussieht dann gehe ich davon aus das es eine Ente ist.
 
-Das selbe können wir mit manchen Entities machen, zum Beispiel ein Datum wenn jemand 09.07.2021 schreibt geht man davon aus das es ein Datum ist. Und dieses Format kann mit regular expressions prüfen.
+Das selbe können wir mit manchen Entities machen, zum Beispiel ein Datum, wenn jemand 09.07.2021 schreibt geht man davon aus das es ein Datum ist. Und dieses Format kann mit regular expressions prüfen.
 
 === Tools
 
@@ -222,7 +222,7 @@ Außerdem bietet *Keras* ein Interface zu deep neural networks an, welche dann b
 
 *PyTorch* ist eine Open-Source-Library für Python, die auf der in Lua geschriebenen Bibliothek Torch basiert. *PyTorch* wird von dem Facebook-Forschungsteam für künstliche Intelligenz entwickelt.
 
-Mit *PyTorch* lassen sich Tensor-Analysen und Neuronale Netze auf Basis eines Autograd-Systems erstellen. Die Bibliothek zeichnet sich durch hohe Flexibilität und Geschwindigkeit aus und wird außerdem auf vielen Cloud-Plattformen unterstützt.
+Mit *PyTorch* lassen sich Tensor-Analysen und neuronale Netze auf Basis eines Autograd-Systems erstellen. Die Bibliothek zeichnet sich durch hohe Flexibilität und Geschwindigkeit aus und wird außerdem auf vielen Cloud-Plattformen unterstützt.
 
 ==== https://scikit-learn.org/stable/[Scikit-learn]
 
@@ -240,7 +240,7 @@ Pandas ist eine Open-Source-Library für Python, die viele data analysis und dat
 
 ==== https://fasttext.cc/[FastText]
 
-*FastText* ist eine Open-Source Library, die es Benutzern erlaubt text represantations und text classifier zu verwenden.
+*FastText* ist eine Open-Source Library, die es Benutzern erlaubt text representations und text classifier zu verwenden.
 
 ==== https://radimrehurek.com/gensim/[Gensim]
 

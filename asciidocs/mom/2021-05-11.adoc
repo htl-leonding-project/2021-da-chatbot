@@ -60,7 +60,7 @@ endif::backend-html5[]
 
 | Schüler
 a| - Präsentation des Ergebnisses der Bot-Recherche (der (mathematischen) Modelle dahinter).
- - Verwenden die verschiedenen ChatBot-Hersteller die selben ML-Verfahren oder verschiedene?
+ - Verwenden die verschiedenen ChatBot-Hersteller dieselben ML-Verfahren oder verschiedene?
 | 1. Juni 2021
 
 | Alle

@@ -59,6 +59,6 @@ ifdef::backend-html5,backend-revealjs[image:Grafik2.png[width=80%]]
 |wer |macht was |bis wann
 
 | Alle
-a| Am Anfang der Sommerferien schauen wir, dass wir eine weile alleine Arbeiten können und uns nur von Zeit zu Zeit treffen
+a| Am Anfang der Sommerferien schauen wir, dass wir eine Weile, alleine Arbeiten können und uns nur von Zeit zu Zeit treffen
 | Anfang Sommerferien
 |===

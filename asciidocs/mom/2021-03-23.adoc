@@ -67,7 +67,7 @@ a| - Kleiner Rasa Prototyp
 a| Diplomarbeit:
 
 - Fokus ist der Gesprächsverlauf
-- Inhalt des Gesprächs ist ein Thema (z.B. Ausbildung, Produktangebot, Leistungsangebot, usw.)
+- Inhalt des Gesprächs ist ein Thema (z. B. Ausbildung, Produktangebot, Leistungsangebot, usw.)
 - Unterthema: Einen Chatbot verstehen (Struktur, Aufbau)
 |
 |===

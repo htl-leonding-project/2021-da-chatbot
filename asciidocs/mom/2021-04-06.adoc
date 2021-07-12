@@ -54,7 +54,7 @@ endif::backend-html5[]
 
 * Es geht ums dazulernen, es kann rauskommen, dass wir merken es hat keinen Sinn
 
-* Arten von Chatbots (rule-based ,...) => alleine anschauen
+* Arten von Chatbots (rule-based , …) => alleine anschauen
 
 * Unterschied von Regeln und trainieren (beim Trainieren wird er besser und lernt dazu)
 
@@ -62,7 +62,7 @@ endif::backend-html5[]
 
 * https://www.mygreatlearning.com/blog/basics-of-building-an-artificial-intelligence-chatbot/#typesofchatbot[Gute Webseite]
 
-* Fertige beispiele nehmen, asnchauen, verstehen, ...
+* Fertige beispiele nehmen, anschauen, verstehen, …
 
 * Prototyp von lernendem Chatbot muss da sein, selbst wenn wir realisieren rule-based ist besser für unsre Angelegenheit
 
@@ -76,6 +76,6 @@ endif::backend-html5[]
 |wer |macht was |bis wann
 
 | Schüler
-a| - Arten von Chatbots (rule-based, ...) alleine anschauen
+a| - Arten von Chatbots (rule-based, …) alleine anschauen
 | 20.04.2021
 |===

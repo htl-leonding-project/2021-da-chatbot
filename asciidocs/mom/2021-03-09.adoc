@@ -52,7 +52,7 @@ endif::backend-html5[]
 
 * Fortschritt
 * Prof. Hammer zeigte Präsentation über Chatbots von anderen Schülern her
-* Was bis zum nächsten mal zu erledigen ist
+* Was bis zum nächsten Mal zu erledigen ist
 
 
 == Vereinbarungen und Entscheidungen
