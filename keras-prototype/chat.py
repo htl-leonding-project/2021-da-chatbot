@@ -3,7 +3,6 @@ import json
 import colorama
 import numpy as np
 import spacy
-from spacy import displacy
 from tensorflow import keras
 
 colorama.init()
