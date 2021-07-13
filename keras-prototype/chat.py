@@ -1,20 +1,23 @@
 import json
-import numpy as np
-from tensorflow import keras
-from sklearn.preprocessing import LabelEncoder
+
 import colorama
+import numpy as np
+import spacy
+from spacy import displacy
+from tensorflow import keras
 
 colorama.init()
-from colorama import Fore, Style, Back
+from colorama import Fore, Style
 
-import random
 import pickle
 
 with open("intents.json") as file:
     data = json.load(file)
+nlp = spacy.load("de_core_news_sm")
 
 
 def chat():
+    name = ''
     # load trained model
     model = keras.models.load_model('chat_model')
 
@@ -45,10 +48,16 @@ def chat():
 
         for i in data['intents']:
             if i['tag'] == tag:
+                if tag == "name":
+                    doc = nlp(inp)
+                    for ent in doc.ents:
+                        if ent.label_ == "PER":
+                            name = ent.text.title()
                 response = np.random.choice(i['responses'])
-                print(Fore.GREEN + "ChatBot:" + Style.RESET_ALL, response)
+                response = response.replace("{name}", name)
+                print(Fore.LIGHTRED_EX + "ChatBot:" + Style.RESET_ALL, response)
                 f = open("log.txt", "a")
-                f.write("User:"+inp+"\nBot:"+response+"\n")
+                f.write("User:" + inp + "\nBot:" + response + "\n")
                 f.close()
 
 

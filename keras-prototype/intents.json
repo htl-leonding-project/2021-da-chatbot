@@ -1,10 +1,14 @@
 {"intents": [
-    {"tag": "greeting",
-     "patterns": ["Hi", "Hallo", "Ist hier jemand?", "Servus", "Grüß Gott"],
-     "responses": ["Hallo", "Hi", "Servus"]
+  {"tag": "name",
+     "patterns": ["Hi ich heiße {name}", "Hallo ich bin {name}", "{name} ist mein name", "Nenne mich {name}", "Ich bin {name}"],
+     "responses": ["Hallo {name}", "Hi {name}", "Servus {name}","Freut mich dich kennenzulernen {name}"]
     },
+  {"tag": "greeting",
+    "patterns": ["Hi", "Hallo", "Ist hier jemand?", "Servus", "Grüß Gott"],
+    "responses": ["Hallo", "Hi", "Servus"]
+  },
   {"tag": "aboutSchool",
-    "patterns": ["Was ist die HTL Leonding?", "HTL Leonding?"],
+    "patterns": ["Was ist die HTL Leonding?", "HTL Leonding?","HTL"],
     "responses": ["Die HTL Leonding ist eine höhere Schule in Österreich"]
   },
   {"tag": "aboutBrach",
