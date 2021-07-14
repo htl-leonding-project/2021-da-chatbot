@@ -3,7 +3,7 @@ NC='\033[0m'
 
 echo  "${C}Is this the first time starting(y/n):${NC} "
 read yesNoStart
-echo  "${C}Do you want to Chat in the Angular Front End(y/n): ${NC}"
+echo  "${C}Do you want to chat in the Angular Front End(y/n): ${NC}"
 read yesNoFront
 if [ "$yesNoStart" == 'y' ] || [ "$yesNoStart" == '' ]
 then
