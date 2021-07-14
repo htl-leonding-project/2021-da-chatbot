@@ -1,0 +1,18 @@
+<mat-card>
+  <div *ngIf="nameSet; else enterName">
+    <mat-form-field class="wide-field">
+      <mat-label>Enter question</mat-label>
+      <input [(ngModel)]="message" [disabled]="processing"
+             matInput placeholder="Enter question">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="sendMessage()" [disabled]="processing">Send</button>
+  </div>
+  <ng-template #enterName>
+    <mat-form-field>
+      <mat-label>Enter your name</mat-label>
+      <input [(ngModel)]="name"
+             matInput placeholder="Enter your name">
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="setName()">Save</button>
+  </ng-template>
+</mat-card>
