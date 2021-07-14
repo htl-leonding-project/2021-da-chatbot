@@ -25,7 +25,7 @@
   }
   ,
   {"tag": "thanks",
-    "patterns": ["Danke","Okay","Danke, das war sehr hilfreich"],
+    "patterns": ["Danke","Okay","Danke, das war sehr hilfreich","Cool"],
     "responses": ["Freut mich das ich dir helfen konnte"]
   }
   ]
