@@ -18,6 +18,15 @@
   {"tag": "medientechnik",
     "patterns": ["Medientechnik?","Was weißt du über Medientechnik?", "Was lernt man im Medientechnik Zweig"],
     "responses": ["Im Medientechnik Zweig lernt man alles über Fotografie und PrintDesign aber auch viel übers programmieren"]
+  },
+  {"tag": "feelings",
+    "patterns": ["Wie geht es dir?","Wie fühlst du dich?"],
+    "responses": ["Mir geht es sehr gut"]
+  }
+  ,
+  {"tag": "thanks",
+    "patterns": ["Danke","Okay","Danke, das war sehr hilfreich"],
+    "responses": ["Freut mich das ich dir helfen konnte"]
   }
   ]
   }

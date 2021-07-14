@@ -4,16 +4,16 @@ Phython3 must be already installed!
 
 Download link: https://www.python.org/downloads/
 
-## Initial Setup
-When you want to run the program for the first time you have to run the `initialStart.sh` script first.
-````
-./initialStart.sh
-````
+If you want to use the Angular front end make sure you have the necessary things installed
 
-## Normal use
+https://nodejs.org/en/download/
 
-When you already made the initial setup once you now only have to start the `chat.py` programm
+https://angular.io/cli
 
-````
-python3 chat.py
-````
+## Starting
+
+You have to run the ``startChatBot.sh`` script and answer some questions so you can chat with the bot.
+
+## Stopping
+
+If you want to stop chating just press ctrl+c
