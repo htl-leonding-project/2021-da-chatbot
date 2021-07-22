@@ -17,7 +17,7 @@
   },
   {"tag": "medientechnik",
     "patterns": ["Medientechnik?","Was weißt du über Medientechnik?", "Was lernt man im Medientechnik Zweig"],
-    "responses": ["Im Medientechnik Zweig lernt man alles über Fotografie und PrintDesign aber auch viel übers programmieren"]
+    "responses": ["Im Medientechnik Zweig lernt man alles über Fotografie und PrintDesign aber auch viel übers Programmieren"]
   },
   {"tag": "feelings",
     "patterns": ["Wie geht es dir?","Wie fühlst du dich?"],

@@ -18,12 +18,12 @@ nlp = spacy.load("de_core_news_sm")
 api = flask.Flask(__name__)
 CORS(api)
 api.config["DEBUG"] = True
+name = ''
 
 
 @api.route('/api/ChatBot', methods=['GET'])
 def home():
     inp = request.args.get('question', default='', type=str)
-    name = ''
     # load trained model
     model = keras.models.load_model('chat_model')
 
@@ -40,7 +40,7 @@ def home():
     result = model.predict(keras.preprocessing.sequence.pad_sequences(tokenizer.texts_to_sequences([inp]),
                                                                           truncating='post', maxlen=max_len))
     tag = lbl_encoder.inverse_transform([np.argmax(result)])
-
+    global name
     for i in data['intents']:
         if i['tag'] == tag:
             if tag == "name":
@@ -51,7 +51,8 @@ def home():
             response = np.random.choice(i['responses'])
             response = response.replace("{name}", name)
     return json.dumps({
-        "message": response
+        "message": response,
+        "name": name
     })
 
 
