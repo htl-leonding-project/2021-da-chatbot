@@ -15,9 +15,14 @@ export class BotService {
   }
 
   public async postMessage(message: IMessage): Promise<void> {
-    this.addMessage(message);
     const result = await this.http.get<IServerMessage>('http://localhost:5000/api/ChatBot?question=' + message.message, {
     }).toPromise();
+    if (result.name !== ''){
+      message.user = result.name;
+    }else {
+      message.user = 'User';
+    }
+    this.addMessage(message);
     this.addMessage({
       user: 'ChatBot',
       message: result.message,
@@ -35,9 +40,10 @@ export class BotService {
 }
 
 export interface IMessage {
-  readonly user: string;
+  user: string;
   readonly message: string;
 }
 interface IServerMessage {
+  readonly name: string;
   readonly message: string;
 }

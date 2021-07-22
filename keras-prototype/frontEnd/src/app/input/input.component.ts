@@ -11,13 +11,11 @@ export class InputComponent {
   constructor(private readonly botService: BotService) {
     this.message = null;
     this.name = null;
-    this.nameSet = false;
     this.processing = false;
   }
 
   public message: string | null;
   public name: string | null;
-  public nameSet: boolean;
   public processing: boolean;
 
   public async sendMessage(): Promise<void> {
@@ -31,12 +29,6 @@ export class InputComponent {
     });
     this.message = null;
     this.processing = false;
-  }
-
-  public setName(): void {
-    if (!this.nameSet && !nullOrEmpty(this.name)) {
-      this.nameSet = true;
-    }
   }
 
 }
