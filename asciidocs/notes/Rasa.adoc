@@ -33,6 +33,13 @@ rasa init
 
 image::images/rasa_init.png[]
 
+You can also use Docker for this. The only difference with this is that you'll be running Rasa inside a Docker container.
+
+[source,]
+----
+docker run -v $(pwd):/app rasa/rasa:2.8.0-full init --no-prompt
+----
+
 - After that you can open the project in your preferred IDE.
 
 - To start a server with your trained model you use
@@ -421,3 +428,5 @@ https://www.udemy.com/course/rasa-for-beginners/
 https://blog.rasa.com/conversation-driven-development-a-better-approach-to-building-ai-assistants/
 
 https://rasa.com/docs/rasa/
+
+https://rasa.com/docs/rasa/docker/building-in-docker/
