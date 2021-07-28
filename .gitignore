@@ -10,3 +10,6 @@ gh-pages/
 .DS_Store
 .env
 asciidocs.demo/
+/rasa-prototype/models/
+/rasa-prototype/.config/
+/rasa-prototype/.keras/
