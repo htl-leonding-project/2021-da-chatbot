@@ -1,3 +1,5 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
 = Rasa Notes
 
 == Installation
@@ -191,6 +193,22 @@ entities:
 ----
 
 To specify the entity in your intents you write:
+
+== NLU Pipeline
+
+Rasa Open Source provides a default NLU config on initialization of the project.
+
+In Rasa Open Source, incoming messages are processed by a sequence of components. These components are executed one after another in a so-called processing pipeline defined in your config.yml. Choosing an NLU pipeline allows you to customize your model and finetune it on your dataset.
+
+Here you can see how the components and their lifecycle works:
+
+ifdef::backend-html5,backend-revealjs[image:component-lifecycle.png[]]
+
+https://rasa.com/docs/rasa/tuning-your-model
+
+You can view every component here:
+
+https://rasa.com/docs/rasa/components
 
 == Rasa Action Server
 
@@ -430,3 +448,7 @@ https://blog.rasa.com/conversation-driven-development-a-better-approach-to-build
 https://rasa.com/docs/rasa/
 
 https://rasa.com/docs/rasa/docker/building-in-docker/
+
+https://rasa.com/docs/rasa/tuning-your-model
+
+https://rasa.com/docs/rasa/components
