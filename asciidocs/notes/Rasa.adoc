@@ -1,4 +1,4 @@
-ifndef::imagesdir[:imagesdir: ../images]
+ifndef::imagesdir[:imagesdir: ./images]
 
 = Rasa Notes
 
@@ -33,7 +33,7 @@ pip3 install rasa
 rasa init
 ----
 
-image::images/rasa_init.png[]
+ifdef::backend-html5,backend-revealjs[image:rasa_init.png[]]
 
 You can also use Docker for this. The only difference with this is that you'll be running Rasa inside a Docker container.
 
@@ -162,7 +162,7 @@ rasa shell
 
 Now you can start asking your bot your new defined questions. Keep in mind that the text doesn't have to be exactly like you wrote it and that the assistant will still be able to recognize it even with a few differences.
 
-image::images/rasa_shell.png[]
+ifdef::backend-html5,backend-revealjs[image:rasa_shell.png[]]
 
 == Slots
 
@@ -244,7 +244,7 @@ You need to define three keys when working with Airtable.
 
 The `API_KEY` which is obtained on your `/account` page.
 
-image::images/api_key.png[]
+ifdef::backend-html5,backend-revealjs[image:api_key.png[width=80%]]
 
 Your `BASE_ID` which you when you're in your `API Docs`. And the 
 `TABLE_NAME` which you'll also get there.
@@ -285,7 +285,7 @@ rasa shell
 
 Now after you've taken part in the survey a new line in your Airtable will be inserted
 
-image::images/airtable-new.png[]
+ifdef::backend-html5,backend-revealjs[image:airtable-new.png[]]
 
 == Twilio
 
@@ -341,13 +341,13 @@ rasa run
 Also Ngrok should be running and you have to insert your URL
 into Twilio.
 
-image::images/twilio-ngrok.png[]
+ifdef::backend-html5,backend-revealjs[image:twilio-ngrok.png[]]
 
 Now you can chat with your assistant via SMS.
 
-image::images/chat-twilio.jpeg[width=30%]
+ifdef::backend-html5,backend-revealjs[image:chat-twilio.jpeg[width=30%]]
 
-image::images/chat-info.jpeg[width=30%]
+ifdef::backend-html5,backend-revealjs[image:chat-info.jpeg[width=30%]]
 
 == Conversation-Driven Development CDD
 
@@ -426,7 +426,7 @@ lsof -i -P -n | grep LISTEN
 kill <id of process>
 ----
 
-image::images/kill_process.png[]
+ifdef::backend-html5,backend-revealjs[image:kill_process.png[]]
 
 === Rasa: command not found
 
