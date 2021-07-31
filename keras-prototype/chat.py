@@ -49,7 +49,10 @@ def chat():
             if i['tag'] == tag:
                 if tag == "name":
                     doc = nlp(inp)
+                    print(doc.ents)
                     for ent in doc.ents:
+                        print(ent.label_)
+                        print(ent.text)
                         if ent.label_ == "PER":
                             name = ent.text.title()
                 response = np.random.choice(i['responses'])
