@@ -2,9 +2,12 @@ version: "2.0"
 
 slots:
   name:
-        type: text
+    type: text
   zweig:
-        type: text
+    type: text
+  logged_in:
+    type: bool
+    influence_conversations: False
 
 intents:
   - greet
@@ -29,10 +32,15 @@ entities:
   
 responses:
   utter_greet:
-  - text: "Hey {name}! Wie gehts dir?"
+    - condition:
+        - type: slot
+          name: logged_in
+          value: true
+      text: "Hey {name}! Wie gehts dir?"
+    - text: "Hi. Wie gehts so?"
   
   utter_cheer_up:
-  - text: "Hier ist etwas zur aufmunterung:"
+  - text: "Hier ist etwas zur Aufmunterung:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
