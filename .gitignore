@@ -13,3 +13,4 @@ asciidocs.demo/
 /rasa-prototype/models/
 /rasa-prototype/.config/
 /rasa-prototype/.keras/
+/rasa-prototype/venv/
