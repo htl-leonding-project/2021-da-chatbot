@@ -2,6 +2,49 @@ ifndef::imagesdir[:imagesdir: ./images]
 
 = Rasa Notes
 
+== Rasa Products
+
+The Rasa stack has two main components:
+
+* Rasa Core
+
+A chatbot framework with machine learning-based dialog management.
+
+RASA Core refers to the main component, which receives and responds
+to the requests.
+
+ifdef::backend-html5,backend-revealjs[image:rasa-core.png[width=80%]]
+
+* Rasa NLU
+
+An intent classification module providing intent classification and entity extraction.
+
+It has two parts:
+
+* Training
+
+This module allows you to train models on your own data. Having your own data to train allows you to develop a NLU that is business specific.
+
+* Server
+
+This module serves as the training model to the chatbot. It can be hosted as an API service and runs at the back end.
+
+The message is basically handled at two stages: one at the Core
+module, which manages the conversation, and one at the NLU module,
+which provides the essential language services.
+
+ifdef::backend-html5,backend-revealjs[image:rasa-core-nlu.png[width=80%]]
+
+**Singh, Abhishek, Ramasubramanian, Karthik, Shivam, Shrey**: Building an Enterprise Chatbot
+Work with Protected Enterprise Data Using Open Source Frameworks **ISBN**: https://isbnsearch.org/isbn/9781484250341[978-1-4842-5034-1]
+
+=== Rasa Open Source
+
+=== Rasa Enterprise
+
+=== Rasa X
+
+
 == Installation
 
 1. Create your directory
@@ -452,3 +495,6 @@ https://rasa.com/docs/rasa/docker/building-in-docker/
 https://rasa.com/docs/rasa/tuning-your-model
 
 https://rasa.com/docs/rasa/components
+
+Singh, Abhishek, Ramasubramanian, Karthik, Shivam, Shrey: Building an Enterprise Chatbot
+Work with Protected Enterprise Data Using Open Source Frameworks **ISBN**: [978-1-4842-5034-1]
