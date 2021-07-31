@@ -253,6 +253,17 @@ You can view every component here:
 
 https://rasa.com/docs/rasa/components
 
+https://rasahq.github.io/rasa-nlu-examples/
+
+=== Comparing NLU Pipelines
+
+You can compare two NLU pipelines by using this command
+
+[source,]
+----
+rasa test nlu --nlu data/nlu.yml --config config_1.yml config_2.yml
+----
+
 == Rasa Action Server
 
 A Rasa action server runs custom actions for a Rasa Open Source conversational assistant.
@@ -495,6 +506,8 @@ https://rasa.com/docs/rasa/docker/building-in-docker/
 https://rasa.com/docs/rasa/tuning-your-model
 
 https://rasa.com/docs/rasa/components
+
+https://rasahq.github.io/rasa-nlu-examples/
 
 Singh, Abhishek, Ramasubramanian, Karthik, Shivam, Shrey: Building an Enterprise Chatbot
 Work with Protected Enterprise Data Using Open Source Frameworks **ISBN**: [978-1-4842-5034-1]
