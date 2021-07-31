@@ -1,0 +1,74 @@
+version: "2.0"
+
+slots:
+  name:
+        type: text
+  zweig:
+        type: text
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - name
+  - htl
+  - branches
+  - branch
+#  - medientechnik
+#  - informatik
+#  - elektronik
+#  - medizintechnik
+
+entities:
+  - name
+  - zweig
+  
+responses:
+  utter_greet:
+  - text: "Hey {name}! Wie gehts dir?"
+  
+  utter_cheer_up:
+  - text: "Hier ist etwas zur aufmunterung:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Hat das geholfen?"
+
+  utter_happy:
+  - text: "Großartig!"
+
+  utter_goodbye:
+  - text: "Tschüss"
+
+  utter_iamabot:
+  - text: "Ich bin ein bot, powered by Rasa."
+  
+  utter_htl:
+  - text: "Die HTL Leonding ist eine Höhere Schule in Leonding in der man zwischen 4 Zweigen wählen kann"
+  
+  utter_branches:
+  - text: "An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik. Über welchen Zweig soll ich dir mehr erzählen?"
+  
+  utter_branch:
+  - text: "{zweig} ist ein toller Zweig in dem man sehr viel lernt"
+  
+#  utter_medientechnik:
+#  - text: "Der Medientechnik Zweig bietet eine vielfältige Ausbildung in der man über Fotografie, 3D Animation bis hin zum Programmieren alles lernt"
+#
+#  utter_informatik:
+#  - text: "Im Informatik Zweig lernt man Programmieren"
+#
+#  utter_elektronik:
+#  - text: "Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren."
+#
+#  utter_medizintechnik:
+#  - text: "In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik."
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

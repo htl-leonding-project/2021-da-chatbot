@@ -1,0 +1,80 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: name
+  steps:
+  - intent: name
+  - action: utter_greet
+
+- story: branch
+  steps:
+  - intent: htl
+  - action: utter_htl
+  - intent: branches
+  - action: utter_branches
+  - intent: branch
+  - action: utter_branch
+  
+#- story: medientechnik
+#  steps:
+#  - intent: htl
+#  - action: utter_htl
+#  - intent: branches
+#  - action: utter_branches
+#  - intent: medientechnik
+#  - action: utter_medientechnik
+#
+#- story: informatik
+#  steps:
+#  - intent: htl
+#  - action: utter_htl
+#  - intent: branches
+#  - action: utter_branches
+#  - intent: informatik
+#  - action: utter_informatik
+#
+#- story: elektronik
+#  steps:
+#  - intent: htl
+#  - action: utter_htl
+#  - intent: branches
+#  - action: utter_branches
+#  - intent: elektronik
+#  - action: utter_elektronik
+#
+#- story: medizintechnik
+#  steps:
+#  - intent: htl
+#  - action: utter_htl
+#  - intent: branches
+#  - action: utter_branches
+#  - intent: medizintechnik
+#  - action: utter_medizintechnik
