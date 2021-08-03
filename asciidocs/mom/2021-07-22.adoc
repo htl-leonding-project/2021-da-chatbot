@@ -81,5 +81,5 @@ ifdef::backend-html5,backend-revealjs[image:what-to-do-2-sketch.png[width=80%]]
 a|
 - An einem funktionierendem Beispiel das Selbstlernen in Rasa (und Dialogflow) erklären
 - Kann man Rasa gratis verwenden
-| 30.07.2021
+| 31.07.2021
 |===
