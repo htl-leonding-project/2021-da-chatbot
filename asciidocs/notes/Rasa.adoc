@@ -67,6 +67,58 @@ pip3 install -U pip
 pip3 install rasa
 ----
 
+=== Conda
+
+Conda ist ein Open-Source-Paketmanager der sowohl auf Windows, macOS und Linux läuft. Außerdem ist Conda auch ein environment manager mit dem man leicht environments erzeugen und wechseln kann, wenn man beispielsweise für eine bestimmte Anwendung eine andere Version eines Packages braucht.
+
+In diesem Fall wurde Conda verwendet, da es beim Trainieren von Rasa Probleme und folgende Fehlermeldung beim Starten gab und ein möglicher Lösungsansatz dafür ist, dass man statt `pip` Conda verwendet.
+
+[source,]
+----
+...
+AttributeError: module ‘tensorflow.python.keras.engine.training’ has no attribute ‘enable_multi_worker’
+----
+
+https://forum.rasa.com/t/module-tensorflow-python-keras-engine-training-has-no-attribute-enable-multi-worker/41502
+
+==== Installation
+
+Falls man nach der Installation von Conda immer noch folgende Fehlermeldung bekommt, muss man noch Conda zum Path hinzufügen.
+
+[source,]
+----
+conda: command not found
+----
+
+Dies macht man folgendermaßen:
+
+[source,]
+----
+export PATH="/home/username/anaconda3/bin/:$PATH"
+----
+
+https://stackoverflow.com/questions/35246386/conda-command-not-found
+
+==== Environment erstellen
+
+Um ein Environment zu erstellen, müssen folgende Befehle ausgeführt werden:
+
+[source,]
+----
+conda create --name rasa_env python=3.7
+conda activate rasa_env
+----
+
+https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+Anschließend müssen Rasa und alle gewünschten Packages installiert werden
+
+
+
+https://forum.rasa.com/t/rasa-x-dont-work/46931/9
+
+https://forum.rasa.com/t/rasa-x-install-stucked/39640
+
 == Create the project
 
 - To initalize to project you need to run
@@ -511,3 +563,5 @@ https://rasahq.github.io/rasa-nlu-examples/
 
 Singh, Abhishek, Ramasubramanian, Karthik, Shivam, Shrey: Building an Enterprise Chatbot
 Work with Protected Enterprise Data Using Open Source Frameworks **ISBN**: [978-1-4842-5034-1]
+
+https://forum.rasa.com/t/module-tensorflow-python-keras-engine-training-has-no-attribute-enable-multi-worker/41502
