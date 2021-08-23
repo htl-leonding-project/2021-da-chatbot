@@ -113,12 +113,6 @@ https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.h
 
 Anschließend müssen Rasa und alle gewünschten Packages installiert werden
 
-
-
-https://forum.rasa.com/t/rasa-x-dont-work/46931/9
-
-https://forum.rasa.com/t/rasa-x-install-stucked/39640
-
 == Create the project
 
 - To initalize to project you need to run
@@ -494,31 +488,50 @@ There are 6 factors of CDD:
 - Annotate user messages
 
 
-In the proccess of `Deployment` you expose your application to a 
+In the process of `Deployment` you expose your application to a
 server rather than still using it locally. 
 
 
 === Installation
 
-There are different ways to install Rasa X
+Es gibt verschieden Arten, um Rasa X zu installieren.
 
 ==== Local Mode
 
-To install Rasa X locally you use:
+Um Rasa X lokal zu installieren, verwendet man folgenden Befehl:
 
 [source,]
 ----
 pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
 ----
 
-And then to start it write:
+==== Troubleshooting
+
+Dies kann allerdings zu Problemen führen, bei denen die Installation stockt und nie beendet wird. Dies liegt daran, dass in pip 20.3 obenstehendes nicht funktioniert. Man kann also entweder eine ältere Version verwenden oder einstellen, dass noch die alte Logik verwenden sollte.
+
+[source,]
+----
+INFO: pip is looking at multiple versions of sniffio to determine which version is compatible with other requirements. This could take a while.
+----
+
+https://forum.rasa.com/t/rasa-x-install-stucked/39640
+
+https://stackoverflow.com/questions/65806524/pip-install-rasa-x-takes-forever/65812957#65812957
+
+Außerdem kann es immer noch zu Problemen mit den Versionen der verschiedenen Packages und Rasa X kommen. In folgenden Links werden Beispiele dafür und die Lösungen für diese Probleme geschildert.
+
+https://forum.rasa.com/t/rasa-x-dont-work/46931/9
+
+https://forum.rasa.com/t/rasa-x-0-23-0-error-in-endpoints-yml/21744/4
+
+Um Rasa X nun zu starten, verwendet man folgenden Befehl:
 
 [source,]
 ----
 rasa x
 ----
 
-This should open a browser tab to `http://localhost:5002`.
+Dieser öffnet einen Browser Tab unter der Adresse `http://localhost:5002`.
 
 == Troubleshooting
 
