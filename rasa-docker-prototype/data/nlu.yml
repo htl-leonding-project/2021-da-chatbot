@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -37,13 +36,11 @@ nlu:
     - Servus
     - Servus bot
     - hi bot
-    - hi bot
     - huhu bot
     - huhu du da
     - huhu hallo
     - huhu
     - huhu sag mal hallo
-
 - intent: goodbye
   examples: |
     - Schönen Abend noch
@@ -91,7 +88,6 @@ nlu:
     - Tschüss chat bot.
     - Wir sehen uns!
     - Wir sehen uns das nächste mal
-
 - intent: affirm
   examples: |
     - Alles klar.
@@ -139,7 +135,6 @@ nlu:
     - nu klar bot
     - ok bot
     - okay bot
-
 - intent: deny
   examples: |
     - no
@@ -149,7 +144,6 @@ nlu:
     - ich denke nicht
     - sicher nicht
     - du spinnst doch
-    
 - intent: name
   examples: |
     - Mein name ist [Felix](name)
@@ -185,7 +179,6 @@ nlu:
     - [Florian](name)
     - [Silvio](name)
     - [Quirin](name)
-  
 - intent: mood_great
   examples: |
     - perfekt
@@ -198,7 +191,6 @@ nlu:
     - Mir gehts super
     - sehr gut
     - wirklich gut
-    
 - intent: mood_unhappy
   examples: |
     - ich hatte einen schlechten tag
@@ -214,7 +206,6 @@ nlu:
     - nicht sehr gut
     - extrem traurig
     - so traurig
-
 - intent: bot_challenge
   examples: |
     - bist du ein Bot?
@@ -222,14 +213,13 @@ nlu:
     - bist du ein Chatbot?
     - rede ich mit einem Roboter?
     - rede ich mit einem Menschen?
-    
 - intent: htl
   examples: |
     - Was ist die HTL Leonding?
     - HTL Leonding?
     - HTL?
     - HTL leonding was ist das?
-    
+    - htl
 - intent: branches
   examples: |
     - Welche Zweige gibt es?
@@ -241,7 +231,6 @@ nlu:
     - Welche Fachrichtungen gibt es?
     - Erzähl mir etwas über die Zweige?
     - Erzähl mir etwas über die verschieden Zweige?
-    
 - intent: branch
   examples: |
     - [Medientechnik](zweig)?
@@ -252,39 +241,3 @@ nlu:
     - [Elektronik](zweig) klingt interessant
     - Was weißt du über [Informatik](zweig)
     - [Medizintechnik](zweig) könnte interessant sein
-#- intent: medientechnik
-#  examples: |
-#    - Medientechnik?
-#    - Medientechnik
-#    - Erzähl mir etwas über den Medientechnik zweig?
-#    - Medientechnik klingt interessant?
-#    - Was weißt du über Medientechnik?
-#    - Medientechnik könnte interessant sein
-#
-#- intent: informatik
-#  examples: |
-#    - Informatik?
-#    - Informatik
-#    - Erzähl mir etwas über den Informatik zweig?
-#    - Informatik klingt interessant?
-#    - Was weißt du über Informatik?
-#    - Informatik könnte interessant sein
-#
-#- intent: elektronik
-#  examples: |
-#    - Elektronik?
-#    - Elektronik
-#    - Erzähl mir etwas über den Elektronik zweig?
-#    - Elektronik klingt interessant?
-#    - Was weißt du über Elektronik?
-#    - Elektronik könnte interessant sein
-#
-#- intent: medizintechnik
-#  examples: |
-#    - Medizintechnik?
-#    - Medizintechnik
-#    - Erzähl mir etwas über den Medizintechnik zweig?
-#    - Medizintechnik klingt interessant?
-#    - Was weißt du über Medizintechnik?
-#    - Medizintechnik könnte interessant sein
-#
