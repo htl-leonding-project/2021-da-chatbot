@@ -47,20 +47,27 @@ Work with Protected Enterprise Data Using Open Source Frameworks **ISBN**: https
 
 == Installation
 
-1. Create your directory
-2. Install Python 
+. Create your directory
+. Install Python
+. Create a virtual environment (optional but recommended)
+. Install Rasa Open Source
+
 [source,]
 ----
 sudo apt update
 sudo apt install python3-dev python3-pip python3-venv
 ----
-3. Create a virtual environment (optional but recommended)
+
+Create a virtual environment (optional but recommended)
+
 [source,]
 ----
 python3 -m venv ./venv
 source ./venv/bin/activate
 ----
-4. Install Rasa Open Source
+
+Install Rasa Open Source
+
 [source,]
 ----
 pip3 install -U pip
