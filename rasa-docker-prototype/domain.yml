@@ -27,16 +27,30 @@ intents:
     use_entities: true
 - branch:
     use_entities: true
+- ask_hours_per_branch:
+    use_entities: true
+- ask_consultation:
+    use_entities: true
+- ask_room:
+    use_entities: true
+- ask_specific_hours:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
 entities:
 - name
-- zweig
+- branch
+- teacher
+- class
+- grade
+- subject
 slots:
   name:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
     influence_conversation: true
-  zweig:
+  branch:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
@@ -46,9 +60,19 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
+  name_was_set:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: false
+    auto_fill: true
+    influence_conversation: true
 responses:
   utter_greet:
-  - text: Hey {name}! Wie gehts dir?
+  - condition:
+    - name: logged_in
+      type: slot
+      value: true
+    text: Hey {name}! Wie gehts dir?
+  - text: Hi! Wie gehts dir?
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Hier ist etwas zur Aufmunterung:'
@@ -65,7 +89,10 @@ responses:
   utter_branches:
   - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik. Über welchen Zweig soll ich dir mehr erzählen?'
   utter_branch:
-  - text: '{zweig} ist ein toller Zweig in dem man sehr viel lernt'
+  - text: '{branch} ist ein toller Zweig in dem man sehr viel lernt'
+  utter_rephrase:
+  - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
+  - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
 actions: []
 forms: {}
 e2e_actions: []
