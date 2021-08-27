@@ -4,22 +4,68 @@ ifndef::imagesdir[:imagesdir: ./images]
 
 == Rasa Products
 
-The Rasa stack has two main components:
+Der Rasa Stack wird in Rasa *NLU* und Rasa *Core* aufgeteilt. Diese sind so aufgebaut, dass sie unabhängig voneinander eingesetzt werden können. So besteht die Möglichkeit, nur einen Teil der Architektur auf Rasa aufzubauen und zusätzlich weitere Services mit einzubinden.
 
 * Rasa Core
 
-A chatbot framework with machine learning-based dialog management.
+Rasa Core ist verantwortlich für den Conversation Flow, Context-Handling, Bot-Responses und Session Management. Dabei kann auf der Rasa NLU oder anderen Services aufgebaut werden, die die Intent Recognition und Entity Extraction übernehmen und die Ergebnisse dem Rasa Core zur Verfügung stellen.
 
-RASA Core refers to the main component, which receives and responds
-to the requests.
+RASA Core bezieht sich dabei auf die Hauptkomponente, die die Nachrichten erhält und darauf antwortet.
+
+Der Rasa Core hält für jede Session, also für jeden User, einen *Tracker*. Dieser enthält den momentanen Zustand der Konversationen, der jeweiligen User. Bekommt der Bot nun eine Nachricht, wird zuerst der *Interpreter* durchlaufen, welcher den Originaltext als Eingabe bekommt, und die Eingabe, den Intent und die extrahierten Entities zurückgibt. Zusammen mit dem aktuellen Zustand des Trackers entscheidet die *Policy* Komponente nun, welche *Action*, also Antwort des Bots, als nächstes ausgeführt werden soll. Diese Entscheidung wird nicht durch einfache Regeln getroffen, sondern genauso wie Intents oder Entities, auf der Grundlage von einem, mit Machine Learning, trainierten Modell.
 
 ifdef::backend-html5,backend-revealjs[image:rasa-core.png[width=80%]]
 
+https://botfriends.de/blog/botwiki/rasa-core/
+
+Hierbei kann man die Policies beispielsweise ändern. Dies macht man in der `config.yml` Datei.
+
+https://rasa.com/docs/rasa/policies/
+
 * Rasa NLU
 
-An intent classification module providing intent classification and entity extraction.
+Rasa NLU hat grundsätzlich zwei Hauptaufgaben.
 
-It has two parts:
+Zum einen wäre da die *Intent Recognition* und die *Entity Recognition*.
+
+Die Intent Recognition, ist die Erkennung der Nutzer-Absichten. Dazu muss die NLU mit ausreichend Utterances, also Responses trainiert werden. Dabei gibt die NLU alle zugehörigen Intents geordnet nach dem Confidence Score zurück. Rasa verfügt demnach über ein Multi Intent Matching.
+
+Außerdem gibt es noch die Entity Recognition, die dafür zuständig ist Entities, also wichtige Informationen, aus natürlicher Sprache zu extrahieren.
+
+ifdef::backend-html5,backend-revealjs[image:rasa_nlu.png[]]
+
+https://botfriends.de/blog/botwiki/rasa-nlu/
+
+Der Aufbau der NLU ist vollständig konfigurierbar mithilfe der sogenannten *Pipeline*.
+
+== NLU Pipeline
+
+Rasa Open Source provides a default NLU config on initialization of the project.
+
+In Rasa Open Source, incoming messages are processed by a sequence of components. These components are executed one after another in a so-called processing pipeline defined in your config.yml. Choosing an NLU pipeline allows you to customize your model and finetune it on your dataset.
+
+Here you can see how the components and their lifecycle works:
+
+ifdef::backend-html5,backend-revealjs[image:component-lifecycle.png[]]
+
+https://rasa.com/docs/rasa/tuning-your-model
+
+You can view every component here:
+
+https://rasa.com/docs/rasa/components
+
+https://rasahq.github.io/rasa-nlu-examples/
+
+=== Comparing NLU Pipelines
+
+You can compare two NLU pipelines by using this command
+
+[source,]
+----
+rasa test nlu --nlu data/nlu.yml --config config_1.yml config_2.yml
+----
+
+There are two parts:
 
 * Training
 
@@ -38,6 +84,10 @@ ifdef::backend-html5,backend-revealjs[image:rasa-core-nlu.png[width=80%]]
 **Singh, Abhishek, Ramasubramanian, Karthik, Shivam, Shrey**: Building an Enterprise Chatbot
 Work with Protected Enterprise Data Using Open Source Frameworks **ISBN**: https://isbnsearch.org/isbn/9781484250341[978-1-4842-5034-1]
 
+https://botfriends.de/blog/botwiki/rasa/
+
+https://botfriends.de/blog/botwiki/rasa-nlu/
+
 === Rasa Open Source
 
 === Rasa Enterprise
@@ -47,20 +97,27 @@ Work with Protected Enterprise Data Using Open Source Frameworks **ISBN**: https
 
 == Installation
 
-1. Create your directory
-2. Install Python 
+. Create your directory
+. Install Python
+. Create a virtual environment (optional but recommended)
+. Install Rasa Open Source
+
 [source,]
 ----
 sudo apt update
 sudo apt install python3-dev python3-pip python3-venv
 ----
-3. Create a virtual environment (optional but recommended)
+
+Create a virtual environment (optional but recommended)
+
 [source,]
 ----
 python3 -m venv ./venv
 source ./venv/bin/activate
 ----
-4. Install Rasa Open Source
+
+Install Rasa Open Source
+
 [source,]
 ----
 pip3 install -U pip
@@ -282,33 +339,6 @@ entities:
 ----
 
 To specify the entity in your intents you write:
-
-== NLU Pipeline
-
-Rasa Open Source provides a default NLU config on initialization of the project.
-
-In Rasa Open Source, incoming messages are processed by a sequence of components. These components are executed one after another in a so-called processing pipeline defined in your config.yml. Choosing an NLU pipeline allows you to customize your model and finetune it on your dataset.
-
-Here you can see how the components and their lifecycle works:
-
-ifdef::backend-html5,backend-revealjs[image:component-lifecycle.png[]]
-
-https://rasa.com/docs/rasa/tuning-your-model
-
-You can view every component here:
-
-https://rasa.com/docs/rasa/components
-
-https://rasahq.github.io/rasa-nlu-examples/
-
-=== Comparing NLU Pipelines
-
-You can compare two NLU pipelines by using this command
-
-[source,]
-----
-rasa test nlu --nlu data/nlu.yml --config config_1.yml config_2.yml
-----
 
 == Rasa Action Server
 
