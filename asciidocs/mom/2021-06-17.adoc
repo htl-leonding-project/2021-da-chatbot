@@ -58,6 +58,7 @@ Wie sieht man, was er dazugelernt hat? Kann man es überhaupt sehen?
 Diese Fragen sollten bis zu den Ferien geklärt sein.
 
 Vorgehensweise bei der Erstellung
+
 1. Auswahlverfahren, welche Methode für die Vektorisierung gewählt werden soll
 2. Anlegen von Testdaten
 3. Ergebnis (ein paar Fragen) geben: Nur ein paar Testdaten um zu sehen, wie das ganze funktioniert => Wenn die Antworten besser werden ist dies ein Zeichen, dass es funktioniert
