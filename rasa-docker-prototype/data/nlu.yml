@@ -198,6 +198,8 @@ nlu:
     - wirklich gut
     - gut
     - gut so
+    - gut eigentlich
+    - gut und dir
 - intent: mood_unhappy
   examples: |
     - ich hatte einen schlechten tag
