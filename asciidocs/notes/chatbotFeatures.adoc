@@ -36,13 +36,30 @@ Zusätzlich soll er noch andere Gimmicks besitzen wie:
 
 * Smalltalk (Wie gehts es dir, Bist du ein Mensch, Wo wohnst du, ...)
 
-image:MockUpLeo.png[width=100%]
-
-image:MockUpLeoClosed.png[width=100%]
-
 ifdef::backend-html5,backend-revealjs[image:MockUpLeo.png[width=100%]]
+
 ifdef::backend-html5,backend-revealjs[image:MockUpLeoClosed.png[width=100%]]
 
+== Chatbot TÜV
+
+Der Chatbot für den TÜV soll etwas wissen über:
+
+* Ingenieur (Ingenieur-Gesetz,... )
+
+* Firma im generellen (Was macht die Firma sonst so, Lage,...)
+
+* Weiterleiten zu passende Dokumente
 
 
+Zusätzlich soll er noch die selben Gimmicks besitzen wie Leo:
+
+* das Wetter
+
+* Witze
+
+* Smalltalk (Wie gehts es dir, Bist du ein Mensch, Wo wohnst du, ...)
+
+ifdef::backend-html5,backend-revealjs[image:MockUpTüvi.png[width=100%]]
+
+ifdef::backend-html5,backend-revealjs[image:MockUpTüviClosed.png[width=100%]]
 
