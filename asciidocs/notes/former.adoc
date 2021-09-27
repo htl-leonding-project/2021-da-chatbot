@@ -17,5 +17,10 @@ endif::backend-html5[]
 
 == Vorherige Diplomarbeit
 
-Die vorherige Diplomarbeit
+Die vorherige Diplomarbeit war nicht so gut da:
+
+* Rule-based
+
+* Keine einfache Option Intents, usw. hinzuzufügen war vorhanden
+
 
