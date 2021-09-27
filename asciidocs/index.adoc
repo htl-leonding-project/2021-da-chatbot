@@ -19,6 +19,11 @@ Dokumente der Diplomarbeit "Chatbot" für das Jahr 2021/2022 von Dumfarth Felix 
 von Herr Pof. Stütz.
 
 == Links
+
+https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbotFeatures[Chatbot Features]
+
+https://htl-leonding-project.github.io/2021-da-chatbot/notes/Rasa[Rasa Notes]
+
 https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-02-22[1. Besprechung 22.02.2021]
 
 https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-03-09[2. Besprechung 09.03.2021]
