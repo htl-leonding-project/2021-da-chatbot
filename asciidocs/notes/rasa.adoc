@@ -563,6 +563,30 @@ rasa x
 
 Dieser öffnet einen Browser Tab unter der Adresse `http://localhost:5002`.
 
+==== Mit Docker Compose
+
+Rasa stellt zwei verschiedene Anleitungen zur Verfügung, um Rasa X auf einem Server als Set von Docker Containern zu erstellen. 
+
+1. Mithilfe eines Install Scripts 
+
+https://rasa.com/docs/rasa-x/installation-and-setup/install/docker-compose/#docker-compose-install-script
+
+2. Manuell
+
+https://rasa.com/docs/rasa-x/installation-and-setup/install/docker-compose/#docker-compose-manual-install
+
+https://forum.rasa.com/t/rasa-x-production-server-is-giving-error-as-could-not-launch-runtime/38058
+
+https://rasa.com/docs/rasa-x/changelog/compatibility-matrix/
+
+https://forum.rasa.com/t/i-cant-login-to-rasa-x/31726/8
+
+https://stackoverflow.com/questions/64678048/getting-error-when-set-rasa-x-admin-password-with-default-command
+
+https://rasa.com/docs/rasa-x/changelog/rasa-x-changelog
+
+https://rasa.com/docs/rasa/changelog
+
 == Troubleshooting
 
 === Port 5005 already in use
