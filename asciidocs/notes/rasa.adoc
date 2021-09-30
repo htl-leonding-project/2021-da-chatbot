@@ -124,6 +124,50 @@ pip3 install -U pip
 pip3 install rasa
 ----
 
+Um nun zu festzustellen, ob Rasa installiert ist kann man zum Beispiel `--version` nutzen um die installierten Version von `Rasa`, `Rasa SDK`, `Rasa X` und `Python` zu sehen.
+
+[source,]
+----
+rasa --help
+rasa --version
+
+# zum Beispiel
+Rasa Version      :         2.8.3
+Minimum Compatible Version: 2.8.0
+Rasa SDK Version  :         2.8.1
+Rasa X Version    :         0.39.3
+Python Version    :         3.8.8
+Operating System  :         Linux-5.11.0-36-generic-x86_64-with-glibc2.10
+Python Path       :         /home/lukas/anaconda3/bin/python
+----
+
+=== Additional Dependencies
+
+Man kann bei Rasa auch andere Machine Learning Algorithmen, wie `spaCy` oder `MITIE` verwenden. Um diese zu installieren, verwendet man folgende Befehle:
+
+- SpaCy
+
+[source,]
+----
+pip3 install rasa[spacy]
+python3 -m spacy download de_core_web_md
+----
+
+- MITIE
+
+[source,]
+----
+pip3 install git+https://github.com/mit-nlp/MITIE.git
+pip3 install rasa[mitie]
+----
+
+Oder um alle Dependencies zu installieren kann man auch optional folgenden Befehl verwenden:
+
+[source,]
+----
+pip3 install rasa[full]
+----
+
 === Conda
 
 Conda ist ein Open-Source-Paketmanager der sowohl auf Windows, macOS und Linux läuft. Außerdem ist Conda auch ein environment manager mit dem man leicht environments erzeugen und wechseln kann, wenn man beispielsweise für eine bestimmte Anwendung eine andere Version eines Packages braucht.
