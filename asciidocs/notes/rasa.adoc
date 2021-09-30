@@ -357,6 +357,17 @@ Now you can start asking your bot your new defined questions. Keep in mind that 
 
 ifdef::backend-html5,backend-revealjs[image:rasa_shell.png[]]
 
+=== Andere CLI Befehle
+
+Um eine interaktive Lernsession mit dem Bot zu starten, verwendet man den Befehl `rasa interactive`. Dabei wird einem in der Konsole ständig angezeigt, wie der Bot nun reagieren würde und man kann ihm direkt Feedback geben, ob die folgende Aktion richtig oder falsch ist.
+
+[source,]
+----
+rasa interactive
+----
+
+ifdef::backend-html5,backend-revealjs[image:rasa-interactive.png[]]
+
 == Slots
 
 Slots are the bot's memory. They are key-value pairs and can be used to store information the user provided, similiar to entities, like locations or information about the outside world.
