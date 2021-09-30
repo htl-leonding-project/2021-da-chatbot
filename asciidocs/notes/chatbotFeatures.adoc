@@ -51,7 +51,7 @@ Der Chatbot für den TÜV soll etwas wissen über:
 * Weiterleiten zu passende Dokumente
 
 
-Zusätzlich soll er noch die selben Gimmicks besitzen wie Leo:
+Zusätzlich soll er noch die selben Gimmicks besitzen wie Leon:
 
 * das Wetter
 

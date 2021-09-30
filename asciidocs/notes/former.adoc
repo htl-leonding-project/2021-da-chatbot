@@ -1,0 +1,26 @@
+= Former Thesis
+Dumfarth, Starka
+1.0, 27.08.2021: Some notes
+ifndef::imagesdir[:imagesdir: ../images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+//icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-project/2021-da-chatbot/] ‏ ‏ ‎
+icon:home[link=https://htl-leonding-project.github.io/2021-da-chatbot]
+endif::backend-html5[]
+
+== Vorherige Diplomarbeit
+
+Die vorherige Diplomarbeit war nicht so gut da:
+
+* Rule-based
+
+* Keine einfache Option Intents, usw. hinzuzufügen war vorhanden
+
+
