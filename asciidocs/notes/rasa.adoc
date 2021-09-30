@@ -330,20 +330,23 @@ And this is the syntax for yml files:
 
 === Run your new stories
 
-At first you have to re-train your model. This allows the model 
-to learn all the things we just implemented to the training data and
-the domain file.
+Um das neue Model zu nutzen muss man dieses zuerst neu trainieren. Dies ermöglicht es dem Model alle neuen Dinge, die wir gerade implementiert im `data/stories.yml` und `domain.yml` File zu lernen.
 
-To train your model you need to run:
+Um sein Model zu trainieren benützt man folgenden Befehl:
 
 [source,]
 ----
 rasa train
 ----
 
-After that you can start the server and initiate a chat-session
-through the `rasa shell` command.
+Um alle Optionen und Flags für den Trainingscommand zu erfahren kann man sich `--help` zur Hilfe nehmen.
 
+[source,]
+----
+rasa train --help
+----
+
+Danach kann man den Server starten und eine neue Chat-Session starten, indem man den `rasa shell` nützt.
 
 [source,]
 ----
