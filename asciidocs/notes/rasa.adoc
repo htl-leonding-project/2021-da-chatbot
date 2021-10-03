@@ -18,9 +18,25 @@ ifdef::backend-html5,backend-revealjs[image:rasa-core.png[width=80%]]
 
 https://botfriends.de/blog/botwiki/rasa-core/
 
+=== Policies
+
+Der Assistent benützt Policies um zu entscheiden, welche Action als nächstes ausgeführt werden soll. Es gibt machine-learning und rule-based policies.
+
 Hierbei kann man die Policies beispielsweise ändern. Dies macht man in der `config.yml` Datei.
 
 https://rasa.com/docs/rasa/policies/
+
+Bei den Policies gibt es unterschiedliche Priorities, die dann zum Einsatz kommen, wenn mehrere Policies dieselbe Confidence vorhergesagt haben.
+
+https://rasa.com/docs/rasa/policies#policy-priority
+
+==== TED Policy
+
+Die TED Policy steht für Transformer Embedding Dialogue Policy und wird meistens standardmäßig verwendet.
+
+Bei jedem Dialog bekommt die TED Policy drei Informationen als Input. Die Message des Users, die vorherige Action die vorhergesagt wurde und Slots und aktive Forms. Dann werden diese in den Dialogue Transformer Encoder gepackt und anschließend werden sogenannte Dense Layer verwendet. Danach wird die Ähnlichkeit zwischen den System Actions und dem Dialogue Embedding berechnet und zum Schluss werden noch CRF Algorithmen verwendet, um Entities zu erkennen.
+
+https://rasa.com/docs/rasa/policies#ted-policy
 
 * Rasa NLU
 
@@ -47,8 +63,10 @@ In Rasa Open Source, incoming messages are processed by a sequence of components
 Here you can see how the components and their lifecycle works:
 
 ifdef::backend-html5,backend-revealjs[image:component-lifecycle.png[]]
-
 https://rasa.com/docs/rasa/tuning-your-model
+
+ifdef::backend-html5,backend-revealjs[image:pipeline.png[]]
+https://www.udemy.com/course/learn-to-build-incredible-ai-chatbots-using-rasa/
 
 You can view every component here:
 
@@ -690,3 +708,5 @@ Singh, Abhishek, Ramasubramanian, Karthik, Shivam, Shrey: Building an Enterprise
 Work with Protected Enterprise Data Using Open Source Frameworks **ISBN**: [978-1-4842-5034-1]
 
 https://forum.rasa.com/t/module-tensorflow-python-keras-engine-training-has-no-attribute-enable-multi-worker/41502
+
+https://www.udemy.com/course/learn-to-build-incredible-ai-chatbots-using-rasa/
