@@ -63,3 +63,19 @@ stories:
     entities:
     - branch: medientechnik
   - action: utter_branch
+- story: ask about hours per branch
+  steps:
+  - intent: ask_hours_per_branch
+  - action: action_hours_per_branch
+- story: ask about hours per branch, grade and subject
+  steps:
+    - intent: ask_specific_hours
+    - action: action_hours_per_branch
+- story: ask about consultation
+  steps:
+    - intent: ask_consultation
+    - action: action_consultation
+- story: ask about rooms
+  steps:
+    - intent: ask_room
+    - action: action_room_info
