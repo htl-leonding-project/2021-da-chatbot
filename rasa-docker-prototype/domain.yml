@@ -5,66 +5,66 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- name:
-    use_entities: true
-- htl:
-    use_entities: true
-- branches:
-    use_entities: true
-- branch:
-    use_entities: true
-- ask_hours_per_branch:
-    use_entities: true
-- ask_consultation:
-    use_entities: true
-- ask_room:
-    use_entities: true
-- ask_specific_hours:
-    use_entities: true
-- nlu_fallback:
-    use_entities: true
+  - greet:
+      use_entities: true
+  - goodbye:
+      use_entities: true
+  - affirm:
+      use_entities: true
+  - deny:
+      use_entities: true
+  - mood_great:
+      use_entities: true
+  - mood_unhappy:
+      use_entities: true
+  - bot_challenge:
+      use_entities: true
+  - name:
+      use_entities: true
+  - htl:
+      use_entities: true
+  - branches:
+      use_entities: true
+  - branch:
+      use_entities: true
+  - ask_hours_per_branch:
+      use_entities: true
+  - ask_consultation:
+      use_entities: true
+  - ask_room:
+      use_entities: true
+  - ask_specific_hours:
+      use_entities: true
+  - nlu_fallback:
+      use_entities: true
 entities:
-- name
-- branch
-- teacher
-- class
-- grade
-- subject
+  - name
+  - branch
+  - teacher
+  - class
+  - grade
+  - subject
 slots:
   name:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
-    influence_conversation: true
+    influence_conversation: false
   branch:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
-    influence_conversation: true
+    influence_conversation: false
   logged_in:
     type: rasa.shared.core.slots.BooleanSlot
     initial_value: null
     auto_fill: true
-    influence_conversation: true
+    influence_conversation: false
   name_was_set:
     type: rasa.shared.core.slots.BooleanSlot
     initial_value: false
     auto_fill: true
-    influence_conversation: true
+    influence_conversation: false
 responses:
   utter_greet:
   - condition:
@@ -93,6 +93,9 @@ responses:
   utter_rephrase:
   - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
   - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
-actions: []
+actions:
+  - action_hours_per_branch
+  - action_room_info
+  - action_consultation
 forms: {}
 e2e_actions: []
