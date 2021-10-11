@@ -1,5 +1,5 @@
 import requests
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -17,7 +17,9 @@ def rasa():
 
         data = {'sender': id, 'message': msg}
 
-        return "Running ..."
+        result = requests.post(url=url, json=data)
+
+        return jsonify(result.json())
 
 
 if __name__ == '__main__':
