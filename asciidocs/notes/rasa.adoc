@@ -388,7 +388,7 @@ ifdef::backend-html5,backend-revealjs[image:rasa-interactive.png[]]
 
 == Slots
 
-Slots are the bot's memory. They are key-value pairs and can be used to store information the user provided, similiar to entities, like locations or information about the outside world.
+Slots are the bot's memory. They are key-value pairs and can be used to store information the user provided, similar to entities, like locations or information about the outside world.
 
 In this example we are using slots for a form. 
 
@@ -475,7 +475,7 @@ export BASE_ID=app***
 export TABLE_NAME=Table%201
 ----
 
-To keep our credentials seperate from other code we'll use `python-dotenv`. You install it through:
+To keep our credentials separate from other code we'll use `python-dotenv`. You install it through:
 
 [source,]
 ----
@@ -669,6 +669,25 @@ https://stackoverflow.com/questions/64678048/getting-error-when-set-rasa-x-admin
 https://rasa.com/docs/rasa-x/changelog/rasa-x-changelog
 
 https://rasa.com/docs/rasa/changelog
+
+=== Production
+
+In Rasa X kann man seinen Bot mit Gästebenutzern teilen, die dann mit dem Bot chatten können und so bei der Verbesserung einen wichtigen Teil beitragen können.
+
+Dafür klickt man auf den Share-Button und gibt dann einen Namen und eine Beschreibung ein.
+
+ifdef::backend-html5,backend-revealjs[image:share-bot.png[width=80%]]
+
+Dieser Link funktioniert allerdings nur lokal und verweist auf den `localhost`
+
+==== Ngrok
+
+Dafür kann man `Ngrok` beispielsweise verwenden.
+
+[source,]
+----
+ngrok http 5002
+----
 
 == Troubleshooting
 
