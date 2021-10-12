@@ -27,11 +27,8 @@ stories:
 - story: name
   steps:
   - intent: name
+  - action: action_log_in
   - action: utter_greet
-  - slot_was_set:
-    - logged_in: true
-  - slot_was_set:
-    - name_was_set: true
 - story: branch
   steps:
   - intent: htl

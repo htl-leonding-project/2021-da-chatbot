@@ -97,5 +97,6 @@ actions:
 - action_hours_per_branch
 - action_room_info
 - action_consultation
+- action_log_in
 forms: {}
 e2e_actions: []

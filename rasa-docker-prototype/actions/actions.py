@@ -11,6 +11,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
 
 
 class ActionHoursPerBranch(Action):
@@ -60,3 +61,16 @@ class ActionConsultationTeacher(Action):
         dispatcher.utter_message(text=f"Du willst also die Sprechstunden von Herrn {teacher} wissen?")
 
         return []
+
+
+class ActionLogIn(Action):
+
+    def name(self) -> Text:
+        return "action_log_in"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        name = next(tracker.get_latest_entity_values("name"), None)
+
+        return [SlotSet("logged_in", True)]
