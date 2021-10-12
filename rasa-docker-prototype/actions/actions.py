@@ -21,9 +21,9 @@ class ActionHoursPerBranch(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        branch = tracker.get_slots('branch')
-        grade = tracker.get_slots('grade')
-        subject = tracker.get_slots('subject')
+        branch = next(tracker.get_latest_entity_values("branch"), None)
+        grade = next(tracker.get_latest_entity_values("grade"), None)
+        subject = next(tracker.get_latest_entity_values("subject"), None)
 
         dispatcher.utter_message(
             text=f"Du willst also die Stunden von {branch} wissen?") if not subject or not grade else dispatcher.utter_message(
@@ -40,7 +40,7 @@ class ActionRoomInfo(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        classroom = tracker.get_slots('class')
+        classroom = next(tracker.get_latest_entity_values("class"), None)
 
         dispatcher.utter_message(text=f"Du willst also wissen wo der Raum {classroom} ist?")
 
@@ -55,7 +55,7 @@ class ActionConsultationTeacher(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        teacher = tracker.get_slots('teacher')
+        teacher = next(tracker.get_latest_entity_values("teacher"), None)
 
         dispatcher.utter_message(text=f"Du willst also die Sprechstunden von Herrn {teacher} wissen?")
 
