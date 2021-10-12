@@ -89,6 +89,26 @@ responses:
   utter_branches:
   - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik. Über welchen Zweig soll ich dir mehr erzählen?'
   utter_branch:
+  - condition:
+    - name: branch
+      type: slot
+      value: medientechnik
+    text: Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.
+  - condition:
+    - name: branch
+      type: slot
+      value: informatik
+    text: Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.
+  - condition:
+    - name: branch
+      type: slot
+      value: elektronik
+    text: Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.
+  - condition:
+    - name: branch
+      type: slot
+      value: medizintechnik
+    text: In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.
   - text: '{branch} ist ein toller Zweig in dem man sehr viel lernt'
   utter_rephrase:
   - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
@@ -98,5 +118,6 @@ actions:
 - action_room_info
 - action_consultation
 - action_log_in
+- action_utter_branch
 forms: {}
 e2e_actions: []
