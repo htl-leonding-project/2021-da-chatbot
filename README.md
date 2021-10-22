@@ -27,7 +27,16 @@ von Herrn Professor Stütz.
 
 [10. Besprechung 22.07.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-07-22)
 
-[11. Besprechung 22.07.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-07-31)
+[11. Besprechung 31.07.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-07-31)
+
+[12. Besprechung 27.08.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-08-27)
+
+[13. Besprechung 27.09.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-09-27)
+
+[14. Besprechung 13.10.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-13)
+
+[15 Besprechung 22.10.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-22)
+
 
 # asciidoctor-docker-template
 
