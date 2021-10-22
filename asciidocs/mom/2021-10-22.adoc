@@ -37,9 +37,9 @@ endif::backend-html5[]
 |In der Schule
 
 |von-bis
-|Mo. 27.09.2021, 8:08 - 8:30  Uhr
+|Mo. 27.09.2021, 8:08 - 8:30  Uhr, 12:10 - 12:30
 |Dauer
-| 22 Minuten
+| 42 Minuten
 |===
 
 
@@ -52,6 +52,13 @@ endif::backend-html5[]
 
 
 ifdef::backend-html5,backend-revealjs[image:tafel-22-10-2021.png[width=100%]]
+
+ifdef::backend-html5,backend-revealjs[image:2021-10-22-sketch1.png[width=100%]]
+
+ifdef::backend-html5,backend-revealjs[image:2021-10-22-sketch2.png[width=100%]]
+
+ifdef::backend-html5,backend-revealjs[image:2021-10-22-sketch3.png[width=100%]]
+
 
 == Vereinbarungen und Entscheidungen
 
