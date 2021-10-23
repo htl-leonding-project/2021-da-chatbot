@@ -2,13 +2,14 @@ package at.htl.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import java.util.List;
 
 @Entity
-class C_Entity extends PanacheEntity {
+public class C_Entity extends PanacheEntity {
 
     private String name;
 
@@ -18,6 +19,7 @@ class C_Entity extends PanacheEntity {
     private EntType entType;
 
     @OneToOne
+    @JsonbTransient
     private Intent intent;
 
     public List<String> getValues() {
