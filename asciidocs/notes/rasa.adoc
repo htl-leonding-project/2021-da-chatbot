@@ -386,7 +386,15 @@ rasa interactive
 
 ifdef::backend-html5,backend-revealjs[image:rasa-interactive.png[]]
 
-== Slots
+== Komponenten
+
+=== Intents
+
+=== Responses
+
+=== Actions
+
+=== Slots
 
 Slots are the bot's memory. They are key-value pairs and can be used to store information the user provided, similar to entities, like locations or information about the outside world.
 
@@ -401,7 +409,7 @@ slots:
     type: <type>
 ----
 
-== Entities
+=== Entities
 
 Entities are structured pieces of information inside a user message like for example a location or a job or a name.
 
@@ -414,7 +422,24 @@ entities:
   - <entity name>
 ----
 
-To specify the entity in your intents you write:
+Um die Entities in den Intents anzugeben, verwendet man folgende Syntax:
+
+[source,]
+----
+Hallo mein Name ist [Lukas](name).
+Ich hätte gerne eine [große](size) [Pizza](meal)
+----
+
+==== Entity Roles
+
+==== Entity Groups
+
+=== Synonyms
+
+=== Rules
+
+=== Forms
+
 
 == Rasa Action Server
 
