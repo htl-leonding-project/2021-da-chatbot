@@ -17,7 +17,7 @@ Prozesse
 enum ResType{
 Text
 Link
-Selection
+Buttons
 }
 
 class Intent{
