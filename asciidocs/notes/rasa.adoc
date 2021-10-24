@@ -531,6 +531,25 @@ https://rasa.com/docs/rasa/nlu-training-data/#synonyms
 
 === Rules
 
+Rules werden angegeben um kleine Teile von Unterhaltungen anzugeben, die immer wieder gleich behandelt werden sollen.
+
+Rules sollten allerdings nicht allzu häufig verwendet werden, weil man nie alle Konversationen vorhersagen kann.
+
+TIP: Um Rules zu verwenden, muss die `RulePolicy` in der Policy Konfiguration eingetragen sein.
+
+Um eine Rule zu verwenden, schreibt man folgendes in sein `rules.yml` File:
+
+----
+rules:
+
+- rule: Say `hello` whenever the user sends a message with intent `greet`
+  steps:
+  - intent: greet
+  - action: utter_greet
+----
+
+https://rasa.com/docs/rasa/rules
+
 == Rasa Action Server [[rasa_action_server]]
 
 Es gibt 2 verschiedene Arten von Messages:
