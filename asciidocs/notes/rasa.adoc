@@ -390,7 +390,36 @@ ifdef::backend-html5,backend-revealjs[image:rasa-interactive.png[]]
 
 === Intents
 
+`Intents` sind die Absichten hinter der Nachricht des Benutzers. Als Intents werden also alle möglichen Beispielssätze definiert, die
+ein Benutzer sagen könnte um eine bestimmte Absicht auszudrücken.
+
+`Intents` werden in dem `nlu.yml` File wie folgt angegeben:
+
+[source,]
+----
+## intent:<intent name>
+- <phrase 1>
+- <phrase 2>
+- <phrase 3>
+----
+
 === Responses
+
+`Responses` sind die Antworten, die vom Bot gegeben werden, wenn ein bestimmter `Intent` erkannt wurde.
+
+`Responses` fügt man in seinem `domain.yml` File wie folgt ein:
+
+[source,]
+----
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_<name of your response>:
+  - text: "<text>"
+    image: "<img link>"
+  ...
+----
 
 === Slots
 
