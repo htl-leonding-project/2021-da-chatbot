@@ -515,6 +515,20 @@ https://rasa.com/docs/rasa/forms/
 
 === Synonyms
 
+Mithilfe von Synonymen kann man extrahierten Entities einen anderen Wert geben, als sie eigentlich vorher hatten, wenn diese
+in der Bedeutung gleich sind. Wenn man also mit verschiedenen Wörtern dasselbe meint, kann man sich `Synonyms` zur Hilfe nehmen.
+
+Ein Beispiel dafür wäre Folgendes:
+----
+nlu:
+- synonym: credit
+  examples: |
+    - credit card account
+    - credit account
+----
+
+https://rasa.com/docs/rasa/nlu-training-data/#synonyms
+
 === Rules
 
 == Rasa Action Server [[rasa_action_server]]
