@@ -432,7 +432,48 @@ Ich hätte gerne eine [große](size) [Pizza](meal)
 
 ==== Entity Roles
 
+Entity Roles können sinnvoll in manchen Szenarien sein. Zum Beispiel bei folgendem Satz:
+
+[source,]
+----
+Buche einen Flug von [Linz](city) nach [London](city).
+----
+
+In diesem Fall sind sowohl `Linz` als auch `London` zwar richtig gekennzeichnet als `city` Entity, allerdings reicht
+diese Information noch nicht aus, damit der Chatbot richtig reagieren kann.
+
+Hierbei wäre es praktisch, wenn man noch angibt, welche dieser zwei Städte das Ziel und welche der Abflugsort ist.
+
+Dies macht man mit `Entity Roles`.
+
 ==== Entity Groups
+
+`Entity Groups` können genutzt werden, wenn man Entites miteinander gruppieren möchte.
+
+Dies kann zum Beispiel hier sinnvoll sein:
+
+[source,]
+----
+Ich hätte gerne eine große [Pizza](meal) mit [Pilzen](topping) und eine [Salami](topping) [Pizza](meal).
+----
+
+Bei der Gruppe muss hier erkannt werden, welche zwei Entites zusammen gehören:
+
+[source,]
+----
+Ich hätte gerne eine große [Pizza](meal) mit [Pilzen](topping) und eine [Salami](topping) [Pizza](meal).
+Group 1: [Pizza](meal) [Pilzen](topping)
+Group 2: [Salami](topping) [Pizza](meal)
+----
+
+==== Nutzung von Entity Roles und Entity Groups
+
+TIP: Um diese Features nutzen zu können muss in der `Pipeline` entweder der `CRFEntityExtractor` oder der `DIETClassifier`
+verwendet werden, da diese als einzige Entity Extractors role und group labels erkennen können.
+
+Man kann entweder ein `Form` verwenden oder eine `Custom Action` machen um `Entity Roles` und `Entity Groups` zu verwenden.
+
+https://rasa.com/blog/introducing-entity-roles-and-groups/
 
 === Synonyms
 
