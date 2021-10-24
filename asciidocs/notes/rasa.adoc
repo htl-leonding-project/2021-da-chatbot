@@ -492,11 +492,30 @@ Wenn dein Assistant eine gewisse Custom Action vorhersagt, sendet der Rasa Serve
 
 === Forms
 
+Um mehrere Informationen von einem Benutzer zu bekommen eignen sich Forms.
+
+TIP: Um Forms zu verwenden, muss die `RulePolicy` in der Policy Konfiguration eingetragen sein.
+
+Um ein Formular hinzuzufügen, muss man dies in der `forms` Section in dem `domain.yml` File angeben.
+
+[source,]
+----
+forms:
+  restaurant_form:
+    required_slots:
+        cuisine:
+          - type: from_entity
+            entity: cuisine
+        num_people:
+          - type: from_entity
+            entity: number
+----
+
+https://rasa.com/docs/rasa/forms/
+
 === Synonyms
 
 === Rules
-
-
 
 == Rasa Action Server [[rasa_action_server]]
 
