@@ -392,8 +392,6 @@ ifdef::backend-html5,backend-revealjs[image:rasa-interactive.png[]]
 
 === Responses
 
-=== Actions
-
 === Slots
 
 Slots are the bot's memory. They are key-value pairs and can be used to store information the user provided, similar to entities, like locations or information about the outside world.
@@ -432,6 +430,9 @@ Ich hätte gerne eine [große](size) [Pizza](meal)
 
 ==== Entity Roles
 
+Um die Entities in den Intents anzugeben, verwendet man folgende Syntax:
+
+[source,]
 Entity Roles können sinnvoll in manchen Szenarien sein. Zum Beispiel bei folgendem Satz:
 
 [source,]
@@ -444,6 +445,9 @@ diese Information noch nicht aus, damit der Chatbot richtig reagieren kann.
 
 Hierbei wäre es praktisch, wenn man noch angibt, welche dieser zwei Städte das Ziel und welche der Abflugsort ist.
 
+Um die Entities in den Intents anzugeben, verwendet man folgende Syntax:
+
+[source,]
 Dies macht man mit `Entity Roles`.
 
 ==== Entity Groups
@@ -475,21 +479,31 @@ Man kann entweder ein `Form` verwenden oder eine `Custom Action` machen um `Enti
 
 https://rasa.com/blog/introducing-entity-roles-and-groups/
 
-=== Synonyms
-
-=== Rules
-
-=== Forms
-
-
-== Rasa Action Server
+=== Actions
 
 Es gibt 2 verschiedene Arten von Messages:
 
 1. Static Messages: Diese sind unabhängig vom User Input und benötigen keinen Action Server
 2. Dynamic Messages: Diese sind abhängig vom User Input und benötigen einen Action Server
 
-A Rasa action server runs custom actions for a Rasa Open Source conversational assistant.
+Der <<rasa_action_server>> führt sogenannte Custom Actions für einen Rasa Open Source Conversation assistent aus.
+
+Wenn dein Assistant eine gewisse Custom Action vorhersagt, sendet der Rasa Server einen POST request an den Actionserver mit einer JSON Payload mit dem Namen der vorhergesagten Action, der Conversation ID, den Inhalten des Trackers und den Inhalten der Domain.
+
+=== Forms
+
+=== Synonyms
+
+=== Rules
+
+
+
+== Rasa Action Server [[rasa_action_server]]
+
+Es gibt 2 verschiedene Arten von Messages:
+
+1. Static Messages: Diese sind unabhängig vom User Input und benötigen keinen Action Server
+2. Dynamic Messages: Diese sind abhängig vom User Input und benötigen einen Action Server
 
 Der Rasa Actionserver führt sogenannte Custom Actions für einen Rasa Open Source Conversation assistent aus.
 
