@@ -1,0 +1,40 @@
+@startuml
+
+class C_Entity {
+name: String
+values: List<String>
+entType: EntType
+intent: Intent
+}
+
+enum EntType{
+Produkt
+Dienst
+Event
+Prozesse
+}
+
+enum ResType{
+Text
+Link
+Buttons
+}
+
+class Intent{
+sentences: List<String>
+entity: Entity
+response: Response
+}
+
+class C_Response{
+responses: List<String>
+resType: ResType
+}
+C_Response -- ResType
+
+C_Entity -- EntType
+
+
+C_Entity -- Intent
+Intent -- C_Response
+@enduml
