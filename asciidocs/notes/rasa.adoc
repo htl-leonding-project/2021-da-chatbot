@@ -384,6 +384,13 @@ And this is the syntax for yml files:
 
 === Run your new stories
 
+Um zu überprüfen ob alles richtig gemacht wurde kann man den Befehl `validate` nützen, welcher angibt ob es irgendwelche Fehler im Projekt gibt.
+
+[source,]
+----
+rasa data validate
+----
+
 Um das neue Model zu nutzen muss man dieses zuerst neu trainieren. Dies ermöglicht es dem Model alle neuen Dinge, die wir gerade implementiert im `data/stories.yml` und `domain.yml` File zu lernen.
 
 Um sein Model zu trainieren benützt man folgenden Befehl:
