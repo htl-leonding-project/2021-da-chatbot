@@ -56,6 +56,7 @@ Der Aufbau der NLU ist vollständig konfigurierbar mithilfe der sogenannten *Pip
 
 == NLU Pipeline
 
+
 Rasa Open Source provides a default NLU config on initialization of the project.
 
 In Rasa Open Source, incoming messages are processed by a sequence of components. These components are executed one after another in a so-called processing pipeline defined in your config.yml. Choosing an NLU pipeline allows you to customize your model and finetune it on your dataset.
@@ -73,6 +74,41 @@ You can view every component here:
 https://rasa.com/docs/rasa/components
 
 https://rasahq.github.io/rasa-nlu-examples/
+
+=== DIETClassifier
+
+DIET steht für "Dual Intent and Entity Transformer" der Name ist schon relativ vielsagend, DIET kann Intents klassifizieren und Entities erkennen.
+
+Was bedeutet eigentlich Klassifizieren und was macht ein "Classifier" überhaupt?
+
+ifdef::backend-html5,backend-revealjs[image:classifiers.png[]]
+
+Ein Classifier nimmt den User Input und findet den passenden Intent aus unserem NLU.yml file dazu, ohne DIET würde man noch einen Entity Extractor brauchen, der aus dem Input Entities extrahiert jedoch kann DIET dies auch.
+
+In dem Beispiel vom Bild oben würden wir dank DIET wissen wie der Intent lautet und das der Name Vincet
+
+=== CRFEntityExtractor
+ifdef::backend-html5,backend-revealjs[image:extractor.PNG[]]
+
+=== Policy
+Eine Policy sind die Techniken die beachtet werden wie der Bot dem User antwortet.
+
+ifdef::backend-html5,backend-revealjs[image:policy.png[]]
+
+Falls mehrere policies eine Antwort mit derselben Genauigkeit hätten, wird nach der Priorität die Antwort gewählt:
+
+ifdef::backend-html5,backend-revealjs[image:policyPriority.PNG[]]
+
+
+==== Rule Policy
+
+Wenn man das rule.yml file und die rules die daran stehen benutzen will, muss man die Rule Policy bei den policies einstellen diese ist jedoch sowieso standard mäßig an
+ifdef::backend-html5,backend-revealjs[image:rule.PNG[]]
+
+==== TED Policy
+
+Die TED Policy ist eine ML Policy die sich vorhergehende Aktionen ansieht, um die nächste Antwort zu bestimmen
+ifdef::backend-html5,backend-revealjs[image:ted.png[]]
 
 === Comparing NLU Pipelines
 
