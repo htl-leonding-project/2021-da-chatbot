@@ -1,0 +1,65 @@
+@startuml
+class Intent {
+    - name: String
+}
+
+class Entity {
+    - name: String
+}
+
+class SentenceEntity {
+    - sentence: Sentence
+    - entity: Entity
+    - position: int
+}
+
+class Sentence {
+    - id: Long
+    - sentence: String
+    - intent: Intent
+}
+
+class ExampleSentence {
+    - id: Long
+    - sentence: String
+}
+
+
+class Topic {
+    - id: Long
+    - name: String
+}
+
+class Response {
+    - name: String
+    - text: String
+    - intent: Intent
+}
+
+class Slot {
+    - name: String
+    - type: SlotType
+    - influenceConversations: boolean
+}
+
+enum TopicType {
+FACHBEGRIFF,
+SMALLTALK
+}
+
+enum SlotType {
+TEXT,
+BOOL,
+CATEGORICAL,
+FLOAT,
+LIST,
+ANY
+}
+
+Slot -> SlotType
+Topic -> TopicType
+Sentence "*" -> "1" Intent : consists of <
+Response "*" -> "1" Intent : has <
+SentenceEntity "*" -> "1" Sentence
+SentenceEntity "*" -> "1" Entity
+@enduml
