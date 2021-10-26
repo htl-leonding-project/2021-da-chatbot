@@ -266,7 +266,16 @@ conda activate rasa_env
 
 https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
-Anschließend müssen Rasa und alle gewünschten Packages installiert werden
+Anschließend müssen Rasa und alle gewünschten Packages installiert werden.
+
+Zum Beispiel Rasa X mit dem folgendem Befehl:
+
+[source,]
+----
+pip install --use-deprecated=legacy-resolver rasa-x --extra-index-url https://pypi.rasa.com/simple
+----
+
+In diesem Fall wird die alte Logik von pip verwendet, da die Installation mit `pip 21` stecken bleibt.
 
 == Create the project
 
