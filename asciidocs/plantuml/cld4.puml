@@ -1,0 +1,90 @@
+@startuml
+
+'https://rasa.com/docs/rasa/domain/
+
+class Document {
+ - name: String
+}
+note right: - domain.yml\n- nlu.yml\n- ...
+
+class Element {
+  key: String
+  value: Value
+  dataType: DataType
+  superElement: Element
+  document: Document
+}
+note right of Element
+- key: slots
+- value: null
+- superElement: null
+- document: domain.yml
+
+'- key: concerts
+'- value: null
+'- dataType: Element
+'- superElement: slots
+'- document: null
+'
+'- key: type
+'- value: list
+'- dataType: String
+'- superElement: concerts
+'- document: null
+'
+'- key: influence_conversation
+'- value: false
+'- superElement: concerts
+'- document: null
+'
+'- key: intents
+'- value: null
+'- dataType: List
+'- superElement: null
+'- document: domain.yml
+'
+'- key: affirm
+'- value: null
+'- dataType: null
+'- superElement: intents
+'- document: null
+'
+'- key: deny
+'- value: null
+'- superElement: intents
+'- document: null
+'
+'- key: greet
+'- value: null
+'- superElement: intents
+'- document: null
+'
+'- key: thankyou
+'- value: null
+'- superElement: intents
+'- document: null
+'
+'- key: goodbye
+'- value: null
+'- superElement: intents
+'- document: null
+
+end note
+
+
+class DataType {
+  name: String
+}
+note right of DataType
+- Element
+- List
+- String
+- Integer
+- ...
+end note
+
+Document <-- Element
+Element <-- Element
+Element <--  DataType
+
+@enduml
