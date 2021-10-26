@@ -8,8 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import java.util.List;
 
-@Entity
-public class C_Entity extends PanacheEntity {
+@Entity(name = "C_ENTITY")
+public class ChatbotEntity extends PanacheEntity {
 
     private String name;
 

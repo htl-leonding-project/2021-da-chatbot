@@ -13,10 +13,10 @@ public class Intent extends PanacheEntity {
     private List<String> sentences;
 
     @OneToOne
-    private C_Entity entity;
+    private ChatbotEntity entity;
 
     @OneToOne
-    private C_Response response;
+    private ChatbotResponse response;
 
     public List<String> getSentences() {
         return sentences;
@@ -26,19 +26,19 @@ public class Intent extends PanacheEntity {
         this.sentences = sentences;
     }
 
-    public C_Entity getEntity() {
+    public ChatbotEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(C_Entity entity) {
+    public void setEntity(ChatbotEntity entity) {
         this.entity = entity;
     }
 
-    public C_Response getResponse() {
+    public ChatbotResponse getResponse() {
         return response;
     }
 
-    public void setResponse(C_Response response) {
+    public void setResponse(ChatbotResponse response) {
         this.response = response;
     }
 }

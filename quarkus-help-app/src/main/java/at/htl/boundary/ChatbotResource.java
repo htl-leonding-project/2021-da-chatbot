@@ -1,12 +1,10 @@
-package at.htl;
+package at.htl.boundary;
 
 import at.htl.entity.*;
-import at.htl.repository.C_EntityRepository;
-import at.htl.repository.C_ResponseRepository;
+import at.htl.repository.ChatbotEntityRepository;
+import at.htl.repository.ChatbotResponseRepository;
 import at.htl.repository.IntentRepository;
-import org.postgresql.shaded.com.ongres.scram.common.bouncycastle.pbkdf2.Strings;
 
-import javax.persistence.Transient;
 import javax.transaction.Transactional;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -21,15 +19,15 @@ import java.util.List;
 @Path("/api")
 public class ChatbotResource {
 
-    C_EntityRepository cEntityRepository = new C_EntityRepository();
-    C_ResponseRepository cResponseRepository = new C_ResponseRepository();
+    ChatbotEntityRepository cEntityRepository = new ChatbotEntityRepository();
+    ChatbotResponseRepository cResponseRepository = new ChatbotResponseRepository();
     IntentRepository intentRepository = new IntentRepository();
     @GET
     @Transactional
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/fill")
-    public C_Entity hello() {
-        C_Entity e = new C_Entity();
+    public ChatbotEntity hello() {
+        ChatbotEntity e = new ChatbotEntity();
         e.setEntType(EntType.Produkt);
         e.setName("HTL Leonding");
         List<String> values = new ArrayList<>();
@@ -47,7 +45,7 @@ public class ChatbotResource {
         sentences.add("{ENT}");
         intent.setSentences(sentences);
 
-        C_Response response = new C_Response();
+        ChatbotResponse response = new ChatbotResponse();
         response.setResType(ResType.Text);
         List<String> responses = new ArrayList<>();
         responses.add("Die HTL Leonding ist eine Höhere Schule in Leonding in der man zwischen 4 Zweigen wählen kann");

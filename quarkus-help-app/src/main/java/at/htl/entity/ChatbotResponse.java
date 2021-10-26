@@ -6,8 +6,8 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import java.util.List;
 
-@Entity
-public class C_Response extends PanacheEntity {
+@Entity(name = "C_RESPONSE")
+public class ChatbotResponse extends PanacheEntity {
 
     @ElementCollection
     private List<String> sentences;
