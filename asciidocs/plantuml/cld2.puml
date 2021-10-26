@@ -1,4 +1,5 @@
 @startuml
+left to right direction
 class Intent {
     - name: String
 }
@@ -14,17 +15,13 @@ class Entity {
 }
 note right: Entity: Abteilung(wo sind die Synonyme?)
 
-class SentenceEntity {
-    - sentence: Sentence
+class EntityValue {
+    - intentValue: IntentValue
     - entity: Entity
     - position: int
 }
+note right: Intent: Abteilung\n- Medientechnik\n- Informatik\n- Elektronik\n- Medizintechnik
 
-class Sentence {
-    - id: Long
-    - sentence: String
-    - intent: Intent
-}
 
 class ExampleSentence {
     - id: Long
@@ -45,30 +42,36 @@ class Response {
 
 class Slot {
     - name: String
+    - value:
     - type: SlotType
     - influenceConversations: boolean
 }
+note right: zB Abteilung -> Medientechnik vom TYP STRING
+
+class Synonym {
+
+}
 
 enum TopicType {
-FACHBEGRIFF,
-SMALLTALK
+  FACHBEGRIFF,
+  SMALLTALK
 }
 
 enum SlotType {
-TEXT,
-BOOL,
-CATEGORICAL,
-FLOAT,
-LIST,
-ANY
+    TEXT,
+    BOOL,
+    CATEGORICAL,
+    FLOAT,
+    LIST,
+    ANY
 }
 
 Slot -> SlotType
-Topic -> TopicType
-Sentence "*" -> "1" Intent : consists of <
-Response "*" -> "1" Intent : has <
-SentenceEntity "*" -> "1" Sentence
-SentenceEntity "*" -> "1" Entity
+Topic -right> TopicType
+IntentValue "*" -right> "1" Intent : consists of <
+Response "*" -left> "1" Intent : has <
+EntityValue "*" -right> "1" IntentValue
+EntityValue "*" -left> "1" Entity
 @enduml
 
 
