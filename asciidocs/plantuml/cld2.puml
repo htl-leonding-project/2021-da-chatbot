@@ -2,10 +2,17 @@
 class Intent {
     - name: String
 }
+note right: name -> product-group
+
+class IntentValue {
+  - value: String
+}
+note right: value -> - Welche [Abteilungen] (ProductGroup) gibt es?\n               - Welche Fachrichtungen gibt es?
 
 class Entity {
     - name: String
 }
+note right: Entity: Abteilung(wo sind die Synonyme?)
 
 class SentenceEntity {
     - sentence: Sentence
@@ -63,3 +70,5 @@ Response "*" -> "1" Intent : has <
 SentenceEntity "*" -> "1" Sentence
 SentenceEntity "*" -> "1" Entity
 @enduml
+
+
