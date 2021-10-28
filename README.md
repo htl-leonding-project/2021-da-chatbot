@@ -6,7 +6,17 @@ von Herrn Professor Stütz.
 
 [Index](https://github.com/htl-leonding-project/2021-da-chatbot/)
 
-### Besprechungen
+[Chatbot Features](https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbotFeatures)
+
+### Technology Notes
+
+[Rasa](https://htl-leonding-project.github.io/2021-da-chatbot/notes/rasa)
+
+[Deep Learning](https://htl-leonding-project.github.io/2021-da-chatbot/notes/deep-learning)
+
+[Text Analysis](https://htl-leonding-project.github.io/2021-da-chatbot/notes/text-analysis)
+
+### Meetings
 [1. Besprechung 22.02.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-02-22)
 
 [2. Besprechung 09.03.2021](https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-03-09)
