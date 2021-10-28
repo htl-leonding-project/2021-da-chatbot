@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Say what Leonie is anytime when user asks
+  steps:
+    - intent: ask_leonie
+    - action: utter_leonie

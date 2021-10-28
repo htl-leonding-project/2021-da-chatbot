@@ -3,7 +3,7 @@ config:
   store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
 intents:
 - greet:
     use_entities: true
@@ -37,6 +37,9 @@ intents:
     use_entities: true
 - nlu_fallback:
     use_entities: true
+- ask_leonie:
+    use_entities: true
+
 entities:
 - name
 - branch
@@ -113,6 +116,9 @@ responses:
   utter_rephrase:
   - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
   - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
+  utter_leonie:
+  - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
+
 actions:
 - action_hours_per_branch
 - action_room_info

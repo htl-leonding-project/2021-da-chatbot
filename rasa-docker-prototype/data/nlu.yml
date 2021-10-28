@@ -326,3 +326,11 @@ nlu:
     - Kannst du mir sagen wie viele [Chemie](subject) Stunden man pro Woche in der [1. Klasse](grade) [Elektronik](branch) hat?
     - Kannst du mir sagen wie viele [Geschichte](subject) Stunden man pro Woche in der [2. Klasse](grade) [Medizintechnik](branch) hat?
     - Kannst du mir sagen wie viele [Computerpraktikum](subject) Stunden man pro Woche in der [5. Klasse](grade) [Informatik](branch) hat?
+
+- intent: ask_leonie
+  examples: |
+    - Kennst du Leonie?
+    - Bist du die Leonie?
+    - Was weißt du über die Leonie?
+    - Sagt dir Leonie etwas?
+    - Was ist Leonie?
