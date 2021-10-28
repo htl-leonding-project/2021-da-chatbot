@@ -87,6 +87,23 @@ Ein Classifier nimmt den User Input und findet den passenden Intent aus unserem 
 
 In dem Beispiel vom Bild oben würden wir dank DIET wissen wie der Intent lautet und das der Name Vincet
 
+=== FallbackClassifier
+
+Den `FallbackClassifier` verwendet man um mit Nachrichten umzugehen, bei denen nur eine sehr niedrige Confidence vorhergesagt wurde. In diesem Fall wird dann ein Intent mit dem Namen `nlu_fallback` vorhergesagt, welchen man dann behandeln kann und beispielsweise als Antwort immer definiert, dass der User seine Nachricht neu formulieren soll.
+
+Die Confidence wird hierbei auf den Wert gesetzt welcher im `Threshold` angegeben wird.
+
+[source,]
+----
+pipeline:
+- name: FallbackClassifier
+  threshold: 0.7
+----
+
+https://rasa.com/docs/rasa/fallback-handoff/#nlu-fallback
+
+https://rasa.com/docs/rasa/components#fallbackclassifier
+
 === CRFEntityExtractor
 ifdef::backend-html5,backend-revealjs[image:extractor.PNG[]]
 
