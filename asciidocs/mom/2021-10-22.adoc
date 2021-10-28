@@ -67,7 +67,7 @@ ifdef::backend-html5,backend-revealjs[image:2021-10-22-sketch3.png[width=100%]]
 |===
 |wer |macht was |bis wann
 | Schüler
-| Datenmodell für Backend | Bis zum nächsten Mal
+| Datenmodell für Backend | 25.10.2021
 a|
 
 |===
