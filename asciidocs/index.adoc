@@ -22,9 +22,9 @@ von Herr Pof. Stütz.
 
 https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbotFeatures[Chatbot Features]
 
-[Index](https://github.com/htl-leonding-project/2021-da-chatbot/)
+https://github.com/htl-leonding-project/2021-da-chatbot/[Index]
 
-[Chatbot Features](https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbotFeatures)
+https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbotFeatures[Chatbot Features]
 
 === Technology Notes
 
