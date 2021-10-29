@@ -1,0 +1,42 @@
+@startuml
+
+class NluEntryType {
+ name: String
+}
+
+class Nlu {
+ - version: integer
+}
+
+class NluEntry {
+ - type: NluEntryType
+ - name: String
+ - isDomainSpecific
+}
+note right of NluEntry
+- type "intent" -> name: abteilung
+- type "synonym" -> name: abteilung
+
+isDomainSpecific ... ist ein Fachbereichsbegriff, nicht für allgemeine Konversation
+end note
+
+class NluEntryExample{
+ - Example: String
+}
+note right of NluEntryExample
+- NluEntry "intent" -> Example "Abteilung"
+- NluEntry "synonym" -> Example "Fachrichtung"
+end note
+note right of NluEntryType
+ - intent
+ - synonym
+ - regex
+end note
+
+
+NluEntryType <-- Nlu
+Nlu <-- NluEntry
+NluEntry <-- NluEntryExample
+
+
+@enduml
