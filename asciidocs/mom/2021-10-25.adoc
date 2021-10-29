@@ -106,7 +106,6 @@ Frage: Sind Rasa, Dialogflow, Cortana, Watson usw ähnlich im Aufbau oder so unt
 
 Ein Prototyp soll erstellt werden mit einem Viewer (yml oder Json file Ausgabe vo Domain und so)
 
-==
 - Endpoint mit Dokument Namen
 
 mit json b oder p anhängen
