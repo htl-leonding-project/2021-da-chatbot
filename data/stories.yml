@@ -1,0 +1,78 @@
+version: "2.0"
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: name
+  steps:
+  - intent: name
+  - action: action_log_in
+  - action: utter_greet
+- story: branch
+  steps:
+  - intent: htl
+  - action: utter_htl
+  - intent: branches
+  - action: utter_branches
+  - intent: branch
+  - action: action_utter_branch
+- story: ask for a branch
+  steps:
+  - intent: branch
+  - action: action_utter_branch
+- story: ask for branches
+  steps:
+  - intent: branches
+  - action: utter_branches
+  - intent: branch
+  - action: action_utter_branch
+- story: rephrase
+  steps:
+  - intent: nlu_fallback
+  - action: utter_rephrase
+- story: Story from Conversation ID ccc3836ad30640dba21bb220d28ccf0c
+  steps:
+  - action: action_utter_branch
+  - intent: branches
+  - action: utter_branches
+  - intent: branch
+    entities:
+    - branch: medientechnik
+  - action: action_utter_branch
+- story: ask about hours per branch
+  steps:
+  - intent: ask_hours_per_branch
+  - action: action_hours_per_branch
+- story: ask about hours per branch, grade and subject
+  steps:
+    - intent: ask_specific_hours
+    - action: action_hours_per_branch
+- story: ask about consultation
+  steps:
+    - intent: ask_consultation
+    - action: action_consultation
+- story: ask about rooms
+  steps:
+    - intent: ask_room
+    - action: action_room_info

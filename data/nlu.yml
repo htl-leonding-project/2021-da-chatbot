@@ -1,0 +1,336 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Grüß Gott!
+    - Guten Tag!
+    - Guten Tag bot
+    - Guten Tag lieber bot
+    - Hallo.
+    - Sag mal hallo
+    - Hallo du da
+    - Hallo du bot
+    - Hallo lieber bot.
+    - Hallo bot.
+    - Hey!
+    - Hey robo
+    - Hey bot
+    - Hey bot kannst du hallo sagen
+    - Hi
+    - Hi bot kannst du hallo sagen
+    - Hi hallo
+    - Mahlzeit!
+    - Moin!
+    - Moin, bot kannst du hallo sagen
+    - Moin moin!
+    - Na du?!
+    - Na du, bot
+    - Na du sag mal hallo
+    - Na du bot, sag mal hallo
+    - Sag mal hallo.
+    - Kannst du hallo sagen
+    - Kannst mich begrüßen
+    - Kannst du uns begrüßen
+    - sei gegrüßt
+    - sei gegrüßt bot
+    - Servus
+    - Servus bot
+    - hi bot
+    - huhu bot
+    - huhu du da
+    - huhu hallo
+    - huhu
+    - huhu sag mal hallo
+    - oida seas
+    - hi
+- intent: goodbye
+  examples: |
+    - Schönen Abend noch
+    - Auf Wiederschauen
+    - Auf Wiederschauen bot
+    - auf wiedersehen
+    - Auf Wiedersehen bot
+    - Auf Wiedersehen, chat bot.
+    - bis bald
+    - bis dann
+    - bis demnächst
+    - bis denn
+    - bis die Tage
+    - Bis morgen
+    - bis nachher
+    - Bis später
+    - bis zum nächsten Mal
+    - bis bald bot
+    - bis dann bot
+    - bis demnächst bot
+    - bis denn bot
+    - bis die Tage bot
+    - Bis morgen bot
+    - bis nachher bot
+    - Bis später bot
+    - bis zum nächsten Mal bot
+    - Bis zum nächsten Mal. Tschau.
+    - bye
+    - bot
+    - Ciao.
+    - Ich gehe jetzt
+    - Ich verabschiede mich jetzt
+    - Mach es gut
+    - Machs gut!
+    - Man sieht sich!
+    - Pass gut auf dich auf!
+    - Schönen Tag
+    - schönen tag noch
+    - Schönes Wochenende
+    - Schön Feierabend
+    - Tschau
+    - tschüs
+    - tschüs bot
+    - Tschüss.
+    - Tschüss chat bot.
+    - Wir sehen uns!
+    - Wir sehen uns das nächste mal
+- intent: affirm
+  examples: |
+    - Alles klar.
+    - Alles klar bot
+    - auf jeden fall
+    - Dann erzähl mal.
+    - Dann erzähl mal bot
+    - gern
+    - gern bot
+    - Gerne.
+    - Gerne. Ja.
+    - Ich will mehr darüber wissen.
+    - ja
+    - ja bot
+    - Ja.
+    - Ja bitte.
+    - Ja doch, erzähl mal.
+    - Ja erzähl mal.
+    - Ja erzähl mal noch ein bisschen.
+    - Ja erzähl mal noch ein bisschen mehr.
+    - Ja, erzähl mal was.
+    - Ja gerne.
+    - Ja ja doch.
+    - Ja ja, hab ich.
+    - Ja klar.
+    - Jo.
+    - johr
+    - Na gut.
+    - Na immer mehr.
+    - na klar
+    - Na klar.
+    - Natürlich.
+    - Noch mehr.
+    - Erzähle mir mehr
+    - Erzähle noch mehr
+    - nu klar
+    - ok
+    - okay
+    - Okay.
+    - Okay, dann kommen wir mal wieder.
+    - Sehr gern.
+    - Sehr gern bot
+    - Na klar bot
+    - Natürlich bot
+    - nu klar bot
+    - ok bot
+    - okay bot
+- intent: deny
+  examples: |
+    - no
+    - nein
+    - n
+    - niemals
+    - ich denke nicht
+    - sicher nicht
+    - du spinnst doch
+- intent: name
+  examples: |
+    - Mein name ist [Felix](name)
+    - ich bin [Lukas](name)
+    - ich bin [Robert](name)
+    - ich bin [Tom](name)
+    - ich bin [Sarah](name)
+    - ich bin [Lisa](name)
+    - ich bin [Thomas](name)
+    - ich bin [Ali](name)
+    - ich bin [Josef](name)
+    - Ich heisse [Franz](name)
+    - Man nennt mich [Georg](name)
+    - sag [David](name)
+    - meine freunde nennen mich [Günther](name)
+    - du kannst mich [John](name) nennen
+    - du darft mich [Jonas](name) nennen
+    - Bitte nenne mich [Sebastian](name)
+    - mein name ist [Tom](name)
+    - [Basti](name)
+    - [Peter](name)
+    - [Mark](name)
+    - [Max](name)
+    - [Sandy](name)
+    - [Kelly](name)
+    - [Tobias](name)
+    - [Simon](name)
+    - [Nina](name)
+    - [Isabel](name)
+    - [Flo](name)
+    - [Oliver](name)
+    - [Philipp](name)
+    - [Florian](name)
+    - [Silvio](name)
+    - [Quirin](name)
+    - ich bin [lukas](name)
+    - hi ich bin [lukas](name)
+    - mein name ist [felix](name)
+- intent: mood_great
+  examples: |
+    - perfekt
+    - super
+    - toll
+    - fabelhaft
+    - fantastisch
+    - Ich fühle mich gut
+    - Mir gehts toll
+    - Mir gehts super
+    - sehr gut
+    - wirklich gut
+    - gut
+    - gut so
+    - gut eigentlich
+    - gut und dir
+- intent: mood_unhappy
+  examples: |
+    - ich hatte einen schlechten tag
+    - Ich bin traurig
+    - Ich fühle mich nicht wohl
+    - Ich bin entäuscht
+    - super traurig
+    - Ich bin wirklich traurig
+    - traurig
+    - sehr traurig
+    - unglücklich
+    - nicht gut
+    - nicht sehr gut
+    - extrem traurig
+    - so traurig
+- intent: bot_challenge
+  examples: |
+    - bist du ein Bot?
+    - bist du ein mensch?
+    - bist du ein Chatbot?
+    - rede ich mit einem Roboter?
+    - rede ich mit einem Menschen?
+- intent: htl
+  examples: |
+    - Was ist die HTL Leonding?
+    - HTL Leonding?
+    - HTL?
+    - HTL leonding was ist das?
+    - htl
+    - htl yo
+    - Htl infos
+- intent: branches
+  examples: |
+    - Welche Zweige gibt es?
+    - Zweige?
+    - Abteilungen?
+    - Was für Abteilungen gibt es?
+    - Welche Zweige gibt es an der HTL leonding?
+    - Was lernt man an der HTL Leonding?
+    - Welche Fachrichtungen gibt es?
+    - Erzähl mir etwas über die Zweige?
+    - Erzähl mir etwas über die verschieden Zweige?
+    - welche zweige denn
+    - welche denn
+    - zweig
+    - welche ha
+    - htl zweige
+    - Welche zweige
+- intent: branch
+  examples: |
+    - [Medientechnik](branch)?
+    - [Informatik](branch)
+    - [Medizintechnik](branch)
+    - [Elektronik](branch)
+    - Erzähl mir etwas über den [Medientechnik](branch) zweig?
+    - [Elektronik](branch) klingt interessant
+    - Was weißt du über [Informatik](branch)
+    - [Medizintechnik](branch) könnte interessant sein
+    - [elektronik](branch)
+    - [medientechnik](branch)
+    - Was lernt man in der [Informatik](branch)?
+    - Was lernt man in der [Elektronik](branch)?
+    - Was lernt man in der [Medientechnik](branch)?
+    - Was lernt man in der [Medizintechnik](branch)?
+    - [Medizintechnik](branch) bitte
+    - [elektronik](branch) pls
+    - [medizintechnik](branch) bitte
+    - [Informatik](branch) bitte
+- intent: ask_hours_per_branch
+  examples: |
+    - Wieviele Stunden gibt es pro Woche in der [Informatik](branch)?
+    - Wieviele Stunden gibt es pro Woche in der [Elektronik](branch)?
+    - Wieviele Stunden gibt es pro Woche in der [Medientechnik](branch)?
+    - Wieviele Stunden gibt es pro Woche in der [Medizintechnik](branch)?
+    - Wieviele Stunden hat die [Informatik](branch)?
+    - Wieviele Stunden hat die [Elektronik](branch)?
+    - Wieviele Stunden hat die [Medientechnik](branch)?
+    - Wieviele Stunden hat die [Medizintechnik](branch)?
+    - Wie viele Stunden hat man in der [Informatik](branch)?
+    - Wie viele Stunden hat man in der [Elektronik](branch)?
+    - Wie viele Stunden hat man in der [Medientechnik](branch)?
+    - Wie viele Stunden hat man in der [Medizintechnik](branch)?
+    - Wie viele Stunden hat man im [Informatik](branch) Zweig?
+    - Wie viele Stunden hat man im [Elektronik](branch) Zweig?
+    - Wie viele Stunden hat man im [Medientechnik](branch) Zweig?
+    - Wie viele Stunden hat man im [Medizintechnik](branch) Zweig?
+    - Stundenanzahl von [Informatik](branch)
+    - Stundenanzahl von [Elektronik](branch)
+    - Stundenanzahl von [Medientechnik](branch)
+    - Stundenanzahl von [Medizintechnik](branch)
+    - Stundenanzahl der [Informatik](branch)
+    - Stundenanzahl der [Elektronik](branch)
+    - Stundenanzahl der [Medientechnik](branch)
+    - Stundenanzahl der [Medizintechnik](branch)
+- intent: ask_consultation
+  examples: |
+    - Wann hat Herr [Stütz](teacher) Sprechstunde?
+    - Wann hat Herr Professor [Holzmann](teacher) Sprechstunde?
+    - Wann kann ich mit Herrn Professor [Reichinger](teacher) reden?
+    - Wann hat Herr Professor [Jakob](teacher) Zeit für ein Gespräch?
+    - Sprechstunde von Herrn [Höfer](teacher)?
+    - Weißt du wann Herr [Bauer](teacher) Sprechstunde hat?
+    - Wann hat Frau Professor [Schwaiger](teacher) Sprechstunde?
+    - Wann kann ich mit Frau Professor [Brenn](teacher) reden?
+    - Wann hat Frau Professor [Apollonio](teacher) Zeit für ein Gespräch?
+    - Sprechstunde von Frau [Engleitner](teacher)?
+    - Weißt du wann Frau [Gallner-Holzmann](teacher) Sprechstunde hat?
+- intent: ask_room
+  examples: |
+    - Wo ist der Raum der [5AHITM](class)?
+    - Wo befindet sich der Raum der [4CHIF](class)?
+    - Wo finde ich den Raum der Klasse [2BHITM](class)?
+    - Weißt du wo der Klassenraum der [3AHEL](class) ist?
+    - Klassenzimmer von der [1BHIF](class)
+- intent: ask_specific_hours
+  examples: |
+    - Wie viele Stunden [Mathematik](subject) hat man in der [3. Klasse](grade) [Medientechnik](branch)?
+    - Wie viele Stunden [Physik](subject) hat man in der [2. Klasse](grade) [Informatik](branch)?
+    - Wie viele Stunden [Englisch](subject) hat man in der [1. Klasse](grade) [Medizintechnik](branch)?
+    - Wie viele Stunden [Turnen](subject) hat man in der [3. Klasse](grade) [Elektronik](branch)?
+    - Wie viele Stunden [Netzwerktechnik](subject) hat man in der [5. Klasse](grade) [Medientechnik](branch)?
+    - Kannst du mir sagen wie viele [Softwareentwicklung](subject) Stunden man pro Woche in der [4. Klasse](grade) [Informatik](branch) hat?
+    - Kannst du mir sagen wie viele [Rechnungswesen](subject) Stunden man pro Woche in der [3. Klasse](grade) [Medientechnik](branch) hat?
+    - Kannst du mir sagen wie viele [Chemie](subject) Stunden man pro Woche in der [1. Klasse](grade) [Elektronik](branch) hat?
+    - Kannst du mir sagen wie viele [Geschichte](subject) Stunden man pro Woche in der [2. Klasse](grade) [Medizintechnik](branch) hat?
+    - Kannst du mir sagen wie viele [Computerpraktikum](subject) Stunden man pro Woche in der [5. Klasse](grade) [Informatik](branch) hat?
+
+- intent: ask_leonie
+  examples: |
+    - Kennst du Leonie?
+    - Bist du die Leonie?
+    - Was weißt du über die Leonie?
+    - Sagt dir Leonie etwas?
+    - Was ist Leonie?

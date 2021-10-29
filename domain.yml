@@ -1,0 +1,129 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- name:
+    use_entities: true
+- htl:
+    use_entities: true
+- branches:
+    use_entities: true
+- branch:
+    use_entities: true
+- ask_hours_per_branch:
+    use_entities: true
+- ask_consultation:
+    use_entities: true
+- ask_room:
+    use_entities: true
+- ask_specific_hours:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- ask_leonie:
+    use_entities: true
+
+entities:
+- name
+- branch
+- teacher
+- class
+- grade
+- subject
+slots:
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  branch:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  logged_in:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  name_was_set:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: false
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - condition:
+    - name: logged_in
+      type: slot
+      value: true
+    text: Hey {name}! Wie gehts dir?
+  - text: Hi! Wie gehts dir?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Hier ist etwas zur Aufmunterung:'
+  utter_did_that_help:
+  - text: Hat das geholfen?
+  utter_happy:
+  - text: Großartig!
+  utter_goodbye:
+  - text: Tschüss
+  utter_iamabot:
+  - text: Ich bin ein bot, powered by Rasa.
+  utter_htl:
+  - text: Die HTL Leonding ist eine Höhere Schule in Leonding in der man zwischen 4 Zweigen wählen kann
+  utter_branches:
+  - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik. Über welchen Zweig soll ich dir mehr erzählen?'
+  utter_branch:
+  - condition:
+    - name: branch
+      type: slot
+      value: medientechnik
+    text: Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.
+  - condition:
+    - name: branch
+      type: slot
+      value: informatik
+    text: Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.
+  - condition:
+    - name: branch
+      type: slot
+      value: elektronik
+    text: Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.
+  - condition:
+    - name: branch
+      type: slot
+      value: medizintechnik
+    text: In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.
+  - text: '{branch} ist ein toller Zweig in dem man sehr viel lernt'
+  utter_rephrase:
+  - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
+  - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
+  utter_leonie:
+  - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
+
+actions:
+- action_hours_per_branch
+- action_room_info
+- action_consultation
+- action_log_in
+- action_utter_branch
+forms: {}
+e2e_actions: []

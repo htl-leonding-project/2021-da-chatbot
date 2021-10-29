@@ -1,0 +1,7 @@
+models/
+results/
+.cache/
+/venv/
+/*.db
+/events.db-shm
+/events.db-wal
