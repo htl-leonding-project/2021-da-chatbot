@@ -26,3 +26,7 @@ rules:
   steps:
     - intent: thanks
     - action: utter_no_problem
+- rule: show school picture
+  steps:
+    - intent: show_school_picture
+    - action: utter_school_photo

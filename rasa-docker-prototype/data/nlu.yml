@@ -358,3 +358,12 @@ nlu:
     - Wie gehts, wie stehts.
     - Wie gehts so?
     - Wie gehts?
+
+- intent: show_school_picture
+  examples: |
+    - Wie sieht die HTL aus?
+    - Zeig mir die HTL?
+    - Kannst du mir die HTL Leonding zeigen?
+    - Zeig mir ein Foto der HTL Leonding?
+    - Ich würde die HTL Leonding gerne sehen?
+    - Wie sieht die HTL Leonding den so aus?
