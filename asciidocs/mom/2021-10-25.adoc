@@ -114,6 +114,9 @@ Json zu YAML umwandeln
 
 Pretty Print
 
+ifdef::backend-html5,backend-revealjs[image:2021-10-25-sketch.png[width=100%]]
+
+
 == Vereinbarungen und Entscheidungen
 
 .Was wurde vereinbart?
