@@ -22,7 +22,19 @@ von Herr Pof. Stütz.
 
 https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbotFeatures[Chatbot Features]
 
-https://htl-leonding-project.github.io/2021-da-chatbot/notes/rasa[Rasa Notes]
+[Index](https://github.com/htl-leonding-project/2021-da-chatbot/)
+
+[Chatbot Features](https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbotFeatures)
+
+=== Technology Notes
+
+https://htl-leonding-project.github.io/2021-da-chatbot/notes/rasa[Rasa]
+
+https://htl-leonding-project.github.io/2021-da-chatbot/notes/deep-learning[Deep Learning]
+
+https://htl-leonding-project.github.io/2021-da-chatbot/notes/text-analysis[Text Analysis]
+
+=== Meetings
 
 https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-02-22[1. Besprechung 22.02.2021]
 
@@ -53,3 +65,9 @@ https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-09-27[13. Bespre
 https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-13[14. Besprechung 13.10.2021]
 
 https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-22[15. Besprechung 22.10.2021]
+
+https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-25[16. Besprechung 25.10.2021]
+
+https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-26[17. Besprechung 26.10.2021]
+
+https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-28[18. Besprechung 28.10.2021]
