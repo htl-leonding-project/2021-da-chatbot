@@ -22,7 +22,7 @@ von Herr Pof. Stütz.
 
 https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbotFeatures[Chatbot Features]
 
-https://htl-leonding-project.github.io/2021-da-chatbot/notes/Rasa[Rasa Notes]
+https://htl-leonding-project.github.io/2021-da-chatbot/notes/rasa[Rasa Notes]
 
 https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-02-22[1. Besprechung 22.02.2021]
 

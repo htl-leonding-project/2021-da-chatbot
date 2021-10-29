@@ -88,12 +88,13 @@ Ein Classifier nimmt den User Input und findet den passenden Intent aus unserem 
 In dem Beispiel vom Bild oben würden wir dank DIET wissen wie der Intent lautet und das der Name Vincet
 
 === CRFEntityExtractor
+
 ifdef::backend-html5,backend-revealjs[image:extractor.PNG[]]
 
 === Policy
 Eine Policy sind die Techniken die beachtet werden wie der Bot dem User antwortet.
 
-ifdef::backend-html5,backend-revealjs[image:policy.png[]]
+ifdef::backend-html5,backend-revealjs[image:policy.PNG[]]
 
 Falls mehrere policies eine Antwort mit derselben Genauigkeit hätten, wird nach der Priorität die Antwort gewählt:
 
@@ -103,12 +104,14 @@ ifdef::backend-html5,backend-revealjs[image:policyPriority.PNG[]]
 ==== Rule Policy
 
 Wenn man das rule.yml file und die rules die daran stehen benutzen will, muss man die Rule Policy bei den policies einstellen diese ist jedoch sowieso standard mäßig an
+
 ifdef::backend-html5,backend-revealjs[image:rule.PNG[]]
 
 ==== TED Policy
 
 Die TED Policy ist eine ML Policy die sich vorhergehende Aktionen ansieht, um die nächste Antwort zu bestimmen
-ifdef::backend-html5,backend-revealjs[image:ted.png[]]
+
+ifdef::backend-html5,backend-revealjs[image:ted.PNG[]]
 
 === Comparing NLU Pipelines
 

@@ -37,7 +37,7 @@ endif::backend-html5[]
 |In der Schule
 
 |von-bis
-|Mo. 27.09.2021, 8:08 - 8:30  Uhr, 12:10 - 12:30
+|Fr. 22.10.2021, 8:08 - 8:30  Uhr, 12:10 - 12:30
 |Dauer
 | 42 Minuten
 |===
