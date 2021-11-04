@@ -12,7 +12,7 @@ Rasa Core ist verantwortlich für den Conversation Flow, Context-Handling, Bot-R
 
 RASA Core bezieht sich dabei auf die Hauptkomponente, die die Nachrichten erhält und darauf antwortet.
 
-Der Rasa Core hält für jede Session, also für jeden User, einen *Tracker*. Dieser enthält den momentanen Zustand der Konversationen, der jeweiligen User. Bekommt der Bot nun eine Nachricht, wird zuerst der *Interpreter* durchlaufen, welcher den Originaltext als Eingabe bekommt, und die Eingabe, den Intent und die extrahierten Entities zurückgibt. Zusammen mit dem aktuellen Zustand des Trackers entscheidet die *Policy* Komponente nun, welche *Action*, also Antwort des Bots, als nächstes ausgeführt werden soll. Diese Entscheidung wird nicht durch einfache Regeln getroffen, sondern genauso wie Intents oder Entities, auf der Grundlage von einem, mit Machine Learning, trainierten Modell.
+Der Rasa Core hält für jede Session, also für jeden User, einen *Tracker*. Dieser enthält den momentanen Zustand der Konversationen, der jeweiligen User. Bekommt der Bot nun eine Nachricht, wird zuerst der *Interpreter* durchlaufen, welcher den Originaltext als Eingabe bekommt, und die Eingabe, den Intent und die extrahierten Entities zurückgibt. Zusammen mit dem aktuellen Zustand des Trackers entscheidet die *Policy* Komponente nun, welche *Action*, also Antwort des Bots, als nächstes ausgeführt werden soll. Diese Entscheidung wird nicht durch einfache Regeln getroffen, sondern genauso wie Intents oder Entities, auf der Grundlage von einem, mit Machine Learning, trainierten Model.
 
 ifdef::backend-html5,backend-revealjs[image:rasa-core.png[width=80%]]
 
@@ -58,17 +58,76 @@ Der Aufbau der NLU ist vollständig konfigurierbar mithilfe der sogenannten *Pip
 
 Rasa Open Source bietet bei der Initialisierung des Projekts eine Standard-NLU-Konfiguration.
 
-In Rasa Open Source werden eingehende Nachrichten von einer Reihe von Komponenten verarbeitet. Diese Komponenten werden nacheinander in einer sogenannten Processing Pipeline ausgeführt, die im `config.yml` File definiert ist. Wenn man eine NLU-Pipeline auswählt, kann man allerdings sein Modell anpassen und an das Dataset verfeinern.
+In Rasa Open Source werden eingehende Nachrichten von einer Reihe von Komponenten verarbeitet. Diese Komponenten werden nacheinander in einer sogenannten Processing Pipeline ausgeführt, die im `config.yml` File definiert ist. Wenn man eine NLU-Pipeline auswählt, kann man allerdings sein Model anpassen und an das Dataset verfeinern.
 
 Auf diesem Bild sind alle Komponenten und der Lifecycle zu sehen:
 
 ifdef::backend-html5,backend-revealjs[image:component-lifecycle.png[]]
 https://rasa.com/docs/rasa/tuning-your-model
 
+Bevor die erste Komponente mit der Create-Funktion erstellt wird, wird ein sogenannter Kontext erstellt (der nichts anderes als ein Python-dict ist). Dieser Kontext wird verwendet, um Informationen zwischen den Komponenten zu übergeben. Beispielsweise kann eine Komponente Merkmalsvektoren für die Trainingsdaten berechnen, diese im Kontext speichern und eine andere Komponente kann diese Merkmalsvektoren aus dem Kontext abrufen und eine Intent Klassifikation durchführen.
+
+Zunächst wird der Kontext mit allen Konfigurationswerten gefüllt, die Pfeile im Bild zeigen die Aufrufreihenfolge und visualisieren den Pfad des übergebenen Kontexts. Nachdem alle Komponenten trainiert und beibehalten wurden, wird das finale context dictionary verwendet, um die Metadaten des Models beizubehalten.
+
+http://35.196.60.7/docs/nlu/0.14.4/choosing_pipeline/#component-lifecycle
+
 ifdef::backend-html5,backend-revealjs[image:pipeline.png[]]
 https://www.udemy.com/course/learn-to-build-incredible-ai-chatbots-using-rasa/
 
-You can view every component here:
+=== Arten von NLU Pipelines
+
+Es gibt verschiedene bereits konfigurierte Pipelines.
+
+Grundsätzlich ist zwischen Pipelines zu unterscheiden, indem man sich informiert, ob sie `pre-trained word vectors` verwenden oder nicht.
+
+==== Beispiele für Pipelines mit pre-trained word vectors
+
+Der Vorteil von Pipelines, die pre-trained word vectors verwendet ist, dass diese bereits aus der jeweiligen Sprache word vectors besitzen. Somit weiß das Model beispielsweise, dass Äpfel und Birnen ähnlich sind ohne, dass dies in den Intents irgendwo spezifiert werden muss.
+
+
+[source,]
+----
+language: "de"
+
+pipeline: "spacy_sklearn"
+----
+
+Die SpaCy Pipeline verwendet pre-trained word vectors von GloVe oder fastText.
+
+Es gibt außerdem auch noch Pipelines von `MITIE`. Diese verwendet `MITIE` als Source für die word vectors. Ein Vorteil von MITIE ist, dass man hier auch seine eigenen word vectors trainieren kann, indem man einen Corpus von Wikipedia oder ähnlichen Seiten verwendet. Allerdings wird MITIE meistens nicht empfohlen und es könnte auch sein, dass MITIE demnächstet deprecated sein wird.
+
+[source,]
+----
+language: "de"
+
+pipeline: "mitie_sklearn"
+----
+
+==== Beispiele für Pipelines ohne pre-trained word vectors
+
+Der Vorteil von Pipelines ohne pre-trained word vectors ist, dass diese speziell auf den Fachbereich angepasst sind, für den man den Chatbot entwickelt.
+
+Als Beispiel kann man die Wörter "balance" und "symmetry" aus dem Englischen sehen. Diese Wörter sind eng miteinander verwandt. Allerdings kann im Kontext von Banken das Wort "balance" auch mit "cash" verwandt sein. Bei einem pre-trained Model würden diese Wortvektoren nicht nah aneinander liegen, aber wenn man einen Chatbot hat der nur Intents besitzt, die mit Banken und Rechnungswesen zu tun haben, werden diese zwei Wörter "balance" und "cash" ohne pre-trained word vectors als ähnlich erkannt werden.
+
+Außerdem benutzen diese Pipelines kein sprach-spezifisches Model und somit kann man sie in allen Sprachen verwenden, die tokenisiert werden kann.
+
+
+[source,]
+----
+language: "de"
+
+pipeline: "tensorflow_embedding"
+----
+
+Der Bag-of-word-vectors Ansatz ist zwar sehr gut aber leider auch nicht perfekt. Ein Problem davon ist, dass er oftmals keine fachspezifischen Begriffe kennt und außerdem können Typos nicht als Wortvektoren gelernt werden. Außerdem ist das Problem bei pre-trained word vectors, dass zehntausende Vektoren gespeichert werden, die vermutlich nie verwendet werden.
+
+Mit dem Tensorflow-Embedding macht man im Grunde genommen genau das Gegenteil. Diese Pipeline verwendet keine pre-trained vectors und sollte mit jeder Sprache verwendet werden können. Diese Pipeline lernt Embeddings für die Intents und für die Wörter und die Embeddings werden verwendet um die Ähnlichkeit zwischen dem Input und den Intents zu ermitteln.
+
+https://medium.com/rasa-blog/supervised-word-vectors-from-scratch-in-rasa-nlu-6daf794efcd8
+
+http://35.196.60.7/docs/nlu/0.14.4/choosing_pipeline/
+
+Alle Komponenten der Pipeline können hier eingesehen werden:
 
 https://rasa.com/docs/rasa/components
 
