@@ -146,7 +146,7 @@ nlu:
     - ich denke nicht
     - sicher nicht
     - du spinnst doch
-- intent: name
+- intent: tell_name
   examples: |
     - Mein name ist [Felix](name)
     - ich bin [Lukas](name)
@@ -222,7 +222,7 @@ nlu:
     - bist du ein Chatbot?
     - rede ich mit einem Roboter?
     - rede ich mit einem Menschen?
-- intent: htl
+- intent: ask_htl_general
   examples: |
     - Was ist die HTL Leonding?
     - HTL Leonding?
@@ -231,7 +231,8 @@ nlu:
     - htl
     - htl yo
     - Htl infos
-- intent: branches
+    - Erzähl mir etwas über die HTL Leonding
+- intent: ask_branches
   examples: |
     - Welche Zweige gibt es?
     - Zweige?
@@ -248,7 +249,7 @@ nlu:
     - welche ha
     - htl zweige
     - Welche zweige
-- intent: branch
+- intent: ask_specific_branch
   examples: |
     - [Medientechnik](branch)?
     - [Informatik](branch)
@@ -326,7 +327,6 @@ nlu:
     - Kannst du mir sagen wie viele [Chemie](subject) Stunden man pro Woche in der [1. Klasse](grade) [Elektronik](branch) hat?
     - Kannst du mir sagen wie viele [Geschichte](subject) Stunden man pro Woche in der [2. Klasse](grade) [Medizintechnik](branch) hat?
     - Kannst du mir sagen wie viele [Computerpraktikum](subject) Stunden man pro Woche in der [5. Klasse](grade) [Informatik](branch) hat?
-
 - intent: ask_leonie
   examples: |
     - Kennst du Leonie?
@@ -334,3 +334,36 @@ nlu:
     - Was weißt du über die Leonie?
     - Sagt dir Leonie etwas?
     - Was ist Leonie?
+
+- intent: better_than_leonie
+  examples: |
+    - Leonie ist besser als du
+    - Du bist besser als Leonie
+    - Leonie ist besser
+    - Leonie ist schlauer als du
+    - Leonie ist viel schlauer als du
+
+- intent: thanks
+  examples: |
+    - danke
+    - thx
+    - Vielen dank
+    - okay, danke
+    - du warst eine große Hilfe
+
+- intent: how_are_you
+  examples: |
+    - Wie geht es dir?
+    - Wie fühlst du dich?
+    - Wie gehts, wie stehts.
+    - Wie gehts so?
+    - Wie gehts?
+
+- intent: show_school_picture
+  examples: |
+    - Wie sieht die HTL aus?
+    - Zeig mir die HTL?
+    - Kannst du mir die HTL Leonding zeigen?
+    - Zeig mir ein Foto der HTL Leonding?
+    - Ich würde die HTL Leonding gerne sehen?
+    - Wie sieht die HTL Leonding den so aus?

@@ -1,45 +1,29 @@
 version: '2.0'
-config:
-  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false
 intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- name:
-    use_entities: true
-- htl:
-    use_entities: true
-- branches:
-    use_entities: true
-- branch:
-    use_entities: true
-- ask_hours_per_branch:
-    use_entities: true
-- ask_consultation:
-    use_entities: true
-- ask_room:
-    use_entities: true
-- ask_specific_hours:
-    use_entities: true
-- nlu_fallback:
-    use_entities: true
-- ask_leonie:
-    use_entities: true
-
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- tell_name
+- ask_htl_general
+- ask_branches
+- ask_specific_branch
+- ask_hours_per_branch
+- ask_consultation
+- ask_room
+- ask_specific_hours
+- nlu_fallback
+- ask_leonie
+- better_than_leonie
+- thanks
+- how_are_you
+- show_school_picture
 entities:
 - name
 - branch
@@ -49,24 +33,17 @@ entities:
 - subject
 slots:
   name:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
+    type: text
     influence_conversation: false
   branch:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
+    type: text
     influence_conversation: false
   logged_in:
-    type: rasa.shared.core.slots.BooleanSlot
-    initial_value: null
-    auto_fill: true
+    type: bool
     influence_conversation: false
   name_was_set:
-    type: rasa.shared.core.slots.BooleanSlot
+    type: bool
     initial_value: false
-    auto_fill: true
     influence_conversation: false
 responses:
   utter_greet:
@@ -118,6 +95,15 @@ responses:
   - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
   utter_leonie:
   - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
+  utter_leonie_and_me:
+    - text: Ich und meine Schweser sind beide besonders auf unsre eigene Art.
+  utter_no_problem:
+    - text: Kein Problem, dafür bin ich doch da!
+  utter_i_am_doing_well:
+    - text: Mir geht es sehr gut, danke fürs Fragen!
+  utter_school_photo:
+    - image: https://www.htl-leonding.at/wp-content/uploads/2019/11/banner_full_ueberuns.jpg?x49412
+      text: 'So sieht unsere Schule aus:'
 
 actions:
 - action_hours_per_branch
@@ -125,5 +111,3 @@ actions:
 - action_consultation
 - action_log_in
 - action_utter_branch
-forms: {}
-e2e_actions: []

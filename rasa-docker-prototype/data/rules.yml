@@ -16,3 +16,17 @@ rules:
   steps:
     - intent: ask_leonie
     - action: utter_leonie
+
+- rule: Say youre equal anytime when user says something about you and leonie
+  steps:
+    - intent: better_than_leonie
+    - action: utter_leonie_and_me
+
+- rule: say no problem when the user thanks the bot
+  steps:
+    - intent: thanks
+    - action: utter_no_problem
+- rule: show school picture
+  steps:
+    - intent: show_school_picture
+    - action: utter_school_photo
