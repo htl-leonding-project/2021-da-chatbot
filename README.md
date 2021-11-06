@@ -6,7 +6,7 @@ von Herrn Professor Stütz.
 
 [Index](https://github.com/htl-leonding-project/2021-da-chatbot/)
 
-[Chatbot Features](https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbotFeatures)
+[Chatbot Features](https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbot-features)
 
 ### Technology Notes
 
