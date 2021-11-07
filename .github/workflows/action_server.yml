@@ -1,0 +1,30 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+    - 'rasa-docker-prototype/actions/**'
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    name: Build Action Server image and upgrade Rasa X deployment
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - id: action_server
+      name: Build an action server with a custom actions
+      uses: RasaHQ/action-server-gha@main
+      # Full list of parameters: https://github.com/RasaHQ/action-server-gha/tree/master#input-arguments
+      with:
+        docker_registry: registry.cloud.htl-leonding.ac.at
+        docker_image_name: 'f.dumfarth/leobot'
+        docker_registry_login: ${{ secrets.LEO_LOGIN }}
+        docker_registry_password: ${{ secrets.LEO_PASS }}
+        # More details about github context:
+        # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context
+        #
+        # github.sha - The commit SHA that triggered the workflow run
+        docker_image_tag: 'leon'
+        docker_registry_push: true
