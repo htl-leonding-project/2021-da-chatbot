@@ -26,7 +26,18 @@ rules:
   steps:
     - intent: thanks
     - action: utter_no_problem
+
 - rule: show school picture
   steps:
     - intent: show_school_picture
     - action: utter_school_photo
+
+#- rule: respond to FAQ's
+#  steps:
+#    - intent: faq
+#    - action: utter_faq
+
+- rule: respond to chitchat
+  steps:
+    - intent: chitchat
+    - action: utter_chitchat

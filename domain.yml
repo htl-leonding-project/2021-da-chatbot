@@ -22,8 +22,8 @@ intents:
 - ask_leonie
 - better_than_leonie
 - thanks
-- how_are_you
 - show_school_picture
+- chitchat
 entities:
 - name
 - branch
@@ -99,11 +99,17 @@ responses:
     - text: Ich und meine Schweser sind beide besonders auf unsre eigene Art.
   utter_no_problem:
     - text: Kein Problem, dafür bin ich doch da!
-  utter_i_am_doing_well:
-    - text: Mir geht es sehr gut, danke fürs Fragen!
   utter_school_photo:
     - image: https://www.htl-leonding.at/wp-content/uploads/2019/11/banner_full_ueberuns.jpg?x49412
       text: 'So sieht unsere Schule aus:'
+  utter_chitchat/how_are_you:
+    - text: Mir geht es sehr gut, danke fürs Fragen!
+  utter_chitchat/ask_name:
+    - text: Ich bin Leon!
+    - text: Mein Name ist Leon oder LeoBot ich weiß es selbst nicht so genau.
+    - text: Ich heiße Leon, du kannst mich aber auch LeoBot nennen :)
+  utter_chitchat/ask_technology:
+    - text: Ein Tool namens Rasa wurde verwendet um mir Sachen beizubringen.
 
 actions:
 - action_hours_per_branch

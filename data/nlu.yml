@@ -351,13 +351,45 @@ nlu:
     - okay, danke
     - du warst eine große Hilfe
 
-- intent: how_are_you
+- intent: chitchat/how_are_you
   examples: |
     - Wie geht es dir?
     - Wie fühlst du dich?
     - Wie gehts, wie stehts.
     - Wie gehts so?
     - Wie gehts?
+    - Gut und dir?
+    - Gut, wie gehts dir so?
+    - Nicht gut und dir?
+    - Nicht so toll, und dir?
+    - Schlecht, wie gehts dir so?
+
+- intent: chitchat/ask_name
+  examples: |
+    - Wie ist dein Name?
+    - Wie heißt du?
+    - Was ist dein Name?
+    - Wer bist du?
+    - Kannst du mir deinen Namen sagen?
+    - Magst du mir verraten wie du heißt?
+    - Wie heißt du denn jetzt?
+    - Sag mir deinen Namen
+    - Wie nennen dich andere Leute?
+    - Weißt du deinen Namen?
+    - Hast du einen Namen?
+
+- intent: chitchat/ask_technology
+  examples: |
+    - In was bist du geschrieben?
+    - Welche Technologien verwendest du?
+    - Womit wurdest du geschrieben?
+    - Womit wurdest du erstellt?
+    - Welche Tools wurden für dich benutzt?
+    - Worin bist du geschrieben?
+    - Sag mir worin du geschrieben bist
+    - Sag mir welche Tools du verwendest
+    - Weißt du worin du geschrieben bist?
+    - Weißt du welche Technologien für dich verwendet wurden?
 
 - intent: show_school_picture
   examples: |

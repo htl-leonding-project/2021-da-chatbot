@@ -76,7 +76,7 @@ stories:
   steps:
     - intent: ask_room
     - action: action_room_info
-- story: asking how bot is
-  steps:
-    - intent: how_are_you
-    - action: utter_i_am_doing_well
+#- story: asking how bot is
+#  steps:
+#    - intent: how_are_you
+#    - action: utter_i_am_doing_well
