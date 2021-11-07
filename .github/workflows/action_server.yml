@@ -1,9 +1,9 @@
 on:
   push:
     branches:
-      - main
+      - rasa-chatbot
     paths:
-    - 'rasa-docker-prototype/actions/**'
+    - 'actions/**'
 
 jobs:
   build_and_deploy:
