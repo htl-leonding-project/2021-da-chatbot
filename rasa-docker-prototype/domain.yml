@@ -24,6 +24,11 @@ intents:
 - thanks
 - show_school_picture
 - chitchat
+- pre_knowledge_for_htl
+- ask_languages_at_htl
+- ask_htl_difficulty
+- ask_study_after_htl
+- ask_student_home
 entities:
 - name
 - branch
@@ -110,6 +115,17 @@ responses:
     - text: Ich heiße Leon, du kannst mich aber auch LeoBot nennen :)
   utter_chitchat/ask_technology:
     - text: Ein Tool namens Rasa wurde verwendet um mir Sachen beizubringen.
+  utter_pre_school_knowledge:
+    - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
+    - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
+  utter_languages_at_htl:
+    - text: An der HTL hat man nur Englisch als Fremdsprache neben dem Deutschunterricht. Dafür lernst du aber umso mehr nützliche Programmiersprachen.
+  utter_htl_difficulty:
+    - text: Unzählige Schüler haben die HTL bereits geschafft, allerdings sollte man schon etwas machen und bemüht sein um auch keine Schwierigkeiten zu bekommen.
+  utter_student_home:
+    - text: In der Nähe der Schule gibt es Studentenheime, die sich bestimmt über dich freuen würden.
+  utter_study_after_htl:
+    - text: Der Vorteil an einer HTL ist, dass du direkt eine fachspezifische Ausbildung bekommst und somit nicht mehr studieren musst, um trotzdem gute, interessante Jobs zu bekommen. Aber natürlich stehen dir alle Türen nach der HTL offen.
 
 actions:
 - action_hours_per_branch

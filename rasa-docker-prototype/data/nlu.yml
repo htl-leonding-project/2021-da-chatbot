@@ -399,3 +399,69 @@ nlu:
     - Zeig mir ein Foto der HTL Leonding?
     - Ich würde die HTL Leonding gerne sehen?
     - Wie sieht die HTL Leonding den so aus?
+
+- intent: pre_knowledge_for_htl
+  examples: |
+    - Was muss man können bevor man auf die HTL geht?
+    - Was muss ich können, um auf die HTL gehen zu können?
+    - Was muss man können, um in der HTL anfangen zu können?
+    - Muss ich schon etwas können, bevor ich auf die HTL gehe?
+    - Muss man programmieren können, um in die HTL zu gehen?
+    - Muss ich programmieren schon vor der HTL können?
+    - Muss ich programmieren können, um an die HTL zu gehen?
+    - Was muss man für die HTL können?
+    - Muss man programmieren können für die HTL?
+    - Was sind Voraussetzungen für die HTL?
+    - Was soll man können für die HTL?
+    - Was sollte man so können für die HTL?
+    - Welche Fähigkeiten brauche ich für die HTL?
+
+- intent: ask_languages_at_htl
+  examples: |
+    - Welche Fremdsprachen gibt es an der HTL?
+    - Welche Sprachen lernt man an der HTL?
+    - Welche Fremdsprachen lernt man an der HTL?
+    - Welche Sprachen gibt es an der HTL?
+    - Hat man auch Fremdsprachen an der HTL?
+    - Hat man auch andere Sprachen außer Deutsch an der HTL?
+    - Welche Sprachen werden an der HTL unterrichtet?
+    - Welche Fremdsprachen werden an der HTL unterrichtet?
+    - Was für Fremdsprachen lernt man?
+    - Welche Fremdsprachen lernt man?
+    - Weißt du welche Fremdsprachen man an der HTL lernt?
+    - Wie sieht es mit Fremsprachen an der HTL aus?
+    - Was für Fremdsprachen werden einem beigebracht?
+
+- intent: ask_htl_difficulty
+  examples: |
+    - Ist die HTL schwer?
+    - Ist die HTL sehr schwer?
+    - Kann man die HTL schaffen?
+    - Kann ich die HTL schaffen?
+    - Wie schwer ist die HTL?
+    - Wie schwer ist die HTL wirklich?
+    - Ist die HTL wirklich so schwer, wie man immer hört?
+    - Wie leicht ist die HTL?
+    - Weißt du wie schwer die HTL ist?
+
+- intent: ask_study_after_htl
+  examples: |
+    - Kann man nach der HTL studieren?
+    - Muss man nach der HTL studieren?
+    - Wie sieht es mit einem Studium nach der HTL aus?
+    - Studieren nach der HTL?
+    - Studium nach der HTL?
+    - Muss man nach der HTL ein Studium machen?
+    - Muss ich nach der HTL trotzdem noch studieren?
+
+- intent: ask_student_home
+  examples: |
+    - Gibt es in der Nähe Studentenheime?
+    - Gibt es auch Studentenheime?
+    - Kann ich in einem Studentenheim in der Nähe bleiben?
+    - Was mache ich wenn ich nicht in der Nähe der HTL wohne?
+    - Wie weit ist das nächste Studentenheim entfernt?
+    - Weißt du wo das nächste Studentenheim ist?
+    - Ist in der Nähe ein Studentenheim?
+    - Kannst du mir sagen wo ein Studentenheim ist?
+    - Können Schüler auch in Studentenheimen bleiben?

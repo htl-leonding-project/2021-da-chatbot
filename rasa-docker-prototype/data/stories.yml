@@ -80,3 +80,27 @@ stories:
 #  steps:
 #    - intent: how_are_you
 #    - action: utter_i_am_doing_well
+- story: ask about pre school knowledge
+  steps:
+    - intent: pre_knowledge_for_htl
+    - action: utter_pre_school_knowledge
+
+- story: ask about languages teached at the htl
+  steps:
+    - intent: ask_languages_at_htl
+    - action: utter_languages_at_htl
+
+- story: ask about difficulty of the htl
+  steps:
+    - intent: ask_htl_difficulty
+    - action: utter_htl_difficulty
+
+- story: ask about student homes
+  steps:
+    - intent: ask_student_home
+    - action: utter_student_home
+
+- story: ask about whether you have to study after htl or not
+  steps:
+    - intent: ask_study_after_htl
+    - action: utter_study_after_htl
