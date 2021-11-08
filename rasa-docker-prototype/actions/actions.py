@@ -120,7 +120,16 @@ class ActionNumberOfTeachers(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        counter = 0
 
+        s.login()
+
+        for teacher in s.teachers():
+            counter+=1
+
+        s.logout()
+
+        dispatcher.utter_message(text=f"Derzeit gibt es {counter} Lehrerinnen und Lehrer an der HTL Leonding.")
         return []
 
 class ActionNumberOfClasses(Action):
@@ -131,7 +140,16 @@ class ActionNumberOfClasses(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        counter = 0
 
+        s.login()
+
+        for student in s.students():
+            counter+=1
+
+        s.logout()
+
+        dispatcher.utter_message(text=f"Derzeit gibt es {counter} Schülerinnen und Schüler an der HTL Leonding.")
         return []
 
 
@@ -143,5 +161,14 @@ class ActionNumberOfStudents(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        counter = 0
 
+        s.login()
+
+        for klasse in s.klassen():
+            counter+=1
+
+        s.logout()
+
+        dispatcher.utter_message(text=f"Derzeit gibt es {counter} Klassen an der HTL Leonding.")
         return []
