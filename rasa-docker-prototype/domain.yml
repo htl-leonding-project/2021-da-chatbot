@@ -173,5 +173,8 @@ actions:
 - action_consultation
 - action_log_in
 - action_utter_branch
+- action_number_of_teachers
+- action_number_of_classes
+- action_number_students
 forms: {}
 e2e_actions: []

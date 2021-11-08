@@ -109,7 +109,39 @@ class ActionUtterBranch(Action):
             else:
                 dispatcher.utter_message(text=f"Die Fachrichtung {branch} kenne ich leider nicht.")
 
+        return []
 
 
+class ActionNumberOfTeachers(Action):
+
+    def name(self) -> Text:
+        return "action_number_of_teachers"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        return []
+
+class ActionNumberOfClasses(Action):
+
+    def name(self) -> Text:
+        return "action_number_of_classes"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        return []
+
+
+class ActionNumberOfStudents(Action):
+
+    def name(self) -> Text:
+        return "action_number_students"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         return []
