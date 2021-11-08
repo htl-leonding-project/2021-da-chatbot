@@ -144,12 +144,12 @@ class ActionNumberOfClasses(Action):
 
         s.login()
 
-        for student in s.students():
+        for klasse in s.klassen():
             counter+=1
 
         s.logout()
 
-        dispatcher.utter_message(text=f"Derzeit gibt es {counter} Schülerinnen und Schüler an der HTL Leonding.")
+        dispatcher.utter_message(text=f"Derzeit gibt es {counter} Klassen an der HTL Leonding.")
         return []
 
 
@@ -165,10 +165,10 @@ class ActionNumberOfStudents(Action):
 
         s.login()
 
-        for klasse in s.klassen():
+        for student in s.students():
             counter+=1
 
         s.logout()
 
-        dispatcher.utter_message(text=f"Derzeit gibt es {counter} Klassen an der HTL Leonding.")
+        dispatcher.utter_message(text=f"Derzeit gibt es {counter} Schülerinnen und Schüler an der HTL Leonding.")
         return []
