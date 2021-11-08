@@ -100,3 +100,15 @@ stories:
   steps:
   - intent: ask_htl_age
   - action: utter_htl_age
+- story: ask about number of teachers
+  steps:
+  - intent: ask_number_of_teachers
+  - action: action_number_of_teachers
+- story: ask about number of classes
+  steps:
+    - intent: ask_number_of_classes
+    - action: action_number_of_classes
+- story: ask about number of students
+  steps:
+  - intent: ask_number_of_students
+  - action: action_number_students

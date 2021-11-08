@@ -473,3 +473,31 @@ nlu:
     - Kannst du mir sagen, wie lange es die HTL schon gibt?
     - Sag mir das Alter der HTL
     - Wann wurde die HTL gegründet?
+- intent: ask_number_of_teachers
+  examples: |
+    - Wie viele Lehrer gibt es derzeit an der HTL?
+    - Wie viele Lehrerinnen unterrichten derzeit an der Schule?
+    - Weißt du wie viele Lehrerinnen und Lehrer ihr habt?
+    - Wie viele Lehrerinnen und Lehrer gibt es an der HTL?
+    - Sag mir wie viele Lehrer es gibt?
+    - Wie viele Lehrer hat die Schule?
+    - Wie viele Lehrerinnen hat die Schule?
+- intent: ask_number_of_classes
+  examples: |
+    - Wie viele Klassen gibt es?
+    - Wie viele Klassen gibt es an der HTL?
+    - Weißt du wie viele Klassen es an der HTL gibt?
+    - Wie viele Klassen sind es zurzeit?
+    - Sag mir wie viele Klassen es gibt?
+    - Weißt du eigentlich wie viele Klassen es gibt?
+- intent: ask_number_of_students
+  examples: |
+    - Wie viele Schülerinnen und Schüler gibt es?
+    - Wie viele Schüler gibt es an der HTL?
+    - Wie viele Schülerinnen gibt es an der HTL?
+    - Wie viele Schülerinnen und Schüler besuchen die HTL?
+    - Wie viele Schüler gehen auf diese Schule?
+    - Wie viele Schülerinnen gehen an die HTL?
+    - Weißt du wie viele Schülerinnen und Schüler ihr habt?
+    - Nenne mir die Anzahl der Schüler.
+    - Sag mir wie viele Schülerinnen es an der HTL gibt.
