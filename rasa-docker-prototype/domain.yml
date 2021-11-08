@@ -59,9 +59,12 @@ intents:
     use_entities: true
 - ask_htl_age:
     use_entities: true
-- ask_number_of_teachers
-- ask_number_of_classes
-- ask_number_of_students
+- ask_number_of_teachers:
+    use_entities: true
+- ask_number_of_classes:
+    use_entities: true
+- ask_number_of_students:
+    use_entities: true
 entities:
 - name
 - branch
