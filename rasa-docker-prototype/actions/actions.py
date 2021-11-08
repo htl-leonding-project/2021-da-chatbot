@@ -12,6 +12,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
+import webuntis
 
 class ActionHoursPerBranch(Action):
 
@@ -86,16 +87,19 @@ class ActionUtterBranch(Action):
         branch = next(tracker.get_latest_entity_values("branch"), None)
         branch = branch.lower()
 
-        dispatcher.utter_message(text=f"{branch}")
 
         if branch:
             if branch == "medientechnik":
+                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch}")
                 dispatcher.utter_message(text="Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.")
             elif branch == "informatik":
+                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch}")
                 dispatcher.utter_message(text="Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.")
             elif branch == "elektronik":
+                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch}")
                 dispatcher.utter_message(text="Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.")
             elif branch == "medizintechnik":
+                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch}")
                 dispatcher.utter_message(text="In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.")
             else:
                 dispatcher.utter_message(text=f"Die Fachrichtung {branch} kenne ich leider nicht.")
