@@ -43,6 +43,7 @@ nlu:
     - huhu sag mal hallo
     - oida seas
     - hi
+    - Guten Abend
 - intent: goodbye
   examples: |
     - Schönen Abend noch
@@ -90,6 +91,7 @@ nlu:
     - Tschüss chat bot.
     - Wir sehen uns!
     - Wir sehen uns das nächste mal
+    - Gute Nacht
 - intent: affirm
   examples: |
     - Alles klar.
@@ -334,7 +336,6 @@ nlu:
     - Was weißt du über die Leonie?
     - Sagt dir Leonie etwas?
     - Was ist Leonie?
-
 - intent: better_than_leonie
   examples: |
     - Leonie ist besser als du
@@ -342,7 +343,6 @@ nlu:
     - Leonie ist besser
     - Leonie ist schlauer als du
     - Leonie ist viel schlauer als du
-
 - intent: thanks
   examples: |
     - danke
@@ -350,7 +350,6 @@ nlu:
     - Vielen dank
     - okay, danke
     - du warst eine große Hilfe
-
 - intent: chitchat/how_are_you
   examples: |
     - Wie geht es dir?
@@ -363,7 +362,6 @@ nlu:
     - Nicht gut und dir?
     - Nicht so toll, und dir?
     - Schlecht, wie gehts dir so?
-
 - intent: chitchat/ask_name
   examples: |
     - Wie ist dein Name?
@@ -377,7 +375,6 @@ nlu:
     - Wie nennen dich andere Leute?
     - Weißt du deinen Namen?
     - Hast du einen Namen?
-
 - intent: chitchat/ask_technology
   examples: |
     - In was bist du geschrieben?
@@ -390,7 +387,14 @@ nlu:
     - Sag mir welche Tools du verwendest
     - Weißt du worin du geschrieben bist?
     - Weißt du welche Technologien für dich verwendet wurden?
-
+- intent: chitchat/ask_creator
+  examples: |
+    - Wer hat dich gemacht?
+    - Wer hat dich erschaffen?
+    - Wer sind deine Erschaffer?
+    - Weißt du von wem du gemacht wurdest?
+    - Kannst du mir sagen von wem du gemacht wurdest?
+    - Wem hat man dich zu verdanken?
 - intent: show_school_picture
   examples: |
     - Wie sieht die HTL aus?
@@ -399,7 +403,6 @@ nlu:
     - Zeig mir ein Foto der HTL Leonding?
     - Ich würde die HTL Leonding gerne sehen?
     - Wie sieht die HTL Leonding den so aus?
-
 - intent: pre_knowledge_for_htl
   examples: |
     - Was muss man können bevor man auf die HTL geht?
@@ -415,7 +418,6 @@ nlu:
     - Was soll man können für die HTL?
     - Was sollte man so können für die HTL?
     - Welche Fähigkeiten brauche ich für die HTL?
-
 - intent: ask_languages_at_htl
   examples: |
     - Welche Fremdsprachen gibt es an der HTL?
@@ -431,7 +433,6 @@ nlu:
     - Weißt du welche Fremdsprachen man an der HTL lernt?
     - Wie sieht es mit Fremsprachen an der HTL aus?
     - Was für Fremdsprachen werden einem beigebracht?
-
 - intent: ask_htl_difficulty
   examples: |
     - Ist die HTL schwer?
@@ -443,7 +444,6 @@ nlu:
     - Ist die HTL wirklich so schwer, wie man immer hört?
     - Wie leicht ist die HTL?
     - Weißt du wie schwer die HTL ist?
-
 - intent: ask_study_after_htl
   examples: |
     - Kann man nach der HTL studieren?
@@ -453,7 +453,6 @@ nlu:
     - Studium nach der HTL?
     - Muss man nach der HTL ein Studium machen?
     - Muss ich nach der HTL trotzdem noch studieren?
-
 - intent: ask_student_home
   examples: |
     - Gibt es in der Nähe Studentenheime?
@@ -465,3 +464,12 @@ nlu:
     - Ist in der Nähe ein Studentenheim?
     - Kannst du mir sagen wo ein Studentenheim ist?
     - Können Schüler auch in Studentenheimen bleiben?
+- intent: ask_htl_age
+  examples: |
+    - Wie alt ist die HTL?
+    - Wie lange gibt es die HTL schon?
+    - Wann wurde die HTL gebaut?
+    - Seit wann gibt es die HTL
+    - Kannst du mir sagen, wie lange es die HTL schon gibt?
+    - Sag mir das Alter der HTL
+    - Wann wurde die HTL gegründet?
