@@ -1,18 +1,23 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
-#
-# This is a simple example for a custom action which utters "Hello World!"
+import webuntis
+import os
+
 
 from typing import Any, Text, Dict, List
-
+from dotenv import load_dotenv
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
-import webuntis
+
+load_dotenv()
+
+s = webuntis.Session(
+            server='mese.webuntis.com/WebUntis/jsonrpc.do',
+            username= os.getenv('webuntis_username'),
+            password= os.getenv('webuntis_password'),
+            school='htbla linz leonding',
+            useragent='WebUntis Test'
+        )
 
 class ActionHoursPerBranch(Action):
 
