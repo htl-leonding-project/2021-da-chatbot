@@ -1,17 +1,23 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
-#
-# This is a simple example for a custom action which utters "Hello World!"
+import webuntis
+import os
+
 
 from typing import Any, Text, Dict, List
-
+from dotenv import load_dotenv
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
+
+load_dotenv()
+
+s = webuntis.Session(
+            server='mese.webuntis.com/WebUntis/jsonrpc.do',
+            username= os.getenv('webuntis_username'),
+            password= os.getenv('webuntis_password'),
+            school='htbla linz leonding',
+            useragent='WebUntis Test'
+        )
 
 class ActionHoursPerBranch(Action):
 
@@ -86,21 +92,83 @@ class ActionUtterBranch(Action):
         branch = next(tracker.get_latest_entity_values("branch"), None)
         branch = branch.lower()
 
-        dispatcher.utter_message(text=f"{branch}")
 
         if branch:
             if branch == "medientechnik":
+                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch}")
                 dispatcher.utter_message(text="Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.")
             elif branch == "informatik":
+                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch}")
                 dispatcher.utter_message(text="Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.")
             elif branch == "elektronik":
+                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch}")
                 dispatcher.utter_message(text="Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.")
             elif branch == "medizintechnik":
+                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch}")
                 dispatcher.utter_message(text="In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.")
             else:
                 dispatcher.utter_message(text=f"Die Fachrichtung {branch} kenne ich leider nicht.")
 
+        return []
 
 
+class ActionNumberOfTeachers(Action):
 
+    def name(self) -> Text:
+        return "action_number_of_teachers"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        counter = 0
+
+        s.login()
+
+        for teacher in s.teachers():
+            counter+=1
+
+        s.logout()
+
+        dispatcher.utter_message(text=f"Derzeit gibt es {counter} Lehrerinnen und Lehrer an der HTL Leonding.")
+        return []
+
+class ActionNumberOfClasses(Action):
+
+    def name(self) -> Text:
+        return "action_number_of_classes"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        counter = 0
+
+        s.login()
+
+        for student in s.students():
+            counter+=1
+
+        s.logout()
+
+        dispatcher.utter_message(text=f"Derzeit gibt es {counter} Schülerinnen und Schüler an der HTL Leonding.")
+        return []
+
+
+class ActionNumberOfStudents(Action):
+
+    def name(self) -> Text:
+        return "action_number_students"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        counter = 0
+
+        s.login()
+
+        for klasse in s.klassen():
+            counter+=1
+
+        s.logout()
+
+        dispatcher.utter_message(text=f"Derzeit gibt es {counter} Klassen an der HTL Leonding.")
         return []

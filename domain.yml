@@ -1,34 +1,64 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false
 intents:
-- greet
-- goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
-- bot_challenge
-- tell_name
-- ask_htl_general
-- ask_branches
-- ask_specific_branch
-- ask_hours_per_branch
-- ask_consultation
-- ask_room
-- ask_specific_hours
-- nlu_fallback
-- ask_leonie
-- better_than_leonie
-- thanks
-- show_school_picture
-- chitchat
-- pre_knowledge_for_htl
-- ask_languages_at_htl
-- ask_htl_difficulty
-- ask_study_after_htl
-- ask_student_home
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- tell_name:
+    use_entities: true
+- ask_htl_general:
+    use_entities: true
+- ask_branches:
+    use_entities: true
+- ask_specific_branch:
+    use_entities: true
+- ask_hours_per_branch:
+    use_entities: true
+- ask_consultation:
+    use_entities: true
+- ask_room:
+    use_entities: true
+- ask_specific_hours:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- ask_leonie:
+    use_entities: true
+- better_than_leonie:
+    use_entities: true
+- thanks:
+    use_entities: true
+- show_school_picture:
+    use_entities: true
+- chitchat:
+    use_entities: true
+- pre_knowledge_for_htl:
+    use_entities: true
+- ask_languages_at_htl:
+    use_entities: true
+- ask_htl_difficulty:
+    use_entities: true
+- ask_study_after_htl:
+    use_entities: true
+- ask_student_home:
+    use_entities: true
+- ask_htl_age:
+    use_entities: true
 entities:
 - name
 - branch
@@ -38,17 +68,24 @@ entities:
 - subject
 slots:
   name:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
   branch:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
   logged_in:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
   name_was_set:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
     initial_value: false
+    auto_fill: true
     influence_conversation: false
 responses:
   utter_greet:
@@ -101,35 +138,43 @@ responses:
   utter_leonie:
   - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
   utter_leonie_and_me:
-    - text: Ich und meine Schweser sind beide besonders auf unsre eigene Art.
+  - text: Ich und meine Schweser sind beide besonders auf unsre eigene Art.
   utter_no_problem:
-    - text: Kein Problem, dafür bin ich doch da!
+  - text: Kein Problem, dafür bin ich doch da!
   utter_school_photo:
-    - image: https://www.htl-leonding.at/wp-content/uploads/2019/11/banner_full_ueberuns.jpg?x49412
-      text: 'So sieht unsere Schule aus:'
+  - image: https://www.htl-leonding.at/wp-content/uploads/2019/11/banner_full_ueberuns.jpg?x49412
+    text: 'So sieht unsere Schule aus:'
   utter_chitchat/how_are_you:
-    - text: Mir geht es sehr gut, danke fürs Fragen!
+  - text: Mir geht es sehr gut, danke fürs Fragen!
   utter_chitchat/ask_name:
-    - text: Ich bin Leon!
-    - text: Mein Name ist Leon oder LeoBot ich weiß es selbst nicht so genau.
-    - text: Ich heiße Leon, du kannst mich aber auch LeoBot nennen :)
+  - text: Ich bin Leon!
+  - text: Mein Name ist Leon oder LeoBot ich weiß es selbst nicht so genau.
+  - text: Ich heiße Leon, du kannst mich aber auch LeoBot nennen :)
   utter_chitchat/ask_technology:
-    - text: Ein Tool namens Rasa wurde verwendet um mir Sachen beizubringen.
+  - text: Ein Tool namens Rasa wurde verwendet um mir Sachen beizubringen.
+  utter_chitchat/ask_creator:
+  - text: Ich entstand im Zuge der Diplomarbeit von Felix Dumfarth und Lukas Starka.
   utter_pre_school_knowledge:
-    - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
-    - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
+  - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
+  - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
   utter_languages_at_htl:
-    - text: An der HTL hat man nur Englisch als Fremdsprache neben dem Deutschunterricht. Dafür lernst du aber umso mehr nützliche Programmiersprachen.
+  - text: An der HTL hat man nur Englisch als Fremdsprache neben dem Deutschunterricht. Dafür lernst du aber umso mehr nützliche Programmiersprachen.
   utter_htl_difficulty:
-    - text: Unzählige Schüler haben die HTL bereits geschafft, allerdings sollte man schon etwas machen und bemüht sein um auch keine Schwierigkeiten zu bekommen.
+  - text: Unzählige Schüler haben die HTL bereits geschafft, allerdings sollte man schon etwas machen und bemüht sein um auch keine Schwierigkeiten zu bekommen.
   utter_student_home:
-    - text: In der Nähe der Schule gibt es Studentenheime, die sich bestimmt über dich freuen würden.
+  - text: In der Nähe der Schule gibt es Studentenheime, die sich bestimmt über dich freuen würden.
   utter_study_after_htl:
-    - text: Der Vorteil an einer HTL ist, dass du direkt eine fachspezifische Ausbildung bekommst und somit nicht mehr studieren musst, um trotzdem gute, interessante Jobs zu bekommen. Aber natürlich stehen dir alle Türen nach der HTL offen.
-
+  - text: Der Vorteil an einer HTL ist, dass du direkt eine fachspezifische Ausbildung bekommst und somit nicht mehr studieren musst, um trotzdem gute, interessante Jobs zu bekommen. Aber natürlich stehen dir alle Türen nach der HTL offen.
+  utter_htl_age:
+  - text: Die HTL Leonding wurde 1984 gegründet und der Zweig für EDV und Organisation entstand 1985.
 actions:
 - action_hours_per_branch
 - action_room_info
 - action_consultation
 - action_log_in
 - action_utter_branch
+- action_number_of_teachers
+- action_number_of_classes
+- action_number_students
+forms: {}
+e2e_actions: []
