@@ -1,7 +1,6 @@
 import webuntis
 import os
 
-
 from typing import Any, Text, Dict, List
 from dotenv import load_dotenv
 from rasa_sdk import Action, Tracker

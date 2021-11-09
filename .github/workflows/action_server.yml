@@ -20,7 +20,7 @@ jobs:
       with:
         actions_directory: 'rasa-docker-prototype/actions/'
         docker_registry: registry.cloud.htl-leonding.ac.at
-        requirements_file: requirements.txt
+        requirements_file: rasa-docker-prototype/actions/requirements.txt
         docker_image_name: 'f.dumfarth/leobot'
         docker_registry_login: ${{ secrets.LEO_LOGIN }}
         docker_registry_password: ${{ secrets.LEO_PASS }}
