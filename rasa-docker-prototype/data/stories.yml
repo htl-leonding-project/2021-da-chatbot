@@ -112,3 +112,7 @@ stories:
   steps:
   - intent: ask_number_of_students
   - action: action_number_students
+- story: ask about holidays
+  steps:
+    - intent: ask_holidays
+    - action: action_get_holidays
