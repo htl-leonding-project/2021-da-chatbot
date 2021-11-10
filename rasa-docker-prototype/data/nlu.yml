@@ -402,7 +402,7 @@ nlu:
     - Kannst du mir die HTL Leonding zeigen?
     - Zeig mir ein Foto der HTL Leonding?
     - Ich würde die HTL Leonding gerne sehen?
-    - Wie sieht die HTL Leonding den so aus?
+    - Wie sieht die HTL Leonding denn so aus?
 - intent: pre_knowledge_for_htl
   examples: |
     - Was muss man können bevor man auf die HTL geht?
