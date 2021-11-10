@@ -402,7 +402,7 @@ nlu:
     - Kannst du mir die HTL Leonding zeigen?
     - Zeig mir ein Foto der HTL Leonding?
     - Ich würde die HTL Leonding gerne sehen?
-    - Wie sieht die HTL Leonding den so aus?
+    - Wie sieht die HTL Leonding denn so aus?
 - intent: pre_knowledge_for_htl
   examples: |
     - Was muss man können bevor man auf die HTL geht?
@@ -501,3 +501,17 @@ nlu:
     - Weißt du wie viele Schülerinnen und Schüler ihr habt?
     - Nenne mir die Anzahl der Schüler.
     - Sag mir wie viele Schülerinnen es an der HTL gibt.
+- intent: ask_holidays
+  examples: |
+    - Wann sind schulfreie Tage?
+    - Wann muss ich nicht zur Schule gehen?
+    - An welchen Tagen ist keine Schule?
+    - Wann habe ich keine Schule?
+    - Wann sind Ferien?
+    - Wann habe ich Ferien?
+    - Weißt du wann Ferien sind?
+    - Weißt du wann schulfreie Tage sind?
+    - Kannst du mir sagen, wann ich nicht zur Schule gehen muss?
+    - Sag mir wann schulfrei ist
+    - Sag mir wann Ferien sind
+    - Sag mir wann schulfreie Tage sind

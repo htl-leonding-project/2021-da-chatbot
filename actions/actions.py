@@ -171,3 +171,24 @@ class ActionNumberOfStudents(Action):
 
         dispatcher.utter_message(text=f"Derzeit gibt es {counter} Schülerinnen und Schüler an der HTL Leonding.")
         return []
+
+class ActionHolidayList(Action):
+
+    def name(self) -> Text:
+        return "action_get_holidays"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        output = "Dieses Schuljahr gibt es folgende schulautonome Tage:\n"
+
+        s.login()
+
+        for holiday in s.holidays():
+            print(f"{holiday}\nStart: {holiday.start} Name: {holiday.name} End: {holiday.end} Short_name: {holiday.short_name}")
+            output += f"- {holiday.name}: Von {holiday.start.strftime('%d. %m. %Y')} bis {holiday.end.strftime('%d. %m. %Y')}\n"
+
+        s.logout()
+
+        dispatcher.utter_message(text=output)
+        return []
