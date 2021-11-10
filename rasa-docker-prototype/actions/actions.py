@@ -186,7 +186,7 @@ class ActionHolidayList(Action):
 
         for holiday in s.holidays():
             print(f"{holiday}\nStart: {holiday.start} Name: {holiday.name} End: {holiday.end} Short_name: {holiday.short_name}")
-            output += f"- {holiday.name}: Von {holiday.start} bis {holiday.end}\n"
+            output += f"- {holiday.name}: Von {holiday.start.strftime('%d. %m. %Y')} bis {holiday.end.strftime('%d. %m. %Y')}\n"
 
         s.logout()
 
