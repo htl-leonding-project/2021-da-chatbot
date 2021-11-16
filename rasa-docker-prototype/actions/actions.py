@@ -162,7 +162,7 @@ class ActionNumberOfStudents(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         counter = 0
 
-        dispatcher.utter_message(text=f"Username: {os.getenv('WEBUNTIS_USERNAME'} Password: {os.getenv{'WEBUNTIS_PASSWORD'}")
+        dispatcher.utter_message(text=f"Username: {os.getenv('WEBUNTIS_USERNAME')} Password: {os.getenv('WEBUNTIS_PASSWORD')}")
 
         s.login()
 
