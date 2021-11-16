@@ -12,8 +12,8 @@ load_dotenv()
 
 s = webuntis.Session(
             server='mese.webuntis.com/WebUntis/jsonrpc.do',
-            username= os.getenv('webuntis_username'),
-            password= os.getenv('webuntis_password'),
+            username= os.getenv('WEBUNTIS_USERNAME'),
+            password= os.getenv('WEBUNTIS_PASSWORD'),
             school='htbla linz leonding',
             useragent='WebUntis Test'
         )
