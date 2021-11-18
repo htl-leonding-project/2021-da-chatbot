@@ -362,7 +362,50 @@ https://rasa.com/docs/rasa/components/#entitysynonymmapper
 
 ==== ResponseSelector
 
+Ein `Selector` sagt die korrekte Response voraus aus einer Menge von möglichen Responses.
 
+Beim `ResponseSelector` wird als Ausgabe ein Key-Value Paar ausgegeben. Als Key wird hierbei der Retrieval Intent ausgegeben und das Value ist die vorhergesagte Response und die Confidence, mit der diese vorhergesagt wurde.
+
+[source,json]
+----
+{
+    "response_selector": {
+      "faq": {
+        "response": {
+          "id": 1388783286124361986,
+          "confidence": 0.7,
+          "intent_response_key": "chitchat/ask_weather",
+          "responses": [
+            {
+              "text": "It's sunny in Berlin today",
+              "image": "https://i.imgur.com/nGF1K8f.jpg"
+            },
+            {
+              "text": "I think it's about to rain."
+            }
+          ],
+          "utter_action": "utter_chitchat/ask_weather"
+         },
+        "ranking": [
+          {
+            "id": 1388783286124361986,
+            "confidence": 0.7,
+            "intent_response_key": "chitchat/ask_weather"
+          },
+          {
+            "id": 1388783286124361986,
+            "confidence": 0.3,
+            "intent_response_key": "chitchat/ask_name"
+          }
+        ]
+      }
+    }
+}
+----
+
+Die Vorhersage dieses `ResponseSelector` wird dann vom Dialogue Manager verwendet um die vorhergesagte Response auszugeben.
+
+Außerdem wird hierbei das gleiche neuronale Netzwerk verwendet, wie beim `DIETClassifier`.
 
 ==== FallbackClassifier
 
