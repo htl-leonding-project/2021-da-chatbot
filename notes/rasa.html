@@ -669,14 +669,12 @@ pre.rouge {
 <li><a href="#_nlu_pipeline">3. NLU Pipeline</a>
 <ul class="sectlevel2">
 <li><a href="#_arten_von_nlu_pipelines">3.1. Arten von NLU Pipelines</a></li>
-<li><a href="#_dietclassifier">3.2. DIETClassifier</a></li>
-<li><a href="#_fallbackclassifier">3.3. FallbackClassifier</a></li>
-<li><a href="#_crfentityextractor">3.4. CRFEntityExtractor</a></li>
-<li><a href="#_policy">3.5. Policy</a></li>
-<li><a href="#_comparing_nlu_pipelines">3.6. Comparing NLU Pipelines</a></li>
-<li><a href="#_rasa_open_source">3.7. Rasa Open Source</a></li>
-<li><a href="#_rasa_enterprise">3.8. Rasa Enterprise</a></li>
-<li><a href="#_rasa_x">3.9. Rasa X</a></li>
+<li><a href="#_pipeline_komponenten">3.2. Pipeline Komponenten</a></li>
+<li><a href="#_policy">3.3. Policy</a></li>
+<li><a href="#_comparing_nlu_pipelines">3.4. Comparing NLU Pipelines</a></li>
+<li><a href="#_rasa_open_source">3.5. Rasa Open Source</a></li>
+<li><a href="#_rasa_enterprise">3.6. Rasa Enterprise</a></li>
+<li><a href="#_rasa_x">3.7. Rasa X</a></li>
 </ul>
 </li>
 <li><a href="#_installation">4. Installation</a>
@@ -981,6 +979,10 @@ pipeline: "supervised_embedding"</code></pre>
 <div class="paragraph">
 <p><a href="https://www.youtube.com/watch?v=seBN1gMJN0U&amp;list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&amp;index=4" class="bare">https://www.youtube.com/watch?v=seBN1gMJN0U&amp;list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&amp;index=4</a></p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pipeline_komponenten"><a class="anchor" href="#_pipeline_komponenten"></a>3.2. Pipeline Komponenten</h3>
 <div class="paragraph">
 <p>Alle Komponenten der Pipeline können hier eingesehen werden:</p>
 </div>
@@ -990,10 +992,209 @@ pipeline: "supervised_embedding"</code></pre>
 <div class="paragraph">
 <p><a href="https://rasahq.github.io/rasa-nlu-examples/" class="bare">https://rasahq.github.io/rasa-nlu-examples/</a></p>
 </div>
+<div class="paragraph">
+<p>Die generellen Funktionsweisen von Text-Analysis-Tools stehen <a href="https://htl-leonding-project.github.io/2021-da-chatbot/notes/text-analysis#_natural_language_processing_nlp">hier</a> beschrieben.</p>
+</div>
+<div class="paragraph">
+<p>Ein Beispiel für eine Pipeline, die bereits von Rasa vorkonfiguriert ist, sieht folgendermaßen aus:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="yml"><span class="na">pipeline</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">WhitespaceTokenizer</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">RegexFeaturizer</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">LexicalSyntacticFeaturizer</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">CountVectorsFeaturizer</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">CountVectorsFeaturizer</span>
+    <span class="na">analyzer</span><span class="pi">:</span> <span class="s">char_wb</span>
+    <span class="na">min_ngram</span><span class="pi">:</span> <span class="m">1</span>
+    <span class="na">max_ngram</span><span class="pi">:</span> <span class="m">4</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">DIETClassifier</span>
+    <span class="na">epochs</span><span class="pi">:</span> <span class="m">100</span>
+    <span class="na">constrain_similarities</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">EntitySynonymMapper</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">ResponseSelector</span>
+    <span class="na">epochs</span><span class="pi">:</span> <span class="m">100</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">FallbackClassifier</span>
+    <span class="na">threshold</span><span class="pi">:</span> <span class="m">0.3</span>
+    <span class="na">ambiguity_threshold</span><span class="pi">:</span> <span class="s">0.1</span></code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_dietclassifier"><a class="anchor" href="#_dietclassifier"></a>3.2. DIETClassifier</h3>
+<div class="sect3">
+<h4 id="_whitespacetokenizer"><a class="anchor" href="#_whitespacetokenizer"></a>3.2.1. WhitespaceTokenizer</h4>
+<div class="paragraph">
+<p>Ein <code>WhitespaceTokenizer</code> ist eine sehr einfache Art eines Tokenizers. Hierbei wird, wie der Name bereits vermuten lässt, der Satz aufgeteilt in verschiedene Tokens.
+Ein Token kann zum Beispiel also ein Wort sein und beim <code>WhitespaceTokenizer</code> wird der Satz pro Whitespace also Leerzeichen aufgeteilt.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/whitespacetokenizer.png" alt="whitespacetokenizer"></span></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://www.youtube.com/watch?v=ET1k9OrsfYQ&amp;list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&amp;index=5</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Es gibt auch komplexere Tokenizer und Tokenizer, die speziell an Sprachen angepasst sind und die besonderen Regeln, die in diesen Sprachen gelten, beachten.
+Außerdem kann man natürlich auch selber einen Tokenizer schreiben.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<code>Tokenizer</code> sollten generell weit am Anfang in einer Pipeline sein, wenn nicht sogar die erste Komponente.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_regexfeaturizer"><a class="anchor" href="#_regexfeaturizer"></a>3.2.2. RegexFeaturizer</h4>
+<div class="paragraph">
+<p>Einen <code>RegexFeaturizer</code> kann man verwenden um die EntityExtraction zu erleichtern.</p>
+</div>
+<div class="paragraph">
+<p>Bei diesem werden Regular Expressions und Lookup Tables verwendet und der RegexFeaturizer gibt an, ob ein Wort von den Regular Expressions oder Lookup Tables erkannt wurde.</p>
+</div>
+<div class="paragraph">
+<p>Der <code>EntityExtractor</code> nimmt dann diese Tokens als Input und produziert Named Entity Recognition Ergebnisse.</p>
+</div>
+<div class="paragraph">
+<p><strong>Regular Expressions</strong></p>
+</div>
+<div class="paragraph">
+<p>Regular Expressions können verwendet werden um Patterns eines Strings zu beschreiben und können hier bei dem Beispiel von Chatbots beispielsweise verwendet werden, um Zahlen zu beschreiben.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/regular-expression-example.png" alt="regular expression example"></span></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://www.youtube.com/watch?v=ET1k9OrsfYQ&amp;list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&amp;index=5</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Lookup Tables</strong></p>
+</div>
+<div class="paragraph">
+<p>Lookup Tables können verwendet werden, wenn eine Entity vordefinierte Werte haben kann. Zum Beispiel kann eine Enitity country 194 verschiedene Länder annehmen.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/lookup-table-example.png" alt="lookup table example"></span></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://www.youtube.com/watch?v=ET1k9OrsfYQ&amp;list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&amp;index=5</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Der <code>RegexFeaturizer</code> muss vor dem EntityExtractor in der Pipeline platziert werden.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_crfentityextractor"><a class="anchor" href="#_crfentityextractor"></a>3.2.3. CRFEntityExtractor</h4>
+<div class="paragraph">
+<p>Eine Möglichkeit um Entites aus der Nachricht des Benutzers zu extrahieren ist über den <code>CRFEntityExtractor</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/extractor.PNG" alt="extractor"></span></p>
+</div>
+<div class="paragraph">
+<p>CRF steht hierbei für <code><span class="underline">C</span>onditional <span class="underline">R</span>andom <span class="underline">F</span>ield</code>. Dieses Modell lernt, welche Komponenten eines Satzes Entities sind und welche Entities diese sind.</p>
+</div>
+<div class="paragraph">
+<p>Dies macht der <code>CRFEntityExtractor</code>, indem er die Sequenzen der Tokens beobachtet. Es wird also ein Token aus dem Satz herausgepickt, und anschließend wird geschaut, ob die Wörter danach und davor zum Kontext des Worts beitragen, um zu erkennen, ob es sich hierbei um eine Entity handelt.
+Dabei schaut der Extractor auf Eigenschaften, wie beispielsweise, ob das Wort groß- oder kleingeschrieben ist, ob es einen Prefix hat, ob es eine Zahl ist oder ob es ein speziell definiertes Wort für die Entities ist.
+Dies wird auch mit den Wörtern davor und danach gemacht.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/crf-entity-extractor.png" alt="crf entity extractor"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.youtube.com/watch?v=ET1k9OrsfYQ&amp;list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&amp;index=5" class="bare">https://www.youtube.com/watch?v=ET1k9OrsfYQ&amp;list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&amp;index=5</a></p>
+</div>
+<div class="paragraph">
+<p>Der <code>CRFEntityExtractor</code> produziert anschließend als Output, welche Wörter in einem Satz Entities sind und welche Entities diese sind, also was ihre Labels sind.
+Außerdem wird noch produziert, wie sicher das Modell war, dass diese Entites korrekt sind, also die sogenannte <code>Confidence</code> wird ausgegeben und welches Modell verwendet wurde.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ducklinghttpextractor"><a class="anchor" href="#_ducklinghttpextractor"></a>3.2.4. DucklingHttpExtractor</h4>
+<div class="paragraph">
+<p>Falls man komplexere Entites extrahieren will, wie beispielsweise Postleitzahlen, Daten oder generelle Nummern, so kann man den <code>DucklingHttpExtractor</code> verwenden.</p>
+</div>
+<div class="paragraph">
+<p><code>Duckling</code> ist eine Library, die speziell dafür entworfen wurde, dass Informationen, wie Daten, Telefonnummern, E-Mails oder Postleitzahlen extrahiert werden.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/duckling-http-extractor.png" alt="duckling http extractor"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.youtube.com/watch?v=ET1k9OrsfYQ&amp;list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&amp;index=5" class="bare">https://www.youtube.com/watch?v=ET1k9OrsfYQ&amp;list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&amp;index=5</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_lexicalsyntacticfeaturizer"><a class="anchor" href="#_lexicalsyntacticfeaturizer"></a>3.2.5. LexicalSyntacticFeaturizer</h4>
+<div class="paragraph">
+<p>Ein <code>Featurizer</code> generell wird verwendet um Features von den Tokens zu extrahieren.</p>
+</div>
+<div class="paragraph">
+<p>Diese können dann von dem Intent-Klassifikations-Modell genutzt werden um Muster zu erkennen und anschließend den korrekten Intent vorherzusagen.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/featurizer.png" alt="featurizer"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.youtube.com/watch?v=YxMzz6NF6Zw&amp;list=PL75e0qA87dlEjGAc9j9v3a5h1mxI2Z9fi&amp;index=8" class="bare">https://www.youtube.com/watch?v=YxMzz6NF6Zw&amp;list=PL75e0qA87dlEjGAc9j9v3a5h1mxI2Z9fi&amp;index=8</a></p>
+</div>
+<div class="paragraph">
+<p>Der <code>LexicalSyntacticFeaturizer</code> bekommt als Input einen Token und erstellt dann Features für die Entity Extraktion.
+Dabei verwendet er ein sogenanntes Sliding Window, welches über jeden Token in der Nachricht des Benutzers verwendet wird.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://rasa.com/docs/rasa/components/#lexicalsyntacticfeaturizer/" class="bare">https://rasa.com/docs/rasa/components/#lexicalsyntacticfeaturizer/</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_countvectorsfeaturizer"><a class="anchor" href="#_countvectorsfeaturizer"></a>3.2.6. CountVectorsFeaturizer</h4>
+<div class="paragraph">
+<p>Der <code>CountVectorsFeaturizer</code> erstellt Bag-of-Words. Dabei wird gezählt, wie oft ein bestimmtes Wort aus den Trainingsdaten in der Nachricht des Benutzers vorkommt.
+Dies wird dann als Input dem Intent-Classification-Model übergeben.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/countvectorsfeaturizer.png" alt="countvectorsfeaturizer"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.youtube.com/watch?v=YxMzz6NF6Zw&amp;list=PL75e0qA87dlEjGAc9j9v3a5h1mxI2Z9fi&amp;index=8" class="bare">https://www.youtube.com/watch?v=YxMzz6NF6Zw&amp;list=PL75e0qA87dlEjGAc9j9v3a5h1mxI2Z9fi&amp;index=8</a></p>
+</div>
+<div class="paragraph">
+<p>Beim <code>CountVectorsFeaturizer</code> kann man außerdem angeben, dass statt Wörtern sogenannte n-grams verwendet werden sollen.
+Dies macht das Modell in der Regel robuster gegen Typos allerdings erhöht sich damit auch die Zeit, die das Modell zum Trainieren benötigt.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="yml"><span class="na">pipeline</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">CountVectorsFeaturizer</span>
+    <span class="na">analyzer</span><span class="pi">:</span> <span class="s">char_wb</span>
+    <span class="na">min_ngram</span><span class="pi">:</span> <span class="m">1</span>
+    <span class="na">max_ngram</span><span class="pi">:</span> <span class="s">4</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_dietclassifier"><a class="anchor" href="#_dietclassifier"></a>3.2.7. DIETClassifier</h4>
 <div class="paragraph">
 <p>DIET steht für "Dual Intent and Entity Transformer" der Name ist schon relativ vielsagend, DIET kann Intents klassifizieren und Entities erkennen.</p>
 </div>
@@ -1010,8 +1211,101 @@ pipeline: "supervised_embedding"</code></pre>
 <p>In dem Beispiel vom Bild oben würden wir dank DIET wissen wie der Intent lautet und das der Name Vincet</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_fallbackclassifier"><a class="anchor" href="#_fallbackclassifier"></a>3.3. FallbackClassifier</h3>
+<div class="sect3">
+<h4 id="_entitysynonymmapper"><a class="anchor" href="#_entitysynonymmapper"></a>3.2.8. EntitySynonymMapper</h4>
+<div class="paragraph">
+<p>Der <code>EntitySynonymMapper</code> erwartet als Input einen Extractor der Enity Extractors und liefert als Ausgabe modifizierte Werte für die Entities, die bereits vorher erkannt wurden.</p>
+</div>
+<div class="paragraph">
+<p>Wenn beim <code>EntitySynonymMapper</code> also eine Entity überliefert wird und in den Trainingsdaten Synonyme für diese Entity vorhanden sind wird der Wert der Entity auf den Wert, der in den Trainingsdaten angegeben ist, gesetzt.</p>
+</div>
+<div class="paragraph">
+<p>Wenn also beispielsweise in einem Satz des Benutzers <code>New York City</code> oder <code>NYC</code> vorkommt, werden diese beide auf den selben Wert <code>nyc</code> gesetzt.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I moved to New York City"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"intent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inform_relocation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"entities"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nyc"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"entity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"city"</span><span class="p">,</span><span class="w">
+      </span><span class="p">}]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I got a new flat in NYC."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"intent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inform_relocation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"entities"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nyc"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"entity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"city"</span><span class="p">,</span><span class="w">
+      </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://rasa.com/docs/rasa/components/#entitysynonymmapper" class="bare">https://rasa.com/docs/rasa/components/#entitysynonymmapper</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_responseselector"><a class="anchor" href="#_responseselector"></a>3.2.9. ResponseSelector</h4>
+<div class="paragraph">
+<p>Ein <code>Selector</code> sagt die korrekte Response voraus aus einer Menge von möglichen Responses.</p>
+</div>
+<div class="paragraph">
+<p>Beim <code>ResponseSelector</code> wird als Ausgabe ein Key-Value Paar ausgegeben. Als Key wird hierbei der Retrieval Intent ausgegeben und das Value ist die vorhergesagte Response und die Confidence, mit der diese vorhergesagt wurde.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nl">"response_selector"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"faq"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1388783286124361986</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"confidence"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"intent_response_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chitchat/ask_weather"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"responses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"It's sunny in Berlin today"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://i.imgur.com/nGF1K8f.jpg"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I think it's about to rain."</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"utter_action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"utter_chitchat/ask_weather"</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"ranking"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1388783286124361986</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"confidence"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"intent_response_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chitchat/ask_weather"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1388783286124361986</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"confidence"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"intent_response_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chitchat/ask_name"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Die Vorhersage dieses <code>ResponseSelector</code> wird dann vom Dialogue Manager verwendet um die vorhergesagte Response auszugeben.</p>
+</div>
+<div class="paragraph">
+<p>Außerdem wird hierbei das gleiche neuronale Netzwerk verwendet, wie beim <code>DIETClassifier</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fallbackclassifier"><a class="anchor" href="#_fallbackclassifier"></a>3.2.10. FallbackClassifier</h4>
 <div class="paragraph">
 <p>Den <code>FallbackClassifier</code> verwendet man um mit Nachrichten umzugehen, bei denen nur eine sehr niedrige Confidence vorhergesagt wurde. In diesem Fall wird dann ein Intent mit dem Namen <code>nlu_fallback</code> vorhergesagt, welchen man dann behandeln kann und beispielsweise als Antwort immer definiert, dass der User seine Nachricht neu formulieren soll.</p>
 </div>
@@ -1032,14 +1326,9 @@ pipeline: "supervised_embedding"</code></pre>
 <p><a href="https://rasa.com/docs/rasa/components#fallbackclassifier" class="bare">https://rasa.com/docs/rasa/components#fallbackclassifier</a></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_crfentityextractor"><a class="anchor" href="#_crfentityextractor"></a>3.4. CRFEntityExtractor</h3>
-<div class="paragraph">
-<p><span class="image"><img src="../images/extractor.PNG" alt="extractor"></span></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="_policy"><a class="anchor" href="#_policy"></a>3.5. Policy</h3>
+<h3 id="_policy"><a class="anchor" href="#_policy"></a>3.3. Policy</h3>
 <div class="paragraph">
 <p>Eine Policy sind die Techniken die beachtet werden wie der Bot dem User antwortet.</p>
 </div>
@@ -1053,7 +1342,7 @@ pipeline: "supervised_embedding"</code></pre>
 <p><span class="image"><img src="../images/policyPriority.PNG" alt="policyPriority"></span></p>
 </div>
 <div class="sect3">
-<h4 id="_rule_policy"><a class="anchor" href="#_rule_policy"></a>3.5.1. Rule Policy</h4>
+<h4 id="_rule_policy"><a class="anchor" href="#_rule_policy"></a>3.3.1. Rule Policy</h4>
 <div class="paragraph">
 <p>Wenn man das rule.yml file und die rules die daran stehen benutzen will, muss man die Rule Policy bei den policies einstellen diese ist jedoch sowieso standard mäßig an</p>
 </div>
@@ -1062,7 +1351,7 @@ pipeline: "supervised_embedding"</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ted_policy_2"><a class="anchor" href="#_ted_policy_2"></a>3.5.2. TED Policy</h4>
+<h4 id="_ted_policy_2"><a class="anchor" href="#_ted_policy_2"></a>3.3.2. TED Policy</h4>
 <div class="paragraph">
 <p>Die TED Policy ist eine ML Policy die sich vorhergehende Aktionen ansieht, um die nächste Antwort zu bestimmen</p>
 </div>
@@ -1072,7 +1361,7 @@ pipeline: "supervised_embedding"</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_comparing_nlu_pipelines"><a class="anchor" href="#_comparing_nlu_pipelines"></a>3.6. Comparing NLU Pipelines</h3>
+<h3 id="_comparing_nlu_pipelines"><a class="anchor" href="#_comparing_nlu_pipelines"></a>3.4. Comparing NLU Pipelines</h3>
 <div class="paragraph">
 <p>You can compare two NLU pipelines by using this command</p>
 </div>
@@ -1124,15 +1413,15 @@ Work with Protected Enterprise Data Using Open Source Frameworks <strong>ISBN</s
 </div>
 </div>
 <div class="sect2">
-<h3 id="_rasa_open_source"><a class="anchor" href="#_rasa_open_source"></a>3.7. Rasa Open Source</h3>
+<h3 id="_rasa_open_source"><a class="anchor" href="#_rasa_open_source"></a>3.5. Rasa Open Source</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_rasa_enterprise"><a class="anchor" href="#_rasa_enterprise"></a>3.8. Rasa Enterprise</h3>
+<h3 id="_rasa_enterprise"><a class="anchor" href="#_rasa_enterprise"></a>3.6. Rasa Enterprise</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_rasa_x"><a class="anchor" href="#_rasa_x"></a>3.9. Rasa X</h3>
+<h3 id="_rasa_x"><a class="anchor" href="#_rasa_x"></a>3.7. Rasa X</h3>
 
 </div>
 </div>
@@ -2274,7 +2563,7 @@ Work with Protected Enterprise Data Using Open Source Frameworks <strong>ISBN</s
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-11-18 18:35:11 UTC
+Last updated 2021-11-18 22:17:20 UTC
 </div>
 </div>
 </body>
