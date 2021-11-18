@@ -16,7 +16,7 @@ ifdef::backend-html5[]
 
 == Über
 Dokumente der Diplomarbeit "Chatbot" für das Jahr 2021/2022 von Dumfarth Felix und Lukas Starka unter Betreuung
-von Herr Pof. Stütz.
+von Herrn Prof. Stütz.
 
 == Links
 
