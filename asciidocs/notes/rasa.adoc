@@ -2,6 +2,32 @@ ifndef::imagesdir[:imagesdir: ./images]
 
 = Rasa Notes
 
+== Rasa und AI
+
+Rasa selbst definiert 5 Stufen von AI.
+
+ifdef::backend-html5,backend-revealjs[image:5_levels_of_ai.png[width=100%]]
+
+https://www.youtube.com/watch?v=-F6h43DRpcU&list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&index=2
+
+**Level 1: Notifications **
+
+Auf Level 1 geht es darum simple Aufgaben zu erfüllen, wie man sie möglicherweise von seinem Smartphone kennt.
+Darunter fällt zum Beispiel das Anlegen von Terminen und anderen Benachrichtigungen, die man dann zu der eingestellten Uhrzeit bekommt.
+
+**Level 2: "Chatbots" & FAQs **
+
+Auf Level 2 geht es darum, dass der Benutzer einfache Fragen stellen kann und anschließend der Chatbot auf diese antwortet.
+Diese Stufe findet man sehr oft, allerdings sind diese sehr fehleranfällig, weil hier nur eine Menge an Regeln angelegt wird, an die sich der Chatbot hält.
+Dies wird sehr oft in Form von FAQs genutzt und auch ein paar kleine Follow-up Fragen können hierbei schon definiert sein.
+
+**Level 3: Contextual AI Assistants **
+
+Dieses Level wird derzeit von Rasa unterstützt. Zusätzlich zu normalen FAQs wird hierbei auch der Kontext beachtet.
+Es macht nämlich einen Unterschied, wann, wie und in welcher Situation ein Benutzer etwas gesagt hat.
+Bei Contextual Assistants wird der Kontext, also was bereits zuvor gesagt wurde, auch beachtet. Außerdem lenken sie Konversationen
+in die gewünschte Richtung und werden mit der Zeit immer besser, wenn man sie trainiert.
+
 == Rasa Products
 
 Der Rasa Stack wird in Rasa *NLU* und Rasa *Core* aufgeteilt. Diese sind so aufgebaut, dass sie unabhängig voneinander eingesetzt werden können. So besteht die Möglichkeit, nur einen Teil der Architektur auf Rasa aufzubauen und zusätzlich weitere Services mit einzubinden.
