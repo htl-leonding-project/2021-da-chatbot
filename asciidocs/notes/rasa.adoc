@@ -289,6 +289,8 @@ https://www.youtube.com/watch?v=YxMzz6NF6Zw&list=PL75e0qA87dlEjGAc9j9v3a5h1mxI2Z
 Der `LexicalSyntacticFeaturizer` bekommt als Input einen Token und erstellt dann Features für die Entity Extraktion.
 Dabei verwendet er ein sogenanntes Sliding Window, welches über jeden Token in der Nachricht des Benutzers verwendet wird.
 
+https://rasa.com/docs/rasa/components/#lexicalsyntacticfeaturizer/
+
 ==== CountVectorsFeaturizer
 
 Der `CountVectorsFeaturizer` erstellt Bag-of-Words. Dabei wird gezählt, wie oft ein bestimmtes Wort aus den Trainingsdaten in der Nachricht des Benutzers vorkommt.
@@ -324,7 +326,43 @@ In dem Beispiel vom Bild oben würden wir dank DIET wissen wie der Intent lautet
 
 ==== EntitySynonymMapper
 
+Der `EntitySynonymMapper` erwartet als Input einen Extractor der Enity Extractors und liefert als Ausgabe modifizierte Werte für die Entities, die bereits vorher erkannt wurden.
+
+Wenn beim `EntitySynonymMapper` also eine Entity überliefert wird und in den Trainingsdaten Synonyme für diese Entity vorhanden sind wird der Wert der Entity auf den Wert, der in den Trainingsdaten angegeben ist, gesetzt.
+
+Wenn also beispielsweise in einem Satz des Benutzers `New York City` oder `NYC` vorkommt, werden diese beide auf den selben Wert `nyc` gesetzt.
+
+[source,json]
+----
+[
+    {
+      "text": "I moved to New York City",
+      "intent": "inform_relocation",
+      "entities": [{
+        "value": "nyc",
+        "start": 11,
+        "end": 24,
+        "entity": "city",
+      }]
+    },
+    {
+      "text": "I got a new flat in NYC.",
+      "intent": "inform_relocation",
+      "entities": [{
+        "value": "nyc",
+        "start": 20,
+        "end": 23,
+        "entity": "city",
+      }]
+    }
+]
+----
+
+https://rasa.com/docs/rasa/components/#entitysynonymmapper
+
 ==== ResponseSelector
+
+
 
 ==== FallbackClassifier
 
