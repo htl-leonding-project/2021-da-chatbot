@@ -172,13 +172,49 @@ ifdef::backend-html5,backend-revealjs[image:pre-trained-vs-supervised.png[]]
 
 https://www.youtube.com/watch?v=seBN1gMJN0U&list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&index=4
 
+=== Pipeline Komponenten
+
 Alle Komponenten der Pipeline können hier eingesehen werden:
 
 https://rasa.com/docs/rasa/components
 
 https://rasahq.github.io/rasa-nlu-examples/
 
-=== DIETClassifier
+Die generellen Funktionsweisen von Text-Analysis-Tools stehen https://htl-leonding-project.github.io/2021-da-chatbot/notes/text-analysis#_natural_language_processing_nlp[hier] beschrieben.
+
+Ein Beispiel für eine Pipeline, die bereits von Rasa vorkonfiguriert ist, sieht folgendermaßen aus:
+
+[source,yml]
+----
+pipeline:
+    - name: WhitespaceTokenizer
+    - name: RegexFeaturizer
+    - name: LexicalSyntacticFeaturizer
+    - name: CountVectorsFeaturizer
+    - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+    - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+    - name: EntitySynonymMapper
+    - name: ResponseSelector
+    epochs: 100
+    - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+----
+
+==== WhitespaceTokenizer
+
+==== RegexFeaturizer
+
+==== LexicalSyntacticFeaturizer
+
+==== CountVectorsFeaturizer
+
+==== DIETClassifier
 
 DIET steht für "Dual Intent and Entity Transformer" der Name ist schon relativ vielsagend, DIET kann Intents klassifizieren und Entities erkennen.
 
@@ -190,7 +226,15 @@ Ein Classifier nimmt den User Input und findet den passenden Intent aus unserem 
 
 In dem Beispiel vom Bild oben würden wir dank DIET wissen wie der Intent lautet und das der Name Vincet
 
-=== FallbackClassifier
+==== CRFEntityExtractor
+
+ifdef::backend-html5,backend-revealjs[image:extractor.PNG[]]
+
+==== EntitySynonymMapper
+
+==== ResponseSelector
+
+==== FallbackClassifier
 
 Den `FallbackClassifier` verwendet man um mit Nachrichten umzugehen, bei denen nur eine sehr niedrige Confidence vorhergesagt wurde. In diesem Fall wird dann ein Intent mit dem Namen `nlu_fallback` vorhergesagt, welchen man dann behandeln kann und beispielsweise als Antwort immer definiert, dass der User seine Nachricht neu formulieren soll.
 
@@ -207,11 +251,8 @@ https://rasa.com/docs/rasa/fallback-handoff/#nlu-fallback
 
 https://rasa.com/docs/rasa/components#fallbackclassifier
 
-=== CRFEntityExtractor
-
-ifdef::backend-html5,backend-revealjs[image:extractor.PNG[]]
-
 === Policy
+
 Eine Policy sind die Techniken die beachtet werden wie der Bot dem User antwortet.
 
 ifdef::backend-html5,backend-revealjs[image:policy.PNG[]]
