@@ -278,7 +278,36 @@ https://www.youtube.com/watch?v=ET1k9OrsfYQ&list=PL75e0qA87dlHQny7z43NduZHPo6qd-
 
 ==== LexicalSyntacticFeaturizer
 
+Ein `Featurizer` generell wird verwendet um Features von den Tokens zu extrahieren.
+
+Diese können dann von dem Intent-Klassifikations-Modell genutzt werden um Muster zu erkennen und anschließend den korrekten Intent vorherzusagen.
+
+ifdef::backend-html5,backend-revealjs[image:featurizer.png[]]
+
+https://www.youtube.com/watch?v=YxMzz6NF6Zw&list=PL75e0qA87dlEjGAc9j9v3a5h1mxI2Z9fi&index=8
+
+
+
 ==== CountVectorsFeaturizer
+
+Der `CountVectorsFeaturizer` erstellt Bag-of-Words. Dabei wird gezählt, wie oft ein bestimmtes Wort aus den Trainingsdaten in der Nachricht des Benutzers vorkommt.
+Dies wird dann als Input dem Intent-Classification-Model übergeben.
+
+ifdef::backend-html5,backend-revealjs[image:countvectorsfeaturizer.png[]]
+
+https://www.youtube.com/watch?v=YxMzz6NF6Zw&list=PL75e0qA87dlEjGAc9j9v3a5h1mxI2Z9fi&index=8
+
+Beim `CountVectorsFeaturizer` kann man außerdem angeben, dass statt Wörtern sogenannte n-grams verwendet werden sollen.
+Dies macht das Modell in der Regel robuster gegen Typos allerdings erhöht sich damit auch die Zeit, die das Modell zum Trainieren benötigt.
+
+[source,yml]
+----
+pipeline:
+    - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+----
 
 ==== DIETClassifier
 
