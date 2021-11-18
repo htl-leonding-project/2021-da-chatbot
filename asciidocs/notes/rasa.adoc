@@ -110,6 +110,8 @@ Grundsätzlich ist zwischen Pipelines zu unterscheiden, indem man sich informier
 
 Der Vorteil von Pipelines, die pre-trained word vectors verwendet ist, dass diese bereits aus der jeweiligen Sprache word vectors besitzen. Somit weiß das Model beispielsweise, dass Äpfel und Birnen ähnlich sind ohne, dass dies in den Intents irgendwo spezifiert werden muss.
 
+Die Vorteile hierbei sind also, dass das Model weniger Trainingsdaten benötigt, um eine gute Performance zu besitzen.
+Außerdem geht der ganze Trainingsprozess in der Regel schneller und die sogenannten Iteration Times sind kürzer als bei Modellen ohne pre-trained word vectors.
 
 [source,]
 ----
@@ -152,6 +154,15 @@ Mit dem Tensorflow-Embedding macht man im Grunde genommen genau das Gegenteil. D
 https://medium.com/rasa-blog/supervised-word-vectors-from-scratch-in-rasa-nlu-6daf794efcd8
 
 http://35.196.60.7/docs/nlu/0.14.4/choosing_pipeline/
+
+Eine weitere Pipeline lautet wie folgt:
+
+[source,]
+----
+language: "de"
+
+pipeline: "supervised_embedding"
+----
 
 Alle Komponenten der Pipeline können hier eingesehen werden:
 
