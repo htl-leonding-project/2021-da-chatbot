@@ -164,6 +164,14 @@ language: "de"
 pipeline: "supervised_embedding"
 ----
 
+==== Supervised Embeddings vs. Pretrained Embeddings
+
+In der folgenden Grafik sieht man ein Flussdiagramm, welches beschreibt, ob man Supervised Embeddings oder Pretrained Embeddings verwenden soll.
+
+ifdef::backend-html5,backend-revealjs[image:pre-trained-vs-supervised.png[]]
+
+https://www.youtube.com/watch?v=seBN1gMJN0U&list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&index=4
+
 Alle Komponenten der Pipeline können hier eingesehen werden:
 
 https://rasa.com/docs/rasa/components
