@@ -222,21 +222,29 @@ TIP: `Tokenizer` sollten generell weit am Anfang in einer Pipeline sein, wenn ni
 
 ==== RegexFeaturizer
 
-==== LexicalSyntacticFeaturizer
+Einen `RegexFeaturizer` kann man verwenden um die EntityExtraction zu erleichtern.
 
-==== CountVectorsFeaturizer
+Bei diesem werden Regular Expressions und Lookup Tables verwendet und der RegexFeaturizer gibt an, ob ein Wort von den Regular Expressions oder Lookup Tables erkannt wurde.
 
-==== DIETClassifier
+Der `EntityExtractor` nimmt dann diese Tokens als Input und produziert Named Entity Recognition Ergebnisse.
 
-DIET steht für "Dual Intent and Entity Transformer" der Name ist schon relativ vielsagend, DIET kann Intents klassifizieren und Entities erkennen.
+*Regular Expressions*
 
-Was bedeutet eigentlich Klassifizieren und was macht ein "Classifier" überhaupt?
+Regular Expressions können verwendet werden um Patterns eines Strings zu beschreiben und können hier bei dem Beispiel von Chatbots beispielsweise verwendet werden, um Zahlen zu beschreiben.
 
-ifdef::backend-html5,backend-revealjs[image:classifiers.png[]]
+ifdef::backend-html5,backend-revealjs[image:regular-expression-example.png[]]
 
-Ein Classifier nimmt den User Input und findet den passenden Intent aus unserem NLU.yml file dazu, ohne DIET würde man noch einen Entity Extractor brauchen, der aus dem Input Entities extrahiert jedoch kann DIET dies auch.
+ https://www.youtube.com/watch?v=ET1k9OrsfYQ&list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&index=5
 
-In dem Beispiel vom Bild oben würden wir dank DIET wissen wie der Intent lautet und das der Name Vincet
+*Lookup Tables*
+
+Lookup Tables können verwendet werden, wenn eine Entity vordefinierte Werte haben kann. Zum Beispiel kann eine Enitity country 194 verschiedene Länder annehmen.
+
+ifdef::backend-html5,backend-revealjs[image:lookup-table-example.png[]]
+
+ https://www.youtube.com/watch?v=ET1k9OrsfYQ&list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&index=5
+
+TIP: Der `RegexFeaturizer` muss vor dem EntityExtractor in der Pipeline platziert werden.
 
 ==== CRFEntityExtractor
 
@@ -252,9 +260,37 @@ Dies wird auch mit den Wörtern davor und danach gemacht.
 
 ifdef::backend-html5,backend-revealjs[image:crf-entity-extractor.png[]]
 
+https://www.youtube.com/watch?v=ET1k9OrsfYQ&list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&index=5
+
 Der `CRFEntityExtractor` produziert anschließend als Output, welche Wörter in einem Satz Entities sind und welche Entities diese sind, also was ihre Labels sind.
 Außerdem wird noch produziert, wie sicher das Modell war, dass diese Entites korrekt sind, also die sogenannte `Confidence` wird ausgegeben und welches Modell verwendet wurde.
 
+==== DucklingHttpExtractor
+
+Falls man komplexere Entites extrahieren will, wie beispielsweise Postleitzahlen, Daten oder generelle Nummern, so kann man den `DucklingHttpExtractor` verwenden.
+
+`Duckling` ist eine Library, die speziell dafür entworfen wurde, dass Informationen, wie Daten, Telefonnummern, E-Mails oder Postleitzahlen extrahiert werden.
+
+ifdef::backend-html5,backend-revealjs[image:duckling-http-extractor.png[]]
+
+https://www.youtube.com/watch?v=ET1k9OrsfYQ&list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&index=5
+
+
+==== LexicalSyntacticFeaturizer
+
+==== CountVectorsFeaturizer
+
+==== DIETClassifier
+
+DIET steht für "Dual Intent and Entity Transformer" der Name ist schon relativ vielsagend, DIET kann Intents klassifizieren und Entities erkennen.
+
+Was bedeutet eigentlich Klassifizieren und was macht ein "Classifier" überhaupt?
+
+ifdef::backend-html5,backend-revealjs[image:classifiers.png[]]
+
+Ein Classifier nimmt den User Input und findet den passenden Intent aus unserem NLU.yml file dazu, ohne DIET würde man noch einen Entity Extractor brauchen, der aus dem Input Entities extrahiert jedoch kann DIET dies auch.
+
+In dem Beispiel vom Bild oben würden wir dank DIET wissen wie der Intent lautet und das der Name Vincet
 
 ==== EntitySynonymMapper
 
