@@ -208,6 +208,16 @@ pipeline:
 
 ==== WhitespaceTokenizer
 
+Ein `WhitespaceTokenizer` ist eine sehr einfache Art eines Tokenizers. Hierbei wird, wie der Name bereits vermuten lässt, der Satz aufgeteilt in verschiedene Tokens.
+Ein Token kann zum Beispiel also ein Wort sein und beim `WhitespaceTokenizer` wird der Satz pro Whitespace also Leerzeichen aufgeteilt.
+
+ifdef::backend-html5,backend-revealjs[image:whitespacetokenizer.png[]]
+
+ https://www.youtube.com/watch?v=ET1k9OrsfYQ&list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc&index=5
+
+Es gibt auch komplexere Tokenizer und Tokenizer, die speziell an Sprachen angepasst sind und die besonderen Regeln, die in diesen Sprachen gelten, beachten.
+Außerdem kann man natürlich auch selber einen Tokenizer schreiben.
+
 ==== RegexFeaturizer
 
 ==== LexicalSyntacticFeaturizer
