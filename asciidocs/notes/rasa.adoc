@@ -218,6 +218,8 @@ ifdef::backend-html5,backend-revealjs[image:whitespacetokenizer.png[]]
 Es gibt auch komplexere Tokenizer und Tokenizer, die speziell an Sprachen angepasst sind und die besonderen Regeln, die in diesen Sprachen gelten, beachten.
 Außerdem kann man natürlich auch selber einen Tokenizer schreiben.
 
+TIP: `Tokenizer` sollten generell weit am Anfang in einer Pipeline sein, wenn nicht sogar die erste Komponente.
+
 ==== RegexFeaturizer
 
 ==== LexicalSyntacticFeaturizer
@@ -238,7 +240,21 @@ In dem Beispiel vom Bild oben würden wir dank DIET wissen wie der Intent lautet
 
 ==== CRFEntityExtractor
 
+Eine Möglichkeit um Entites aus der Nachricht des Benutzers zu extrahieren ist über den `CRFEntityExtractor`.
+
 ifdef::backend-html5,backend-revealjs[image:extractor.PNG[]]
+
+CRF steht hierbei für `[underline]##C##onditional [underline]##R##andom [underline]##F##ield`. Dieses Modell lernt, welche Komponenten eines Satzes Entities sind und welche Entities diese sind.
+
+Dies macht der `CRFEntityExtractor`, indem er die Sequenzen der Tokens beobachtet. Es wird also ein Token aus dem Satz herausgepickt, und anschließend wird geschaut, ob die Wörter danach und davor zum Kontext des Worts beitragen, um zu erkennen, ob es sich hierbei um eine Entity handelt.
+Dabei schaut der Extractor auf Eigenschaften, wie beispielsweise, ob das Wort groß- oder kleingeschrieben ist, ob es einen Prefix hat, ob es eine Zahl ist oder ob es ein speziell definiertes Wort für die Entities ist.
+Dies wird auch mit den Wörtern davor und danach gemacht.
+
+ifdef::backend-html5,backend-revealjs[image:crf-entity-extractor.png[]]
+
+Der `CRFEntityExtractor` produziert anschließend als Output, welche Wörter in einem Satz Entities sind und welche Entities diese sind, also was ihre Labels sind.
+Außerdem wird noch produziert, wie sicher das Modell war, dass diese Entites korrekt sind, also die sogenannte `Confidence` wird ausgegeben und welches Modell verwendet wurde.
+
 
 ==== EntitySynonymMapper
 
