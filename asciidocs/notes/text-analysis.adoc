@@ -120,8 +120,6 @@ Andere häufig durchgeführte Schritte beim Preprocessing von Texten sind das *S
 
 Beim *Stemming* werden die Suffixe und Prefixe der einzelnen *Tokens* des Textes mithilfe eines Stemmers in eine Form überführt, welche nur den Wortstamm zurücklässt.
 
-Stemming wird dazu verwendet, dass nicht alle verschiedenen Formen von 
-
 Auch hierbei gibt es entweder die Möglichkeit selber einen *Stemmer* zu programmieren oder bereits vorgefertigte Stemmer zu verwenden. 
 
 Hier sind einige Beispiele fürs Stemming:
