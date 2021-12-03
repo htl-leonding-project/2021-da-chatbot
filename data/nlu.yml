@@ -72,7 +72,6 @@ nlu:
     - bis zum nächsten Mal bot
     - Bis zum nächsten Mal. Tschau.
     - bye
-    - bot
     - Ciao.
     - Ich gehe jetzt
     - Ich verabschiede mich jetzt
@@ -406,6 +405,7 @@ nlu:
 - intent: pre_knowledge_for_htl
   examples: |
     - Was muss man können bevor man auf die HTL geht?
+    - Was muss man können wenn man an die HTL will?
     - Was muss ich können, um auf die HTL gehen zu können?
     - Was muss man können, um in der HTL anfangen zu können?
     - Muss ich schon etwas können, bevor ich auf die HTL gehe?
