@@ -270,6 +270,9 @@ nlu:
     - [elektronik](branch) pls
     - [medizintechnik](branch) bitte
     - [Informatik](branch) bitte
+    - Erzähl mir etwas über die [Strombastler](branch)
+    - Was weißt du über die [Strombastler](branch)
+    - Was lernt man bei den [Strombastlern](branch)
 - intent: ask_hours_per_branch
   examples: |
     - Wieviele Stunden gibt es pro Woche in der [Informatik](branch)?
@@ -515,3 +518,25 @@ nlu:
     - Sag mir wann schulfrei ist
     - Sag mir wann Ferien sind
     - Sag mir wann schulfreie Tage sind
+- synonym: Elektronik
+  examples: |
+    - Strombastler
+    - Elektrotechnik
+    - Elektrotechniker
+    - Strombastlern
+- synonym: Medientechnik
+  examples: |
+    - IT-Medientechnik
+    - IT Medientechnik
+    - Medientechnologie
+- synonym: Informatik
+  examples: |
+    - IT
+    - Programmieren
+    - Programmierer
+    - Programmierzweig
+- synonym: Medizintechnik
+  examples: |
+    - Biomedizin
+    - Biomediziner
+    - Gesundheitstechnik
