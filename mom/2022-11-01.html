@@ -7,7 +7,7 @@
 <meta name="generator" content="Asciidoctor 2.0.17">
 <meta name="author" content="Dumfarth, Starka">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>Diplomarbeit Chatbot</title>
+<title>Besprechungsprotokoll 11.01.2022</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,130 +438,153 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-pre.rouge .hll {
-  background-color: #ffc;
-}
-pre.rouge .hll * {
-  background-color: initial;
-}
-</style>
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Diplomarbeit Chatbot</h1>
+<h1>Besprechungsprotokoll 11.01.2022</h1>
 <div class="details">
 <span id="author" class="author">Dumfarth, Starka</span><br>
-<span id="revnumber">version 1.0.0,</span>
-<span id="revdate">2021</span>
+<span id="revnumber">version 1.0,</span>
+<span id="revdate">11.01.2022</span>
+<br><span id="revremark">Some notes</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_über">1. Über</a></li>
-<li><a href="#_links">2. Links</a>
-<ul class="sectlevel2">
-<li><a href="#_technology_notes">2.1. Technology Notes</a></li>
-<li><a href="#_meetings">2.2. Meetings</a></li>
-</ul>
-</li>
+<li><a href="#_besprochene_themen">1. Besprochene Themen</a></li>
+<li><a href="#_vereinbarungen_und_entscheidungen">2. Vereinbarungen und Entscheidungen</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_über"><a class="anchor" href="#_über"></a>1. Über</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Dokumente der Diplomarbeit "Chatbot" für das Jahr 2021/2022 von Dumfarth Felix und Lukas Starka unter Betreuung
-von Herrn Prof. Stütz.</p>
+<p><span class="icon"><a class="image" href="https://github.com/htl-leonding-project/2021-da-chatbot/"><i class="fa fa-github-square"></i></a></span> ‏ ‏ ‎
+<span class="icon"><a class="image" href="https://htl-leonding-project.github.io/2021-da-chatbot"><i class="fa fa-home"></i></a></span></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Teilnehmer</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">anwesend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dumfarth Felix</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starka Lukas</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Thomas Stütz</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Ort und Zeit</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Person</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">von-bis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Di. 11.01.2022, 9:50 - 10:10  Uhr</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dauer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20 Minuten</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_besprochene_themen"><a class="anchor" href="#_besprochene_themen"></a>1. Besprochene Themen</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Für das FrontEnd sollte eine weitere feedback Seite hinzugefügt werden</p>
+</li>
+<li>
+<p>Chatbot beim Frontend soll Emotionen zeigen</p>
+</li>
+<li>
+<p>Eine weitere Webseite mit Log In - im Backend Quarkus mit authentication (Basic auth)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Jedes Gespräch soll gelogged werden, mit IP Adresse!</p>
+</li>
+<li>
+<p>Filter nach Zeit (Letzte Woche, &#8230;&#8203;)</p>
+</li>
+<li>
+<p>Allgemeines Dashboard (Wie viele Gespräche gibt es, Wie lang sind diese im Durschnitt, usw)</p>
+</li>
+<li>
+<p>Bis zum Ende der Woche</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Für die Zukunft soll durch die Gesprächsdaten neue Intents hinzugefügt werden</p>
+</li>
+<li>
+<p>Wir sollen Herr Prof. Stütz ein Dokument mit sämtliche Zugangsdaten, alle unsre Repos inkl. Beschreibung was drinnen ist.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_links"><a class="anchor" href="#_links"></a>2. Links</h2>
+<h2 id="_vereinbarungen_und_entscheidungen"><a class="anchor" href="#_vereinbarungen_und_entscheidungen"></a>2. Vereinbarungen und Entscheidungen</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><a href="https://github.com/htl-leonding-project/2021-da-chatbot/">Index</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/notes/chatbot-features">Chatbot Features</a></p>
-</div>
-<div class="sect2">
-<h3 id="_technology_notes"><a class="anchor" href="#_technology_notes"></a>2.1. Technology Notes</h3>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/notes/rasa">Rasa</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/notes/deep-learning">Deep Learning</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/notes/text-analysis">Text Analysis</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_meetings"><a class="anchor" href="#_meetings"></a>2.2. Meetings</h3>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-02-22">1. Besprechung 22.02.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-03-09">2. Besprechung 09.03.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-03-23">3. Besprechung 23.03.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-04-06">4. Besprechung 06.04.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-04-20">5. Besprechung 20.04.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-04-29">6. Besprechung 29.04.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-05-11">7. Besprechung 11.05.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-06-01">8. Besprechung 01.06.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-06-17">9. Besprechung 17.06.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-07-22">10. Besprechung 22.07.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-07-31">11. Besprechung 31.07.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-08-27">12. Besprechung 27.08.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-09-27">13. Besprechung 27.09.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-13">14. Besprechung 13.10.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-22">15. Besprechung 22.10.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-25">16. Besprechung 25.10.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-26">17. Besprechung 26.10.2021</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://htl-leonding-project.github.io/2021-da-chatbot/mom/2021-10-28">18. Besprechung 28.10.2021</a></p>
-</div>
-</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Table 3. Was wurde vereinbart?</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">macht was</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bis wann</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schüler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log Seite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.01.2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schüler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datei mit Daten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bald</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0.0<br>
+Version 1.0<br>
 Last updated 2022-01-11 09:34:50 UTC
 </div>
 </div>
