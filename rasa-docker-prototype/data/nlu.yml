@@ -397,6 +397,14 @@ nlu:
     - Weißt du von wem du gemacht wurdest?
     - Kannst du mir sagen von wem du gemacht wurdest?
     - Wem hat man dich zu verdanken?
+- intent: chitchat/insult
+  examples: |
+    - Ich mag dich nicht.
+    - Du bist schlecht
+    - Du kannst nichts.
+    - Warum bist du so dumm.
+    - Deine Antworten sind nicht sinnvoll.
+    - Deine Antworten sind dumm.
 - intent: show_school_picture
   examples: |
     - Wie sieht die HTL aus?
