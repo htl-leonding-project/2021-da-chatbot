@@ -518,6 +518,13 @@ nlu:
     - Sag mir wann schulfrei ist
     - Sag mir wann Ferien sind
     - Sag mir wann schulfreie Tage sind
+- intent: ask_contact
+  examples: |
+    - Cool, wo kann ich mich bewerben?
+    - Wie kann man euch erreichen?
+    - Wo muss ich mich melden?
+    - Unter welcher Mail ist die HTL erreichbar?
+    - Was ist die Telefonnummer?
 - synonym: Elektronik
   examples: |
     - Strombastler

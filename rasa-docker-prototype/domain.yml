@@ -175,6 +175,8 @@ responses:
   - text: Der Vorteil an einer HTL ist, dass du direkt eine fachspezifische Ausbildung bekommst und somit nicht mehr studieren musst, um trotzdem gute, interessante Jobs zu bekommen. Aber natürlich stehen dir alle Türen nach der HTL offen.
   utter_htl_age:
   - text: Die HTL Leonding wurde 1984 gegründet und der Zweig für EDV und Organisation entstand 1985.
+  utter_contact:
+  - text: Gerne kannst du eine Mail an das Sekreteriat unter office@htl-leonding.ac.at schreiben oder anrufen unter der Nummer (0732) 67 33 68 – 0.
 actions:
 - action_hours_per_branch
 - action_room_info

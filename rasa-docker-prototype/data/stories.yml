@@ -116,3 +116,7 @@ stories:
   steps:
     - intent: ask_holidays
     - action: action_get_holidays
+- story: ask about contact information
+  steps:
+    - intent: ask_contact
+    - action: utter_contact
