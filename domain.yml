@@ -162,6 +162,8 @@ responses:
   - text: Ein Tool namens Rasa wurde verwendet um mir Sachen beizubringen.
   utter_chitchat/ask_creator:
   - text: Ich entstand im Zuge der Diplomarbeit von Felix Dumfarth und Lukas Starka.
+  utter_chitchat/insult:
+  - text: Ich gebe stets mein bestes dir die richtigen Antworten bereit zu stellen, aber leider kann ich auch nicht alles wissen. Du kannst mir aber gerne ein Feedback schreiben!
   utter_pre_school_knowledge:
   - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
   - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
@@ -175,6 +177,8 @@ responses:
   - text: Der Vorteil an einer HTL ist, dass du direkt eine fachspezifische Ausbildung bekommst und somit nicht mehr studieren musst, um trotzdem gute, interessante Jobs zu bekommen. Aber natürlich stehen dir alle Türen nach der HTL offen.
   utter_htl_age:
   - text: Die HTL Leonding wurde 1984 gegründet und der Zweig für EDV und Organisation entstand 1985.
+  utter_contact:
+  - text: Gerne kannst du eine Mail an das Sekreteriat unter office@htl-leonding.ac.at schreiben oder anrufen unter der Nummer (0732) 67 33 68 – 0.
 actions:
 - action_hours_per_branch
 - action_room_info

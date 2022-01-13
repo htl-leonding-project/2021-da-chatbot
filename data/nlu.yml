@@ -397,6 +397,14 @@ nlu:
     - Weißt du von wem du gemacht wurdest?
     - Kannst du mir sagen von wem du gemacht wurdest?
     - Wem hat man dich zu verdanken?
+- intent: chitchat/insult
+  examples: |
+    - Ich mag dich nicht.
+    - Du bist schlecht
+    - Du kannst nichts.
+    - Warum bist du so dumm.
+    - Deine Antworten sind nicht sinnvoll.
+    - Deine Antworten sind dumm.
 - intent: show_school_picture
   examples: |
     - Wie sieht die HTL aus?
@@ -518,6 +526,13 @@ nlu:
     - Sag mir wann schulfrei ist
     - Sag mir wann Ferien sind
     - Sag mir wann schulfreie Tage sind
+- intent: ask_contact
+  examples: |
+    - Cool, wo kann ich mich bewerben?
+    - Wie kann man euch erreichen?
+    - Wo muss ich mich melden?
+    - Unter welcher Mail ist die HTL erreichbar?
+    - Was ist die Telefonnummer?
 - synonym: Elektronik
   examples: |
     - Strombastler
