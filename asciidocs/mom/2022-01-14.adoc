@@ -46,6 +46,12 @@ endif::backend-html5[]
 
 == Besprochene Themen
 
+* Server muss noch deployed werden
+* E-Mail an den Abteilungsvorstand, um Termin für einen Testbetrieb anfragen
+* Link zu Github Repo anführen, damit man Issues erstellen kann
+* https://github.com/gras64/rasa-german-demo/blob/master/data/nlu/nlu.md[Möglicherweise interessantes Repo für vordefinierte Fragen]
+* IP von schulinternem Netz sollen rot angezeigt werden
+* Andere Aussagen hinzufügen, wenn etwas nicht verstanden wird
 
 == Vereinbarungen und Entscheidungen
 
@@ -53,5 +59,13 @@ endif::backend-html5[]
 [%autowidth]
 |===
 |wer |macht was |bis wann
-
+| Schüler
+| GitHub Repo public stellen
+| 17.01.2022
+| Schüler
+| Auf Server deployen
+| 17.01.2022
+| Schüler
+| Model verbessern (möglicherweise Pre-Trained Templates)
+| 17.01.2022
 |===
