@@ -539,6 +539,7 @@ nlu:
     - Elektrotechnik
     - Elektrotechniker
     - Strombastlern
+    - Höhere Elektronik
 - synonym: Medientechnik
   examples: |
     - IT-Medientechnik
@@ -555,3 +556,18 @@ nlu:
     - Biomedizin
     - Biomediziner
     - Gesundheitstechnik
+- synonym: Fachschule
+  examples: |
+    - Fachschule Elektronik
+    - 4 jährige Schule
+- synonym: Abendschule
+  examples: |
+    - Kolleg Informatik
+- lookup: branch
+  examples: |
+    - Medizintechnik
+    - Medientechnik
+    - Fachschule
+    - Informatik
+    - Abendschule
+    - Elektronik
