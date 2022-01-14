@@ -67,6 +67,8 @@ intents:
     use_entities: true
 - ask_holidays:
     use_entities: true
+- ask_contact:
+    use_entities: true
 entities:
 - name
 - branch
