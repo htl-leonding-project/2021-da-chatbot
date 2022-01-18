@@ -47,19 +47,19 @@ intents:
       use_entities: true
   - chitchat:
       use_entities: true
-  - pre_knowledge_for_htl:
-  - ask_languages_at_htl:
-  - ask_htl_difficulty:
-  - ask_study_after_htl:
-  - ask_student_home:
-  - ask_htl_age:
-  - ask_number_of_teachers:
-  - ask_number_of_classes:
-  - ask_number_of_students:
-  - ask_holidays:
-  - ask_contact:
-  - ask_faq_rasax:
-  - ask_faq_channels:
+  - pre_knowledge_for_htl
+  - ask_languages_at_htl
+  - ask_htl_difficulty
+  - ask_study_after_htl
+  - ask_student_home
+  - ask_htl_age
+  - ask_number_of_teachers
+  - ask_number_of_classes
+  - ask_number_of_students
+  - ask_holidays
+  - ask_contact
+  - ask_faq_rasax
+  - ask_faq_channels
   - ask_faq_community_size
   - ask_faq_ee
   - ask_faq_is_programming_required
@@ -215,10 +215,6 @@ responses:
         im Maßstab, der Funktionen für mehr Sicherheit und Datenschutz sowie fachkundigen Support bietet."
   utter_faq_python:
     - text: "Die unterstützten Python-Versionen sind 3.6 und 3.7🐍. Die empfohlene Version ist 3.7."
-  utter_faq_rasax:
-    - text: "Rasa X ist ein Toolset, mit dem du Gespräche nutzen kannst, um Ihren Assistenten zu verbessern.
-        Erfahre mehr über Rasa X [hier](https://rasa.com/docs/rasa-x/) oder lese den Blog-Beitrag darüber, warum wir es entwickelt haben
-        [hier](https://blog.rasa.com/algorithms-alone-wont-solve-conversational-ai-introducing-rasa-x/). "
   utter_faq_slots:
     - text: "Slots fungieren als Schlüsselwertspeicher, in dem vom Benutzer bereitgestellte Informationen gespeichert werden können
        (z.B. deine Heimatstadt) sowie Informationen über die Außenwelt
