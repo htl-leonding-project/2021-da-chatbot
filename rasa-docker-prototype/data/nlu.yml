@@ -141,7 +141,6 @@ nlu:
     - Akzeptieren
     - Genial!
     - Cool
-    - Gut
     - Groß
     - Ich nehme an
     - Ich nehme an.
@@ -203,7 +202,6 @@ nlu:
     - erledigt
     - Meinetwegen
     - natürlich
-    - gut
     - Scheiße ja!
     - gehen
     - gehen Sie geradeaus
@@ -252,7 +250,6 @@ nlu:
     - Okie
     - Ok
     - Oui
-    - perfekt
     - Bitte
     - si
     - irgendwie
@@ -325,7 +322,6 @@ nlu:
     - ich nehme an
     - yes
     - ja
-    - toll
 - intent: deny
   examples: |
     - no
@@ -1044,36 +1040,9 @@ nlu:
     - Was ist der Preis von Rasa
     - was ist der Preis?
     - Deine Kosten?
-    - Sind Sie Open Source?
-    - Können Sie mir sagen, ob Rasa Open Source ist oder nicht?
-    - Wie finde ich heraus, ob Rasa Open Source ist?
-    - Ist Rasa eine als Open Source formatierte Software?
-    - Ist Rasa Open Source
     - Handelt es sich um Open Source oder ist ein Premium-Angebot verfügbar?
-    - Ist Rasa Open Source?
-    - Ist die Rasa-Software Open Source?
     - Ist Ihre Software Open Source?
     - Rasa Open Source?
-    - Die Rasa-Software, ist das Open Source?
-    - Sind Sie voll Open Source
-    - Bist du Open Source?
-    - Kann ich rasa Open Source Software aufrufen?
-    - Fällt rasa in die Kategorie Open Source Software?
-    - Verwendet Rasa Open Source Software?
-    - Wie bekomme ich die Open Source Rasa
-    - Ist RASA Open Source?
-    - Ist es Open Source?
-    - Ist rasa Open-Source?
-    - Ist Rasa eine Art Open-Source-Software?
-    - Ist Rasa eine Open Source Software?
-    - Wird Rasa als Open-Source-Software betrachtet?
-    - Ist rasa wie eine Open Source Software
-    - Ist Rasa-Software als Open Source klassifiziert?
-    - Ist das Rasa-Projekt Open Source?
-    - Ist das Projekt Open Source?
-    - Ist die Software Rasa Open Source?
-    - Ist das Open Source
-    - ist diese Open Source Lizenz
     - Ist das Open Source?
     - Ist Ihr Produkt Open Source
     - ist es freie Open Source Software
@@ -1081,12 +1050,6 @@ nlu:
     - rasa [core](product) ist Open Source?
     - Rasa ist die Open Source
     - Welche Komponenten von Rasa sind Open Source
-    - Wäre ein Beispiel für Open Source-Software Rasa?
-    - Würden die Leute Rasa als Open-Source-Software bezeichnen?
-    - Wäre rasa Open Source Software?
-    - Würde Rasa in die Kategorie der Open-Source-Software fallen?
-    - Würden Sie rasa Open Source Software nennen?
-    - Würden Sie Rasa Open Source Software in Betracht ziehen?
     - Wie ist es OpenSource
 - intent: ask_faq_tutorials
   examples: |
@@ -1138,52 +1101,16 @@ nlu:
     - Ich muss RASA Schritt für Schritt studieren. Welches ist der beste Ort, an dem ich studieren kann?
 - intent: ask_faq_python_version
   examples: |
-    - Gibt es ein paar Tutorials, die ich mir ansehen könnte
-    - Hast du Tutorials
-    - Ich brauche ein Tutorial zur Verwendung von Rasa
-    - Rasa-Tutorial
-    - Kannst du mir ein Tutorial zeigen
-    - Ich möchte einem Tutorial folgen
-    - Hast du ein Tutorial, dem ich folgen kann
-    - Ich suche ein Tutorial
-    - Ich möchte ein Tutorial über Rasa
-    - Ich brauche ein Rasa-Tutorial
-    - Bitte zeigen Sie mir ein Tutorial
-    - Hattest du ein Tutorial?
-    - Groß. Gibt es Tutorials?
-    - Gibt es ein Tutorial für Rasa?
-    - LERNPROGRAMM !!!!!!!!!!
-    - Tutorials zum Erlernen von Rasa?
-    - irgendwelche Tutorials zur Verwendung von Rasa?
-    - Gibt es ein paar Tutorials, die ich mir ansehen könnte?
-    - Gibt es Tutorials zu Rasa?
-    - grundlegende Tutorials
-    - Bestes Tutorial für Rasa
-    - Kannst du mir ein Tutorial schicken?
-    - Kannst du mir eine Online-Anleitung zu Rasa geben?
-    - Kannst du mir ein gutes Handbuch über Rasa zeigen?
-    - Hast du ein Rasa-Tutorial?
-    - Laden Sie das Tutorial herunter
-    - Hol mir ein paar Tutorials
-    - Ich kann kein Tutorial für Rasa finden
-    - Ich brauche ein gutes Tutorial für Rasa
-    - Ich möchte ein Tutorial von Rasa
-    - Ich möchte ein Tutorial
-    - Ich suche das YouTube-Tutorial
-    - gibt es ein Tutorial dafür?
-    - Gibt es ein Tutorial?
-    - Rasa-Bot-Tutorial
-    - Rasa-Tutorials
-    - Zeigst du mir ein Tutorial?
-    - Lernprogramm
-    - Lernprogramm?
-    - Tutorials
-    - Was ist das beste Tutorial
-    - Wo kann ich Tutorials für Rasa finden?
-    - Wo finde ich Tutorials?
-    - Wo bekomme ich ein Tutorial zu Rasa?
-    - Ja, wo finde ich praktische Anleitungen zur Verwendung von RASA-Produkten?
-    - Ich muss RASA Schritt für Schritt studieren. Welches ist der beste Ort, an dem ich studieren kann?
+    - Welche Python-Version soll ich installieren
+    - Welche Version von Python
+    - Welches Python unterstützt du
+    - Welche Python-Version installiere ich
+    - Was ist Python-Version erforderlich
+    - Python-Version
+    - Welche Version braucht Python
+    - Welche Version von Python soll installiert werden
+    - Welche Version von Python brauche ich
+    - Welche Python-Version sollte ich installieren, um das Rasa-Beispiel auszuführen
 - intent: ask_faq_slots
   examples: |
     - Definition von Slots bitte.
