@@ -180,3 +180,7 @@ stories:
     steps:
       - intent: ask_faq_what_is_forum
       - action: utter_faq_what_is_forum
+  - story: say that cant helo
+    steps:
+      - intent: cant_help
+      - action: utter_cant_help

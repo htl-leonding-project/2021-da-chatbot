@@ -242,7 +242,6 @@ nlu:
     - OK gut
     - Ok, großartig
     - Okay, ich akzeptiere
-    - Okay, Sara
     - Ok, ich benehme mich jetzt
     - OK ich habe verstanden
     - in Ordnung...
@@ -407,6 +406,39 @@ nlu:
     - bist du ein Chatbot?
     - rede ich mit einem Roboter?
     - rede ich mit einem Menschen?
+    - Bist du ein Bot?
+    - Bist du ein echter Bot?
+    - Bist du ein computer
+    - Bist du wirklich ein Bot?
+    - Bist du ein Roboter
+    - Bist du ein Rasa-Bot?
+    - Was bist du, ein Bot?
+    - Sag mir, bist du ein Bot?
+    - Bist du ein Skynet?
+    - Bist du ein Chatbot?
+    - Bist du ai
+    - Bist du künstliche Intelligenz?
+    - Bist du künstlich?
+    - Ich denke du bist ein Chatbot
+    - Du bist ein Roboter
+    - Du bist ai
+    - Du bist ein Chatbot
+    - bist du ein Bot
+    - Bist du ein Bot ?
+    - Du bist ein Bot
+    - Bist du der Bot?
+    - Hallo, bist du der Bot?
+    - Bist du ein Chat-Bot?
+    - Bist du ein Roboter?
+    - Bist du echt?
+    - Was bist du ?
+    - Also bin ich heute hier, um [eine] (Nummer: 1) sehr einfache Frage zu stellen, was bist du?
+    - Bist du echt lol
+    - Weil du ein Bot bist
+    - bist du ein Bot?
+    - Oh, bist du ein Chatbot?
+    - Bist du sicher, dass du ein Bot bist?
+    - Bist du ein Bot
 - intent: ask_htl_general
   examples: |
     - Was ist die HTL Leonding?
@@ -548,6 +580,78 @@ nlu:
     - Nicht gut und dir?
     - Nicht so toll, und dir?
     - Schlecht, wie gehts dir so?
+    - Ahoi Kumpel, wie geht es dir?
+    - Geht es dir gut?
+    - Fühlst du dich gut?
+    - Hast du einen tollen Tag?
+    - Hallo Leon, was hast du vor?
+    - Hallo Leon! Wie geht es Ihnen?
+    - Wie geht es dir?
+    - Wie geht's?
+    - Wie geht es Ihnen
+    - Wie geht es dir Mädchen?
+    - Wie geht es dir heute?
+    - Wie geht es Ihnen?
+    - Wie war dein Tag?
+    - Wie geht's
+    - Wie hängt es?
+    - Wie geht es deinem Freund im Leben?
+    - Wie ist es dir ergangen?
+    - Es geht mir gut und dir
+    - Ist alles in Ordnung?
+    - Was ist los?
+    - Was gibt's Neues?
+    - Was geht
+    - Was ist los Mann
+    - Und du
+    - geht es dir gut
+    - bist du glücklich
+    - hast du einen guten Tag
+    - bist du in Ordnung
+    - Hallo wie geht's dir?
+    - Hallo, wie geht es dir?
+    - Hi wie geht's
+    - Hallo Leon, wie geht es dir?
+    - Wie?
+    - Wie läuft es so
+    - Wie geht es euch?
+    - Wie geht es Ihnen ?
+    - wie geht es dir
+    - wie geht es dir heute Morgen
+    - Wie geht es dir heute, mein süßer Freund?
+    - wie geht es dir heute?
+    - wie geht es dir?
+    - Wie geht es Ihnen heute
+    - Wie geht es Ihnen'
+    - Wie geht es Ihnen????
+    - Wie ist es dir gegangen
+    - Wie gehts
+    - Wie geht es Heute
+    - Wie läuft dein Tag?
+    - Wie ist dein Abend
+    - wie geht's
+    - wie geht's ?
+    - wie geht's?
+    - wie ist das Leben
+    - Wie hat dich das Leben behandelt?
+    - Wie läuft dein Tag
+    - Wie geht's dir?
+    - ist alles in Ordnung
+    - Ist alles in Ordnung
+    - nein, mir geht es gut - wie geht es dir?
+    - Okay, hi, wie geht es dir?
+    - wassup>
+    - Wie war dein Tag
+    - Was hast du vor?
+    - was ist gut
+    - Was ist los, Leon?
+    - Was geht?
+    - Was machst du?
+    - Was ist hier los
+    - Was gibt's Neues
+    - Und du?
+    - Wie geht es dir
+    - Wie geht es dir heute
 - intent: chitchat/ask_name
   examples: |
     - Wie ist dein Name?
@@ -561,6 +665,39 @@ nlu:
     - Wie nennen dich andere Leute?
     - Weißt du deinen Namen?
     - Hast du einen Namen?
+- intent: chitchat/ask_how_old
+  examples: |
+    - wie alt?
+    - Wie alt bist du?
+    - wann wurdest du geboren?
+    - Wann hast du Geburtstag?
+    - wann ist dein Geburtstag?
+    - wie alt bist du?
+    - Weißt du, wie alt du bist?
+    - Wie alt bist du genau?
+    - In welchem Jahr wurdest du geboren?
+    - Kannst du mir dein Alter sagen?
+    - Wann ist dein Geburtstag?
+    - Wie alt wirst du an deinem nächsten Geburtstag sein?
+    - Wann feiern Sie Ihren Geburtstag?
+    - Wie alt warst du an deinem letzten Geburtstag?
+    - Wie viele Kerzen waren auf Ihrer letzten Geburtstagstorte?
+    - Hast du Freunde im gleichen Alter wie dich, wenn ja, wie alt bist du?
+    - Nenne mir deinen Tag, Monat und Jahr der Geburt.
+    - Und du bist wie viele Jahre alt?
+    - Was ist dein Geburtsjahr?
+    - In welchem Alter haben Sie Ihren letzten Geburtstag gefeiert?
+    - Wie alt warst du, als du deinen letzten Geburtstag gefeiert hast?
+    - Sag mir dein Alter?
+    - Wie steht es mit deinem Alter?
+    - wie alt bist du
+    - Wie alt wirst du in diesem Jahr sein?
+    - Wie lange bist du schon da?
+    - Wie lange lebst du schon?
+    - In welchem Alter bist du am nächsten Geburtstag?
+    - Wie viele Jahre hast du gelebt?
+    - Seit wie vielen Jahren lebst du?
+    - Wie lange hast du die Erde besetzt?
 - intent: chitchat/ask_technology
   examples: |
     - In was bist du geschrieben?
@@ -680,6 +817,114 @@ nlu:
     - Warum bist du so dumm.
     - Deine Antworten sind nicht sinnvoll.
     - Deine Antworten sind dumm.
+- intent: chitchat/ask_languagesbot
+  examples: |
+    - Welche Sprachen sprichst du?
+    - Welche Sprachen kannst du sprechen?
+    - In welchen Sprachen kannst du sprechen?
+    - Welche Sprachen kennen Sie?
+    - In welchen Sprachen sprechen Sie fließend?
+    - In welchen Sprachen sprichst du fließend?
+    - In welchen Sprachen kannst du dich unterhalten?
+    - Welche Sprachen beherrschen Sie?
+    - Welche Sprachen kennst du?
+    - In welchen Sprachen sprechen Sie fließend genug?
+    - In welchen Sprachen sprechen Sie gerne?
+    - In welchen Sprachen sprechen Sie gut?
+    - Mit welchen Sprachen sind Sie gut vertraut?
+    - In welchen Sprachen kannst du dich wohlfühlen?
+    - In welchen Sprachen sprichst du am liebsten?
+    - Welche Sprachen beherrschst du gut?
+    - Kennst du irgendwelche anderen Sprachen?
+    - Sprichst du irgendwelche anderen Sprachen?
+    - Welche Sprachen kannst du?
+    - Was sprichst du?
+    - Sprichst du noch andere Sprachen?
+    - Kannst du in anderen Sprachen kommunizieren?
+    - In welchen Sprachen kannst du kommunizieren?
+    - Wie viele Sprachen kannst du?
+    - nenne mir einige Sprachen, die du kennenst?
+    - sprichst du irgendwelche anderen Sprachen?
+    - Was weißt du außer Deutsch noch?
+    - bist du zweisprachig?
+    - Bist du mehrsprachig?
+    - what foreign languages do you know?
+    - what foreign languages are you fluent in?
+    - Welche Fremdsprachen kennst du?
+    - Welche Sprache benutzt du
+    - In welchen Sprachen sprichst du gerne?
+    - In welchen Sprachen sprichst gut?
+    - welche Sprachen sprichst du
+    - Mit welchen Sprachen bist du gut vertraut?
+    - In welchen Sprachen sprechst du am liebsten?
+    - Welche Sprachen verstehst du?
+    - weißt du, Französisch
+- intent: chitchat/ask_whatismyname
+  examples: |
+    - was ist mein Name?
+    - Darf ich meinen Namen kennen?
+    - Was ist mein Name?
+    - Wie nenne ich mich?
+    - Sag mir meinen Namen.
+    - Erkläre mir meinen Namen.
+    - Wie könnte ich heißen?
+    - Unter welchem Namen gehe ich?
+    - Welchen Namen soll ich für mich selbst erkennen?
+    - Kannst du mir meinen Namen sagen?
+    - Habe ich einen Namen?
+    - Habe ich einen Namen? Was ist es?
+    - Wie wurde ich genannt?
+    - Sag meinen Namen.
+    - Kennst du meinen Namen?
+    - Wie nennen mich die Leute?
+    - Wie nennen mich die Leute sonst noch?
+    - Ich habe einen Namen, was ist das?
+    - Sag mir meinen Namen
+    - Ich möchte meinen Namen wissen
+    - Teile mir mit, wie ich heiße
+    - Bitte lasse mich wissen, wie ich heiße
+    - Kannst du mir sagen, wie ich heiße?
+    - Ich würde gerne wissen, wie ich heiße
+    - Wie nennt mich jeder?
+    - Wie heiße ich?
+    - Wie haben meine Eltern mich genannt?
+    - Wie nennen mich meine Kollegen?
+    - Wie wäre der Name auf meinem Grabstein?
+    - Weißt du, wie ich heiße?
+    - Wie ist mein Vorname?
+    - Wie ist meinen vollen Name?
+    - Wie genau ist mein Name?
+- intent: chitchat/ask_wherefrom
+  examples: |
+    - Wo lebst du
+    - wo kommen Sie her?
+    - Wo kommst du her?
+    - Wo bist du?
+    - Wo bist du geboren?
+    - In welcher Stadt bist du geboren?
+    - Wo bist du aufgewachsen?
+    - In welchem Staat wurdest du geboren?
+    - In welchem Land bist du geboren?
+    - Woher kommst du?
+    - Wo warst du, bevor du hier warst?
+    - Woher?
+    - Weißt du, woher du kommst?
+    - Wo ist deine Heimatstadt?
+    - Aus welchem Land kommst du?
+    - Bist du von hier?
+    - woher kommen deine Eltern?
+    - Wo hast du deine Jugend verbracht?
+    - Wo denkst du nach Hause?
+    - Welche Stadt behauptest du für deine Geburt?
+    - Auf welche Staatsbürgerschaft erhebst du Anspruch?
+    - Was ist dein Erbe?
+    - Was ist dein Geburtsort?
+    - Du wurdest an welchem Ort gezeugt?
+    - Was ist deine Wurzel?
+    - Woher bist du gekommen?
+    - Wo sind deine Wurzeln?
+    - Aus welcher Gegend kommst du?
+    - Wie heißt der Ort, von dem du gekommen bist??
 - intent: show_school_picture
   examples: |
     - Wie sieht die HTL aus?
@@ -1362,6 +1607,26 @@ nlu:
     - Welche Themen werden in diesem Forum behandelt?
     - Für wen ist das Forum?
     - warum sollte ich dem Forum beitreten?
+- intent: cant_help
+  examples: |
+    - Ok, dann kannst du mir nicht helfen
+    - Das war Scheiße, du hilfst nicht
+    - Du kannst mir nicht helfen
+    - Du kannst mir nicht mit dem helfen, was ich brauche
+    - Dann kannst du mir wohl nicht helfen
+    - Okay, ich glaube, du kannst mir nicht helfen
+    - das ist nicht was ich will
+    - ok, aber das hilft mir nicht
+    - Das führt zu nichts
+    - Dieses Gespräch ist nicht wirklich hilfreich
+    - Du kannst mir nicht mit dem helfen, was ich will
+    - Ich glaube nicht, dass du tun kannst, was ich will
+    - halt
+    - Hör auf zurückzugehen
+    - Hast du was?
+    - und du nennst dich bot Firma? pff
+    - und das ist es?
+    - nichts anderes?
 - synonym: Elektronik
   examples: |
     - Strombastler
