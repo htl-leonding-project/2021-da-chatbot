@@ -145,6 +145,9 @@ responses:
   utter_rephrase:
   - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
   - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
+  - text: Weiß der Geier oder weiß er nicht? Nein in dem Fall nicht, könntest du das bitte noch mal umformulieren?
+  - text: 'Wie Sokrates schon einst sagte: "Ich weiß, dass ich nichts weiß". Du kannst mir aber gerne auf die Sprünge helfen und die Nachricht neu formulieren!'
+  - text: 'Schon Descartes wusste zu sagen: "Ich denke, also bin ich". Und ich denke, dass diese Frage nicht so leicht zu beantworten ist und du sie neu formulieren solltest!'
   utter_leonie:
   - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
   utter_leonie_and_me:
