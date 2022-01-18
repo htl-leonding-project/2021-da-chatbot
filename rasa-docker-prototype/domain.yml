@@ -5,77 +5,81 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false
 intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- tell_name:
-    use_entities: true
-- ask_htl_general:
-    use_entities: true
-- ask_branches:
-    use_entities: true
-- ask_specific_branch:
-    use_entities: true
-- ask_hours_per_branch:
-    use_entities: true
-- ask_consultation:
-    use_entities: true
-- ask_room:
-    use_entities: true
-- ask_specific_hours:
-    use_entities: true
-- nlu_fallback:
-    use_entities: true
-- ask_leonie:
-    use_entities: true
-- better_than_leonie:
-    use_entities: true
-- thanks:
-    use_entities: true
-- show_school_picture:
-    use_entities: true
-- chitchat:
-    use_entities: true
-- pre_knowledge_for_htl:
-    use_entities: true
-- ask_languages_at_htl:
-    use_entities: true
-- ask_htl_difficulty:
-    use_entities: true
-- ask_study_after_htl:
-    use_entities: true
-- ask_student_home:
-    use_entities: true
-- ask_htl_age:
-    use_entities: true
-- ask_number_of_teachers:
-    use_entities: true
-- ask_number_of_classes:
-    use_entities: true
-- ask_number_of_students:
-    use_entities: true
-- ask_holidays:
-    use_entities: true
-- ask_contact:
-    use_entities: true
+  - greet:
+      use_entities: true
+  - goodbye:
+      use_entities: true
+  - affirm:
+      use_entities: true
+  - deny:
+      use_entities: true
+  - mood_great:
+      use_entities: true
+  - mood_unhappy:
+      use_entities: true
+  - bot_challenge:
+      use_entities: true
+  - tell_name:
+      use_entities: true
+  - ask_htl_general:
+      use_entities: true
+  - ask_branches:
+      use_entities: true
+  - ask_specific_branch:
+      use_entities: true
+  - ask_hours_per_branch:
+      use_entities: true
+  - ask_consultation:
+      use_entities: true
+  - ask_room:
+      use_entities: true
+  - ask_specific_hours:
+      use_entities: true
+  - nlu_fallback:
+      use_entities: true
+  - ask_leonie:
+      use_entities: true
+  - better_than_leonie:
+      use_entities: true
+  - thanks:
+      use_entities: true
+  - show_school_picture:
+      use_entities: true
+  - chitchat:
+      use_entities: true
+  - pre_knowledge_for_htl:
+  - ask_languages_at_htl:
+  - ask_htl_difficulty:
+  - ask_study_after_htl:
+  - ask_student_home:
+  - ask_htl_age:
+  - ask_number_of_teachers:
+  - ask_number_of_classes:
+  - ask_number_of_students:
+  - ask_holidays:
+  - ask_contact:
+  - ask_faq_rasax:
+  - ask_faq_channels:
+  - ask_faq_community_size
+  - ask_faq_ee
+  - ask_faq_is_programming_required
+  - ask_faq_opensource_cost
+  - ask_faq_tutorials
+  - ask_faq_python_version
+  - ask_faq_slots
+  - ask_faq_tutorialcore
+  - ask_faq_tutorialnlu
+  - ask_faq_languages
+  - ask_faq_opensource
+  - ask_faq_voice
+  - ask_faq_what_is_forum
 entities:
-- name
-- branch
-- teacher
-- class
-- grade
-- subject
+  - name
+  - branch
+  - teacher
+  - class
+  - grade
+  - subject
 slots:
   name:
     type: rasa.shared.core.slots.TextSlot
@@ -99,100 +103,154 @@ slots:
     influence_conversation: false
 responses:
   utter_greet:
-  - condition:
-    - name: logged_in
-      type: slot
-      value: true
-    text: Hey {name}! Wie gehts dir?
-  - text: Hi! Wie gehts dir?
+    - condition:
+        - name: logged_in
+          type: slot
+          value: true
+      text: Hey {name}! Wie gehts dir?
+    - text: Hi! Wie gehts dir?
   utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Hier ist etwas zur Aufmunterung:'
+    - image: https://i.imgur.com/nGF1K8f.jpg
+      text: 'Hier ist etwas zur Aufmunterung:'
   utter_did_that_help:
-  - text: Hat das geholfen?
+    - text: Hat das geholfen?
   utter_happy:
-  - text: Großartig!
+    - text: Großartig!
   utter_goodbye:
-  - text: Tschüss
+    - text: Tschüss
   utter_iamabot:
-  - text: Ich bin ein bot, powered by Rasa.
+    - text: Ich bin ein bot, powered by Rasa.
   utter_htl:
-  - text: Die HTL Leonding ist eine Höhere Schule in Leonding in der man zwischen 4 Zweigen wählen kann
+    - text: Die HTL Leonding ist eine Höhere Schule in Leonding in der man zwischen 4 Zweigen wählen kann
   utter_branches:
-  - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik. Über welchen Zweig soll ich dir mehr erzählen?'
+    - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik. Über welchen Zweig soll ich dir mehr erzählen?'
   utter_branch:
-  - condition:
-    - name: branch
-      type: slot
-      value: medientechnik
-    text: Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.
-  - condition:
-    - name: branch
-      type: slot
-      value: informatik
-    text: Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.
-  - condition:
-    - name: branch
-      type: slot
-      value: elektronik
-    text: Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.
-  - condition:
-    - name: branch
-      type: slot
-      value: medizintechnik
-    text: In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.
-  - text: '{branch} ist ein toller Zweig in dem man sehr viel lernt'
+    - condition:
+        - name: branch
+          type: slot
+          value: medientechnik
+      text: Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.
+    - condition:
+        - name: branch
+          type: slot
+          value: informatik
+      text: Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.
+    - condition:
+        - name: branch
+          type: slot
+          value: elektronik
+      text: Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.
+    - condition:
+        - name: branch
+          type: slot
+          value: medizintechnik
+      text: In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.
+    - text: '{branch} ist ein toller Zweig in dem man sehr viel lernt'
   utter_rephrase:
-  - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
-  - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
-  - text: Weiß der Geier oder weiß er nicht? Nein in dem Fall nicht, könntest du das bitte noch mal umformulieren?
-  - text: 'Wie Sokrates schon einst sagte: "Ich weiß, dass ich nichts weiß". Du kannst mir aber gerne auf die Sprünge helfen und die Nachricht neu formulieren!'
-  - text: 'Schon Descartes wusste zu sagen: "Ich denke, also bin ich". Und ich denke, dass diese Frage nicht so leicht zu beantworten ist und du sie neu formulieren solltest!'
+    - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
+    - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
+    - text: Weiß der Geier oder weiß er nicht? Nein in dem Fall nicht, könntest du das bitte noch mal umformulieren?
+    - text: 'Wie Sokrates schon einst sagte: "Ich weiß, dass ich nichts weiß". Du kannst mir aber gerne auf die Sprünge helfen und die Nachricht neu formulieren!'
+    - text: 'Schon Descartes wusste zu sagen: "Ich denke, also bin ich". Und ich denke, dass diese Frage nicht so leicht zu beantworten ist und du sie neu formulieren solltest!'
   utter_leonie:
-  - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
+    - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
   utter_leonie_and_me:
-  - text: Meine Schwester und ich sind beide besonders auf unsre eigene Art.
+    - text: Meine Schwester und ich sind beide besonders auf unsre eigene Art.
   utter_no_problem:
-  - text: Kein Problem, dafür bin ich doch da!
+    - text: Kein Problem, dafür bin ich doch da!
   utter_school_photo:
-  - image: https://www.htl-leonding.at/wp-content/uploads/2019/11/banner_full_ueberuns.jpg?x49412
-    text: 'So sieht unsere Schule aus:'
+    - image: https://www.htl-leonding.at/wp-content/uploads/2019/11/banner_full_ueberuns.jpg?x49412
+      text: 'So sieht unsere Schule aus:'
   utter_chitchat/how_are_you:
-  - text: Mir geht es sehr gut, danke fürs Fragen!
+    - text: Mir geht es sehr gut, danke fürs Fragen!
   utter_chitchat/ask_name:
-  - text: Ich bin Leon!
-  - text: Mein Name ist Leon oder LeoBot ich weiß es selbst nicht so genau.
-  - text: Ich heiße Leon, du kannst mich aber auch LeoBot nennen :)
+    - text: Ich bin Leon!
+    - text: Mein Name ist Leon oder LeoBot ich weiß es selbst nicht so genau.
+    - text: Ich heiße Leon, du kannst mich aber auch LeoBot nennen :)
   utter_chitchat/ask_technology:
-  - text: Ein Tool namens Rasa wurde verwendet um mir Sachen beizubringen.
+    - text: Ein Tool namens Rasa wurde verwendet um mir Sachen beizubringen.
   utter_chitchat/ask_creator:
-  - text: Ich entstand im Zuge der Diplomarbeit von Felix Dumfarth und Lukas Starka.
+    - text: Ich entstand im Zuge der Diplomarbeit von Felix Dumfarth und Lukas Starka.
   utter_chitchat/insult:
-  - text: Ich gebe stets mein bestes dir die richtigen Antworten bereit zu stellen, aber leider kann ich auch nicht alles wissen. Du kannst mir aber gerne ein Feedback schreiben!
+    - text: Ich gebe stets mein bestes dir die richtigen Antworten bereit zu stellen, aber leider kann ich auch nicht alles wissen. Du kannst mir aber gerne ein Feedback schreiben!
   utter_pre_school_knowledge:
-  - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
-  - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
+    - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
+    - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
   utter_languages_at_htl:
-  - text: An der HTL hat man nur Englisch als Fremdsprache neben dem Deutschunterricht. Dafür lernst du aber umso mehr nützliche Programmiersprachen.
+    - text: An der HTL hat man nur Englisch als Fremdsprache neben dem Deutschunterricht. Dafür lernst du aber umso mehr nützliche Programmiersprachen.
   utter_htl_difficulty:
-  - text: Unzählige Schüler haben die HTL bereits geschafft, allerdings sollte man schon etwas machen und bemüht sein um auch keine Schwierigkeiten zu bekommen.
+    - text: Unzählige Schüler haben die HTL bereits geschafft, allerdings sollte man schon etwas machen und bemüht sein um auch keine Schwierigkeiten zu bekommen.
   utter_student_home:
-  - text: In der Nähe der Schule gibt es Studentenheime, die sich bestimmt über dich freuen würden.
+    - text: In der Nähe der Schule gibt es Studentenheime, die sich bestimmt über dich freuen würden.
   utter_study_after_htl:
-  - text: Der Vorteil an einer HTL ist, dass du direkt eine fachspezifische Ausbildung bekommst und somit nicht mehr studieren musst, um trotzdem gute, interessante Jobs zu bekommen. Aber natürlich stehen dir alle Türen nach der HTL offen.
+    - text: Der Vorteil an einer HTL ist, dass du direkt eine fachspezifische Ausbildung bekommst und somit nicht mehr studieren musst, um trotzdem gute, interessante Jobs zu bekommen. Aber natürlich stehen dir alle Türen nach der HTL offen.
   utter_htl_age:
-  - text: Die HTL Leonding wurde 1984 gegründet und der Zweig für EDV und Organisation entstand 1985.
+    - text: Die HTL Leonding wurde 1984 gegründet und der Zweig für EDV und Organisation entstand 1985.
   utter_contact:
-  - text: Gerne kannst du eine Mail an das Sekreteriat unter office@htl-leonding.ac.at schreiben oder anrufen unter der Nummer (0732) 67 33 68 – 0.
+    - text: Gerne kannst du eine Mail an das Sekreteriat unter office@htl-leonding.ac.at schreiben oder anrufen unter der Nummer (0732) 67 33 68 – 0.
+  utter_rasa_x:
+    - text: "Rasa X ist ein Toolset, mit dem du Gespräche nutzen kannst, um Ihren Assistenten zu verbessern.
+    Erfahre mehr über Rasa X [hier](https://rasa.com/docs/rasa-x/) oder lese den Blog-Beitrag darüber, warum wir es entwickelt haben
+    [hier](https://blog.rasa.com/algorithms-alone-wont-solve-conversational-ai-introducing-rasa-x/). "
+  utter_faq_channels:
+    - text: "Wir haben eine [umfassende Liste der unterstützten Konnektoren](https://rasa.com/docs/core/connectors/),
+      Wenn du jedoch den gesuchten Channel nicht siehst, kannst du jederzeit einen benutzerdefinierten Connector erstellen, indem du den Anweisungen folgen
+      [diese Anleitung](https://rasa.com/docs/rasa/user-guide/connectors/custom-connectors/). "
+  utter_faq_community_size:
+    - text: "Rasa hat mehr als 10 Millionen User und über 300 Code- und Content-Mitwirkende 🚀."
+  utter_faq_languages:
+    - text: "Mit Rasa kannst du Assistenten in jeder gewünschten Sprache erstellen!"
+  utter_faq_is_programming_required:
+    - text: "Rasa Open Source ist in Python geschrieben, aber für die Entwicklung eines Assistenten ist keine Programmierung erforderlich.
+      Informationen zum Erstellen eines Assistenten finden Sie in der [Rasa Masterclass](https://www.youtube.com/watch?v=rlAQWbhwqLA).
+      Es gibt einen Ort, an dem Programmierkenntnisse nützlich sind, und zwar bei der Implementierung
+      [benutzerdefinierte Aktionen](https://rasa.com/docs/rasa/core/actions/#custom-actions). Du kannst einen Aktionsserver in
+      Node.js, .NET, Java oder eine andere Sprache  erstellen und definiere dort deine Aktionen. Für benutzerdefinierte Aktionen, die in Python geschrieben wurden,
+      bieten wir ein kleines [Python SDK](https://rasa.com/docs/rasa/api/rasa-sdk/#rasa-sdk), um die Entwicklung noch einfacher zu machen. "
+  utter_faq_tutorialnlu:
+    - text: "Die Rasa Masterclass-Episoden 2-4 konzentrieren sich auf NLU. Schauen Sie sich Episode 2
+    [hier](https://www.youtube.com/watch?v=k5UeywXA28k) an."
+  utter_faq_ee:
+    - text: "Rasa Enterprise ist ein unternehmensfähiges Abonnement zur Entwicklung und Auslieferung von Kontextassistenten
+        im Maßstab, der Funktionen für mehr Sicherheit und Datenschutz sowie fachkundigen Support bietet."
+  utter_faq_python:
+    - text: "Die unterstützten Python-Versionen sind 3.6 und 3.7🐍. Die empfohlene Version ist 3.7."
+  utter_faq_rasax:
+    - text: "Rasa X ist ein Toolset, mit dem du Gespräche nutzen kannst, um Ihren Assistenten zu verbessern.
+        Erfahre mehr über Rasa X [hier](https://rasa.com/docs/rasa-x/) oder lese den Blog-Beitrag darüber, warum wir es entwickelt haben
+        [hier](https://blog.rasa.com/algorithms-alone-wont-solve-conversational-ai-introducing-rasa-x/). "
+  utter_faq_slots:
+    - text: "Slots fungieren als Schlüsselwertspeicher, in dem vom Benutzer bereitgestellte Informationen gespeichert werden können
+       (z.B. deine Heimatstadt) sowie Informationen über die Außenwelt
+       (z.B. das Ergebnis einer Datenbankabfrage). Weitere Informationen [hier](https://rasa.com/docs/rasa/core/slots/). "
+  utter_faq_tutorialcore:
+    - text: "Die Rasa Masterclass bietet eine großartige Einführung in das Dialogmanagement
+        [hier](https://www.youtube.com/watch?v=WoTmnN2EMdo)."
+  utter_faq_tutorials:
+    - text: "Folge der [Rasa Masterclass](https://www.youtube.com/watch?v=rlAQWbhwqLA)
+       Um einen Level 3-Assistenten von Grund auf neu zu erstellen, oder lese unseren [Blog] (https://blog.rasa.com/tag/tutorials/).
+       Ausführliche Tutorials zum Anpassen deines Assistenten. "
+  utter_faq_voice:
+    - text: "Du kannst Rasa mit jedem beliebigen Kanal verbinden, einschließlich Sprachkanälen.
+        Weitere Informationen findest du [hier](https://rasa.com/docs/core/connectors/). "
+  utter_faq_what_is_forum:
+    - text: "[Rasa Forum](https://forum.rasa.com) ist der Ort, an dem all das Community-Buzz stattfindet.
+       Hier kannst du an Diskussionen teilnehmen, Antworten auf deine technischen Fragen erhalten und die neuesten Updates erhalten
+       auf das, was bei Rasa passiert."
+  utter_faq_open_source_cost:
+    - text: "Das Rasa-Framework für maschinelles Lernen ist Open Source! Wir bemühen uns um ein gepflegtes und
+        dokumentiertes Open-Source-Tools, mit denen alle Hersteller reibungslos die besten KI-Assistenten erstellen können.
+        Darüber hinaus bieten wir das kostenlose Toolset [Rasa X](https://rasa.com/docs/rasa-x/) und an
+        bezahlte Rasa Enterprise-Abonnements. Weitere Informationen findst du über die Pläne und Preise [hier] (https://rasa.com/product/pricing/)."
 actions:
-- action_hours_per_branch
-- action_room_info
-- action_consultation
-- action_log_in
-- action_utter_branch
-- action_number_of_teachers
-- action_number_of_classes
-- action_number_students
-- action_get_holidays
-forms: {}
-e2e_actions: []
+  - action_hours_per_branch
+  - action_room_info
+  - action_consultation
+  - action_log_in
+  - action_utter_branch
+  - action_number_of_teachers
+  - action_number_of_classes
+  - action_number_students
+  - action_get_holidays
+forms: { }
+e2e_actions: [ ]
