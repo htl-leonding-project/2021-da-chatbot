@@ -184,3 +184,7 @@ stories:
     steps:
       - intent: cant_help
       - action: utter_cant_help
+  - story: utter human handoff
+    steps:
+      - intent: human_handoff
+      - action: utter_human_handoff
