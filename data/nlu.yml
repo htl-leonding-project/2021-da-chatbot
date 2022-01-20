@@ -817,6 +817,99 @@ nlu:
     - Warum bist du so dumm.
     - Deine Antworten sind nicht sinnvoll.
     - Deine Antworten sind dumm.
+    - SCHEISSE
+    - Scheiße
+    - Verpiss dich
+    - Fick dich
+    - Gott, du bist ein Idiot
+    - Ich kann nicht glauben, wie dumm du bist
+    - Ich hasse dich
+    - Verlierer
+    - Blöd
+    - Sie sind ein Narr.
+    - Sie sind ein Idiot.
+    - Du bist dumm.
+    - Du bist kurzsichtig.
+    - du bist nicht intelligent.
+    - du weißt es nicht.
+    - Dein Gehirn ist langweilig.
+    - Du hast kein Hirn.
+    - Du hast keine Intelligenz.
+    - Du hast keinen Sinn.
+    - Du weißt nichts.
+    - Dir fehlt die Intelligenz.
+    - Du hast kein Verständnis.
+    - Du bist ein Idiot.
+    - Du bist ein Trottel.
+    - Ihre Intelligenz ist lächerlich.
+    - Ihre Denkweise ist naiv.
+    - Ein Baby weiß mehr als du
+    - Bist du Müll?
+    - Bist du hirntot?
+    - Arschloch
+    - Schlampe
+    - Verdammt noch mal
+    - Aber du bist ein Idiot
+    - Pass auf meinen Arsch auf, du Schlampe
+    - f * ck
+    - Fick Rasa
+    - Fick dich maschinell lernender Bot
+    - Fick dich, Sara
+    - Fick dich!
+    - verdammt dumm
+    - verdammte Arbeit
+    - Hau ab
+    - Geh weg
+    - Geh und fick dich
+    - fahr zur Hölle
+    - Wie kannst du so ein Idiot sein?
+    - ich hasse dich
+    - Ich hasse dein dummes Gesicht
+    - Ich denke, dass du ein Schwachsinn bist
+    - Dummkopf
+    - dich beleidigen
+    - Ok, fick dich
+    - Okay, halt die Klappe
+    - sara du siehst aus wie ein verbrannter spatz
+    - Scheisse
+    - Scheiße Bot
+    - Halt die Klappe Arschloch
+    - so dumm
+    - So verdammt dumm
+    - Trottel
+    - das war nicht sehr lustig
+    - Es war ein schrecklicher Scherz
+    - Du bist ein Stück Müll
+    - Du bist eine Muschi
+    - Was zum Teufel
+    - Ja, aber du bist ein Idiot
+    - Du bist ein volltrottel
+    - Du bist ein dummer Bot
+    - du bist ein Idiot
+    - du bist dumm
+    - Du bist bescheuert
+    - du bist verdammt dumm Mädel
+    - Du bist idiotisch
+    - Du bist so unwissend
+    - Du bist dumm
+    - Sie sind nicht intelligent
+    - Sie sind nutzlos Bot
+    - du Arschloch
+    - du Idiot
+    - Du Idiot Bot
+    - Du Hurensohn
+    - du gehtst mir auf die Nerven
+    - Du bist ein Lmao-Verlierer
+    - Du bist nicht schlau
+    - Du bist so dumm
+    - Du bist die schwachsinnigste Person, die ich kenne
+    - Deine Mutter ist schwul
+    - du bist lästig
+    - bist du dumm
+    - dumm
+    - doof
+    - du bist doof ich weiß doch du kennst die antwort
+    - Bist du doof
 - intent: chitchat/ask_languagesbot
   examples: |
     - Welche Sprachen sprichst du?
@@ -925,6 +1018,103 @@ nlu:
     - Wo sind deine Wurzeln?
     - Aus welcher Gegend kommst du?
     - Wie heißt der Ort, von dem du gekommen bist??
+- intent: chitchat/nicetomeetyou
+  examples: |
+    - Freut mich, dich kennenzulernen.
+    - Fühlt sich gut an, dich zu sehen!
+    - Freut mich, dich endlich zu treffen!
+    - Freut mich, Sie kennenzulernen.
+    - Schön dich zu treffen
+    - Schön dich zu treffen!
+    - Schön dich zu treffen.
+    - Ich bin froh, dass wir uns getroffen haben.
+    - Gut dich zu treffen!
+    - Schön dich zu sehen!
+    - Tolle Interaktion mit dir
+    - Schön dich zu sehen
+    - Schön, Sie kennenzulernen!
+    - Freut mich, dich zu sehen.
+    - Hallo Sara, wollte dich nur testen
+    - Hallo, ich freue mich, Sie kennenzulernen.
+    - Hallo, schön dich kennenzulernen!
+    - Ich bin froh dich zu treffen.
+    - Ich bin froh, dass er uns vorgestellt hat.
+    - Ich hatte ein tolles Treffen mit dir
+    - Ich bin froh dich kennengelernt zu haben!
+    - Ich freue mich dich zu treffen!
+    - Ich bin froh, dass wir uns getroffen haben!
+    - Ich freue mich, Sie kennen zu lernen!
+    - Ich bin so froh, dass ich dich treffen konnte.
+    - Ich freue mich sehr, Sie kennenzulernen!
+    - Es ist in der Tat eine Freude, Sie kennenzulernen.
+    - Es war eine Freude, Ihre Firma zu haben.
+    - Es war schön, dich getroffen zu haben
+    - Es ist mir eine Freude, Sie kennenzulernen!
+    - Es ist mir eine Freude, dich kennenzulernen!
+    - Es ist gut, dass ich dich treffen konnte. Es war eine Freude.
+    - Es ist toll, dich kennenzulernen!
+    - Es ist toll, Sie kennenzulernen!
+    - Es ist schön, dich endlich zu treffen.
+    - Es ist wunderbar, dich zu treffen!
+    - Es ist mir eine Freude, Sie kennenzulernen
+    - Es ist großartig, mit Ihnen in Kontakt zu treten.
+    - Schön, dich kennen zu lernen.
+    - Schön dich kennengelernt zu haben.
+    - Ich freu mich dich kennenzulernen!
+    - Bis demnächst. Es war schön dich kennenzulernen.
+    - Danke für dieses Treffen. Es war toll dich zu sehen.
+    - Freut mich, dich kennenzulernen
+- intent: tell_joke
+  examples: |
+    - einen Witz erzählen
+    - Kannst du einen Witz erzählen?
+    - Kannst du mir einen Witz erzählen?
+    - Überlege dir einen Witz den ich lustig finde.
+    - Könntest du bitte einen Witz mit mir teilen.
+    - könneten Sie mir einen Witz erzählen?
+    - Hast du irgendwelche Witze?
+    - Kennst du Witze?
+    - Unterhalte mich mit einem Witz.
+    - Gib mir einen lustigen Witz.
+    - Gib mir einen Witz.
+    - Schenk mir ein bisschen Erleichterung.
+    - Ich brauche einen guten Witz.
+    - Ich möchte etwas Lustiges hören.
+    - Kennest du Witze?
+    - Lass uns einen Witz von dir hören.
+    - Bring mich zum Lachen.
+    - Bitte erzähl mir einen Witz.
+    - Sag etwas Lustiges.
+    - Erzähl mir einen Witz!
+    - Einen Witz erzählen.
+    - Erzähl mir was Lustiges.
+    - Sag mir was Humorvolles!
+    - Sag mir etwas, von dem du denkst, dass es mich zum Lachen bringt.
+    - Erzähl mir den besten Witz, den du kennst.
+    - Was ist ein guter Witz?
+    - Willst du mir einen Witz erzählen?
+    - Würdest du einen Witz mit mir teilen?
+    - Würdest du mir einen Witz erzählen?
+    - Gib mir einen guten Witz
+    - Bring mich mit einem schlechten Witz zum Lachen
+    - Bring mich zum Lachen mit einem Witz
+    - Sag einen lustigen Witz
+    - Sag einen Witz
+    - Sag einen Witz, der lustig ist
+    - Sag einen Witz, der so schlimm ist, dass er lustig ist
+    - Erzähl mir einen Witz
+    - Erzähl mir einen kurzen Witz
+    - Erzähl mir einen Geschichtenwitz
+    - Erzähl mir etwas Lustiges, wie einen Witz
+    - Du kannst einen Scherz sagen
+    - kannst du mir einen witz erzählen
+    - erzähle einen witz
+    - Erzâhle mir einen witz
+    - Kennst du noch einen witz
+    - erzähle mir einen witz
+    - kennst du noch einen witz
+    - kennst du noch einen
+    - erzähle mir eine witz
 - intent: show_school_picture
   examples: |
     - Wie sieht die HTL aus?
@@ -1114,7 +1304,7 @@ nlu:
     - Ich brauche eine Hilfe, um Rasa in einen Messenger zu integrieren
     - Welche verschiedenen Nachrichtenkanäle kann rasa nutzen?
     - welche rasa Nachrichtenkanäle werden unterstützt?
-    - Welche Kanäle werden von Rasa [NLU](Produkt) unterstützt?
+    - Welche Kanäle werden von Rasa NLUProdukt unterstützt?
     - Welche Nachrichtenkanäle werden von Rasa unterstützt?
     - Welche Nachrichtenkanäle können mit rasa verwendet werden?
     - Welche Kanäle unterstützt du?
@@ -1292,7 +1482,7 @@ nlu:
     - Ist Ihr Produkt Open Source
     - ist es freie Open Source Software
     - kein Budget, deshalb suche ich Open Source
-    - rasa [core](product) ist Open Source?
+    - rasa core ist Open Source?
     - Rasa ist die Open Source
     - Welche Komponenten von Rasa sind Open Source
     - Wie ist es OpenSource
@@ -1607,6 +1797,22 @@ nlu:
     - Welche Themen werden in diesem Forum behandelt?
     - Für wen ist das Forum?
     - warum sollte ich dem Forum beitreten?
+- intent: ask_pipeline
+  examples: |
+    - Mit welcher Pipeline soll ich beginnen?
+    - Was ist die richtige Pipeline?
+    - Womit habe ich eine gute Pipeline am Anfang?
+    - Welche Pipeline soll ich verwenden?
+    - Welche Pipeline ist besser für das, was ich will?
+    - soll ich besser mit der tensorflow pipeline oder spacy beginnen?
+    - Spacy oder Tensorflow, was ist besser, um zu beginnen?
+    - Ich weiß nicht, welche Pipeline ich verwenden soll
+    - Welche Pipeline ist besser
+    - Welche Pipeline ist besser?
+    - Rohrleitung empfehlen
+    - Pipelineempfehlung
+    - gib mir eine Empfehlung
+    - Anaconda
 - intent: cant_help
   examples: |
     - Ok, dann kannst du mir nicht helfen
@@ -1627,6 +1833,52 @@ nlu:
     - und du nennst dich bot Firma? pff
     - und das ist es?
     - nichts anderes?
+- intent: human_handoff
+  examples: |
+    - Ich möchte mit einem Menschen sprechen
+    - Lass mich bitte mit einer echten Person sprechen
+    - Gibt es auch Menschen, die für Ihr Unternehmen arbeiten?
+    - Gib mir einen richtigen Menschen
+    - Ich möchte nicht mit einem Bot sprechen
+    - Kann ich mit jemandem sprechen, der mir wirklich helfen kann?
+    - Ich rede nicht gern mit einer Maschine
+    - Können Sie mich bitte mit einem echten rasa-Mitarbeiter verbinden?
+    - Gib mir jetzt einen Menschen
+    - Das ist ärgerlich. Ich möchte mit jemandem sprechen, der echt ist
+    - Ich möchte mit einer Person sprechen
+    - Kannst du mich mit einem Menschen in Kontakt bringen?
+    - Lass mich mit einem Menschen reden
+    - Ich würde gerne mit einem echten rasa-Mitarbeiter sprechen
+    - mit einem bot zu reden ist dumm
+    - Ich möchte mit jemandem sprechen, der schlauer ist als Sie
+    - Kann ich bitte mit einem Menschen sprechen?
+    - Ich würde lieber mit einem echten rasa-Mitarbeiter sprechen
+    - Ich möchte mit jemand anderem sprechen
+    - Lass mich mit einer realen Person sprechen
+    - Bitte gib mir einen Menschen
+    - Kundendienst
+    - Ich möchte mit dem Kundenservice sprechen
+    - jemand aus der Kundenbetreuung
+    - Kannst du mich an dein Team weiterleiten?
+    - Serviceagent
+    - menschliche Übergabe
+    - Gib mir einen Menschen
+    - mit einer realen Person sprechen
+    - Ich möchte mit einer realen Person sprechen
+    - Falsch, ich möchte mit einem Menschen sprechen
+    - Könnte ich mit Akela sprechen?
+    - Ich möchte mit jemandem bei Rasa sprechen
+    - Ich möchte mit den Gründern sprechen
+    - Ich bin mir nicht sicher, wie ich einen Befehl ausführen soll
+    - Ja, mein Pip wirft mir einen seltsamen Fehler
+    - Ich habe ein Problem mit Berechtigungen
+    - Kann ich mit einer Person sprechen?
+    - Kannst du mich bitte mit einem echten rasa-Mitarbeiter verbinden?
+    - Hast du menschliche Unterstützung?
+    - Ich möchte mit einem Manager sprechen
+    - Ich möchte mit Menschen sprechen
+    - Ich möchte mit jemandem sprechen, der schlauer ist als du
+    - das hilft nicht, kann ich mit Menschen sprechen?
 - synonym: Elektronik
   examples: |
     - Strombastler

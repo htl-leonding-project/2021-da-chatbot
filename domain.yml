@@ -74,6 +74,8 @@ intents:
   - ask_faq_voice
   - ask_faq_what_is_forum
   - cant_help
+  - human_handoff
+  - ask_pipeline
 entities:
   - name
   - branch
@@ -199,6 +201,13 @@ responses:
     - text: "Ich bin zwar in Leonding geboren, aber ich betrachte mich als Weltbürger."
     - text: "Ich bin in der coolsten Stadt der Welt geboren, in Leonding."
     - text: "Mir wurde beigebracht, meine Adresse nicht im Internet zu verraten."
+  utter_chitchat/nicetomeetyou:
+    - text: "Gleichfalls!"
+    - text: "Thank you. Es ist mir ein Vergnügen, auch dich kennenzulernen!"
+    - text: "Es ist auch schön, dich kennenzulernen!"
+    - text: "Freut mich auch, dich kennenzulernen!"
+    - text: "Es ist immer eine Freude, neue Leute kennenzulernen!"
+    - text: "Freut mich auch, dich kennenzulernen! Freut mich, wenn ich helfen kann."
   utter_pre_school_knowledge:
     - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
     - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
@@ -266,6 +275,10 @@ responses:
         bezahlte Rasa Enterprise-Abonnements. Weitere Informationen findst du über die Pläne und Preise [hier] (https://rasa.com/product/pricing/)."
   utter_cant_help:
     - text: Das ist schade, aber wenn du weitere Fragen hast lass es mich wissen!
+  utter_human_handoff:
+    - text: Wenn ich dir leider nicht helfen konnte, kannst du gerne dein Feedback da lassen und einen Kommentar schreiben.
+  utter_pipeline:
+    - text: Es gibt eine Anleitung zu Pipelines [hier](https://rasa.com/docs/rasa/tuning-your-model/)
 actions:
   - action_hours_per_branch
   - action_room_info
@@ -276,5 +289,6 @@ actions:
   - action_number_of_classes
   - action_number_students
   - action_get_holidays
+  - action_tell_joke
 forms: { }
 e2e_actions: [ ]

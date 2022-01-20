@@ -1,5 +1,7 @@
 import webuntis
 import os
+import requests
+import json
 
 from typing import Any, Text, Dict, List
 from dotenv import load_dotenv
@@ -108,9 +110,9 @@ class ActionUtterBranch(Action):
             elif branch == "fachschule":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
                 dispatcher.utter_message(text="Im fachpraktischen Unterricht wird fachtheoretisches Wissen gefestigt und durch die Herstellung verschiedener Werkstücke mit dem Erlernen von praktischen Fertigkeiten ergänzt. Die 4-jährige Fachschulausbildung unterscheidet sich u.a. zur 5-jährigen HTL-Ausbildung auch durch den höheren Praxisanteil an Unterrichtsstunden.")
-           elif branch == "abendschule":
-               dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
-               dispatcher.utter_message(text="Seit dem Schuljahr 2015/16 gilt der neue Lehrplan für Informatik an unserer Abendschule. Dieser Lehrplan sieht die Konzentration der Ausbildung auf Bildungsinhalte der Informatik vor. Als schulautonomer Schwerpunkt wird in Leonding Software-Engineering angeboten.")
+            elif branch == "abendschule":
+                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
+                dispatcher.utter_message(text="Seit dem Schuljahr 2015/16 gilt der neue Lehrplan für Informatik an unserer Abendschule. Dieser Lehrplan sieht die Konzentration der Ausbildung auf Bildungsinhalte der Informatik vor. Als schulautonomer Schwerpunkt wird in Leonding Software-Engineering angeboten.")
             else:
                 dispatcher.utter_message(text=f"Die Fachrichtung {branch} kenne ich leider nicht.")
 
@@ -197,6 +199,24 @@ class ActionHolidayList(Action):
             output += f"- {holiday.name}: Von {holiday.start.strftime('%d. %m. %Y')} bis {holiday.end.strftime('%d. %m. %Y')}\n"
 
         s.logout()
+
+        dispatcher.utter_message(text=output)
+        return []
+
+class ActionTellJoke(Action):
+    def name(self) -> Text:
+            return "action_tell_joke"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        response = requests.get("https://witzapi.de/api/joke")
+        print(response)
+        json_str = json.dumps(response.json())
+        resp = json.loads(json_str)
+
+        output = resp[0]["text"]
 
         dispatcher.utter_message(text=output)
         return []
