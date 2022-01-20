@@ -1064,6 +1064,57 @@ nlu:
     - Bis demnächst. Es war schön dich kennenzulernen.
     - Danke für dieses Treffen. Es war toll dich zu sehen.
     - Freut mich, dich kennenzulernen
+- intent: tell_joke
+  examples: |
+    - einen Witz erzählen
+    - Kannst du einen Witz erzählen?
+    - Kannst du mir einen Witz erzählen?
+    - Überlege dir einen Witz den ich lustig finde.
+    - Könntest du bitte einen Witz mit mir teilen.
+    - könneten Sie mir einen Witz erzählen?
+    - Hast du irgendwelche Witze?
+    - Kennst du Witze?
+    - Unterhalte mich mit einem Witz.
+    - Gib mir einen lustigen Witz.
+    - Gib mir einen Witz.
+    - Schenk mir ein bisschen Erleichterung.
+    - Ich brauche einen guten Witz.
+    - Ich möchte etwas Lustiges hören.
+    - Kennest du Witze?
+    - Lass uns einen Witz von dir hören.
+    - Bring mich zum Lachen.
+    - Bitte erzähl mir einen Witz.
+    - Sag etwas Lustiges.
+    - Erzähl mir einen Witz!
+    - Einen Witz erzählen.
+    - Erzähl mir was Lustiges.
+    - Sag mir was Humorvolles!
+    - Sag mir etwas, von dem du denkst, dass es mich zum Lachen bringt.
+    - Erzähl mir den besten Witz, den du kennst.
+    - Was ist ein guter Witz?
+    - Willst du mir einen Witz erzählen?
+    - Würdest du einen Witz mit mir teilen?
+    - Würdest du mir einen Witz erzählen?
+    - Gib mir einen guten Witz
+    - Bring mich mit einem schlechten Witz zum Lachen
+    - Bring mich zum Lachen mit einem Witz
+    - Sag einen lustigen Witz
+    - Sag einen Witz
+    - Sag einen Witz, der lustig ist
+    - Sag einen Witz, der so schlimm ist, dass er lustig ist
+    - Erzähl mir einen Witz
+    - Erzähl mir einen kurzen Witz
+    - Erzähl mir einen Geschichtenwitz
+    - Erzähl mir etwas Lustiges, wie einen Witz
+    - Du kannst einen Scherz sagen
+    - kannst du mir einen witz erzählen
+    - erzähle einen witz
+    - Erzâhle mir einen witz
+    - Kennst du noch einen witz
+    - erzähle mir einen witz
+    - kennst du noch einen witz
+    - kennst du noch einen
+    - erzähle mir eine witz
 - intent: show_school_picture
   examples: |
     - Wie sieht die HTL aus?

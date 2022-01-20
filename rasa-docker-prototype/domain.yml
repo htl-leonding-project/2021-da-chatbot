@@ -289,5 +289,6 @@ actions:
   - action_number_of_classes
   - action_number_students
   - action_get_holidays
+  - action_tell_joke
 forms: { }
 e2e_actions: [ ]

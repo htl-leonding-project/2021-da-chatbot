@@ -188,3 +188,7 @@ stories:
     steps:
       - intent: human_handoff
       - action: utter_human_handoff
+  - story: tell a joke
+    steps:
+      - intent: tell_joke
+      - action: action_tell_joke

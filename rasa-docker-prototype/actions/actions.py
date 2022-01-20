@@ -202,3 +202,21 @@ class ActionHolidayList(Action):
 
         dispatcher.utter_message(text=output)
         return []
+
+class ActionTellJoke(Action):
+    def name(self) -> Text:
+            return "action_tell_joke"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        response = requests.get("https://witzapi.de/api/joke")
+        print(response)
+        json_str = json.dumps(response.json())
+        resp = json.loads(json_str)
+
+        output = resp[0]["text"]
+
+        dispatcher.utter_message(text=output)
+        return []
