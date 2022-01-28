@@ -76,6 +76,7 @@ intents:
   - cant_help
   - human_handoff
   - ask_pipeline
+  - tell_joke
 entities:
   - name
   - branch
@@ -112,6 +113,11 @@ responses:
           value: true
       text: Hey {name}! Wie gehts dir?
     - text: Hi! Wie gehts dir?
+      buttons:
+        - title: "Gut 😊"
+          payload: "/mood_great"
+        - title: "Nicht so gut 😔"
+          payload: "/mood_unhappy"
   utter_cheer_up:
     - image: https://i.imgur.com/nGF1K8f.jpg
       text: 'Hier ist etwas zur Aufmunterung:'
@@ -126,7 +132,7 @@ responses:
   utter_htl:
     - text: Die HTL Leonding ist eine Höhere Schule in Leonding in der man zwischen 4 Zweigen wählen kann
   utter_branches:
-    - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik. Über welchen Zweig soll ich dir mehr erzählen?'
+    - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik und die Fachschule für Elektronik und die Abendschule. Über welchen Zweig soll ich dir mehr erzählen?'
   utter_branch:
     - condition:
         - name: branch
@@ -224,61 +230,40 @@ responses:
   utter_contact:
     - text: Gerne kannst du eine Mail an das Sekreteriat unter office@htl-leonding.ac.at schreiben oder anrufen unter der Nummer (0732) 67 33 68 – 0.
   utter_rasa_x:
-    - text: "Rasa X ist ein Toolset, mit dem du Gespräche nutzen kannst, um Ihren Assistenten zu verbessern.
-    Erfahre mehr über Rasa X [hier](https://rasa.com/docs/rasa-x/) oder lese den Blog-Beitrag darüber, warum wir es entwickelt haben
-    [hier](https://blog.rasa.com/algorithms-alone-wont-solve-conversational-ai-introducing-rasa-x/). "
+    - text: Rasa X ist ein Toolset, mit dem du Gespräche nutzen kannst, um Ihren Assistenten zu verbessern.
   utter_faq_channels:
-    - text: "Wir haben eine [umfassende Liste der unterstützten Konnektoren](https://rasa.com/docs/core/connectors/),
-      Wenn du jedoch den gesuchten Channel nicht siehst, kannst du jederzeit einen benutzerdefinierten Connector erstellen, indem du den Anweisungen folgen
-      [diese Anleitung](https://rasa.com/docs/rasa/user-guide/connectors/custom-connectors/). "
+    - text: Wir haben eine umfassende Liste der unterstützten Konnektoren, wenn du jedoch den gesuchten Channel nicht siehst, kannst du jederzeit einen benutzerdefinierten Connector erstellen.
   utter_faq_community_size:
     - text: "Rasa hat mehr als 10 Millionen User und über 300 Code- und Content-Mitwirkende 🚀."
   utter_faq_languages:
     - text: "Mit Rasa kannst du Assistenten in jeder gewünschten Sprache erstellen!"
   utter_faq_is_programming_required:
-    - text: "Rasa Open Source ist in Python geschrieben, aber für die Entwicklung eines Assistenten ist keine Programmierung erforderlich.
-      Informationen zum Erstellen eines Assistenten finden Sie in der [Rasa Masterclass](https://www.youtube.com/watch?v=rlAQWbhwqLA).
-      Es gibt einen Ort, an dem Programmierkenntnisse nützlich sind, und zwar bei der Implementierung
-      [benutzerdefinierte Aktionen](https://rasa.com/docs/rasa/core/actions/#custom-actions). Du kannst einen Aktionsserver in
-      Node.js, .NET, Java oder eine andere Sprache  erstellen und definiere dort deine Aktionen. Für benutzerdefinierte Aktionen, die in Python geschrieben wurden,
-      bieten wir ein kleines [Python SDK](https://rasa.com/docs/rasa/api/rasa-sdk/#rasa-sdk), um die Entwicklung noch einfacher zu machen. "
+    - text: Rasa Open Source ist in Python geschrieben, aber für die Entwicklung eines Assistenten ist keine Programmierung erforderlich. Informationen zum Erstellen eines Assistenten finden Sie in der Rasa Masterclass. Es gibt einen Ort, an dem Programmierkenntnisse nützlich sind, und zwar bei der Implementierung benutzerdefinierte Aktionen. Du kannst einen Aktionsserver in Node.js, .NET, Java oder eine andere Sprache  erstellen und definiere dort deine Aktionen. Für benutzerdefinierte Aktionen, die in Python geschrieben wurden, bieten wir eine kleine Python SDK, um die Entwicklung noch einfacher zu machen.
   utter_faq_tutorialnlu:
-    - text: "Die Rasa Masterclass-Episoden 2-4 konzentrieren sich auf NLU. Schauen Sie sich Episode 2
-    [hier](https://www.youtube.com/watch?v=k5UeywXA28k) an."
+    - text: Die Rasa Masterclass-Episoden 2-4 konzentrieren sich auf NLU.
   utter_faq_ee:
     - text: "Rasa Enterprise ist ein unternehmensfähiges Abonnement zur Entwicklung und Auslieferung von Kontextassistenten
         im Maßstab, der Funktionen für mehr Sicherheit und Datenschutz sowie fachkundigen Support bietet."
   utter_faq_python:
     - text: "Die unterstützten Python-Versionen sind 3.6 und 3.7🐍. Die empfohlene Version ist 3.7."
   utter_faq_slots:
-    - text: "Slots fungieren als Schlüsselwertspeicher, in dem vom Benutzer bereitgestellte Informationen gespeichert werden können
-       (z.B. deine Heimatstadt) sowie Informationen über die Außenwelt
-       (z.B. das Ergebnis einer Datenbankabfrage). Weitere Informationen [hier](https://rasa.com/docs/rasa/core/slots/). "
+    - text: Slots fungieren als Schlüsselwertspeicher, in dem vom Benutzer bereitgestellte Informationen gespeichert werden können (z.B. deine Heimatstadt) sowie Informationen über die Außenwelt (z.B. das Ergebnis einer Datenbankabfrage).
   utter_faq_tutorialcore:
-    - text: "Die Rasa Masterclass bietet eine großartige Einführung in das Dialogmanagement
-        [hier](https://www.youtube.com/watch?v=WoTmnN2EMdo)."
+    - text: Die Rasa Masterclass bietet eine großartige Einführung in das Dialogmanagement.
   utter_faq_tutorials:
-    - text: "Folge der [Rasa Masterclass](https://www.youtube.com/watch?v=rlAQWbhwqLA)
-       Um einen Level 3-Assistenten von Grund auf neu zu erstellen, oder lese unseren [Blog] (https://blog.rasa.com/tag/tutorials/).
-       Ausführliche Tutorials zum Anpassen deines Assistenten. "
+    - text: Folge der Rasa Masterclass um einen Level 3-Assistenten von Grund auf neu zu erstellen, oder lese unseren Blog. Ausführliche Tutorials zum Anpassen deines Assistenten.
   utter_faq_voice:
-    - text: "Du kannst Rasa mit jedem beliebigen Kanal verbinden, einschließlich Sprachkanälen.
-        Weitere Informationen findest du [hier](https://rasa.com/docs/core/connectors/). "
+    - text: Du kannst Rasa mit jedem beliebigen Kanal verbinden, einschließlich Sprachkanälen.
   utter_faq_what_is_forum:
-    - text: "[Rasa Forum](https://forum.rasa.com) ist der Ort, an dem all das Community-Buzz stattfindet.
-       Hier kannst du an Diskussionen teilnehmen, Antworten auf deine technischen Fragen erhalten und die neuesten Updates erhalten
-       auf das, was bei Rasa passiert."
+    - text: Rasa Forum ist der Ort, an dem all das Community-Buzz stattfindet. Hier kannst du an Diskussionen teilnehmen, Antworten auf deine technischen Fragen erhalten und die neuesten Updates erhalten auf das, was bei Rasa passiert.
   utter_faq_open_source_cost:
-    - text: "Das Rasa-Framework für maschinelles Lernen ist Open Source! Wir bemühen uns um ein gepflegtes und
-        dokumentiertes Open-Source-Tools, mit denen alle Hersteller reibungslos die besten KI-Assistenten erstellen können.
-        Darüber hinaus bieten wir das kostenlose Toolset [Rasa X](https://rasa.com/docs/rasa-x/) und an
-        bezahlte Rasa Enterprise-Abonnements. Weitere Informationen findst du über die Pläne und Preise [hier] (https://rasa.com/product/pricing/)."
+    - text: Das Rasa-Framework für maschinelles Lernen ist Open Source! Wir bemühen uns um ein gepflegtes und dokumentiertes Open-Source-Tools, mit denen alle Hersteller reibungslos die besten KI-Assistenten erstellen können. Darüber hinaus bieten wir das kostenlose Toolset Rasa X und an bezahlte Rasa Enterprise-Abonnements.
   utter_cant_help:
     - text: Das ist schade, aber wenn du weitere Fragen hast lass es mich wissen!
   utter_human_handoff:
     - text: Wenn ich dir leider nicht helfen konnte, kannst du gerne dein Feedback da lassen und einen Kommentar schreiben.
   utter_pipeline:
-    - text: Es gibt eine Anleitung zu Pipelines [hier](https://rasa.com/docs/rasa/tuning-your-model/)
+    - text: Es gibt eine Anleitung zu Pipelines unter https://rasa.com/docs/rasa/tuning-your-model/
 actions:
   - action_hours_per_branch
   - action_room_info
