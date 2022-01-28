@@ -192,3 +192,7 @@ stories:
     steps:
       - intent: tell_joke
       - action: action_tell_joke
+  - story: tell about pipeline
+    steps:
+      - intent: ask_pipeline
+      - action: utter_pipeline
