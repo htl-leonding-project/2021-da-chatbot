@@ -489,6 +489,10 @@ nlu:
     - Erzähl mir etwas über die [Strombastler](branch)
     - Was weißt du über die [Strombastler](branch)
     - Was lernt man bei den [Strombastlern](branch)
+    - [Fachschule](branch)
+    - [Abendschule](branch)
+    - Erzähle mir etwas über [Fachschule](branch)
+    - Erzähle mir etwas über [Elektronik](branch)
 - intent: ask_hours_per_branch
   examples: |
     - Wieviele Stunden gibt es pro Woche in der [Informatik](branch)?
