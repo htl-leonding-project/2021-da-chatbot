@@ -123,38 +123,62 @@ responses:
       text: 'Hier ist etwas zur Aufmunterung:'
   utter_did_that_help:
     - text: Hat das geholfen?
+      buttons:
+        - title: "Ja 😄"
+          payload: "/affirm"
+        - title: "Nein leider 😪"
+          payload: "/deny"
   utter_happy:
     - text: Großartig!
+      buttons:
+        - title: "Wie geht es dir?"
+          payload: "Wie geht es dir?"
   utter_goodbye:
     - text: Tschüss
   utter_iamabot:
     - text: Ich bin ein bot, powered by Rasa.
   utter_htl:
     - text: Die HTL Leonding ist eine Höhere Schule in Leonding in der man zwischen 4 Zweigen wählen kann
+      buttons:
+        - title: "Welche denn?"
+          payload: "/ask_branches"
   utter_branches:
     - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik und die Fachschule für Elektronik und die Abendschule. Über welchen Zweig soll ich dir mehr erzählen?'
-  utter_branch:
-    - condition:
-        - name: branch
-          type: slot
-          value: medientechnik
-      text: Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.
-    - condition:
-        - name: branch
-          type: slot
-          value: informatik
-      text: Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.
-    - condition:
-        - name: branch
-          type: slot
-          value: elektronik
-      text: Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.
-    - condition:
-        - name: branch
-          type: slot
-          value: medizintechnik
-      text: In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.
-    - text: '{branch} ist ein toller Zweig in dem man sehr viel lernt'
+      buttons:
+        - title: "Medientechnik"
+          payload: "Erzähle mir etwas über Medientechnik"
+        - title: "Informatik"
+          payload: "Erzähle mir etwas über Informatik"
+        - title: "Elektronik"
+          payload: "Erzähle mir etwas über Elektronik"
+        - title: "Medizintechnik"
+          payload: "Erzähle mir etwas über Medizintechnik"
+        - title: "Abendschule"
+          payload: "Erzähle mir etwas über Abendschule"
+        - title: "Fachschule"
+          payload: "Erzähle mir etwas über Fachschule"
+#  utter_branch:
+#    - condition:
+#        - name: branch
+#          type: slot
+#          value: medientechnik
+#      text: Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.
+#    - condition:
+#        - name: branch
+#          type: slot
+#          value: informatik
+#      text: Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.
+#    - condition:
+#        - name: branch
+#          type: slot
+#          value: elektronik
+#      text: Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.
+#    - condition:
+#        - name: branch
+#          type: slot
+#          value: medizintechnik
+#      text: In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.
+#    - text: '{branch} ist ein toller Zweig in dem man sehr viel lernt'
   utter_rephrase:
     - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
     - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
@@ -163,21 +187,46 @@ responses:
     - text: 'Schon Descartes wusste zu sagen: "Ich denke, also bin ich". Und ich denke, dass diese Frage nicht so leicht zu beantworten ist und du sie neu formulieren solltest!'
   utter_leonie:
     - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
+      buttons:
+        - title: "Wer von euch ist besser?"
+          payload: "/better_than_leonie"
   utter_leonie_and_me:
     - text: Meine Schwester und ich sind beide besonders auf unsre eigene Art.
+      buttons:
+        - title: "Wer ist deine Schwester?"
+          payload: "/ask_leonie"
   utter_no_problem:
     - text: Kein Problem, dafür bin ich doch da!
   utter_school_photo:
     - image: https://www.htl-leonding.at/wp-content/uploads/2019/11/banner_full_ueberuns.jpg?x49412
       text: 'So sieht unsere Schule aus:'
+      buttons:
+        - title: "Was ist die HTL Leonding?"
+          payload: "/ask_htl_general"
+        - title: "Wie alt ist die HTL Leonding?"
+          payload: "/ask_htl_age"
+        - title: "Welche Zweige gibt es?"
+          payload: "/ask_branches"
   utter_chitchat/how_are_you:
     - text: Mir geht es sehr gut, danke fürs Fragen!
   utter_chitchat/ask_name:
     - text: Ich bin Leon!
     - text: Mein Name ist Leon oder LeoBot ich weiß es selbst nicht so genau.
     - text: Ich heiße Leon, du kannst mich aber auch LeoBot nennen :)
+      buttons:
+        - title: "Wer hat dich gemacht?"
+          payload: "Wer hat dich gemacht?"
+        - title: "Welche Technologien verwendest du?"
+          payload: "Welche Technologien verwendest du?"
+        - title: "Wie alt bist du?"
+          payload: "Wie alt bist du?"
+        - title: "Welche Sprachen sprichst du?"
+          payload: "Welche Sprachen sprichst du?"
   utter_chitchat/ask_technology:
     - text: Ein Tool namens Rasa wurde verwendet um mir Sachen beizubringen.
+      buttons:
+        - title: "Wer hat dir die Sachen beigebracht?"
+          payload: "Wer hat dich gemacht?"
   utter_chitchat/ask_creator:
     - text: Ich entstand im Zuge der Diplomarbeit von Felix Dumfarth und Lukas Starka.
   utter_chitchat/insult:
@@ -258,8 +307,20 @@ responses:
     - text: Rasa Forum ist der Ort, an dem all das Community-Buzz stattfindet. Hier kannst du an Diskussionen teilnehmen, Antworten auf deine technischen Fragen erhalten und die neuesten Updates erhalten auf das, was bei Rasa passiert.
   utter_faq_open_source_cost:
     - text: Das Rasa-Framework für maschinelles Lernen ist Open Source! Wir bemühen uns um ein gepflegtes und dokumentiertes Open-Source-Tools, mit denen alle Hersteller reibungslos die besten KI-Assistenten erstellen können. Darüber hinaus bieten wir das kostenlose Toolset Rasa X und an bezahlte Rasa Enterprise-Abonnements.
+      buttons:
+        - text: "Was ist Rasa X?"
+          payload: "/ask_faq_rasax"
+        - text: "Wie groß ist die Rasa Community?"
+          payload: "/ask_faq_community_size"
+        - text: "Muss ich dafür programmieren können?"
+          payload: "/ask_faq_is_programming_required"
+        - text: "Wo kann ich Rasa lernen?"
+          payload: "/ask_faq_tutorials"
   utter_cant_help:
     - text: Das ist schade, aber wenn du weitere Fragen hast lass es mich wissen!
+      buttons:
+        - text: "Kann ich einen Verbesserungsvorschlag einbringen?"
+          payload: "/human_handoff"
   utter_human_handoff:
     - text: Wenn ich dir leider nicht helfen konnte, kannst du gerne dein Feedback da lassen und einen Kommentar schreiben.
   utter_pipeline:
