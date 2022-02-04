@@ -23,7 +23,7 @@ stories:
       - action: utter_cheer_up
       - action: utter_did_that_help
       - intent: deny
-      - action: utter_goodbye
+      - action: utter_cant_help
   - story: name
     steps:
       - intent: tell_name
