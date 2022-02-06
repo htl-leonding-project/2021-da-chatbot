@@ -77,6 +77,35 @@ intents:
   - human_handoff
   - ask_pipeline
   - tell_joke
+  - good_grades_required
+  - prepare_for_htl
+  - which_branch_to_choose
+  - programming_after_first_grade
+  - girls_count_at_school
+  - voluntary_subjects
+  - average_class_size
+  - classes_per_grade
+  - programming_languages
+  - workshops_and_labours
+  - difference_to_other_schools
+  - social_education
+  - economy_subject
+  - pe_for_girls
+  - girls_connection
+  - mood_at_school
+  - apply_for_school
+  - school_equipment
+  - jobs_after_htl
+  - school_in_the_afternoon
+  - internship_for_htl
+  - htl_duration
+  - peers_at_school
+  - appliance_probability
+  - equipment_needed
+  - trips_during_school
+  - lunch_at_school
+  - school_autonomous_priorities
+  - public_transport_connection
 entities:
   - name
   - branch
@@ -123,38 +152,62 @@ responses:
       text: 'Hier ist etwas zur Aufmunterung:'
   utter_did_that_help:
     - text: Hat das geholfen?
+      buttons:
+        - title: "Ja 😄"
+          payload: "/affirm"
+        - title: "Nein leider 😪"
+          payload: "/deny"
   utter_happy:
     - text: Großartig!
+      buttons:
+        - title: "Wie geht es dir?"
+          payload: "Wie geht es dir?"
   utter_goodbye:
     - text: Tschüss
   utter_iamabot:
     - text: Ich bin ein bot, powered by Rasa.
   utter_htl:
     - text: Die HTL Leonding ist eine Höhere Schule in Leonding in der man zwischen 4 Zweigen wählen kann
+      buttons:
+        - title: "Welche denn?"
+          payload: "/ask_branches"
   utter_branches:
     - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik und die Fachschule für Elektronik und die Abendschule. Über welchen Zweig soll ich dir mehr erzählen?'
-  utter_branch:
-    - condition:
-        - name: branch
-          type: slot
-          value: medientechnik
-      text: Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.
-    - condition:
-        - name: branch
-          type: slot
-          value: informatik
-      text: Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.
-    - condition:
-        - name: branch
-          type: slot
-          value: elektronik
-      text: Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.
-    - condition:
-        - name: branch
-          type: slot
-          value: medizintechnik
-      text: In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.
-    - text: '{branch} ist ein toller Zweig in dem man sehr viel lernt'
+      buttons:
+        - title: "Medientechnik"
+          payload: "Erzähle mir etwas über Medientechnik"
+        - title: "Informatik"
+          payload: "Erzähle mir etwas über Informatik"
+        - title: "Elektronik"
+          payload: "Erzähle mir etwas über Elektronik"
+        - title: "Medizintechnik"
+          payload: "Erzähle mir etwas über Medizintechnik"
+        - title: "Abendschule"
+          payload: "Erzähle mir etwas über Abendschule"
+        - title: "Fachschule"
+          payload: "Erzähle mir etwas über Fachschule"
+#  utter_branch:
+#    - condition:
+#        - name: branch
+#          type: slot
+#          value: medientechnik
+#      text: Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.
+#    - condition:
+#        - name: branch
+#          type: slot
+#          value: informatik
+#      text: Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.
+#    - condition:
+#        - name: branch
+#          type: slot
+#          value: elektronik
+#      text: Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.
+#    - condition:
+#        - name: branch
+#          type: slot
+#          value: medizintechnik
+#      text: In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.
+#    - text: '{branch} ist ein toller Zweig in dem man sehr viel lernt'
   utter_rephrase:
     - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
     - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
@@ -163,21 +216,46 @@ responses:
     - text: 'Schon Descartes wusste zu sagen: "Ich denke, also bin ich". Und ich denke, dass diese Frage nicht so leicht zu beantworten ist und du sie neu formulieren solltest!'
   utter_leonie:
     - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
+      buttons:
+        - title: "Wer von euch ist besser?"
+          payload: "/better_than_leonie"
   utter_leonie_and_me:
     - text: Meine Schwester und ich sind beide besonders auf unsre eigene Art.
+      buttons:
+        - title: "Wer ist deine Schwester?"
+          payload: "/ask_leonie"
   utter_no_problem:
     - text: Kein Problem, dafür bin ich doch da!
   utter_school_photo:
     - image: https://www.htl-leonding.at/wp-content/uploads/2019/11/banner_full_ueberuns.jpg?x49412
       text: 'So sieht unsere Schule aus:'
+      buttons:
+        - title: "Was ist die HTL Leonding?"
+          payload: "/ask_htl_general"
+        - title: "Wie alt ist die HTL Leonding?"
+          payload: "/ask_htl_age"
+        - title: "Welche Zweige gibt es?"
+          payload: "/ask_branches"
   utter_chitchat/how_are_you:
     - text: Mir geht es sehr gut, danke fürs Fragen!
   utter_chitchat/ask_name:
     - text: Ich bin Leon!
     - text: Mein Name ist Leon oder LeoBot ich weiß es selbst nicht so genau.
     - text: Ich heiße Leon, du kannst mich aber auch LeoBot nennen :)
+      buttons:
+        - title: "Wer hat dich gemacht?"
+          payload: "Wer hat dich gemacht?"
+        - title: "Welche Technologien verwendest du?"
+          payload: "Welche Technologien verwendest du?"
+        - title: "Wie alt bist du?"
+          payload: "Wie alt bist du?"
+        - title: "Welche Sprachen sprichst du?"
+          payload: "Welche Sprachen sprichst du?"
   utter_chitchat/ask_technology:
     - text: Ein Tool namens Rasa wurde verwendet um mir Sachen beizubringen.
+      buttons:
+        - title: "Wer hat dir die Sachen beigebracht?"
+          payload: "Wer hat dich gemacht?"
   utter_chitchat/ask_creator:
     - text: Ich entstand im Zuge der Diplomarbeit von Felix Dumfarth und Lukas Starka.
   utter_chitchat/insult:
@@ -258,12 +336,82 @@ responses:
     - text: Rasa Forum ist der Ort, an dem all das Community-Buzz stattfindet. Hier kannst du an Diskussionen teilnehmen, Antworten auf deine technischen Fragen erhalten und die neuesten Updates erhalten auf das, was bei Rasa passiert.
   utter_faq_open_source_cost:
     - text: Das Rasa-Framework für maschinelles Lernen ist Open Source! Wir bemühen uns um ein gepflegtes und dokumentiertes Open-Source-Tools, mit denen alle Hersteller reibungslos die besten KI-Assistenten erstellen können. Darüber hinaus bieten wir das kostenlose Toolset Rasa X und an bezahlte Rasa Enterprise-Abonnements.
+      buttons:
+        - text: "Was ist Rasa X?"
+          payload: "/ask_faq_rasax"
+        - text: "Wie groß ist die Rasa Community?"
+          payload: "/ask_faq_community_size"
+        - text: "Muss ich dafür programmieren können?"
+          payload: "/ask_faq_is_programming_required"
+        - text: "Wo kann ich Rasa lernen?"
+          payload: "/ask_faq_tutorials"
   utter_cant_help:
     - text: Das ist schade, aber wenn du weitere Fragen hast lass es mich wissen!
+      buttons:
+        - text: "Kann ich einen Verbesserungsvorschlag einbringen?"
+          payload: "/human_handoff"
   utter_human_handoff:
     - text: Wenn ich dir leider nicht helfen konnte, kannst du gerne dein Feedback da lassen und einen Kommentar schreiben.
   utter_pipeline:
     - text: Es gibt eine Anleitung zu Pipelines unter https://rasa.com/docs/rasa/tuning-your-model/
+  utter_good_grades_required:
+    - text: Wenn du dich bei der HTL bewirbst, wird Mathematik 2x gezählt und Deutsch und Englisch jeweils 1x und so ergibt sich eine Punktzahl.
+  utter_prepare_for_htl:
+    - text: Es ist keine Vorbereitung notwendig, weil in jedem Fach von Grund auf alles erklärt wird. Am wichtigsten ist der Wille neue Inhalte lernen zu wollen.
+  utter_which_branch_to_choose:
+    - text: Am besten ist es, wenn du dich für genau die Richtung entscheidest, die dich auch am meisten interessiert und dir wirklich Spaß macht.
+  utter_programming_after_first_grade:
+    - text: In den ersten Klassen lernt man die Grundlagen der Programmierung, wie Rechner und dies entwickelt sich weiter bis man in den höheren Klassen High-End-Programmierung im Bereich der Informatik lernt.
+  utter_girls_count_at_school:
+    - text: An der Schule gibt es derzeit ungefähr 20% Mädchen, wobei die Aufteilung unterschiedlich ist. Vor allem im Bereich der Medizintechnik und der Medientechnik gibt es oftmals viele Mädchen.
+  utter_voluntary_subjects:
+    - text: "Typische Freigegenstände sind: Business Englisch, 3D-Druck, Robotik oder das Internet of Things."
+  utter_average_class_size:
+    - text: In den ersten Klassen sind es meistens zwischen 25 und 30 Schülerinnen und Schüler.
+  utter_classes_per_grade:
+    - text: Normalerweise wird mit 4 Klassen in der Informatik, jeweils 2 Medizin- und Medientechnikklassen und einer Elektronikklasse begonnen. Die genaue Anzahl hängt allerdings von den Bewerberinnen und Bewerbern ab.
+  utter_programming_languages:
+    - text: Im Prinzip lernt man alle Prinzipien aller gängigen modernen Programmiersprachen und die jeweiligen Sprachen werden von Jahr zu Jahr an den momentanen Stand der Technik angepasst.
+  utter_workshops_and_labours:
+    - text: Der Unterricht ist sehr praxisnahe. Es gibt voll ausgerüstete Werkstätte und Labors in denen in Kleingruppen gearbeitet wird, ähnlich wie es in den Firmen der Fall ist.
+  utter_difference_to_other_schools:
+    - text: Wir an der HTL Leonding sehen uns als DIE Digitalisierer. Die Hauptstoßrichtung dabei ist natürlich die Softwareentwicklung und Programmieren mit den dazugehörigen Teilen der Elektronik.
+  utter_social_education:
+    - text: Es gibt den Gegenstand soziale Kompotenz. In diesem wird das Miteinander gelehrt, also, wie man sich in einer Gruppe verhält und, wie man respektvoll miteinander umgeht.
+  utter_economy_subject:
+    - text: In der Informatik ist die Wirtschaft ein Schwerpunkt mit den Fächern Betriebliche Organisation und Rechnungswesen. In den anderen Fachrichtungen gibt es jeweils 2 Wochenstunden Wirtschaft & Recht.
+  utter_pe_for_girls:
+    - text: Es gibt einen eigenen Sportunterricht für Mädchen, in dem klassenübergreifend die Mädchen in Gruppen unterrichtet werden.
+  utter_girls_connection:
+    - text: Es gibt einen eigenen Mädchenraum und ein immer wiederkehrendes Mädchencafé, bei dem die sozialen Kontakte gepflegt werden können.
+  utter_mood_at_school:
+    - text: Wir haben ein ausgezeichnetes Schulklima und es wird auch viel abteilungsübergreifend gearbeit, wie man an den Diplomarbeiten erkennen kann.
+  utter_apply_for_school:
+    - text: Die Anmeldung erfolgt sobald man das Semesterzeugnis erhalten hat und die Frist kann auf der Schulhomepage eingesehen werden.
+  utter_school_equipment:
+    - text: Es gibt eigene Werkstätten und Labors für die Elektronik und die Medizintechnik und die Medientechnik verfügt über ein Aufnahmestudio und andere multimediale Räume.
+  utter_jobs_after_htl:
+    - text: Als Digitalisierer stehen einem alle Türen öffnen. Man kann in der Unterhaltungsbranche, Versicherungstechnik, Prozessautomation arbeiten oder studieren gehen.
+  utter_school_in_the_afternoon:
+    - text: Es ist von Fachrichtung zu Fachrichtung und von Jahrgang zu Jahrgang unterschiedlich, aber meistens gibt es 1-3 Nachmittage mit Unterricht.
+  utter_internship_for_htl:
+    - text: Jede Schülerin und jeder Schüler muss 2x ein Pflichtpraktikum von 4 Wochen machen.
+  utter_htl_duration:
+    - text: Die Höhere Abteilung umfasst 5 Jahre, die Fachschule dauert nur 4 Jahre.
+  utter_peers_at_school:
+    - text: Ja, es gibt Tutoren und Peers an der Schule, welche den Erstklässlerinnen und Erstklässlern helfen können.
+  utter_appliance_probability:
+    - text: Wenn eine Schülerin oder ein Schüler die entsprechenden Voraussetzungen erfüllt, wird diese mit großer Wahrscheinlichkeit auch aufgenommen wird.
+  utter_equipment_needed:
+    - text: In den Informatik- und Medientechnikklassen wird ein Notebook ab der 1. Klasse benötigt. In den Medizintechnik- und Elektronikklassen ist ein Notebook ab der 3. Klasse von Vorteil.
+  utter_trips_during_school:
+    - text: Ja, es gibt Schulausflüge. In der ersten Klasse gibt es sogenannte Kennenlerntage, in der 2. Klasse eine Sportwoche, in der 3. und 4. Klasse entweder eine Kultur- oder Sprachreise und in der 5. Klasse geht es meistens nach Brüssel, in die Hauptstadt der Europäischen Union.
+  utter_lunch_at_school:
+    - text: Es gibt in der Schule ein Buffet, bei dem es auch warme Mahlzeiten gibt. Gegen Vorbestellung können hier sogar warme Menüs bestellt werden.
+  utter_school_autonomous_priorities:
+    - text: Ja, es gibt schulautonome Vertiefungen, wie beispielsweise Robotik, Mobile Computing und 3D-Animation.
+  utter_public_transport_connection:
+    - text: Vom Hauptbahnhof fährt man mit der Straßenbahn 10 Minuten bis zur Meixnerkreuzung und von dort aus geht man noch weitere 10 Minuten bis zur Schule.
 actions:
   - action_hours_per_branch
   - action_room_info
