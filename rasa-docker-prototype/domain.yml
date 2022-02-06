@@ -354,6 +354,64 @@ responses:
     - text: Wenn ich dir leider nicht helfen konnte, kannst du gerne dein Feedback da lassen und einen Kommentar schreiben.
   utter_pipeline:
     - text: Es gibt eine Anleitung zu Pipelines unter https://rasa.com/docs/rasa/tuning-your-model/
+  utter_good_grades_required:
+    - text: Wenn du dich bei der HTL bewirbst, wird Mathematik 2x gezählt und Deutsch und Englisch jeweils 1x und so ergibt sich eine Punktzahl.
+  utter_prepare_for_htl:
+    - text: Es ist keine Vorbereitung notwendig, weil in jedem Fach von Grund auf alles erklärt wird. Am wichtigsten ist der Wille neue Inhalte lernen zu wollen.
+  utter_which_branch_to_choose:
+    - text: Am besten ist es, wenn du dich für genau die Richtung entscheidest, die dich auch am meisten interessiert und dir wirklich Spaß macht.
+  utter_programming_after_first_grade:
+    - text: In den ersten Klassen lernt man die Grundlagen der Programmierung, wie Rechner und dies entwickelt sich weiter bis man in den höheren Klassen High-End-Programmierung im Bereich der Informatik lernt.
+  utter_girls_count_at_school:
+    - text: An der Schule gibt es derzeit ungefähr 20% Mädchen, wobei die Aufteilung unterschiedlich ist. Vor allem im Bereich der Medizintechnik und der Medientechnik gibt es oftmals viele Mädchen.
+  utter_voluntary_subjects:
+    - text: "Typische Freigegenstände sind: Business Englisch, 3D-Druck, Robotik oder das Internet of Things."
+  utter_average_class_size:
+    - text: In den ersten Klassen sind es meistens zwischen 25 und 30 Schülerinnen und Schüler.
+  utter_classes_per_grade:
+    - text: Normalerweise wird mit 4 Klassen in der Informatik, jeweils 2 Medizin- und Medientechnikklassen und einer Elektronikklasse begonnen. Die genaue Anzahl hängt allerdings von den Bewerberinnen und Bewerbern ab.
+  utter_programming_languages:
+    - text: Im Prinzip lernt man alle Prinzipien aller gängigen modernen Programmiersprachen und die jeweiligen Sprachen werden von Jahr zu Jahr an den momentanen Stand der Technik angepasst.
+  utter_workshops_and_labours:
+    - text: Der Unterricht ist sehr praxisnahe. Es gibt voll ausgerüstete Werkstätte und Labors in denen in Kleingruppen gearbeitet wird, ähnlich wie es in den Firmen der Fall ist.
+  utter_difference_to_other_schools:
+    - text: Wir an der HTL Leonding sehen uns als DIE Digitalisierer. Die Hauptstoßrichtung dabei ist natürlich die Softwareentwicklung und Programmieren mit den dazugehörigen Teilen der Elektronik.
+  utter_social_education:
+    - text: Es gibt den Gegenstand soziale Kompotenz. In diesem wird das Miteinander gelehrt, also, wie man sich in einer Gruppe verhält und, wie man respektvoll miteinander umgeht.
+  utter_economy_subject:
+    - text: In der Informatik ist die Wirtschaft ein Schwerpunkt mit den Fächern Betriebliche Organisation und Rechnungswesen. In den anderen Fachrichtungen gibt es jeweils 2 Wochenstunden Wirtschaft & Recht.
+  utter_pe_for_girls:
+    - text: Es gibt einen eigenen Sportunterricht für Mädchen, in dem klassenübergreifend die Mädchen in Gruppen unterrichtet werden.
+  utter_girls_connection:
+    - text: Es gibt einen eigenen Mädchenraum und ein immer wiederkehrendes Mädchencafé, bei dem die sozialen Kontakte gepflegt werden können.
+  utter_mood_at_school:
+    - text: Wir haben ein ausgezeichnetes Schulklima und es wird auch viel abteilungsübergreifend gearbeit, wie man an den Diplomarbeiten erkennen kann.
+  utter_apply_for_school:
+    - text: Die Anmeldung erfolgt sobald man das Semesterzeugnis erhalten hat und die Frist kann auf der Schulhomepage eingesehen werden.
+  utter_school_equipment:
+    - text: Es gibt eigene Werkstätten und Labors für die Elektronik und die Medizintechnik und die Medientechnik verfügt über ein Aufnahmestudio und andere multimediale Räume.
+  utter_jobs_after_htl:
+    - text: Als Digitalisierer stehen einem alle Türen öffnen. Man kann in der Unterhaltungsbranche, Versicherungstechnik, Prozessautomation arbeiten oder studieren gehen.
+  utter_school_in_the_afternoon:
+    - text: Es ist von Fachrichtung zu Fachrichtung und von Jahrgang zu Jahrgang unterschiedlich, aber meistens gibt es 1-3 Nachmittage mit Unterricht.
+  utter_internship_for_htl:
+    - text: Jede Schülerin und jeder Schüler muss 2x ein Pflichtpraktikum von 4 Wochen machen.
+  utter_htl_duration:
+    - text: Die Höhere Abteilung umfasst 5 Jahre, die Fachschule dauert nur 4 Jahre.
+  utter_peers_at_school:
+    - text: Ja, es gibt Tutoren und Peers an der Schule, welche den Erstklässlerinnen und Erstklässlern helfen können.
+  utter_appliance_probability:
+    - text: Wenn eine Schülerin oder ein Schüler die entsprechenden Voraussetzungen erfüllt, wird diese mit großer Wahrscheinlichkeit auch aufgenommen wird.
+  utter_equipment_needed:
+    - text: In den Informatik- und Medientechnikklassen wird ein Notebook ab der 1. Klasse benötigt. In den Medizintechnik- und Elektronikklassen ist ein Notebook ab der 3. Klasse von Vorteil.
+  utter_trips_during_school:
+    - text: Ja, es gibt Schulausflüge. In der ersten Klasse gibt es sogenannte Kennenlerntage, in der 2. Klasse eine Sportwoche, in der 3. und 4. Klasse entweder eine Kultur- oder Sprachreise und in der 5. Klasse geht es meistens nach Brüssel, in die Hauptstadt der Europäischen Union.
+  utter_lunch_at_school:
+    - text: Es gibt in der Schule ein Buffet, bei dem es auch warme Mahlzeiten gibt. Gegen Vorbestellung können hier sogar warme Menüs bestellt werden.
+  utter_school_autonomous_priorities:
+    - text: Ja, es gibt schulautonome Vertiefungen, wie beispielsweise Robotik, Mobile Computing und 3D-Animation.
+  utter_public_transport_connection:
+    - text: Vom Hauptbahnhof fährt man mit der Straßenbahn 10 Minuten bis zur Meixnerkreuzung und von dort aus geht man noch weitere 10 Minuten bis zur Schule.
 actions:
   - action_hours_per_branch
   - action_room_info
