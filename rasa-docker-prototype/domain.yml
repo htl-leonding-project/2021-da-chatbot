@@ -77,6 +77,17 @@ intents:
   - human_handoff
   - ask_pipeline
   - tell_joke
+  - good_grades_required
+  - prepare_for_htl
+  - which_branch_to_choose
+  - programming_after_first_grade
+  - girls_count_at_school
+  - voluntary_subjects
+  - average_class_size
+  - classes_per_grade
+  - programming_languages
+  - workshops_and_labours
+  - difference_to_other_schools
 entities:
   - name
   - branch

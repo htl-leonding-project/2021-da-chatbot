@@ -1883,6 +1883,89 @@ nlu:
     - Ich möchte mit Menschen sprechen
     - Ich möchte mit jemandem sprechen, der schlauer ist als du
     - das hilft nicht, kann ich mit Menschen sprechen?
+- intent: good_grades_required
+  examples: |
+    - Ist der Notendurchschnitt wichtig?
+    - Brauche ich einen guten Notendurchschnitt?
+    - Brauche ich gute Noten um auf die HTL zu gehen?
+    - Brauche ich gute Noten damit ich auf die HTL gehen kann?
+    - Wie wichtig sind gute Noten?
+- intent: prepare_for_htl
+  examples: |
+    - Wie kann man sich auf die HTL vorbereiten?
+    - Wie kann ich mich auf die HTL vorbereiten?
+    - Was muss man schon können?
+    - Was muss ich bereits können für die HTL
+    - Kann ich mich vorbereiten auf die HTL?
+    - Gibt es etwas, was ich unbedingt können muss?
+- intent: which_branch_to_choose
+  examples: |
+    - Welchen Zweig soll ich wählen
+    - Ich kann mich nicht für einen Zweig entscheiden
+    - Welchen Zweig würdest du empfehlen
+- intent: programming_after_first_grade
+  examples: |
+    - Was kann ich nach der ersten Klasse alles programmieren?
+    - Was kann ich nach der ersten Klasse schon?
+    - Welche Programmiersprachen lernt man am Anfang?
+    - Welche Programmiersprachen lernt man in der ersten Klasse?
+    - Kann ich nach der ersten Klasse schon programmieren?
+- intent: girls_count_at_school
+  examples: |
+    - Wie viele Mädchen gibt es an der Schule?
+    - Gehen auch Mädchen an die HTL?
+    - Gibt es Mädchen?
+    - Gibt es viele Mädchen?
+    - Wie groß ist die Anzahl der Mädchen?
+- intent: voluntary_subjects
+  examples: |
+    - Welche Freigegenstände gibt es?
+    - Welche zusätzlichen Fächer gibt es?
+    - Gibt es viele Freigegenstände?
+    - Kann ich auch neben der Schule andere Dinge lernen?
+    - Weißt du welche Freigegenstände es gibt?
+- intent: average_class_size
+  examples: |
+    - Wie groß sind die Klassen für gewöhnlich?
+    - Wie groß sind die Klassen normalerweise?
+    - Wie viele Schülerinnen sind in einer Klasse?
+    - Wie viele Schüler sind in einer Klasse?
+    - Wie viele Schülerinnen und Schüler sind in einer Klasse?
+    - Weißt du wie viele Leute in einer Klasse sind?
+    - Wie viele sind in einer Klasse?
+- intent: classes_per_grade
+  examples: |
+    - Wie viele Klassen gibt es pro Jahrgang?
+    - Wie viele neue Klassen gibt es?
+    - Wie viele unterschiedliche Klassen gibt es?
+    - Was ist die Anzahl der neuen Klassen?
+    - Wie groß ist die Anzahl der Klassen pro Jahrgang?
+- intent: programming_languages
+  examples: |
+    - Welche Programmiersprachen lernt man an der HTL?
+    - Wie viele Programmiersprachen lernt man an der HTL?
+    - Weißt du welche Programmiersprachen man lernt?
+    - Was lernt man alles für Programmiersprachen?
+    - In welchen Sprachen kann man nach der HTL programmieren?
+- intent: workshops_and_labours
+  examples: |
+    - Was mache ich in den Werkstätten?
+    - Was mache ich in den Labors?
+    - Wie praxisnah ist der Werkstättenunterricht?
+    - Wie praxisnah ist der Laborunterricht?
+    - Lerne ich viel in der Werkstätte?
+    - Lerne ich viel in den Labors?
+    - Mache ich viel in der Werkstätte?
+    - Mache ich viel in den Labors?
+- intent: difference_to_other_schools
+  examples: |
+    - Was ist das besondere an dieser HTL
+    - Was ist das besondere an unserer HTL
+    - Was ist das besonder an der HTL Leonding
+    - Was ist an dieser Schule besser
+    - Warum ist die HTL Leonding am besten
+    - Was unterscheidet die HTL Leonding von anderen Schulen
+    - Was unterscheidet unsere Schule von anderen Schulen
 - synonym: Elektronik
   examples: |
     - Strombastler
