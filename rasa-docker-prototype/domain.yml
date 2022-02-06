@@ -88,6 +88,24 @@ intents:
   - programming_languages
   - workshops_and_labours
   - difference_to_other_schools
+  - social_education
+  - economy_subject
+  - pe_for_girls
+  - girls_connection
+  - mood_at_school
+  - apply_for_school
+  - school_equipment
+  - jobs_after_htl
+  - school_in_the_afternoon
+  - internship_for_htl
+  - htl_duration
+  - peers_at_school
+  - appliance_probability
+  - equipment_needed
+  - trips_during_school
+  - lunch_at_school
+  - school_autonomous_priorities
+  - public_transport_connection
 entities:
   - name
   - branch
