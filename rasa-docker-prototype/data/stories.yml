@@ -196,3 +196,119 @@ stories:
     steps:
       - intent: ask_pipeline
       - action: utter_pipeline
+  - story: ask if good grades are required
+    steps:
+      - intent: good_grades_required
+      - action: utter_good_grades_required
+  - story: ask if you can prepare for htl
+    steps:
+      - intent: prepare_for_htl
+      - action: utter_prepare_for_htl
+  - story: ask which branch to choose
+    steps:
+      - intent: which_branch_to_choose
+      - action: utter_which_branch_to_choose
+  - story: ask about programming after the first grade
+    steps:
+      - intent: programming_after_first_grade
+      - action: utter_programming_after_first_grade
+  - story: ask about number of girls at school
+    steps:
+      - intent: girls_count_at_school
+      - action: utter_girls_count_at_school
+  - story: ask about voluntary subjects
+    steps:
+      - intent: voluntary_subjects
+      - action: utter_voluntary_subjects
+  - story: ask about average class size
+    steps:
+      - intent: average_class_size
+      - action: utter_average_class_size
+  - story: ask about classes per grade
+    steps:
+      - intent: classes_per_grade
+      - action: utter_classes_per_grade
+  - story: ask about programming languages
+    steps:
+      - intent: programming_languages
+      - action: utter_programming_languages
+  - story: ask about workshops and labours
+    steps:
+      - intent: workshops_and_labours
+      - action: utter_workshops_and_labours
+  - story: ask about difference to other schools
+    steps:
+      - intent: difference_to_other_schools
+      - action: utter_difference_to_other_schools
+  - story: ask about social education
+    steps:
+      - intent: social_education
+      - action: utter_social_education
+  - story: ask about economy subject
+    steps:
+      - intent: economy_subject
+      - action: utter_economy_subject
+  - story: ask about pe lessons for girls
+    steps:
+      - intent: pe_for_girls
+      - action: utter_pe_for_girls
+  - story: ask about girls connection
+    steps:
+      - intent: girls_connection
+      - action: utter_girls_connection
+  - story: ask about mood at school
+    steps:
+      - intent: mood_at_school
+      - action: utter_mood_at_school
+  - story: ask about appliance for school
+    steps:
+      - intent: apply_for_school
+      - action: utter_apply_for_school
+  - story: ask about school equipment
+    steps:
+      - intent: school_equipment
+      - action: utter_school_equipment
+  - story: ask about jobs after htl
+    steps:
+      - intent: jobs_after_htl
+      - action: utter_jobs_after_htl
+  - story: ask about school in the afternoon
+    steps:
+      - intent: school_in_the_afternoon
+      - action: utter_school_in_the_afternoon
+  - story: ask about internships during htl
+    steps:
+      - intent: internship_for_htl
+      - action: utter_internship_for_htl
+  - story: ask about duration of htl
+    steps:
+      - intent: htl_duration
+      - action: utter_htl_duration
+  - story: ask about peers at school
+    steps:
+      - intent: peers_at_school
+      - action: utter_peers_at_school
+  - story: ask about probability of appliance
+    steps:
+      - intent: appliance_probability
+      - action: utter_appliance_probability
+  - story: ask about needed equipment
+    steps:
+      - intent: equipment_needed
+      - action: utter_equipment_needed
+  - story: ask about trips during school
+    steps:
+      - intent: trips_during_school
+      - action: utter_trips_during_school
+  - story: ask about lunch at school
+    steps:
+      - intent: lunch_at_school
+      - action: utter_lunch_at_school
+  - story: ask about school autonomous priorities
+    steps:
+      - intent: school_autonomous_priorities
+      - action: utter_school_autonomous_priorities
+  - story: ask about public transport connection
+    steps:
+      - intent: public_transport_connection
+      - action: utter_public_transport_connection
