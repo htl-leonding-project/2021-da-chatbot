@@ -337,13 +337,13 @@ responses:
   utter_faq_open_source_cost:
     - text: Das Rasa-Framework für maschinelles Lernen ist Open Source! Wir bemühen uns um ein gepflegtes und dokumentiertes Open-Source-Tools, mit denen alle Hersteller reibungslos die besten KI-Assistenten erstellen können. Darüber hinaus bieten wir das kostenlose Toolset Rasa X und an bezahlte Rasa Enterprise-Abonnements.
       buttons:
-        - text: "Was ist Rasa X?"
+        - title: "Was ist Rasa X?"
           payload: "/ask_faq_rasax"
-        - text: "Wie groß ist die Rasa Community?"
+        - title: "Wie groß ist die Rasa Community?"
           payload: "/ask_faq_community_size"
-        - text: "Muss ich dafür programmieren können?"
+        - title: "Muss ich dafür programmieren können?"
           payload: "/ask_faq_is_programming_required"
-        - text: "Wo kann ich Rasa lernen?"
+        - title: "Wo kann ich Rasa lernen?"
           payload: "/ask_faq_tutorials"
   utter_cant_help:
     - text: Das ist schade, aber wenn du weitere Fragen hast lass es mich wissen!
