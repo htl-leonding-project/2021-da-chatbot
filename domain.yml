@@ -348,7 +348,7 @@ responses:
   utter_cant_help:
     - text: Das ist schade, aber wenn du weitere Fragen hast lass es mich wissen!
       buttons:
-        - text: "Kann ich einen Verbesserungsvorschlag einbringen?"
+        - title: "Kann ich einen Verbesserungsvorschlag einbringen?"
           payload: "/human_handoff"
   utter_human_handoff:
     - text: Wenn ich dir leider nicht helfen konnte, kannst du gerne dein Feedback da lassen und einen Kommentar schreiben.
