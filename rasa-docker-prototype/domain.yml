@@ -166,11 +166,22 @@ responses:
     - text: Tschüss
   utter_iamabot:
     - text: Ich bin ein bot, powered by Rasa.
+      buttons:
+        - title: "Wer hat dich gemacht?"
+          payload: "Wer hat dich gemacht?"
+        - title: "Wie alt bist du?"
+          payload: "Wie alt bist du?"
   utter_htl:
     - text: Die HTL Leonding ist eine Höhere Schule in Leonding in der man zwischen 4 Zweigen wählen kann
       buttons:
         - title: "Welche denn?"
           payload: "/ask_branches"
+        - title: "Für welchen Zweig soll ich mich entscheiden?"
+          payload: "/which_branch_to_choose"
+        - title: "Wie alt ist die HTL?"
+          payload:
+        - title: "Was unterscheidet die HTL Leonding von anderen Schulen?"
+          payload: "/difference_to_other_schools"
   utter_branches:
     - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik und die Fachschule für Elektronik und die Abendschule. Über welchen Zweig soll ich dir mehr erzählen?'
       buttons:
@@ -256,6 +267,10 @@ responses:
       buttons:
         - title: "Wer hat dir die Sachen beigebracht?"
           payload: "Wer hat dich gemacht?"
+        - title: "Wie alt bist du?"
+          payload: "Wie alt bist du?"
+        - title: "Welche Sprachen sprichst du?"
+          payload: "Welche Sprachen sprichst du?"
   utter_chitchat/ask_creator:
     - text: Ich entstand im Zuge der Diplomarbeit von Felix Dumfarth und Lukas Starka.
   utter_chitchat/insult:
@@ -281,6 +296,9 @@ responses:
     - text: "Ich würde es dir ja sagen, aber der Zugriff auf diesen Teil des Speichers ist begrenzt."
     - text: "Ob du es glaubst oder nicht, ich spioniere tatsächlich nicht deine persönlichen Daten aus."
     - text: "Du bist jetzt die zweite Person, die mich das fragt. Rihanna war die erste."
+      buttons:
+        - title: "Was ist dein Name?"
+          payload: "Was ist dein Name?"
   utter_chitchat/ask_wherefrom:
     - text: "Ich bin zwar in Leonding geboren, aber ich betrachte mich als Weltbürger."
     - text: "Ich bin in der coolsten Stadt der Welt geboren, in Leonding."
@@ -295,14 +313,59 @@ responses:
   utter_pre_school_knowledge:
     - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
     - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
+      buttons:
+        - title: "Wie schwer ist die HTL?"
+          payload: "/htl_difficulty"
+        - title: "Brauche ich gute Noten um an die HTL zu kommen?"
+          payload: "/good_grades_required"
+        - title: "Wie groß sind die Klassen normalerweise?"
+          payload: "/average_class_size"
+        - title: "Welche Ausstattung brauche ich für die HTL?"
+          payload: "/equipment_needed"
   utter_languages_at_htl:
     - text: An der HTL hat man nur Englisch als Fremdsprache neben dem Deutschunterricht. Dafür lernst du aber umso mehr nützliche Programmiersprachen.
+      buttons:
+        - title: "Welche Programmiersprachen lerne ich?"
+          payload: "/programming_languages"
+        - title: "Was kann ich nach der 1. Klasse schon alles programmieren?"
+          payload: "/programming_after_first_grade"
+        - title: "Gibt es auch Wirtschaft an der HTL?"
+          payload: "/economy_subject"
+        - title: "Lernt man auch soziale Kompetenzen an der HTL?"
+          payload: "/social_education"
   utter_htl_difficulty:
     - text: Unzählige Schüler haben die HTL bereits geschafft, allerdings sollte man schon etwas machen und bemüht sein um auch keine Schwierigkeiten zu bekommen.
+      buttons:
+        - title: "Muss ich mich schon vorher für die HTL vorbereiten?"
+          payload: "/prepare_for_htl"
+        - title: "Was ist der Unterschied von der HTL Leonding zu anderen Schulen?"
+          payload: "/difference_to_other_schools"
+        - title: "Wie ist das Schulklima?"
+          payload: "/mood_at_school"
+        - title: "Wie hoch ist die Wahrscheinlichkeit, dass ich angenommen werde?"
+          payload: "/appliance_probability"
   utter_student_home:
     - text: In der Nähe der Schule gibt es Studentenheime, die sich bestimmt über dich freuen würden.
+      buttons:
+        - title: "Wie komme ich zur HTL?"
+          payload: "/public_transport_connection"
+        - title: "Ab wann kann ich mich anmelden?"
+          payload: "/apply_for_school"
+        - title: "Brauche ich gute Noten um angenommen zu werden?"
+          payload: "/good_grades_required"
+        - title: "Wie viele Mädchen gehen auf die HTL?"
+          payload: "/girls_count_at_school"
   utter_study_after_htl:
     - text: Der Vorteil an einer HTL ist, dass du direkt eine fachspezifische Ausbildung bekommst und somit nicht mehr studieren musst, um trotzdem gute, interessante Jobs zu bekommen. Aber natürlich stehen dir alle Türen nach der HTL offen.
+      buttons:
+        - title: "In welchen Branchen kann ich nach der HTL arbeiten?"
+          payload: "/jobs_after_htl"
+        - title: "Sammle ich auch auf der HTL direkt Erfahrungen im Berufsleben?"
+          payload: "/internship_for_htl"
+        - title: "Was ist der Unterschied zu anderen Schulen?"
+          payload: "/difference_to_other_schools"
+        - title: "Ist der Werkstättenunterricht praxisnahe?"
+          payload: "/workshops_and_labours"
   utter_htl_age:
     - text: Die HTL Leonding wurde 1984 gegründet und der Zweig für EDV und Organisation entstand 1985.
   utter_contact:
