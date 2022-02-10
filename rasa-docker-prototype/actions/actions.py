@@ -8,6 +8,8 @@ from dotenv import load_dotenv
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
 
 
 load_dotenv()
@@ -208,7 +210,12 @@ class ActionTellJoke(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        response = requests.get("https://witzapi.de/api/joke")
+        session = requests.Session()
+        retry = Retry(connect=3, backoff_factor=0.5)
+        adapter = HTTPAdapter(max_retries=retry)
+        session.mount('http://', adapter)
+        session.mount('https://', adapter)
+        response = session.get("witzapi.de/api/joke")
         print(response)
         json_str = json.dumps(response.json())
         resp = json.loads(json_str)
