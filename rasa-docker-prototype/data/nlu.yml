@@ -1204,6 +1204,7 @@ nlu:
     - Kannst du mir sagen, wie lange es die HTL schon gibt?
     - Sag mir das Alter der HTL
     - Wann wurde die HTL gegründet?
+    - Wie alt ist die HTL Leonding?
 - intent: ask_number_of_teachers
   examples: |
     - Wie viele Lehrer gibt es derzeit an der HTL?
@@ -2037,6 +2038,10 @@ nlu:
     - Habe ich nach der Matura gute Aussichten auf einen Beruf?
     - Bin ich gefragt nach der Matura?
     - Was soll ich nach der HTL machen?
+    - Bekomme ich nach der HTL einen Job?
+    - Bekomme ich nach der HTL leicht einen Job?
+    - In welchen Feldern kann ich nach der HTL arbeiten?
+    - In welchen Branchen kann ich nach der HTL arbeiten?
 - intent: school_in_the_afternoon
   examples: |
     - Wie lange dauert die Schule meistens?
