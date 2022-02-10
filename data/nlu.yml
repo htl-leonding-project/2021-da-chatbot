@@ -321,6 +321,7 @@ nlu:
     - ich nehme an
     - yes
     - ja
+    - Cool danke
 - intent: deny
   examples: |
     - no
@@ -565,6 +566,7 @@ nlu:
     - Leonie ist besser
     - Leonie ist schlauer als du
     - Leonie ist viel schlauer als du
+    - Leonie ist viel cooler als du
 - intent: thanks
   examples: |
     - danke
@@ -669,6 +671,10 @@ nlu:
     - Wie nennen dich andere Leute?
     - Weißt du deinen Namen?
     - Hast du einen Namen?
+    - Heißt du jetzt Leo oder Leon?
+    - Heißt du jetzt Leobot oder Leon?
+    - Leo oder Leon?
+    - Leobot oder Leon?
 - intent: chitchat/ask_how_old
   examples: |
     - wie alt?
@@ -1198,6 +1204,7 @@ nlu:
     - Kannst du mir sagen, wie lange es die HTL schon gibt?
     - Sag mir das Alter der HTL
     - Wann wurde die HTL gegründet?
+    - Wie alt ist die HTL Leonding?
 - intent: ask_number_of_teachers
   examples: |
     - Wie viele Lehrer gibt es derzeit an der HTL?
@@ -1883,6 +1890,7 @@ nlu:
     - Ich möchte mit Menschen sprechen
     - Ich möchte mit jemandem sprechen, der schlauer ist als du
     - das hilft nicht, kann ich mit Menschen sprechen?
+    - Kann ich einen Verbesserungsvorschlag einbringen?
 - intent: good_grades_required
   examples: |
     - Ist der Notendurchschnitt wichtig?
@@ -2029,6 +2037,11 @@ nlu:
     - Welche Berufschancen habe ich nach der Matura?
     - Habe ich nach der Matura gute Aussichten auf einen Beruf?
     - Bin ich gefragt nach der Matura?
+    - Was soll ich nach der HTL machen?
+    - Bekomme ich nach der HTL einen Job?
+    - Bekomme ich nach der HTL leicht einen Job?
+    - In welchen Feldern kann ich nach der HTL arbeiten?
+    - In welchen Branchen kann ich nach der HTL arbeiten?
 - intent: school_in_the_afternoon
   examples: |
     - Wie lange dauert die Schule meistens?
