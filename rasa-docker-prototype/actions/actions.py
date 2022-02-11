@@ -217,19 +217,25 @@ class ActionTellJoke(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        session = requests.Session()
+        session = requests.session()
+        s.keep_alive = False
         retry = Retry(connect=3, backoff_factor=0.5)
         adapter = HTTPAdapter(max_retries=retry)
         session.mount('http://', adapter)
         session.mount('https://', adapter)
-        response = session.get("https://v2.jokeapi.dev/joke/Any?lang=de")
+        response = session.get("https://v2.jokeapi.dev/joke/Any?lang=de&blacklistFlags=nsfw,religious,political,racist,sexist,explicit")
         print(response)
         json_str = json.dumps(response.json())
         resp = json.loads(json_str)
 
-        output1 = resp["text"]
-        output2 = resp["delivery"]
+        print(resp["type"])
+        if resp["type"] == "single":
+            output = resp["joke"]
+            dispatcher.utter_message(text=output)
+        else:
+            output1 = resp["setup"]
+            output2 = resp["delivery"]
+            dispatcher.utter_message(text=output1)
+            dispatcher.utter_message(text=output2)
 
-        dispatcher.utter_message(text=output1)
-        dispatcher.utter_message(text=output2)
         return []
