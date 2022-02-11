@@ -114,7 +114,7 @@ class ActionUtterBranch(Action):
                 dispatcher.utter_message(text="In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.")
                 dispatcher.utter_message(branch="medizintechnik")
             elif branch == "fachschule":
-                dispatcher.utter_message(text="Natürlich erzähl ich dir etwas über {branch.capitalize()}")
+                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
                 dispatcher.utter_message(text="Im fachpraktischen Unterricht wird fachtheoretisches Wissen gefestigt und durch die Herstellung verschiedener Werkstücke mit dem Erlernen von praktischen Fertigkeiten ergänzt. Die 4-jährige Fachschulausbildung unterscheidet sich u.a. zur 5-jährigen HTL-Ausbildung auch durch den höheren Praxisanteil an Unterrichtsstunden.")
                 dispatcher.utter_message(branch="null")
             elif branch == "abendschule":
