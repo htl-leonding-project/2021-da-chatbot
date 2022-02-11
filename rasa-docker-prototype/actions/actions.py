@@ -98,23 +98,30 @@ class ActionUtterBranch(Action):
             if branch == "medientechnik":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
                 dispatcher.utter_message(text="Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.")
+                dispatcher.utter_message(branch="medientechnik")
             elif branch == "informatik":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
                 dispatcher.utter_message(text="Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.")
+                dispatcher.utter_message(branch="informatik")
             elif branch == "elektronik":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
                 dispatcher.utter_message(text="Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.")
+                dispatcher.utter_message(branch="elektronik")
             elif branch == "medizintechnik":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
                 dispatcher.utter_message(text="In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.")
+                dispatcher.utter_message(branch="medizintechnik")
             elif branch == "fachschule":
-                dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
+                dispatcher.utter_message(text="Natürlich erzähl ich dir etwas über {branch.capitalize()}")
                 dispatcher.utter_message(text="Im fachpraktischen Unterricht wird fachtheoretisches Wissen gefestigt und durch die Herstellung verschiedener Werkstücke mit dem Erlernen von praktischen Fertigkeiten ergänzt. Die 4-jährige Fachschulausbildung unterscheidet sich u.a. zur 5-jährigen HTL-Ausbildung auch durch den höheren Praxisanteil an Unterrichtsstunden.")
+                dispatcher.utter_message(branch="null")
             elif branch == "abendschule":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
                 dispatcher.utter_message(text="Seit dem Schuljahr 2015/16 gilt der neue Lehrplan für Informatik an unserer Abendschule. Dieser Lehrplan sieht die Konzentration der Ausbildung auf Bildungsinhalte der Informatik vor. Als schulautonomer Schwerpunkt wird in Leonding Software-Engineering angeboten.")
+                dispatcher.utter_message(branch="null")
             else:
                 dispatcher.utter_message(text=f"Die Fachrichtung {branch} kenne ich leider nicht.")
+                dispatcher.utter_message(branch="null")
 
         return []
 
