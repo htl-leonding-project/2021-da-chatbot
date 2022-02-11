@@ -236,12 +236,14 @@ class ActionTellJoke(Action):
         adapter = HTTPAdapter(max_retries=retry)
         session.mount('http://', adapter)
         session.mount('https://', adapter)
-        response = session.get("witzapi.de/api/joke")
+        response = session.get("https://v2.jokeapi.dev/joke/Any?lang=de")
         print(response)
         json_str = json.dumps(response.json())
         resp = json.loads(json_str)
 
-        output = resp[0]["text"]
+        output1 = resp["text"]
+        output2 = resp["delivery"]
 
-        dispatcher.utter_message(text=output)
+        dispatcher.utter_message(text=output1)
+        dispatcher.utter_message(text=output2)
         return []
