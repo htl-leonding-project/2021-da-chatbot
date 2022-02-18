@@ -1,4 +1,4 @@
-= Besprechungsprotokoll 11.01.2022
+= Besprechungsprotokoll 14.01.2022
 Dumfarth, Starka
 1.0, 14.01.2022: Some notes
 ifndef::imagesdir[:imagesdir: ../images]
@@ -34,12 +34,11 @@ endif::backend-html5[]
 [cols=2*]
 |===
 |Ort
-|Person
-
+| Schule
 |von-bis
-|Fr. 14.01.2022, 00:00 - 00:00  Uhr
+|Fr. 14.01.2022, 10:20 - 10:40  Uhr
 |Dauer
-| x Minuten
+| 20 Minuten
 |===
 
 
