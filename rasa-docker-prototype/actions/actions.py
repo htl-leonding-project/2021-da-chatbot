@@ -99,7 +99,7 @@ class ActionUtterBranch(Action):
         if branch:
             if branch == "medientechnik":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
-                dispatcher.utter_message(text="Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.")
+                dispatcher.utter_message(text="In der Medientechnik lernt man, wie in der Informatik, viel über Programmieren aber auch medientechnische Inhalte, wie Foto- und Videografie, Bildbearbeitung, Audio, Webseitenerstellung oder Mobile Computing kommen hier nicht zu kurz und unterscheiden die Medientechnik von der Informatik.")
                 dispatcher.utter_message(json_message={
                     "branch": "medientechnik"
                 })
