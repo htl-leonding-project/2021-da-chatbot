@@ -1089,6 +1089,18 @@ nlu:
     - Willst du mit mir zusammen sein?
     - Willst du meine Freundin sein?
     - Lass uns heiraten
+- intent: chitchat/what_are_you_doing
+  examples: |
+    - Und was machst du so?
+    - Was machst du so?
+    - Was geht bei dir?
+    - wm?
+    - Was tust du so?
+    - Was tust du?
+    - Welche Aktivitäten führst du gerade aus?
+    - Was machst du gerade?
+    - Magst du mir sagen was du so machst?
+    - Kannst du mir sagen was du so machst?
 - intent: tell_joke
   examples: |
     - einen Witz erzählen

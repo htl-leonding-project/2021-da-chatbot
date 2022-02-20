@@ -318,10 +318,23 @@ responses:
           payload: "Woher kommst du?"
         - title: "Welche Sprachen sprichst du?"
           payload: "Welche Sprachen sprichst du?"
-        - title: "Womit wurdest du gemacht?"
-          payload: "Welche Technologien wurden für dich verwendet?"
+        - title: "Was machst du so?"
+          payload: "Was machst du so?"
         - title: "Wer hat dich gemacht?"
           payload: "Wer hat dich gemacht?"
+  utter_chitchat/what_are_you_doing:
+    - text: Ach nichts besonderes, nur ein wenig chatten!
+    - text: Ich entspanne gerade ein wenig aber durchlöcher mich ruhig mit Fragen ich muss sowieso wieder an die Arbeit.
+    - text: Frag mich ruhig etwas ich brauche sowieso eine Ablenkung von all dem was ich eigentlich machen sollte!
+      buttons:
+        - title: "Wie geht es dir?"
+          payload: "Wie geht es dir?"
+        - title: "Willst du mich heiraten?"
+          payload: "Willst du mich heiraten?"
+        - title: "Welche Technologien wurden für dich verwendet?"
+          payload: "Welche Technologien wurden für dich verwendet?"
+        - title: "Wie spät ist es?"
+          payload: "Wie spät ist es?"
   utter_pre_school_knowledge:
     - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
     - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
