@@ -10,6 +10,8 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
+from datetime import datetime
+
 
 
 load_dotenv()
@@ -253,3 +255,22 @@ class ActionTellJoke(Action):
             dispatcher.utter_message(text=output2)
 
         return []
+
+class ActionWhatTimeIsIt(Action):
+    def name(self) -> Text:
+            return "action_what_time_is_it"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+
+        now = datetime.now()
+
+        current_time = now.strftime("%H:%M:%S")
+        print("Current Time =", current_time)
+
+        dispatcher.utter_message(f"Es ist gerade {current_time} Uhr!")
+
+        return []
+

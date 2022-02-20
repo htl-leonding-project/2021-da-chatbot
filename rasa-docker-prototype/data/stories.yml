@@ -312,3 +312,7 @@ stories:
     steps:
       - intent: public_transport_connection
       - action: utter_public_transport_connection
+  - story: ask about time
+    steps:
+      - intent: what_time_is_it
+      - action: action_what_time_is_it

@@ -2144,6 +2144,15 @@ nlu:
     - Wie sieht es mit der Verbindung zur Schule aus?
     - Gibt es einen Bus zur Schule?
     - Kann ich mit dem Zug anreisen?
+- intent: what_time_is_it
+  examples: |
+    - Wie spät ist es?
+    - Kannst du mir die Uhrzeit sagen?
+    - Was ist die Uhrzeit?
+    - Wie ist die Zeit?
+    - Sag mir die Zeit!
+    - Sag mir die Uhrzeit
+    - Sag mir wie spät es ist!
 - synonym: Elektronik
   examples: |
     - Strombastler

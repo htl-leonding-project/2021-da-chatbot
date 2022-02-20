@@ -106,6 +106,7 @@ intents:
   - lunch_at_school
   - school_autonomous_priorities
   - public_transport_connection
+  - what_time_is_it
 entities:
   - name
   - branch
@@ -795,5 +796,6 @@ actions:
   - action_number_students
   - action_get_holidays
   - action_tell_joke
+  - action_what_time_is_it
 forms: { }
 e2e_actions: [ ]
