@@ -316,3 +316,7 @@ stories:
     steps:
       - intent: what_time_is_it
       - action: action_what_time_is_it
+  - story: ask about date
+    steps:
+      - intent: what_date_is_it
+      - action: action_what_date_is_it

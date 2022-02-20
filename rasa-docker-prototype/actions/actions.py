@@ -274,3 +274,23 @@ class ActionWhatTimeIsIt(Action):
 
         return []
 
+class ActionWhatDateIsIt(Action):
+    def name(self) -> Text:
+            return "action_what_date_is_it"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+
+        now = datetime.now()
+        weekday = datetime.today().weekday()
+        weekday_string = print ("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag")[weekday]
+
+        current_date = now.strftime("%d.%M.%Y")
+        print("Current Date =", current_date)
+
+        dispatcher.utter_message(f"Heute ist {weekday_string} der {current_date}!")
+
+        return []
+

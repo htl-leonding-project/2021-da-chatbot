@@ -2153,6 +2153,18 @@ nlu:
     - Sag mir die Zeit!
     - Sag mir die Uhrzeit
     - Sag mir wie spät es ist!
+- intent: what_date_is_it
+  examples: |
+    - Welchen Tag haben wir heute?
+    - Welches Datum ist heute?
+    - Was ist der heutige Tag?
+    - Kannst du mir sagen welchen Tag wir haben
+    - Kannst du mir das Datum sagen
+    - Kannst du mir das Datum des heutigen Tages sagen
+    - Sag mir welchen Tag wir haben
+    - Sag mir welcher Tag heute ist
+    - Sag mir das heutige Datum
+    - Sag mir das Datum
 - synonym: Elektronik
   examples: |
     - Strombastler

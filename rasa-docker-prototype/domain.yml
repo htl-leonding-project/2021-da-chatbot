@@ -107,6 +107,7 @@ intents:
   - school_autonomous_priorities
   - public_transport_connection
   - what_time_is_it
+  - what_date_is_it
 entities:
   - name
   - branch
@@ -797,5 +798,6 @@ actions:
   - action_get_holidays
   - action_tell_joke
   - action_what_time_is_it
+  - action_what_date_is_it
 forms: { }
 e2e_actions: [ ]
