@@ -1074,6 +1074,21 @@ nlu:
     - Bis demnächst. Es war schön dich kennenzulernen.
     - Danke für dieses Treffen. Es war toll dich zu sehen.
     - Freut mich, dich kennenzulernen
+- intent: chitchat/marry_me
+  examples: |
+    - Willst du mich heiraten?
+    - Lass uns bitte heiraten
+    - Kann ich dir einen Ring an den Finger stecken
+    - Wann ist die Hochzeit?
+    - Gibt es eine Hochzeit von uns?
+    - Kann man dich heiraten?
+    - Bitte heirate mich
+    - Ich hoffe du heiratest mich
+    - Kannst du mich heiraten?
+    - Kann ich dich heiraten?
+    - Willst du mit mir zusammen sein?
+    - Willst du meine Freundin sein?
+    - Lass uns heiraten
 - intent: tell_joke
   examples: |
     - einen Witz erzählen

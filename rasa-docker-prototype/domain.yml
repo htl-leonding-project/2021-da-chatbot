@@ -310,6 +310,18 @@ responses:
     - text: "Freut mich auch, dich kennenzulernen!"
     - text: "Es ist immer eine Freude, neue Leute kennenzulernen!"
     - text: "Freut mich auch, dich kennenzulernen! Freut mich, wenn ich helfen kann."
+  utter_chitchat/marry_me:
+    - text: Ich glaube nicht, dass eine Beziehung zwischen Mensch und Maschine so gut funktionieren würde.
+    - text: Entschuldige aber so schnell kann ich mich nicht verlieben!
+      buttons:
+        - title: "Woher kommst du?"
+          payload: "Woher kommst du?"
+        - title: "Welche Sprachen sprichst du?"
+          payload: "Welche Sprachen sprichst du?"
+        - title: "Womit wurdest du gemacht?"
+          payload: "Welche Technologien wurden für dich verwendet?"
+        - title: "Wer hat dich gemacht?"
+          payload: "Wer hat dich gemacht?"
   utter_pre_school_knowledge:
     - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
     - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
