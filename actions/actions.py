@@ -10,6 +10,8 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
+from datetime import datetime
+
 
 
 load_dotenv()
@@ -99,7 +101,7 @@ class ActionUtterBranch(Action):
         if branch:
             if branch == "medientechnik":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
-                dispatcher.utter_message(text="Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.")
+                dispatcher.utter_message(text="In der Medientechnik lernt man, wie in der Informatik, viel über Programmieren aber auch medientechnische Inhalte, wie Foto- und Videografie, Bildbearbeitung, Audio, Webseitenerstellung oder Mobile Computing kommen hier nicht zu kurz und unterscheiden die Medientechnik von der Informatik.")
                 dispatcher.utter_message(json_message={
                     "branch": "medientechnik"
                 })
@@ -253,3 +255,42 @@ class ActionTellJoke(Action):
             dispatcher.utter_message(text=output2)
 
         return []
+
+class ActionWhatTimeIsIt(Action):
+    def name(self) -> Text:
+            return "action_what_time_is_it"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+
+        now = datetime.now()
+
+        current_time = now.strftime("%H:%M:%S")
+        print("Current Time =", current_time)
+
+        dispatcher.utter_message(f"Es ist gerade {current_time} Uhr!")
+
+        return []
+
+class ActionWhatDateIsIt(Action):
+    def name(self) -> Text:
+            return "action_what_date_is_it"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+
+        now = datetime.now()
+        weekday = datetime.today().weekday()
+        weekday_string = ("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag")[weekday]
+
+        current_date = now.strftime("%d.%m.%Y")
+        print("Current Date =", current_date)
+
+        dispatcher.utter_message(f"Heute ist {weekday_string} der {current_date}!")
+
+        return []
+

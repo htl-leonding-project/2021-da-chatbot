@@ -1074,6 +1074,33 @@ nlu:
     - Bis demnächst. Es war schön dich kennenzulernen.
     - Danke für dieses Treffen. Es war toll dich zu sehen.
     - Freut mich, dich kennenzulernen
+- intent: chitchat/marry_me
+  examples: |
+    - Willst du mich heiraten?
+    - Lass uns bitte heiraten
+    - Kann ich dir einen Ring an den Finger stecken
+    - Wann ist die Hochzeit?
+    - Gibt es eine Hochzeit von uns?
+    - Kann man dich heiraten?
+    - Bitte heirate mich
+    - Ich hoffe du heiratest mich
+    - Kannst du mich heiraten?
+    - Kann ich dich heiraten?
+    - Willst du mit mir zusammen sein?
+    - Willst du meine Freundin sein?
+    - Lass uns heiraten
+- intent: chitchat/what_are_you_doing
+  examples: |
+    - Und was machst du so?
+    - Was machst du so?
+    - Was geht bei dir?
+    - wm?
+    - Was tust du so?
+    - Was tust du?
+    - Welche Aktivitäten führst du gerade aus?
+    - Was machst du gerade?
+    - Magst du mir sagen was du so machst?
+    - Kannst du mir sagen was du so machst?
 - intent: tell_joke
   examples: |
     - einen Witz erzählen
@@ -2117,6 +2144,27 @@ nlu:
     - Wie sieht es mit der Verbindung zur Schule aus?
     - Gibt es einen Bus zur Schule?
     - Kann ich mit dem Zug anreisen?
+- intent: what_time_is_it
+  examples: |
+    - Wie spät ist es?
+    - Kannst du mir die Uhrzeit sagen?
+    - Was ist die Uhrzeit?
+    - Wie ist die Zeit?
+    - Sag mir die Zeit!
+    - Sag mir die Uhrzeit
+    - Sag mir wie spät es ist!
+- intent: what_date_is_it
+  examples: |
+    - Welchen Tag haben wir heute?
+    - Welches Datum ist heute?
+    - Was ist der heutige Tag?
+    - Kannst du mir sagen welchen Tag wir haben
+    - Kannst du mir das Datum sagen
+    - Kannst du mir das Datum des heutigen Tages sagen
+    - Sag mir welchen Tag wir haben
+    - Sag mir welcher Tag heute ist
+    - Sag mir das heutige Datum
+    - Sag mir das Datum
 - synonym: Elektronik
   examples: |
     - Strombastler

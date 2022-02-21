@@ -106,6 +106,8 @@ intents:
   - lunch_at_school
   - school_autonomous_priorities
   - public_transport_connection
+  - what_time_is_it
+  - what_date_is_it
 entities:
   - name
   - branch
@@ -310,6 +312,31 @@ responses:
     - text: "Freut mich auch, dich kennenzulernen!"
     - text: "Es ist immer eine Freude, neue Leute kennenzulernen!"
     - text: "Freut mich auch, dich kennenzulernen! Freut mich, wenn ich helfen kann."
+  utter_chitchat/marry_me:
+    - text: Ich glaube nicht, dass eine Beziehung zwischen Mensch und Maschine so gut funktionieren würde.
+    - text: Entschuldige aber so schnell kann ich mich nicht verlieben!
+      buttons:
+        - title: "Woher kommst du?"
+          payload: "Woher kommst du?"
+        - title: "Welche Sprachen sprichst du?"
+          payload: "Welche Sprachen sprichst du?"
+        - title: "Was machst du so?"
+          payload: "Was machst du so?"
+        - title: "Wer hat dich gemacht?"
+          payload: "Wer hat dich gemacht?"
+  utter_chitchat/what_are_you_doing:
+    - text: Ach nichts besonderes, nur ein wenig chatten!
+    - text: Ich entspanne gerade ein wenig aber durchlöcher mich ruhig mit Fragen ich muss sowieso wieder an die Arbeit.
+    - text: Frag mich ruhig etwas ich brauche sowieso eine Ablenkung von all dem was ich eigentlich machen sollte!
+      buttons:
+        - title: "Wie geht es dir?"
+          payload: "Wie geht es dir?"
+        - title: "Willst du mich heiraten?"
+          payload: "Willst du mich heiraten?"
+        - title: "Welche Technologien wurden für dich verwendet?"
+          payload: "Welche Technologien wurden für dich verwendet?"
+        - title: "Wie spät ist es?"
+          payload: "Wie spät ist es?"
   utter_pre_school_knowledge:
     - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
     - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
@@ -770,5 +797,7 @@ actions:
   - action_number_students
   - action_get_holidays
   - action_tell_joke
+  - action_what_time_is_it
+  - action_what_date_is_it
 forms: { }
 e2e_actions: [ ]
