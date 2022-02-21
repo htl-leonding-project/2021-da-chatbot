@@ -293,6 +293,13 @@ class ActionWhatDateIsIt(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+        buttons = []
+
+        buttons.append({"title": 'Wie spät ist es?', "payload": '/what_time_is_it'})
+        buttons.append({"title": 'Willst du mich heiraten?', "payload": 'Willst du mich heiraten?'})
+        buttons.append({"title": 'Kannst du mir etwas über die HTL erzählen?', "payload": '/ask_htl_general'})
+        buttons.append({"title": 'Wer hat dich gemacht?', "payload": 'Wer hat dich gemacht?'})
+
 
         now = datetime.now()
         weekday = datetime.today().weekday()
@@ -301,7 +308,7 @@ class ActionWhatDateIsIt(Action):
         current_date = now.strftime("%d.%m.%Y")
         print("Current Date =", current_date)
 
-        dispatcher.utter_message(f"Heute ist {weekday_string} der {current_date}!")
+        dispatcher.utter_message(text=f"Heute ist {weekday_string} der {current_date}!", buttons=buttons)
 
         return []
 
