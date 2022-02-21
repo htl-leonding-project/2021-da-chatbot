@@ -269,13 +269,19 @@ class ActionWhatTimeIsIt(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+        buttons = []
+
+        buttons.append({"title": 'Welcher Tag ist heute?', "payload": '/what_date_is_it'})
+        buttons.append({"title": 'Willst du mich heiraten?', "payload": 'Willst du mich heiraten?'})
+        buttons.append({"title": 'Kannst du mir etwas über die HTL erzählen?', "payload": '/ask_htl_general'})
+        buttons.append({"title": 'Wer hat dich gemacht?', "payload": 'Wer hat dich gemacht?'})
 
         now = datetime.now()
 
         current_time = now.strftime("%H:%M:%S")
         print("Current Time =", current_time)
 
-        dispatcher.utter_message(f"Es ist gerade {current_time} Uhr!")
+        dispatcher.utter_message(text=f"Es ist gerade {current_time} Uhr!", buttons=buttons)
 
         return []
 
