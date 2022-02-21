@@ -285,9 +285,9 @@ class ActionWhatDateIsIt(Action):
 
         now = datetime.now()
         weekday = datetime.today().weekday()
-        weekday_string = print ("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag")[weekday]
+        weekday_string = ("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag")[weekday]
 
-        current_date = now.strftime("%d.%M.%Y")
+        current_date = now.strftime("%d.%m.%Y")
         print("Current Date =", current_date)
 
         dispatcher.utter_message(f"Heute ist {weekday_string} der {current_date}!")
