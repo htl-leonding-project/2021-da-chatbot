@@ -97,46 +97,51 @@ class ActionUtterBranch(Action):
         branch = next(tracker.get_latest_entity_values("branch"), None)
         branch = branch.lower()
 
+        buttons = []
+        buttons.append({"title": 'Welche Programmiersprachen lernt man an der HTL?', "payload": '/programming_languages'})
+        buttons.append({"title": 'Wie komme ich zur HTL?', "payload": '/public_transport_connection'})
+        buttons.append({"title": 'Wie praxisnahe ist der Unterricht in den Werkstätten und Laboren?', "payload": '/workshops_and_labours'})
+        buttons.append({"title": 'Welche anderen Zweige gibt es?', "payload": '/ask_branches'})
 
         if branch:
             if branch == "medientechnik":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
-                dispatcher.utter_message(text="In der Medientechnik lernt man, wie in der Informatik, viel über Programmieren aber auch medientechnische Inhalte, wie Foto- und Videografie, Bildbearbeitung, Audio, Webseitenerstellung oder Mobile Computing kommen hier nicht zu kurz und unterscheiden die Medientechnik von der Informatik.")
+                dispatcher.utter_message(text="In der Medientechnik lernt man, wie in der Informatik, viel über Programmieren aber auch medientechnische Inhalte, wie Foto- und Videografie, Bildbearbeitung, Audio, Webseitenerstellung oder Mobile Computing kommen hier nicht zu kurz und unterscheiden die Medientechnik von der Informatik.", buttons=buttons)
                 dispatcher.utter_message(json_message={
                     "branch": "medientechnik"
                 })
             elif branch == "informatik":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
-                dispatcher.utter_message(text="Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.")
+                dispatcher.utter_message(text="Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.", buttons=buttons)
                 dispatcher.utter_message(json_message={
                     "branch": "informatik"
                 })
             elif branch == "elektronik":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
-                dispatcher.utter_message(text="Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.")
+                dispatcher.utter_message(text="Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.", buttons=buttons)
                 dispatcher.utter_message(json_message={
                     "branch": "elektronik"
                 })
             elif branch == "medizintechnik":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
-                dispatcher.utter_message(text="In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.")
+                dispatcher.utter_message(text="In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.", buttons=buttons)
                 dispatcher.utter_message(json_message={
                     "branch": "medizintechnik"
                 })
             elif branch == "fachschule":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
-                dispatcher.utter_message(text="Im fachpraktischen Unterricht wird fachtheoretisches Wissen gefestigt und durch die Herstellung verschiedener Werkstücke mit dem Erlernen von praktischen Fertigkeiten ergänzt. Die 4-jährige Fachschulausbildung unterscheidet sich u.a. zur 5-jährigen HTL-Ausbildung auch durch den höheren Praxisanteil an Unterrichtsstunden.")
+                dispatcher.utter_message(text="Im fachpraktischen Unterricht wird fachtheoretisches Wissen gefestigt und durch die Herstellung verschiedener Werkstücke mit dem Erlernen von praktischen Fertigkeiten ergänzt. Die 4-jährige Fachschulausbildung unterscheidet sich u.a. zur 5-jährigen HTL-Ausbildung auch durch den höheren Praxisanteil an Unterrichtsstunden.", buttons=buttons)
                 dispatcher.utter_message(json_message={
                     "branch": "null"
                 })
             elif branch == "abendschule":
                 dispatcher.utter_message(text=f"Natürlich erzähl ich dir etwas über {branch.capitalize()}")
-                dispatcher.utter_message(text="Seit dem Schuljahr 2015/16 gilt der neue Lehrplan für Informatik an unserer Abendschule. Dieser Lehrplan sieht die Konzentration der Ausbildung auf Bildungsinhalte der Informatik vor. Als schulautonomer Schwerpunkt wird in Leonding Software-Engineering angeboten.")
+                dispatcher.utter_message(text="Seit dem Schuljahr 2015/16 gilt der neue Lehrplan für Informatik an unserer Abendschule. Dieser Lehrplan sieht die Konzentration der Ausbildung auf Bildungsinhalte der Informatik vor. Als schulautonomer Schwerpunkt wird in Leonding Software-Engineering angeboten.", buttons=buttons)
                 dispatcher.utter_message(json_message={
                     "branch": "null"
                 })
             else:
-                dispatcher.utter_message(text=f"Die Fachrichtung {branch} kenne ich leider nicht.")
+                dispatcher.utter_message(text=f"Die Fachrichtung {branch} kenne ich leider nicht.", buttons=buttons)
                 dispatcher.utter_message(json_message={
                     "branch": "null"
                 })
