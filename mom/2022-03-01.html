@@ -7,7 +7,7 @@
 <meta name="generator" content="Asciidoctor 2.0.17">
 <meta name="author" content="Dumfarth, Starka">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>Chatbot Features</title>
+<title>Besprechungsprotokoll 14.02.2022</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -441,18 +441,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Chatbot Features</h1>
+<h1>Besprechungsprotokoll 14.02.2022</h1>
 <div class="details">
 <span id="author" class="author">Dumfarth, Starka</span><br>
 <span id="revnumber">version 1.0,</span>
-<span id="revdate">27.08.2021</span>
+<span id="revdate">14.02.2022</span>
 <br><span id="revremark">Some notes</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_chatbot_htl">1. Chatbot HTL</a></li>
-<li><a href="#_chatbot_tüv">2. Chatbot TÜV</a></li>
+<li><a href="#_besprochene_themen">1. Besprochene Themen</a></li>
+<li><a href="#_vereinbarungen_und_entscheidungen">2. Vereinbarungen und Entscheidungen</a></li>
 </ul>
 </div>
 </div>
@@ -463,98 +463,101 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><span class="icon"><a class="image" href="https://github.com/htl-leonding-project/2021-da-chatbot/"><i class="fa fa-github-square"></i></a></span> ‏ ‏ ‎
 <span class="icon"><a class="image" href="https://htl-leonding-project.github.io/2021-da-chatbot"><i class="fa fa-home"></i></a></span></p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Teilnehmer</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">anwesend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dumfarth Felix</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starka Lukas</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Martin Huemer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Ort und Zeit</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schule</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">von-bis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Di. 01.03.2022, 10:50 - 11:15  Uhr</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dauer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25 Minuten</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_chatbot_htl"><a class="anchor" href="#_chatbot_htl"></a>1. Chatbot HTL</h2>
+<h2 id="_besprochene_themen"><a class="anchor" href="#_besprochene_themen"></a>1. Besprochene Themen</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Der Chatbot der HTL Leonding soll schulbezogene Fragen über die:</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Schule im generellen (Baujahr, Lage,&#8230;&#8203;)</p>
-</li>
-<li>
-<p>verschiedene Fachrichtungen (Welche es gibt, Stundentafel, &#8230;&#8203;)</p>
-</li>
-<li>
-<p>Stundenplan (Wo ist eine Klasse gerade, Was für eine Stunde, Lehrer Sprechstunden, &#8230;&#8203;)</p>
-</li>
-<li>
-<p>Weiterleiten (Moodle, Webuntis, E-Mail an die Schule, &#8230;&#8203;)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>beantworten.</p>
-</div>
-<div class="paragraph">
-<p>Zusätzlich soll er noch andere Gimmicks besitzen wie:</p>
-</div>
+<p>Beim Laden einer Unterseite soll der Chat auch gespeichert sein</p>
 <div class="ulist">
 <ul>
 <li>
-<p>das Wetter</p>
-</li>
-<li>
-<p>Witze</p>
-</li>
-<li>
-<p>Smalltalk (Wie gehts es dir, Bist du ein Mensch, Wo wohnst du, &#8230;&#8203;)</p>
+<p>Möglicherweise über LocalStorage</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="../images/MockUpLeo.png" alt="MockUpLeo" width="100%"></span></p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../images/MockUpLeoClosed.png" alt="MockUpLeoClosed" width="100%"></span></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_chatbot_tüv"><a class="anchor" href="#_chatbot_tüv"></a>2. Chatbot TÜV</h2>
+<h2 id="_vereinbarungen_und_entscheidungen"><a class="anchor" href="#_vereinbarungen_und_entscheidungen"></a>2. Vereinbarungen und Entscheidungen</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Der Chatbot für den TÜV soll etwas wissen über:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Ingenieur (Ingenieur-Gesetz,&#8230;&#8203; )</p>
-</li>
-<li>
-<p>Firma im generellen (Was macht die Firma sonst so, Lage,&#8230;&#8203;)</p>
-</li>
-<li>
-<p>Weiterleiten zu passende Dokumente</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Zusätzlich soll er noch die selben Gimmicks besitzen wie Leon:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>das Wetter</p>
-</li>
-<li>
-<p>Witze</p>
-</li>
-<li>
-<p>Smalltalk (Wie gehts es dir, Bist du ein Mensch, Wo wohnst du, &#8230;&#8203;)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../images/MockUpTüvi.png" alt="MockUpTüvi" width="100%"></span></p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../images/MockUpTüviClosed.png" alt="MockUpTüviClosed" width="100%"></span></p>
-</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Table 3. Was wurde vereinbart?</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">macht was</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bis wann</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schüler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die VM auf https umstellen, damit Nachrichten auf Wordpress geladen werden können</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schüler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eine Lösung finden um die Mat-Icons anzeigen zu können</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
