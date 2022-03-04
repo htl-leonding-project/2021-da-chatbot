@@ -36,7 +36,7 @@ endif::backend-html5[]
 |Ort
 | Schule
 |von-bis
-|Fr. 01.03.2022, 10:50 - 11:15  Uhr
+|Di. 01.03.2022, 10:50 - 11:15  Uhr
 |Dauer
 | 25 Minuten
 |===
