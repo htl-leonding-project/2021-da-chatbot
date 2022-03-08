@@ -4,12 +4,12 @@ name: Deploy Rasa to vm
 on:
   push:
     branches:
-      - 'rasa-chatbot'
+      - 'main'
     paths:
       - 'rasa-docker-prototype/**'
   pull_request:
     branches:
-      - 'rasa-chatbot'
+      - 'main'
 
   workflow_dispatch:
 
@@ -28,6 +28,7 @@ jobs:
           test_args: --fail-on-prediction-errors
           rasa_train: true
           rasa_test: true
+          workspace: '/rasa-docker-prototype'
       - name: Upload model
         if: github.ref == 'refs/heads/master'
         uses: actions/upload-artifact@master
