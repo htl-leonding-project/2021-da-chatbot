@@ -87,7 +87,7 @@ jobs:
 #        run: ssh staging 'cd /home/chatadm/leobot && git pull'
 
       - name: Copy model to Rasa X
-        run: ssh staging 'cd/home/chatadm/leobot/models && ls -Art | cp `ls -rt *tar.gz | tail -1` /etc/rasa/models'
-
-      - name: Restart Docker-Compose environment
-        run: ssh staging 'cd /home/chatadm/leobot && sudo docker-compose build && sudo docker-compose restart'
+        run: ssh staging 'cd/home/chatadm/leobot/models && curl -k -F "model=@$(ls -t *tar.gz | head -1)" "localhost:4200/api/projects/default/models?api_token=${{ secrets.API_TOKEN }}"'
+#
+#      - name: Restart Docker-Compose environment
+#        run: ssh staging 'cd /home/chatadm/leobot && sudo docker-compose build && sudo docker-compose restart'
