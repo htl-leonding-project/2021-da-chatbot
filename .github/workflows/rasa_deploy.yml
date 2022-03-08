@@ -28,9 +28,8 @@ jobs:
           test_args: --fail-on-prediction-errors
           rasa_train: true
           rasa_test: true
-          workspace: '/rasa-docker-prototype'
       - name: Upload model
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@master
         with:
           name: model
