@@ -51,7 +51,6 @@ jobs:
   deploy:
     name: "Deploy to vm"
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: tests
     steps:
       - name: Download model
