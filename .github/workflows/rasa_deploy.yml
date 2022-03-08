@@ -1,15 +1,15 @@
 # https://github.com/anchore/grype
-name: Rasa Tests
+name: Deploy Rasa to vm
 
 on:
   push:
     branches:
-      - 'main'
+      - 'rasa-chatbot'
     paths:
       - 'rasa-docker-prototype/**'
   pull_request:
     branches:
-      - 'main'
+      - 'rasa-chatbot'
 
   workflow_dispatch:
 
@@ -23,8 +23,8 @@ jobs:
         uses: RasaHQ/rasa-train-test-gha@main
         with:
           test_type: all
-          rasa_version: 3.0.5-full
-          data_validate: false # TODO: Test if data_validate works after update to rasa 3.0
+          rasa_version: 2.8.7
+          data_validate: true
           test_args: --fail-on-prediction-errors
           rasa_train: true
           rasa_test: true
