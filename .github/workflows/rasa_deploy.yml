@@ -83,7 +83,7 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
       - name: Copy model to Rasa X
-        run: ssh staging 'cd home/chatadm/leobot/models && curl -k -F "model=@$(ls -t *tar.gz | head -1)" "localhost:4200/api/projects/default/models?api_token=${{ secrets.API_TOKEN }}"'
+        run: ssh staging 'cd /home/chatadm/leobot/models && ./upload-latest-model.sh'
 
       #      - name: Pull github repository
       #        run: ssh staging 'cd /home/chatadm/leobot && git pull'
