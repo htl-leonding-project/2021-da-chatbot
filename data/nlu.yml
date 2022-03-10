@@ -554,7 +554,7 @@ nlu:
     - Kannst du mir sagen wie viele [Computerpraktikum](subject) Stunden man pro Woche in der [5. Klasse](grade) [Informatik](branch) hat?
 - intent: ask_leonie
   examples: |
-    - Kennst du Leonie?
+    - Kennst du 3D Leonie?
     - Bist du die Leonie?
     - Was weißt du über die Leonie?
     - Sagt dir Leonie etwas?
