@@ -561,12 +561,12 @@ nlu:
     - Was ist Leonie?
 - intent: better_than_leonie
   examples: |
-    - Leonie ist besser als du
-    - Du bist besser als Leonie
-    - Leonie ist besser
-    - Leonie ist schlauer als du
-    - Leonie ist viel schlauer als du
-    - Leonie ist viel cooler als du
+    - 3D Leonie ist besser als du
+    - Du bist besser als 3D Leonie
+    - 3D Leonie ist besser
+    - 3D Leonie ist schlauer als du
+    - 3D Leonie ist viel schlauer als du
+    - 3D Leonie ist viel cooler als du
 - intent: thanks
   examples: |
     - danke
@@ -590,8 +590,8 @@ nlu:
     - Geht es dir gut?
     - Fühlst du dich gut?
     - Hast du einen tollen Tag?
-    - Hallo Leon, was hast du vor?
-    - Hallo Leon! Wie geht es Ihnen?
+    - Hallo Leonie, was hast du vor?
+    - Hallo Leonie! Wie geht es Ihnen?
     - Wie geht es dir?
     - Wie geht's?
     - Wie geht es Ihnen
@@ -617,7 +617,7 @@ nlu:
     - Hallo wie geht's dir?
     - Hallo, wie geht es dir?
     - Hi wie geht's
-    - Hallo Leon, wie geht es dir?
+    - Hallo Leonie, wie geht es dir?
     - Wie?
     - Wie läuft es so
     - Wie geht es euch?
@@ -650,7 +650,7 @@ nlu:
     - Wie war dein Tag
     - Was hast du vor?
     - was ist gut
-    - Was ist los, Leon?
+    - Was ist los, Leonie?
     - Was geht?
     - Was machst du?
     - Was ist hier los
@@ -671,10 +671,10 @@ nlu:
     - Wie nennen dich andere Leute?
     - Weißt du deinen Namen?
     - Hast du einen Namen?
-    - Heißt du jetzt Leo oder Leon?
-    - Heißt du jetzt Leobot oder Leon?
-    - Leo oder Leon?
-    - Leobot oder Leon?
+    - Heißt du jetzt LeoBot oder Leonie?
+    - Heißt du jetzt Leobot oder Leonie?
+    - Leobot oder Leonie?
+    - Leobot oder Leonie?
 - intent: chitchat/ask_how_old
   examples: |
     - wie alt?

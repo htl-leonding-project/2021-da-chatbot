@@ -168,7 +168,7 @@ responses:
   utter_goodbye:
     - text: Tschüss
   utter_iamabot:
-    - text: Ich bin ein bot, powered by Rasa.
+    - text: Ich bin Leonie, ein bot, powered by Rasa.
       buttons:
         - title: "Wer hat dich gemacht?"
           payload: "Wer hat dich gemacht?"
@@ -229,14 +229,14 @@ responses:
     - text: 'Wie Sokrates schon einst sagte: "Ich weiß, dass ich nichts weiß". Du kannst mir aber gerne auf die Sprünge helfen und die Nachricht neu formulieren!'
     - text: 'Schon Descartes wusste zu sagen: "Ich denke, also bin ich". Und ich denke, dass diese Frage nicht so leicht zu beantworten ist und du sie neu formulieren solltest!'
   utter_leonie:
-    - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
+    - text: Ich und die 3D Leonie sind beide Leonie
       buttons:
         - title: "Wer von euch ist besser?"
           payload: "/better_than_leonie"
   utter_leonie_and_me:
-    - text: Meine Schwester und ich sind beide besonders auf unsre eigene Art.
+    - text: Ich bin nur ein Chat, währendessen kann die 3D Leonie auch tanzen.
       buttons:
-        - title: "Wer ist deine Schwester?"
+        - title: "Was ist der Unterschied zur 3D Leonie?"
           payload: "/ask_leonie"
   utter_no_problem:
     - text: Kein Problem, dafür bin ich doch da!
@@ -253,9 +253,9 @@ responses:
   utter_chitchat/how_are_you:
     - text: Mir geht es sehr gut, danke fürs Fragen!
   utter_chitchat/ask_name:
-    - text: Ich bin Leon!
-    - text: Mein Name ist Leon oder LeoBot ich weiß es selbst nicht so genau.
-    - text: Ich heiße Leon, du kannst mich aber auch LeoBot nennen :)
+    - text: Ich bin Leonie!
+    - text: Mein Name ist Leonie oder LeoBot ich weiß es selbst nicht so genau.
+    - text: Ich heiße Leonie, du kannst mich aber auch LeoBot nennen :)
       buttons:
         - title: "Wer hat dich gemacht?"
           payload: "Wer hat dich gemacht?"
