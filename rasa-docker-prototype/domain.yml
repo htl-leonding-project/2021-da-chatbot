@@ -108,6 +108,7 @@ intents:
   - public_transport_connection
   - what_time_is_it
   - what_date_is_it
+  - no_answer
 entities:
   - name
   - branch
