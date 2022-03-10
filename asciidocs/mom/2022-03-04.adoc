@@ -1,0 +1,92 @@
+= Besprechungsprotokoll 14.02.2022
+Dumfarth, Starka
+1.0, 14.02.2022: Some notes
+ifndef::imagesdir[:imagesdir: ../images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+//icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-project/2021-da-chatbot/] ‏ ‏ ‎
+icon:home[link=https://htl-leonding-project.github.io/2021-da-chatbot]
+endif::backend-html5[]
+
+
+.Teilnehmer
+|===
+|anwesend
+
+|Dumfarth Felix
+
+|Starka Lukas
+
+|Thomas Stütz
+
+|
+
+Christian Aberger
+
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+| Schule
+|von-bis
+|Fr. 04.03.2022, 11:00 - 11:20  Uhr
+|Dauer
+| 20 Minuten
+|===
+
+
+
+== Besprochene Themen
+
+* Es gibt einen Avatar (die Leonie) in 3D. Wenn jemand an die Schule kommt könnte man sie auch über die Webseite ansprechen. Interessierte Personen sollen mithilfe eines 2D Avatars ausgeholfen werden.
+* Wird unvorhersehbar, wenn der Chatbot wirklich alles selber lernt
+* Wir wollen vorhersehbare Ergebnisse
+* Den Lifecycle vorführen und herzeigen
+* Ziel: Ein beliebiges Produktsortiment so zu strukturieren, dass ein Chatbot daraus entsteht
+* Mit dem Kreislauf wird das Trainingsset vergrößert => Reproduzierbar
+* Architektur herzeigen
+** Warum wird Rasa verwendet
+** Keine anderen Anbieter, sondern lokal gehosted
+** Systemarchitektur als Diagramm muss noch erstellt werden
+* Loop vorzeigen
+* Der User möchte geführt werden
+** Buttons
+* Validator würde möglicherweise noch ergänzt werden
+* Nicht live trainieren, sondern gleich entweder mit fertigem Modell oder Film
+* Am Schluss noch Technologien: CI/CD, Pipeline mit GH-Actions, usw.
+* QR-Code am Schluss mit Link auf den Bot zum selber ausprobieren
+
+== Vereinbarungen und Entscheidungen
+
+.Was wurde vereinbart?
+[%autowidth]
+|===
+|wer |macht was |bis wann
+|
+Schüler
+|
+Grafik für den Lifecycle erstellen
+|
+11.03.2022
+|
+Schüler
+|
+Diagramm für die Systemarchitektur erstellen
+|
+11.03.2022
+|
+Schüler
+|
+Präsentation erstellen (am besten mit Asciidoctor Slides)
+|
+11.03.2022
+|===
