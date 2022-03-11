@@ -1,6 +1,6 @@
-= Besprechungsprotokoll 14.02.2022
+= Besprechungsprotokoll 04.03.2022
 Dumfarth, Starka
-1.0, 14.02.2022: Some notes
+1.0, 04.03.2022: Some notes
 ifndef::imagesdir[:imagesdir: ../images]
 :icons: font
 //:sectnums:    // Nummerierung der Überschriften / section numbering
