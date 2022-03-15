@@ -7,7 +7,7 @@
 <meta name="generator" content="Asciidoctor 2.0.17">
 <meta name="author" content="Dumfarth, Starka">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>Besprechungsprotokoll 14.01.2022</title>
+<title>Besprechungsprotokoll 14.03.2022</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -441,11 +441,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Besprechungsprotokoll 14.01.2022</h1>
+<h1>Besprechungsprotokoll 14.03.2022</h1>
 <div class="details">
 <span id="author" class="author">Dumfarth, Starka</span><br>
 <span id="revnumber">version 1.0,</span>
-<span id="revdate">14.01.2022</span>
+<span id="revdate">14.03.2022</span>
 <br><span id="revremark">Some notes</span>
 </div>
 <div id="toc" class="toc2">
@@ -501,11 +501,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">von-bis</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fr. 14.01.2022, 10:20 - 10:40  Uhr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mo. 13.03.2022, 14:45 - 15:35  Uhr</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Dauer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20 Minuten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50 Minuten</p></td>
 </tr>
 </tbody>
 </table>
@@ -514,27 +514,77 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_besprochene_themen"><a class="anchor" href="#_besprochene_themen"></a>1. Besprochene Themen</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Server muss noch deployed werden</p>
-</li>
-<li>
-<p>E-Mail an den Abteilungsvorstand, um Termin für einen Testbetrieb anfragen</p>
-</li>
-<li>
-<p>Link zu Github Repo anführen, damit man Issues erstellen kann</p>
-</li>
-<li>
-<p><a href="https://github.com/gras64/rasa-german-demo/blob/master/data/nlu/nlu.md">Möglicherweise interessantes Repo für vordefinierte Fragen</a></p>
-</li>
-<li>
-<p>IP von schulinternem Netz sollen rot angezeigt werden</p>
-</li>
-<li>
-<p>Andere Aussagen hinzufügen, wenn etwas nicht verstanden wird</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Abkürzungen bei die ersten erwähnungen ausschreiben.</p>
+</div>
+<div class="paragraph">
+<p>Chatbots am Beispiel Rasa: Text nicht aufbauend, etwas mehr erklären (vorerst lassen)</p>
+</div>
+<div class="paragraph">
+<p>Confidence genauer erklären</p>
+</div>
+<div class="paragraph">
+<p>Bei der TED Policy &#8230;&#8203; drei informationen als input &#8230;&#8203; : aufzählungspunkte und nicht nur Text
+Pipline: phython-dict &#8658; erklärung.</p>
+</div>
+<div class="paragraph">
+<p>Die Dinge erklären aber nicht in die mathematische tiefe.</p>
+</div>
+<div class="paragraph">
+<p>Bei die Code Config snippets erklärung dazugeben</p>
+</div>
+<div class="paragraph">
+<p>Keine füllwörter wie "leider auch", "sehr gut"!</p>
+</div>
+<div class="paragraph">
+<p>Nach die Erklärungen beschreiben welche Configuration und weshalb wir benutzen.</p>
+</div>
+<div class="paragraph">
+<p>Zuerst Backend und dann FrontEnd beschreiben.</p>
+</div>
+<div class="paragraph">
+<p>Systemarchitektur</p>
+</div>
+<div class="paragraph">
+<p>Conversation Statistiken vlt pro. Woche anzeigen</p>
+</div>
+<div class="paragraph">
+<p>Diplomarbeit = vorliegende Arbeit</p>
+</div>
+<div class="paragraph">
+<p>Was hat unser Dashboard für funktionalitäten, informationen darstellen, wie viele, wann, welche Conversationen geführt wurden.
+Im dashboard sind alle Daten auch in rasa/rasa x vorhanden jedoch verteilt und versteckt &#8658; dashboard stellt diese einheitlich da, für den Leobot conversation (improvment) cycle</p>
+</div>
+<div class="paragraph">
+<p>Kreis abbildung
+Kreis beschreiben.</p>
+</div>
+<div class="paragraph">
+<p>Regelkreis, in der literatur findet man den regel kreis, bsp heizung einer misst, einer regelt und schaut, temp anpassen wieder von vorne</p>
+</div>
+<div class="paragraph">
+<p>Unseren regelkreis interpretieren wir so:
+Konversationen mit user &#8594; protokolierte conversationen &#8594; intents ergänzt/ geändert/ gelöscht &#8594; trainiert &#8594; vorne</p>
+</div>
+<div class="paragraph">
+<p>Regelkreis ist unser Dashboard
+(sollwert = gelungene convo, istwert= falsche convo is blöd)
+Men in the loop
+An den Conversationen sieht man ob die änderungen gelungen sind, wo nicht muss ich mir anschauen wo schiefgelaufen</p>
+</div>
+<div class="paragraph">
+<p>Beim Dashboard Unterhaltungen mit intents und entities anzeigen</p>
+</div>
+<div class="paragraph">
+<p>Was have ich gemacht, was ist das Ziel,  warum monaco und nicht formular = weils flexibler ist.
+um die flexibilität zu gewährleisten wurde bewusst auf formularfelder verzichtet stattdessen wird ein online editor (monaco) bearbeitet,
+der user erhält eine unterstüzung mit autovervollständigung</p>
+</div>
+<div class="paragraph">
+<p>nachteil vom editor = syntax muss user Beherrschen &#8658; deshalb Autovervollständigung</p>
+</div>
+<div class="paragraph">
+<p>Dashboard wie amaturenbrett stellt nicht nur infos zur verfügung, gibt dem betreuer die möglichkeit zu verbessern.</p>
 </div>
 </div>
 </div>
@@ -556,18 +606,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Schüler</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GitHub Repo public stellen</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">17.01.2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Diplomarbeit schreiben</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Schüler</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Auf Server deployen</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">17.01.2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dashboard erweitern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.03.2022</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Schüler</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Model verbessern (möglicherweise Pre-Trained Templates)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">17.01.2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Project Award vorbereiten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.03.2022</p></td>
 </tr>
 </tbody>
 </table>
