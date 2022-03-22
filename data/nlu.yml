@@ -2168,6 +2168,26 @@ nlu:
   examples: |
     - Darf ich dir einen Ring an den Finger stecken?
     - Willst du mir einen Ring an den Finger stecken?
+- intent: ai_htl_leonding
+  examples: |
+    - Gibt es AI an der HTL Leonding?
+    - Gibt es KI an der HTL Leonding?
+    - Gibt es Machine Learning an der HTL Leonding?
+    - Gibt es ML an der HTL Leonding?
+    - Lernt man AI an der HTL?
+    - Lernt man KI an der HTL?
+    - Lernt man Machine Learning an der HTL?
+    - Lernt man ML an der HTL?
+    - Wird Machine Learning unterrichtet?
+    - Wird AI unterrichtet?
+    - Wird KI unterrichtet?
+    - Wird ML unterrichtet?
+    - Wird Machine Learning an der HTL unterrichtet?
+    - Wird ML an der HTL unterrichtet?
+    - Ist AI Teil des Unterrichts?
+    - Ist KI Teil des Unterrichts?
+    - Ist ML Teil des Unterrichts?
+    - Ist Machine Learning Teil des Unterrichts?
 - synonym: Elektronik
   examples: |
     - Strombastler

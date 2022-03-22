@@ -109,6 +109,7 @@ intents:
   - what_time_is_it
   - what_date_is_it
   - no_answer
+  - ai_htl_leonding
 entities:
   - name
   - branch
@@ -787,6 +788,18 @@ responses:
           payload: "/ask_study_after_htl"
         - title: "Was sind die Kontaktdaten der HTL Leonding?"
           payload: "/ask_contact"
+  utter_ai_htl_leonding:
+    - image: https://www.htl-leonding.at/wp-content/uploads/2021/02/KI_Roboter.jpg?x62003
+      text: "Ja! Seit neuestem gibt es an der HTL Leonding in der Informatik das Fach DSAI. Das steht für Data Science und Artificial Intelligence und man lernt dabei, wie man Systeme mit künstlicher Intelligenz entwickelt, welche Formen es davon gibt und welche Form man einsetzt, um ein bestimmtes Problem zu lösen."
+      buttons:
+        - title: "Welche Programmiersprachen lernt man an der HTL?"
+          payload: "/programming_languages"
+        - title: "Zeig mir ein Bild der HTL!"
+          payload: "/show_school_picture"
+        - title: "Brauche ich gute Noten für die HTL?"
+          payload: "/good_grades_required"
+        - title: "Wie lange dauert die HTL?"
+          payload: "/htl_duration"
 actions:
   - action_hours_per_branch
   - action_room_info
