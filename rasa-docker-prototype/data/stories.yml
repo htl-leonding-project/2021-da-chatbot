@@ -324,3 +324,7 @@ stories:
     steps:
     - intent: no_answer
     - action: utter_rephrase
+  - story: ask about ai at the htl
+    steps:
+    - intent: ai_htl_leonding
+    - action: utter_ai_htl_leonding
