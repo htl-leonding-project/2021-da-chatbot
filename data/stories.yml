@@ -320,10 +320,6 @@ stories:
     steps:
       - intent: what_date_is_it
       - action: action_what_date_is_it
-  - story: find no answer
-    steps:
-    - intent: no_answer
-    - action: utter_rephrase
   - story: ask about ai at the htl
     steps:
     - intent: ai_htl_leonding
