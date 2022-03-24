@@ -1088,6 +1088,12 @@ nlu:
     - Willst du mit mir zusammen sein?
     - Willst du meine Freundin sein?
     - Lass uns heiraten
+    - Kann ich dir einen Ring an den Finger stecken?
+    - Willst du mir einen Ring an den Finger stecken?
+    - Steck mir bitte einen Ring an den Finger!
+    - Heirate mich!
+    - Darf ich dir einen Ring an den Finger stecken?
+    - Darf man dich heiraten?
 - intent: chitchat/what_are_you_doing
   examples: |
     - Und was machst du so?
@@ -2164,10 +2170,6 @@ nlu:
     - Sag mir welcher Tag heute ist
     - Sag mir das heutige Datum
     - Sag mir das Datum
-- intent: no_answer
-  examples: |
-    - Darf ich dir einen Ring an den Finger stecken?
-    - Willst du mir einen Ring an den Finger stecken?
 - intent: ai_htl_leonding
   examples: |
     - Gibt es AI an der HTL Leonding?
