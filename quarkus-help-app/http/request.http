@@ -1,5 +1,0 @@
-GET http://localhost:8080/api/fill
-
-###
-
-GET http://localhost:8080/api/create
